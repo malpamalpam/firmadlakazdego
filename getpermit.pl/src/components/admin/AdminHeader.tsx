@@ -31,7 +31,7 @@ export function AdminHeader({ user, active }: Props) {
               aria-label="getpermit.pl admin"
             >
               <Image
-                src="/logo.svg"
+                src="/logo.png"
                 alt=""
                 width={48}
                 height={32}
