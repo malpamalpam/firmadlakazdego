@@ -32,14 +32,11 @@ export function AdminHeader({ user, active }: Props) {
             >
               <Image
                 src="/logo.jpg"
-                alt=""
-                width={48}
-                height={32}
-                className="h-7 w-auto"
+                alt="getpermit.pl"
+                width={120}
+                height={40}
+                className="h-10 w-auto"
               />
-              <span className="font-display text-lg font-bold tracking-tight">
-                get<span className="text-brand">permit</span>.pl
-              </span>
               <span className="ml-2 inline-flex items-center gap-1 rounded-full bg-accent/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-accent">
                 <ShieldCheck className="h-3 w-3" />
                 admin

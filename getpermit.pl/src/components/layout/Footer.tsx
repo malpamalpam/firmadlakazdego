@@ -21,14 +21,11 @@ export function Footer() {
             <Link href="/" className="flex items-center gap-2">
               <Image
                 src="/logo.jpg"
-                alt=""
-                width={48}
-                height={32}
-                className="h-8 w-auto"
+                alt="getpermit.pl"
+                width={140}
+                height={48}
+                className="h-12 w-auto"
               />
-              <span className="font-display text-xl font-bold text-white">
-                get<span className="text-brand">permit</span>.pl
-              </span>
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-white/70">
               {t("tagline")}

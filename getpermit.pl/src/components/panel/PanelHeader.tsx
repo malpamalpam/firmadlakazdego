@@ -37,14 +37,11 @@ export function PanelHeader({ user, active }: Props) {
             >
               <Image
                 src="/logo.jpg"
-                alt=""
-                width={48}
-                height={32}
-                className="h-7 w-auto"
+                alt="getpermit.pl"
+                width={120}
+                height={40}
+                className="h-10 w-auto"
               />
-              <span className="font-display text-lg font-bold tracking-tight">
-                get<span className="text-brand">permit</span>.pl
-              </span>
             </Link>
 
             <nav className="hidden items-center gap-6 md:flex">
