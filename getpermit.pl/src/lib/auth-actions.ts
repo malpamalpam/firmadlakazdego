@@ -72,11 +72,23 @@ export async function registerAction(input: {
     return { ok: false, error: "general" };
   }
 
-  // Jeśli Supabase utworzył usera (może wymagać potwierdzenia email)
+  // Sync public.users — upsert by email (może istnieć z wcześniejszego flow)
   if (data.user) {
-    // Utwórz rekord w public.users
-    const existing = await db.user.findUnique({ where: { id: data.user.id } });
-    if (!existing) {
+    const existingByEmail = await db.user.findUnique({
+      where: { email: parsed.data.email },
+    });
+    if (existingByEmail) {
+      await db.user.update({
+        where: { email: parsed.data.email },
+        data: {
+          id: data.user.id,
+          firstName: parsed.data.firstName,
+          lastName: parsed.data.lastName,
+          phone: parsed.data.phone || null,
+          locale: input.locale,
+        },
+      });
+    } else {
       await db.user.create({
         data: {
           id: data.user.id,
