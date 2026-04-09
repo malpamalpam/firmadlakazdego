@@ -8,7 +8,7 @@ const intlMiddleware = createIntlMiddleware(routing);
 const LOCALES = routing.locales;
 const PANEL_REGEX = new RegExp(`^/panel(?:/|$)`);
 const ADMIN_REGEX = new RegExp(`^/admin(?:/|$)`);
-const PUBLIC_PANEL_PATHS = ["login", "verify", "callback"];
+const PUBLIC_PANEL_PATHS = ["login", "verify", "callback", "rejestracja"];
 
 function isPublicPanelPath(pathname: string): boolean {
   return PUBLIC_PANEL_PATHS.some((p) =>

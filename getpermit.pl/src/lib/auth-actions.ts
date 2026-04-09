@@ -8,59 +8,152 @@ import { siteConfig } from "@/config/site";
 import { db } from "@/lib/db";
 import { getCurrentUser } from "@/lib/auth";
 import { routing } from "@/i18n/routing";
+import { syncUserFromAuth } from "@/lib/sync-user";
 
-const emailSchema = z.string().email();
+/* ============================================================================ */
+/*                              REJESTRACJA                                     */
+/* ============================================================================ */
 
-export type SendMagicLinkResult =
+const registerSchema = z.object({
+  email: z.string().trim().toLowerCase().email(),
+  password: z.string().min(8),
+  firstName: z.string().trim().min(1).max(80),
+  lastName: z.string().trim().min(1).max(80),
+  phone: z.string().trim().max(40).optional().or(z.literal("")),
+  consent: z.literal(true),
+  terms: z.literal(true),
+});
+
+export type RegisterResult =
   | { ok: true }
-  | { ok: false; error: "invalid_email" | "send_failed" };
+  | { ok: false; error: "validation" | "email_taken" | "weak_password" | "general" };
 
-/**
- * Wysyła magic link na podany email przez Supabase Auth.
- * Email-template jest skonfigurowany w Supabase Dashboard → Authentication → Email Templates.
- * Provider SMTP (Resend) skonfigurowany w Authentication → SMTP Settings.
- */
-export async function sendMagicLink(
-  email: string,
-  locale: string,
-  next?: string
-): Promise<SendMagicLinkResult> {
-  const parsed = emailSchema.safeParse(email.trim().toLowerCase());
+export async function registerAction(input: {
+  email: string;
+  password: string;
+  firstName: string;
+  lastName: string;
+  phone?: string;
+  consent: boolean;
+  terms: boolean;
+  locale: string;
+}): Promise<RegisterResult> {
+  const parsed = registerSchema.safeParse(input);
   if (!parsed.success) {
-    return { ok: false, error: "invalid_email" };
+    return { ok: false, error: "validation" };
   }
 
   const supabase = await createSupabaseServerClient();
 
   const callbackUrl = new URL("/api/auth/callback", siteConfig.url);
-  callbackUrl.searchParams.set("locale", locale);
-  if (next) callbackUrl.searchParams.set("next", next);
+  callbackUrl.searchParams.set("locale", input.locale);
+  callbackUrl.searchParams.set("next", "/panel");
 
-  const { error } = await supabase.auth.signInWithOtp({
-    email: parsed.data,
+  const { data, error } = await supabase.auth.signUp({
+    email: parsed.data.email,
+    password: parsed.data.password,
     options: {
       emailRedirectTo: callbackUrl.toString(),
-      // shouldCreateUser=true (domyślne) — pierwsze logowanie tworzy auth user.
-      // Sync z public.users dzieje się w callback handlerze.
+      data: {
+        firstName: parsed.data.firstName,
+        lastName: parsed.data.lastName,
+      },
     },
   });
 
   if (error) {
-    console.error("[sendMagicLink] Supabase error:", error.message);
-    return { ok: false, error: "send_failed" };
+    console.error("[register] Supabase error:", error.message);
+    if (error.message.includes("already registered")) {
+      return { ok: false, error: "email_taken" };
+    }
+    if (error.message.includes("password")) {
+      return { ok: false, error: "weak_password" };
+    }
+    return { ok: false, error: "general" };
+  }
+
+  // Jeśli Supabase utworzył usera (może wymagać potwierdzenia email)
+  if (data.user) {
+    // Utwórz rekord w public.users
+    const existing = await db.user.findUnique({ where: { id: data.user.id } });
+    if (!existing) {
+      await db.user.create({
+        data: {
+          id: data.user.id,
+          email: parsed.data.email,
+          role: "CLIENT",
+          firstName: parsed.data.firstName,
+          lastName: parsed.data.lastName,
+          phone: parsed.data.phone || null,
+          locale: input.locale,
+        },
+      });
+    }
   }
 
   return { ok: true };
 }
 
-/**
- * Wylogowuje użytkownika i przekierowuje na stronę logowania.
- */
+/* ============================================================================ */
+/*                              LOGOWANIE                                       */
+/* ============================================================================ */
+
+const loginSchema = z.object({
+  email: z.string().trim().toLowerCase().email(),
+  password: z.string().min(1),
+});
+
+export type LoginResult =
+  | { ok: true }
+  | { ok: false; error: "validation" | "invalid_credentials" | "general" };
+
+export async function loginAction(input: {
+  email: string;
+  password: string;
+  locale: string;
+}): Promise<LoginResult> {
+  const parsed = loginSchema.safeParse(input);
+  if (!parsed.success) {
+    return { ok: false, error: "validation" };
+  }
+
+  const supabase = await createSupabaseServerClient();
+
+  const { data, error } = await supabase.auth.signInWithPassword({
+    email: parsed.data.email,
+    password: parsed.data.password,
+  });
+
+  if (error) {
+    console.error("[login] Supabase error:", error.message);
+    return { ok: false, error: "invalid_credentials" };
+  }
+
+  // Sync user przy logowaniu (aktualizuje lastLoginAt, rolę w app_metadata)
+  if (data.user) {
+    try {
+      await syncUserFromAuth(data.user.id, data.user.email!, input.locale);
+    } catch (e) {
+      console.error("[login] sync failed:", e);
+    }
+  }
+
+  return { ok: true };
+}
+
+/* ============================================================================ */
+/*                              WYLOGOWANIE                                     */
+/* ============================================================================ */
+
 export async function signOutAction() {
   const supabase = await createSupabaseServerClient();
   await supabase.auth.signOut();
   redirect("/panel/login");
 }
+
+/* ============================================================================ */
+/*                           AKTUALIZACJA PROFILU                               */
+/* ============================================================================ */
 
 const profileSchema = z.object({
   firstName: z.string().trim().max(80).optional().or(z.literal("")),
@@ -73,9 +166,6 @@ export type UpdateProfileResult =
   | { ok: true }
   | { ok: false; error: string };
 
-/**
- * Aktualizuje profil zalogowanego użytkownika (firstName, lastName, phone, locale).
- */
 export async function updateProfile(input: {
   firstName?: string;
   lastName?: string;
