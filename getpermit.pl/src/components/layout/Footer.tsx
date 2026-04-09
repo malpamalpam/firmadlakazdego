@@ -20,11 +20,11 @@ export function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-2">
               <Image
-                src="/logo.png"
+                src="/logo.svg"
                 alt="getpermit.pl"
                 width={150}
                 height={50}
-                className="h-10 w-auto rounded-lg bg-white p-1.5 md:h-12"
+                className="h-10 w-auto brightness-0 invert md:h-12"
               />
               <span className="font-display text-xl font-bold tracking-tight text-white md:text-2xl">
                 get<span className="text-brand">permit</span>.pl

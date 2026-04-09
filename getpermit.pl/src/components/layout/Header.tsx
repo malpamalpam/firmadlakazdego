@@ -64,7 +64,7 @@ export function Header() {
             aria-label="getpermit.pl"
           >
             <Image
-              src="/logo.png"
+              src="/logo.svg"
               alt="getpermit.pl — karta pobytu i zezwolenie na pracę w Polsce"
               width={150}
               height={50}
