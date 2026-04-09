@@ -22,11 +22,11 @@ export function Footer() {
               <Image
                 src="/logo.jpg"
                 alt="getpermit.pl"
-                width={140}
-                height={48}
-                className="h-12 w-auto"
+                width={150}
+                height={50}
+                className="h-10 w-auto md:h-12"
               />
-              <span className="font-display text-xl font-bold text-white">
+              <span className="font-display text-xl font-bold tracking-tight text-white md:text-2xl">
                 get<span className="text-brand">permit</span>.pl
               </span>
             </Link>
