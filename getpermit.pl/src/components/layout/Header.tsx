@@ -66,10 +66,10 @@ export function Header() {
             <Image
               src="/logo.jpg"
               alt="getpermit.pl"
-              width={300}
-              height={100}
+              width={150}
+              height={50}
               priority
-              className="h-20 w-auto md:h-24"
+              className="h-10 w-auto md:h-12"
             />
             <span className="font-display text-xl font-bold tracking-tight text-primary md:text-2xl">
               get<span className="text-brand">permit</span>.pl
@@ -101,13 +101,13 @@ export function Header() {
             })}
             <Link
               href="/o-nas"
-              className="text-lg font-medium text-primary/70 transition-colors hover:text-primary"
+              className="text-sm font-medium text-primary/70 transition-colors hover:text-primary"
             >
               {t("about")}
             </Link>
             <Link
               href="/blog"
-              className="text-lg font-medium text-primary/70 transition-colors hover:text-primary"
+              className="text-sm font-medium text-primary/70 transition-colors hover:text-primary"
             >
               {t("blog")}
             </Link>
