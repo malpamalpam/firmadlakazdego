@@ -52,7 +52,7 @@ export function ServicesGrid() {
               <a
                 key={category.slug}
                 href={`/${locale}/uslugi#${category.slug}`}
-                className="group relative flex flex-col overflow-hidden rounded-2xl border border-primary/10 bg-white p-8 shadow-sm transition-all hover:-translate-y-1 hover:border-accent/40 hover:shadow-lg"
+                className="group relative flex flex-col overflow-hidden rounded-2xl border-2 border-primary/20 bg-white p-8 shadow-md transition-all hover:-translate-y-1 hover:border-accent hover:shadow-xl"
               >
                 <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-accent/10 text-accent">
                   <Icon className="h-7 w-7" strokeWidth={2} />
