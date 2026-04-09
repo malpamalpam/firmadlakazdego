@@ -49,12 +49,25 @@ const nextConfig: NextConfig = {
       }
     }
 
-    // Root "/" → /pl (localePrefix: "always" wymaga explicit redirect)
-    redirects.push({
-      source: "/",
-      destination: "/pl",
-      permanent: false,
-    });
+    // localePrefix: "always" — ścieżki bez /pl muszą redirectować
+    const noLocalePaths = [
+      "/",
+      "/regulamin",
+      "/polityka-prywatnosci",
+      "/cookies",
+      "/uslugi",
+      "/o-nas",
+      "/kontakt",
+      "/blog",
+      "/blog/:slug*",
+    ];
+    for (const path of noLocalePaths) {
+      redirects.push({
+        source: path,
+        destination: `/pl${path === "/" ? "" : path}`,
+        permanent: false,
+      });
+    }
 
     return redirects;
   },
