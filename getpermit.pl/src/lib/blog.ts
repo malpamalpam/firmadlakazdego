@@ -21,8 +21,7 @@ export const BLOG_POSTS: BlogPost[] = [
     description:
       "Ochrona czasowa obywateli Ukrainy przedłużona do marca 2027. Nowe zasady pobytu, pracy, opieki zdrowotnej i działalności gospodarczej po wygaszeniu specustawy.",
     date: "2026-04-09",
-    imageUrl:
-      "https://images.unsplash.com/photo-1589519160732-576fc95a1b2b?auto=format&fit=crop&w=1200&q=80",
+    imageUrl: "/blog-ochrona-czasowa.jpg",
     imageAlt:
       "Flagi Ukrainy i Polski — ochrona czasowa obywateli Ukrainy w Polsce, karta pobytu",
     author: "Zespół getpermit.pl",

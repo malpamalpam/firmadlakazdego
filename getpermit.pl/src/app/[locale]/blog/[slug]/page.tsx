@@ -109,6 +109,29 @@ export default async function BlogPostPage({
         <div className="mx-auto grid max-w-5xl gap-10 lg:grid-cols-[1fr_280px]">
           {/* Content */}
           <div className="min-w-0">
+            {/* Mobile TOC */}
+            <details className="mb-10 rounded-2xl border border-primary/10 bg-surface p-5 lg:hidden">
+              <summary className="flex cursor-pointer items-center gap-2 font-display text-sm font-bold uppercase tracking-wider text-primary/60">
+                <List className="h-4 w-4" aria-hidden="true" />
+                Spis treści
+              </summary>
+              <nav className="mt-4">
+                <ol className="space-y-2 text-sm">
+                  {post.toc.map((item, i) => (
+                    <li key={item.id}>
+                      <a
+                        href={`#${item.id}`}
+                        className="flex gap-2 text-primary/70 transition-colors hover:text-accent"
+                      >
+                        <span className="flex-shrink-0 text-accent/60">{i + 1}.</span>
+                        <span>{item.title}</span>
+                      </a>
+                    </li>
+                  ))}
+                </ol>
+              </nav>
+            </details>
+
             {post.sections.map((section) => (
               <section key={section.id} id={section.id} className="mb-10 scroll-mt-24">
                 <h2 className="mb-4 font-display text-2xl font-extrabold text-primary md:text-3xl">
