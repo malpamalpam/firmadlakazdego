@@ -1,11 +1,13 @@
 import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
 import { getAllServices } from "@/lib/services";
+import { getAllBlogPosts } from "@/lib/blog";
 import { siteConfig } from "@/config/site";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = siteConfig.url;
   const services = await getAllServices();
+  const blogPosts = getAllBlogPosts();
   const now = new Date();
 
   const staticPages: Array<{
@@ -38,6 +40,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       entries.push({
         url: `${base}/${locale}/uslugi/${service.slug}`,
         lastModified: now,
+        changeFrequency: "monthly",
+        priority: 0.7,
+      });
+    }
+    for (const post of blogPosts) {
+      entries.push({
+        url: `${base}/${locale}/blog/${post.slug}`,
+        lastModified: new Date(post.date),
         changeFrequency: "monthly",
         priority: 0.7,
       });

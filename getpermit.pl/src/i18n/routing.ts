@@ -39,6 +39,12 @@ export const routing = defineRouting({
       ru: "/blog",
       uk: "/blog",
     },
+    "/blog/[slug]": {
+      pl: "/blog/[slug]",
+      en: "/blog/[slug]",
+      ru: "/blog/[slug]",
+      uk: "/blog/[slug]",
+    },
     // UWAGA: ścieżki /panel/* i /admin/* CELOWO nie są tutaj rejestrowane —
     // panel klienta i admina obsługujemy standardowym routingiem Next.js
     // (App Router) bez tłumaczenia URL-i. next-intl traktuje je jako passthrough.
