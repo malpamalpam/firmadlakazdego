@@ -82,11 +82,11 @@ const plList = (items: string[]): LocalizedList => ({
 
 /** Bezpieczne wyciągnięcie tłumaczenia z fallbackiem na PL. */
 export function localized(value: LocalizedString, locale: string): string {
-  return (value as Record<string, string>)[locale] ?? value.pl;
+  return (value as unknown as Record<string, string>)[locale] ?? value.pl;
 }
 
 export function localizedList(value: LocalizedList, locale: string): string[] {
-  return (value as Record<string, string[]>)[locale] ?? value.pl;
+  return (value as unknown as Record<string, string[]>)[locale] ?? value.pl;
 }
 
 /* -------------------------------------------------------------------------- */
