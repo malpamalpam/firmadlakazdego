@@ -65,7 +65,7 @@ export function Header() {
           >
             <Image
               src="/logo.jpg"
-              alt="getpermit.pl"
+              alt="getpermit.pl — karta pobytu i zezwolenie na pracę w Polsce"
               width={150}
               height={50}
               priority
@@ -131,7 +131,7 @@ export function Header() {
             type="button"
             className="inline-flex h-10 w-10 items-center justify-center rounded-md text-primary md:hidden"
             onClick={() => setMobileOpen((v) => !v)}
-            aria-label="Menu"
+            aria-label="Otwórz menu nawigacji"
             aria-expanded={mobileOpen}
           >
             {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}

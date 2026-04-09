@@ -15,9 +15,17 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "https://getpermit.pl"
-  ),
+  metadataBase: new URL("https://getpermit.pl"),
+  robots: { index: true, follow: true },
+  // TODO: Stworzyc og:image 1200x630 i umiescic w /public/og-image.jpg
+  openGraph: {
+    type: "website",
+    siteName: "getpermit.pl",
+    images: [{ url: "/logo.jpg", width: 600, height: 400, alt: "getpermit.pl" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({
@@ -26,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html className={`${inter.variable} ${manrope.variable}`} suppressHydrationWarning>
+    <html lang="pl" className={`${inter.variable} ${manrope.variable}`} suppressHydrationWarning>
       <body>{children}</body>
     </html>
   );

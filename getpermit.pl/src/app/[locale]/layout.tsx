@@ -20,18 +20,23 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "metadata" });
 
+  const OG_LOCALES: Record<string, string> = {
+    pl: "pl_PL", en: "en_US", ru: "ru_RU", uk: "uk_UA",
+  };
+
   return {
     title: {
       template: `%s | ${siteConfig.name}`,
       default: t("title"),
     },
     description: t("description"),
+    keywords: t("keywords"),
     openGraph: {
       title: t("title"),
       description: t("description"),
-      url: siteConfig.url,
+      url: `${siteConfig.url}/${locale}`,
       siteName: siteConfig.name,
-      locale,
+      locale: OG_LOCALES[locale] ?? "pl_PL",
       type: "website",
     },
     alternates: {
@@ -59,24 +64,41 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
   const messages = await getMessages();
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "LegalService",
-    name: siteConfig.name,
-    legalName: siteConfig.legalName,
-    url: siteConfig.url,
-    email: siteConfig.contact.email,
-    telephone: siteConfig.contact.phone,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: siteConfig.contact.address.street,
-      postalCode: siteConfig.contact.address.postal,
-      addressLocality: siteConfig.contact.address.city,
-      addressCountry: "PL",
+  // TODO: Dodac AggregateRating po integracji z Google Reviews
+  const jsonLdGraph = [
+    {
+      "@type": "LegalService",
+      name: siteConfig.name,
+      legalName: siteConfig.legalName,
+      url: siteConfig.url,
+      logo: `${siteConfig.url}/logo.jpg`,
+      email: siteConfig.contact.email,
+      telephone: siteConfig.contact.phone,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: siteConfig.contact.address.street,
+        postalCode: siteConfig.contact.address.postal,
+        addressLocality: siteConfig.contact.address.city,
+        addressCountry: "PL",
+      },
+      areaServed: "PL",
+      description: siteConfig.description[locale as keyof typeof siteConfig.description],
+      knowsLanguage: ["pl", "en", "ru", "uk"],
+      serviceType: [
+        "Karta pobytu", "Karta pobytu czasowego", "Karta stalego pobytu",
+        "Zezwolenie na prace", "EU Blue Card", "Tlumaczenia przysiegle",
+      ],
+      priceRange: "$$",
     },
-    areaServed: "PL",
-    description: siteConfig.description[locale as keyof typeof siteConfig.description],
-  };
+    {
+      "@type": "WebSite",
+      name: "getpermit.pl",
+      url: siteConfig.url,
+      inLanguage: ["pl", "en", "ru", "uk"],
+      description: "Profesjonalna pomoc w legalizacji pobytu i pracy cudzoziemcow w Polsce",
+    },
+  ];
+  const jsonLd = { "@context": "https://schema.org", "@graph": jsonLdGraph };
 
   return (
     <NextIntlClientProvider messages={messages}>

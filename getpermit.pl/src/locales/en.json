@@ -21,8 +21,8 @@
     "success": "Success rate"
   },
   "services": {
-    "title": "Our services",
-    "subtitle": "Comprehensive help at every stage of legalization",
+    "title": "Immigration Services — Poland Visa, Work Permit, EU Blue Card",
+    "subtitle": "Poland visa application, work permit, EU Blue Card, residence permits. Professional immigration services for foreigners in Poland.",
     "viewAll": "View all services",
     "viewDetails": "Learn more",
     "from": "from",
@@ -87,8 +87,9 @@
     "consent": "Consent to data processing is required"
   },
   "metadata": {
-    "title": "getpermit.pl — Residence cards and work permits in Poland",
-    "description": "Comprehensive help for foreigners in legalizing residence and work in Poland. Residence cards, work permits, citizenship."
+    "title": "Poland Visa & Work Permit — Immigration Services | getpermit.pl",
+    "description": "Poland visa, work permit, EU Blue Card — professional immigration services in Poland. Residence permits, visa applications. Free consultation in English.",
+    "keywords": "poland visa, work permit poland, eu blue card, immigration poland, poland visa application, how to move to poland, live in poland, poland schengen visa, european blue card, polska visa"
   },
   "panel": {
     "auth": {

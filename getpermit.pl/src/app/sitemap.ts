@@ -8,17 +8,30 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const services = await getAllServices();
   const now = new Date();
 
-  const staticPaths = ["", "/uslugi", "/o-nas", "/kontakt", "/blog"];
+  const staticPages: Array<{
+    path: string;
+    priority: number;
+    changeFrequency: "weekly" | "monthly";
+  }> = [
+    { path: "", priority: 1.0, changeFrequency: "weekly" },
+    { path: "/uslugi", priority: 0.9, changeFrequency: "monthly" },
+    { path: "/o-nas", priority: 0.8, changeFrequency: "monthly" },
+    { path: "/kontakt", priority: 0.8, changeFrequency: "monthly" },
+    { path: "/blog", priority: 0.7, changeFrequency: "weekly" },
+    { path: "/polityka-prywatnosci", priority: 0.3, changeFrequency: "monthly" },
+    { path: "/regulamin", priority: 0.3, changeFrequency: "monthly" },
+    { path: "/cookies", priority: 0.3, changeFrequency: "monthly" },
+  ];
 
   const entries: MetadataRoute.Sitemap = [];
 
   for (const locale of routing.locales) {
-    for (const p of staticPaths) {
+    for (const page of staticPages) {
       entries.push({
-        url: `${base}/${locale}${p}`,
+        url: `${base}/${locale}${page.path}`,
         lastModified: now,
-        changeFrequency: "monthly",
-        priority: p === "" ? 1 : 0.8,
+        changeFrequency: page.changeFrequency,
+        priority: page.priority,
       });
     }
     for (const service of services) {

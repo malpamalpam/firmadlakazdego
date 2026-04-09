@@ -11,7 +11,7 @@
   "hero": {
     "badge": "Pomoc prawna dla cudzoziemców",
     "title": "Polska bez papierologii. Karta pobytu bez nerwów.",
-    "subtitle": "Zajmujemy się dokumentami, żebyś Ty mógł zająć się życiem. Od pierwszego wniosku po kartę pobytu w ręku — 98% naszych spraw kończy się sukcesem.",
+    "subtitle": "Zajmujemy się dokumentami, żebyś Ty mógł zająć się życiem. Karta pobytu, zezwolenie na pracę, karta pobytu czasowego — od pierwszego wniosku po dokument w ręku. 98% naszych spraw kończy się sukcesem.",
     "ctaPrimary": "Umów konsultację",
     "blogCta": "Czytaj blog"
   },
@@ -21,8 +21,8 @@
     "success": "Skuteczność spraw"
   },
   "services": {
-    "title": "Nasze usługi",
-    "subtitle": "Kompleksowa pomoc na każdym etapie legalizacji",
+    "title": "Legalizacja pobytu i pracy — karta pobytu, zezwolenie na pracę",
+    "subtitle": "Karta pobytu czasowego, karta stałego pobytu, zezwolenie na pracę typu A, EU Blue Card. Kompleksowa pomoc w legalizacji cudzoziemców w Polsce.",
     "viewAll": "Zobacz wszystkie usługi",
     "viewDetails": "Dowiedz się więcej",
     "from": "od",
@@ -38,8 +38,8 @@
     "subtitle": "Setki cudzoziemców otrzymały już swoje dokumenty dzięki naszej pomocy"
   },
   "ctaBanner": {
-    "title": "Masz pytania o swoją sytuację?",
-    "subtitle": "Napisz do nas — bezpłatnie ocenimy Twoją sprawę i zaproponujemy najlepsze rozwiązanie.",
+    "title": "Potrzebujesz karty pobytu lub zezwolenia na pracę?",
+    "subtitle": "Napisz do nas — bezpłatnie ocenimy Twoją sprawę i zaproponujemy najlepsze rozwiązanie. Karta pobytu czasowego, karta stałego pobytu, zezwolenie na pracę — pomagamy na każdym etapie.",
     "button": "Skontaktuj się z nami"
   },
   "contact": {
@@ -87,8 +87,9 @@
     "consent": "Wymagana jest zgoda na przetwarzanie danych"
   },
   "metadata": {
-    "title": "getpermit.pl — Karty pobytu i zezwolenia na pracę w Polsce",
-    "description": "Kompleksowa pomoc cudzoziemcom w legalizacji pobytu i pracy w Polsce. Karty pobytu, zezwolenia na pracę, obywatelstwo."
+    "title": "Karta pobytu i zezwolenie na pracę w Polsce | getpermit.pl",
+    "description": "Karta pobytu, karta pobytu czasowego, karta stałego pobytu, zezwolenie na pracę — pomagamy cudzoziemcom legalnie mieszkać i pracować w Polsce. 98% skuteczności spraw. Bezpłatna konsultacja w ciągu 24h.",
+    "keywords": "karta pobytu, karta stałego pobytu, karta pobytu czasowego, zezwolenie na pracę, zezwolenie na pracę typu a, karta czasowego pobytu, ponaglenie karta pobytu, karta pobytu status online, numer karty pobytu, legalizacja pobytu Polska"
   },
   "panel": {
     "auth": {
