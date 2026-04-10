@@ -64,7 +64,7 @@ export function PanelHeader({ user, active }: Props) {
               {displayName}
             </span>
             <Link
-              href="/"
+              href={`/${user.locale ?? "pl"}`}
               className="hidden text-xs font-medium text-primary/60 hover:text-primary md:inline-flex md:items-center md:gap-1"
             >
               <ArrowLeft className="h-3 w-3" />

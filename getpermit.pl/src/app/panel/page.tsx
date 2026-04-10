@@ -52,7 +52,7 @@ export default async function PanelDashboardPage() {
               {t("noCasesDescription")}
             </p>
             <div className="mt-6">
-              <Link href="/kontakt">
+              <Link href={`/${locale}/kontakt`}>
                 <Button variant="accent" size="md">
                   <Mail className="h-4 w-4" />
                   {t("contactButton")}

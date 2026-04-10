@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 import { Cookie, X } from "lucide-react";
 
 const STORAGE_KEY = "getpermit-cookie-consent";
@@ -35,12 +36,12 @@ export function CookieConsent() {
           </h3>
           <p className="mt-1 text-sm leading-relaxed text-ink/70">
             {t("message")}{" "}
-            <a
+            <Link
               href="/polityka-prywatnosci"
               className="font-medium text-accent hover:underline"
             >
               {t("privacyLink")}
-            </a>
+            </Link>
           </p>
         </div>
         <div className="flex flex-shrink-0 items-start gap-2">

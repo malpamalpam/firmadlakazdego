@@ -162,7 +162,7 @@ export function RegisterForm({ locale }: Props) {
         />
         <span>
           {t("consentLabel")} *{" "}
-          <a href="/polityka-prywatnosci" className="text-accent hover:underline" target="_blank">
+          <a href={`/${locale}/polityka-prywatnosci`} className="text-accent hover:underline" target="_blank">
             ↗
           </a>
         </span>
@@ -178,7 +178,7 @@ export function RegisterForm({ locale }: Props) {
         />
         <span>
           {t("termsLabel")} *{" "}
-          <a href="/regulamin" className="text-accent hover:underline" target="_blank">
+          <a href={`/${locale}/regulamin`} className="text-accent hover:underline" target="_blank">
             ↗
           </a>
         </span>
