@@ -1,6 +1,7 @@
 import { useTranslations, useLocale } from "next-intl";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
+import { HeroStats } from "./HeroStats";
 import { siteConfig } from "@/config/site";
 import { ArrowRight } from "lucide-react";
 
@@ -13,9 +14,9 @@ export function HeroSection() {
   const locale = useLocale();
 
   const stats = [
-    { value: `${siteConfig.stats.yearsOfExperience}+`, label: tStats("years") },
-    { value: `${siteConfig.stats.clientsServed.toLocaleString("pl-PL")}+`, label: tStats("clients") },
-    { value: `${siteConfig.stats.successRate}%`, label: tStats("success") },
+    { target: siteConfig.stats.yearsOfExperience, suffix: "+", label: tStats("years") },
+    { target: siteConfig.stats.clientsServed, suffix: "+", label: tStats("clients") },
+    { target: siteConfig.stats.successRate, suffix: "%", label: tStats("success") },
   ];
 
   return (
@@ -45,23 +46,7 @@ export function HeroSection() {
             </div>
 
             {/* Stats inline */}
-            <div className="mt-10 flex items-center gap-6 md:gap-10">
-              {stats.map((stat, i) => (
-                <div key={i} className="flex items-center gap-6 md:gap-10">
-                  {i > 0 && (
-                    <div className="h-10 w-px bg-white/20" aria-hidden="true" />
-                  )}
-                  <div>
-                    <div className="font-display text-2xl font-extrabold text-white md:text-3xl">
-                      {stat.value}
-                    </div>
-                    <div className="mt-0.5 text-[11px] font-semibold uppercase tracking-wider text-white/50">
-                      {stat.label}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <HeroStats stats={stats} />
           </div>
 
           {/* Video */}
