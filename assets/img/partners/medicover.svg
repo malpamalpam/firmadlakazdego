@@ -1,12 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 70" width="220" height="70">
-  <!-- Medicover logo - figure + arc -->
-  <g transform="translate(70, 0) scale(0.6)">
-    <!-- Person figure -->
-    <circle cx="50" cy="12" r="8" fill="#005ca9"/>
-    <path d="M50 22 C35 30, 25 45, 25 45 L50 35 L75 45 C75 45, 65 30, 50 22Z" fill="#005ca9"/>
-    <!-- Arc -->
-    <path d="M10 48 Q30 30, 50 28 Q70 30, 90 48" stroke="#005ca9" stroke-width="5" fill="none" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 70" width="300" height="70">
+  <g transform="translate(10,5)">
+    <!-- Arc swoosh -->
+    <path d="M25 38 Q30 15, 55 8 Q80 2, 105 15 Q115 20, 118 30" stroke="#005ca9" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M30 42 Q35 22, 55 14 Q78 7, 100 18 Q108 22, 112 30" stroke="#005ca9" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <!-- Person -->
+    <circle cx="70" cy="22" r="7" fill="#005ca9"/>
+    <path d="M55 52 L70 35 L85 52" stroke="#005ca9" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M48 55 L70 40 L92 55" stroke="#005ca9" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
   </g>
   <!-- Text -->
-  <text x="110" y="62" font-family="Arial, sans-serif" font-weight="700" font-size="22" fill="#005ca9" text-anchor="middle">MEDICOVER</text>
+  <text x="145" y="50" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="28" fill="#005ca9" letter-spacing="2">MEDICOVER</text>
 </svg>

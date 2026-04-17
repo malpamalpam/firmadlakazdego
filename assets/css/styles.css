@@ -160,21 +160,22 @@ header.sticky-top .navbar a:hover { color: #00BBFF; }
 
 /* ===== HERO ===== */
 .page-index .section-hero {
-  padding-top: 120px;
-  padding-bottom: 40px;
+  padding-top: 110px;
+  padding-bottom: 30px;
   position: relative;
-  background-color: #292623;
+  background-color: #1a1e23;
   overflow: hidden;
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 @media screen and (min-width: 992px) {
-  .page-index .section-hero { padding-top: 140px; padding-bottom: 40px; }
+  .page-index .section-hero { padding-top: 120px; padding-bottom: 30px; }
 }
 @media screen and (min-width: 1200px) {
-  .page-index .section-hero { padding-top: 160px; padding-bottom: 50px; }
+  .page-index .section-hero { padding-top: 130px; padding-bottom: 30px; }
 }
 
 .page-index .section-hero .bg {
@@ -320,11 +321,11 @@ footer .phones span { display: inline-block; min-width: 50px; margin-right: 15px
   border-color: #009dd9;
   color: #ffffff !important;
 }
-/* Navbar version — smaller, pill shape */
+/* Navbar version — same square shape, smaller */
 header .btn-hero-cta {
   font-size: 0.85rem;
   padding: 8px 20px;
-  border-radius: 50px;
+  border-radius: 4px;
 }
 header.sticky-top .btn-hero-cta {
   background-color: #00BBFF;
@@ -376,6 +377,51 @@ header.sticky-top .btn-hero-cta {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
+
+/* ===== CO ROBIMY cards with visible borders ===== */
+#co-robimy .card {
+  border: 1px solid #e0e0e0 !important;
+  transition: all 0.2s ease;
+}
+#co-robimy .card:hover {
+  border-color: #00BBFF !important;
+}
+
+/* ===== JAK DZIALAMY — inline 3 cols ===== */
+.jak-dzialamy-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media screen and (min-width: 768px) {
+  .jak-dzialamy-grid { grid-template-columns: 1fr 1fr 1fr; }
+}
+.jak-dzialamy-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 30px 20px;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+.jak-dzialamy-card:hover {
+  border-color: #00BBFF;
+  box-shadow: 0 5px 20px rgba(0,187,255,0.1);
+}
+.jak-dzialamy-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(0,187,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+}
+.jak-dzialamy-icon svg { width: 28px; height: 28px; }
+
+/* ===== Required field marker ===== */
+.required-star { color: #dc3545; }
 
 /* ===== OUTLINE PRIMARY ===== */
 .btn-outline-primary { color: #00BBFF; border-color: #00BBFF; }
