@@ -44,12 +44,13 @@
                 <div class="d-block d-lg-flex pe-0 pe-xxl-4 me-0 me-lg-5">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item px-1 px-lg-0 px-xl-2 px-xxl-3"><a class="nav-link" href="#co-robimy">O nas</a></li>
-                        <!-- WŁAŚCICIEL: Podmień TWOJ-LINK-CAL-COM na Twój link z Cal.com, np. "firmadlakazdego/konsultacja" -->
-                        <li class="nav-item px-1 px-lg-0 px-xl-2 px-xxl-3"><a class="nav-link cal-link" href="#kontakt" data-cal-link="TWOJ-LINK-CAL-COM" data-cal-config='{"layout":"month_view"}'>Umów konsultację</a></li>
                         <li class="nav-item px-1 px-lg-0 px-xl-2 px-xxl-3"><a class="nav-link" href="#faq">FAQ</a></li>
                         <li class="nav-item px-1 px-lg-0 px-xl-2 px-xxl-3"><a class="nav-link" href="#kontakt">Kontakt</a></li>
                     </ul>
                 </div>
+                <!-- Przycisk "Umów konsultację" — wyróżniony w prawym rogu navbara -->
+                <!-- WŁAŚCICIEL: Podmień TWOJ-LINK-CAL-COM na link Cal.com lub Calendly, np. "firmadlakazdego/konsultacja" -->
+                <a href="https://cal.com/TWOJ-LINK-CAL-COM" target="_blank" class="btn btn-nav-cta d-none d-lg-inline-block ms-3 cal-link-external">Umów konsultację</a>
             </div>
             <!-- [4] Language switcher — UKRYTY do czasu wersji EN/RU -->
             <!-- WŁAŚCICIEL: Odkomentuj gdy dodasz wersje EN/RU strony -->
@@ -92,26 +93,20 @@
         </div>
         <div class="text d-inline-block border-top-1 pt-4 pb-5 position-relative">
             <p class="mt-2 mb-3">Chcesz rozpocząć swoją działalność? Sprawdź, ile możesz z nami zaoszczędzić.<br class="d-none d-md-inline-block">Skontaktuj się z nami i zacznij już dziś.</p>
-            <div class="d-flex gap-3 flex-wrap">
-                <a href="#kontakt" class="btn btn-fdk btn-lg px-5 py-3">Zacznij za darmo</a>
-                <!-- WŁAŚCICIEL: Podmień TWOJ-LINK-CAL-COM na Twój link z Cal.com -->
-                <a href="#kontakt" class="btn btn-outline-light btn-lg px-4 py-3 cal-link" data-cal-link="TWOJ-LINK-CAL-COM" data-cal-config='{"layout":"month_view"}'>Umów konsultację</a>
+            <a href="#kontakt" class="btn btn-fdk btn-lg px-5 py-3">Skontaktuj się z nami</a>
+        </div>
+
+        <!-- COUNTERY — na hero, na tle wideo -->
+        <div class="hero-counters mt-5 pt-4 border-top border-white border-opacity-25">
+            <div class="row text-center row-cols-1 row-cols-md-3 g-4">
+                <div class="col"><span class="counter-value display-4 fw-bold" data-target="20">0</span><span class="display-4 fw-bold">+</span><div class="mt-1 opacity-75">lat doświadczenia</div></div>
+                <div class="col"><span class="counter-value display-4 fw-bold" data-target="10000">0</span><span class="display-4 fw-bold">+</span><div class="mt-1 opacity-75">klientów</div></div>
+                <div class="col"><span class="counter-value display-4 fw-bold" data-target="95">0</span><span class="display-4 fw-bold">%</span><div class="mt-1 opacity-75">zadowolonych klientów</div></div>
             </div>
         </div>
     </div>
     <div class="arrows position-absolute bottom-0 start-50 translate-middle-x pb-4 pb-md-5">
         <svg width="45" height="45" viewBox="0 0 66 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M64.3377 2L33.1688 21.4805L2 2" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/><path d="M64.3377 22.2598L33.1688 41.7403L2 22.2598" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/></svg>
-    </div>
-</section>
-
-<!-- ==================== 2. COUNTERS ==================== -->
-<section class="section-counters py-4 py-md-5">
-    <div class="container">
-        <div class="row text-center row-cols-1 row-cols-md-3 g-4">
-            <div class="col"><span class="counter-value display-4 fw-bold text-heading" data-target="20">0</span><span class="display-4 fw-bold text-heading">+</span><div class="mt-2 text-muted">lat doświadczenia</div></div>
-            <div class="col"><span class="counter-value display-4 fw-bold text-heading" data-target="10000">0</span><span class="display-4 fw-bold text-heading">+</span><div class="mt-2 text-muted">klientów</div></div>
-            <div class="col"><span class="counter-value display-4 fw-bold text-heading" data-target="95">0</span><span class="display-4 fw-bold text-heading">%</span><div class="mt-2 text-muted">zadowolonych klientów</div></div>
-        </div>
     </div>
 </section>
 
@@ -125,10 +120,17 @@
                 <img src="assets/img/partners/payu.svg" alt="PayU" height="30" loading="lazy">
                 <img src="assets/img/partners/upwork.svg" alt="Upwork" height="30" loading="lazy">
                 <img src="assets/img/partners/deel.svg" alt="Deel" height="30" loading="lazy">
+                <img src="assets/img/partners/medicover.svg" alt="Medicover" height="30" loading="lazy">
+                <img src="assets/img/partners/multisport.svg" alt="MultiSport" height="30" loading="lazy">
+                <img src="assets/img/partners/przelewy24.svg" alt="Przelewy24" height="30" loading="lazy">
+                <!-- duplikat do seamless loop -->
                 <img src="assets/img/partners/etsy.svg" alt="Etsy" height="30" loading="lazy">
                 <img src="assets/img/partners/payu.svg" alt="PayU" height="30" loading="lazy">
                 <img src="assets/img/partners/upwork.svg" alt="Upwork" height="30" loading="lazy">
                 <img src="assets/img/partners/deel.svg" alt="Deel" height="30" loading="lazy">
+                <img src="assets/img/partners/medicover.svg" alt="Medicover" height="30" loading="lazy">
+                <img src="assets/img/partners/multisport.svg" alt="MultiSport" height="30" loading="lazy">
+                <img src="assets/img/partners/przelewy24.svg" alt="Przelewy24" height="30" loading="lazy">
             </div>
         </div>
     </div>

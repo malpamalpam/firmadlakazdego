@@ -291,10 +291,33 @@ footer .phones span { display: inline-block; min-width: 50px; margin-right: 15px
   50% { transform: translateX(-50%) translateY(10px); }
 }
 
-/* ===== COUNTERS ===== */
-.section-counters { background-color: #ffffff; border-bottom: 1px solid #eee; }
+/* ===== COUNTERS (inside hero) ===== */
+.hero-counters .counter-value,
+.hero-counters .display-4 { display: inline; }
 .text-heading { color: #000000; }
 .counter-value { display: inline; }
+
+/* ===== NAVBAR CTA BUTTON ===== */
+.btn-nav-cta {
+  background-color: #00BBFF;
+  color: #ffffff !important;
+  border: 2px solid #00BBFF;
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 8px 20px;
+  border-radius: 50px;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+.btn-nav-cta:hover {
+  background-color: #009dd9;
+  border-color: #009dd9;
+  color: #ffffff !important;
+}
+header.sticky-top .btn-nav-cta {
+  background-color: #00BBFF;
+  color: #ffffff !important;
+}
 
 /* ===== FADE IN ===== */
 .fade-in {

@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if (counters.length > 0) {
-        var counterSection = document.querySelector('.section-counters');
+        var counterSection = document.querySelector('.hero-counters') || document.querySelector('.section-counters');
         if (counterSection && 'IntersectionObserver' in window) {
             var obs = new IntersectionObserver(function(entries) {
                 entries.forEach(function(entry) {
@@ -98,7 +98,21 @@ document.addEventListener('DOMContentLoaded', function() {
         updateCalculator();
     }
 
-    // ===== [1] Cal.com fallback — jeśli nie skonfigurowany, scrolluj do #kontakt =====
+    // ===== Cal.com external button — otwiera w nowym oknie =====
+    document.querySelectorAll('.cal-link-external').forEach(function(el) {
+        el.addEventListener('click', function(e) {
+            var href = el.getAttribute('href') || '';
+            // Jeśli placeholder — fallback do #kontakt
+            if (href.indexOf('TWOJ-LINK') !== -1) {
+                e.preventDefault();
+                var kontakt = document.getElementById('kontakt');
+                if (kontakt) kontakt.scrollIntoView({ behavior: 'smooth' });
+            }
+            // Jeśli prawdziwy link — otworzy się w nowym oknie (target=_blank)
+        });
+    });
+
+    // Cal.com fallback dla wewnętrznych linków
     document.querySelectorAll('.cal-link').forEach(function(el) {
         el.addEventListener('click', function(e) {
             var calLink = el.getAttribute('data-cal-link');
