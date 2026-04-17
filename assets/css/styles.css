@@ -1,5 +1,9 @@
 /* Firma Dla Każdego - Custom Styles */
 
+/* [8] Smooth scroll + navbar offset */
+html { scroll-behavior: smooth; }
+section[id] { scroll-margin-top: 80px; }
+
 /* ===== FONTS ===== */
 @font-face {
   font-family: 'Montserrat';
