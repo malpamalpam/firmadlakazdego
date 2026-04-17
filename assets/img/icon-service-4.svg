@@ -1,0 +1,26 @@
+<svg width="110" height="110" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g filter="url(#filter0_d_0_1)">
+        <circle cx="55" cy="48" r="35" fill="white"/>
+    </g>
+    <path d="M49.9893 33.1543L67.1321 33.1543" stroke="#00BBFF" stroke-width="2" stroke-linecap="round"/>
+    <path d="M47.7915 37.1104L67.1322 37.1104" stroke="#00BBFF" stroke-width="2" stroke-linecap="round"/>
+    <path d="M42.9561 41.0664H66.9121" stroke="#00BBFF" stroke-width="2" stroke-linecap="round"/>
+    <path d="M42.9561 45.0225H66.9121" stroke="#00BBFF" stroke-width="2" stroke-linecap="round"/>
+    <path d="M42.9561 48.9785H66.9121" stroke="#00BBFF" stroke-width="2" stroke-linecap="round"/>
+    <path d="M42.9561 52.9346H66.9121" stroke="#00BBFF" stroke-width="2" stroke-linecap="round"/>
+    <path d="M42.9561 56.8906H66.9121" stroke="#00BBFF" stroke-width="2" stroke-linecap="round"/>
+    <path d="M42.9561 60.8467H66.9121" stroke="#00BBFF" stroke-width="2" stroke-linecap="round"/>
+    <path d="M39 36.011L47.1319 27H66.2088C68.4179 27 70.2088 28.7909 70.2088 31V63C70.2088 65.2091 68.4179 67 66.2088 67H43C40.7909 67 39 65.2091 39 63V36.011Z" stroke="#00BBFF" stroke-width="2" stroke-linecap="round"/>
+    <path d="M47.3516 27V31.2308C47.3516 33.9922 45.1131 36.2308 42.3516 36.2308H39" stroke="#00BBFF" stroke-width="2" stroke-linecap="round"/>
+    <defs>
+        <filter id="filter0_d_0_1" x="0" y="0" width="110" height="110" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+            <feOffset dy="7"/>
+            <feGaussianBlur stdDeviation="10"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape"/>
+        </filter>
+    </defs>
+</svg>

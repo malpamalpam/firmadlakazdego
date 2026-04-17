@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Firma Dla Każdego - Inkubator Przedsiębiorczości</title>
+    <meta name="description" content="Najlepiej oceniany inkubator przedsiębiorczości w Polsce. Własna firma w 15 minut, 100% współpraca zdalna, zero ryzyka.">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <meta property="og:image" content="assets/img/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/styles.css" rel="stylesheet">
+</head>
+<body class="page-index">
+<div class="wrapper d-flex flex-column min-vh-100 position-relative">
+
+<!-- HEADER -->
+<header>
+    <nav class="navbar navbar-expand-lg position-absolute w-100 navbar-dark px-3 py-2" aria-label="Main navigation">
+        <div class="container-fluid px-0 px-md-3 position-relative">
+            <a class="navbar-brand me-2 me-xl-5" href="/">
+                <img src="assets/img/logo-white.png" alt="Firma dla każdego - logo" width="130" height="53" class="logo-white d-inline-block align-text-top" fetchpriority="high">
+                <img src="assets/img/logo-dark.png" alt="Firma dla każdego - logo" width="130" height="53" class="logo-dark d-none align-text-top" fetchpriority="high">
+            </a>
+
+            <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSideCollapse" aria-label="Navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSideCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#oferta" data-bs-toggle="dropdown" aria-expanded="false">Oferta</a>
+                        <div class="dropdown-menu">
+                            <ul class="dropdown-inner bg-white border rounded-3">
+                                <a class="dropdown-item" href="#oferta">Programiści / Graficy</a>
+                                <a class="dropdown-item" href="#oferta">E-commerce</a>
+                                <a class="dropdown-item" href="#oferta">Architekci</a>
+                                <a class="dropdown-item" href="#oferta">Tłumacze / Lektorzy</a>
+                                <a class="dropdown-item" href="#oferta">Muzycy</a>
+                                <a class="dropdown-item" href="#oferta">Inne branże</a>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#uslugi" data-bs-toggle="dropdown" aria-expanded="false">Usługi</a>
+                        <div class="dropdown-menu">
+                            <ul class="dropdown-inner bg-white border rounded-3">
+                                <a class="dropdown-item" href="#uslugi">Biznesplany</a>
+                                <a class="dropdown-item" href="#uslugi">Program partnerski</a>
+                                <a class="dropdown-item" href="#uslugi">Inne</a>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <div class="d-block d-lg-flex pe-0 pe-xxl-4 me-0 me-lg-5">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item px-1 px-lg-0 px-xl-2 px-xxl-3"><a class="nav-link" href="#pracodawcy">Dla Pracodawców</a></li>
+                        <li class="nav-item px-1 px-lg-0 px-xl-2 px-xxl-3"><a class="nav-link" href="#cudzoziemcy">Cudzoziemcy</a></li>
+                        <li class="nav-item px-1 px-lg-0 px-xl-2 px-xxl-3"><a class="nav-link" href="#konsultacje">Konsultacje online</a></li>
+                        <li class="nav-item px-1 px-lg-0 px-xl-2 px-xxl-3"><a class="nav-link" href="#blog">Blog</a></li>
+                        <li class="nav-item px-1 px-lg-0 px-xl-2 px-xxl-3"><a class="nav-link" href="#o-nas">O Nas</a></li>
+                        <li class="nav-item px-1 px-lg-0 px-xl-2 px-xxl-3"><a class="nav-link" href="#faq">FAQ</a></li>
+                        <li class="nav-item px-1 px-lg-0 px-xl-2 px-xxl-3"><a class="nav-link" href="#kontakt">Kontakt</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="dropdown lang">
+                <a href="/" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-label="PL">
+                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="rounded-circle">
+                        <rect x="31.4453" y="25" width="37.8889" height="25" transform="rotate(-180 31.4453 25)" fill="white"/>
+                        <rect x="31.4453" y="25" width="37.8889" height="13.3333" transform="rotate(-180 31.4453 25)" fill="#CC0000"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="flex-fill">
+
+<!-- HERO SECTION -->
+<section class="section-hero text-white px-0 px-md-3">
+    <style>
+        .bg {
+            background-image: url('assets/img/fdk_mobile.webp');
+        }
+        @media(min-width: 50em) {
+            .bg {
+                background-image: url('assets/img/fdk_poster.jpg');
+            }
+        }
+    </style>
+    <div class="bg">
+        <video loop="true" autoplay="true" muted="true" preload="true" class="position-absolute"></video>
+    </div>
+    <script>
+        window.onload = videoInit;
+        window.onresize = videoInit;
+        function videoInit() {
+            let video = document.querySelector('.bg video');
+            if(window.innerWidth > 800) {
+                if(!video.querySelector('source')) {
+                    let source = document.createElement('source');
+                    source.setAttribute('src', 'assets/video/fdk.mp4');
+                    source.setAttribute('type', 'video/mp4');
+                    video.appendChild(source);
+                    video.play();
+                }
+            } else {
+                video.pause();
+                video.removeAttribute('src');
+                video.load();
+            }
+        }
+    </script>
+
+    <div class="container text-bigger position-relative">
+        <div class="headline py-4 mb-2">
+            <div id="carouselHero" class="carousel slide carousel-fade pointer-event" data-bs-ride="carousel">
+                <div class="carousel-inner text-uppercase">
+                    <div class="carousel-item d-flex active" data-bs-interval="3000">
+                        <div class="carousel-text align-self-end">
+                            Najlepiej oceniany<br>inkubator przedsiębiorczości<br>w Polsce
+                        </div>
+                    </div>
+                    <div class="carousel-item d-flex" data-bs-interval="3000">
+                        <div class="carousel-text align-self-end">
+                            Własna firma<br>w 15 minut
+                        </div>
+                    </div>
+                    <div class="carousel-item d-flex" data-bs-interval="3000">
+                        <div class="carousel-text align-self-end">
+                            100% współpraca<br>zdalna
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text d-inline-block border-top-1 pt-4 pb-5 position-relative">
+            <p class="mt-2 mb-0">
+                Chcesz rozpocząć swoją działalność? Sprawdź, ile możesz z nami zaoszczędzić.<br class="d-none d-md-inline-block">
+                Skontaktuj się z nami i zacznij już dziś.
+            </p>
+            <div class="mt-4">
+                <a href="#kontakt" class="btn btn-fdk px-4 py-2">Skontaktuj się z nami</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="arrows position-absolute bottom-0 start-50 translate-middle-x pb-4 pb-md-5">
+        <svg width="45" height="45" viewBox="0 0 66 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M64.3377 2L33.1688 21.4805L2 2" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+            <path d="M64.3377 22.2598L33.1688 41.7403L2 22.2598" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+    </div>
+</section>
+
+<!-- SECTION CONTENT -->
+<section class="section-content pt-4 pt-md-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-9 col-xxl-7">
+                <h1 class="text-center mt-4 mb-4">
+                    Inkubator przedsiębiorczości - Jak Ci możemy pomóc?
+                </h1>
+                <div class="text-bigger text-justify pb-4">
+                    <p>Jesteśmy najlepiej ocenianym inkubatorem przedsiębiorczości w Polsce. Możesz spełnić marzenie o własnej firmie i założyć ją już w ciągu 15 minut. Gwarantujemy również niskie koszty prowadzenia działalności. Dowiedz się, jak działa Firma Dla Każdego i jakie daje korzyści. Naszym celem jest wspieranie przedsiębiorczości zarówno wśród Polaków, jak i obcokrajowców.</p>
+                </div>
+
+                <div class="hr-arrow my-3 pb-5">
+                    <svg width="56" height="26" viewBox="0 0 56 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.999998 0.999999L28 24L55 1" stroke="#E8E8E8" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+
+                <h2 class="h4 text-center my-4 my-md-5">Działamy:</h2>
+
+                <!-- Pill cards -->
+                <div class="card shadow rounded-pill mb-4 py-3 py-lg-0">
+                    <div class="row align-items-center text-center px-4 py-2">
+                        <div class="col-12 col-lg-4">
+                            <div class="row align-items-center text-center inner">
+                                <div class="text-center icon my-2 my-lg-0">
+                                    <svg width="52" height="45" viewBox="0 0 52 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M43.465 22.2188C43.465 26.9684 41.9037 31.3581 39.2642 34.8974C38.5225 35.892 37.6956 36.8194 36.7944 37.6688C35.9208 38.4921 34.9774 39.2421 33.9738 39.9088C31.3791 41.6326 28.3824 42.8001 25.1523 43.2402" stroke="#00BBFF" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M16.1806 42.5632C7.40519 39.9673 1 31.8409 1 22.219C1 10.509 10.509 1 22.219 1C26.246 1 30.0081 2.11877 33.2158 4.06692" stroke="#00BBFF" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M9.94531 17.9864L21.9656 30.035L51.0006 1" stroke="#00BBFF" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <div class="col p-0 fw-bold text-nowrap ps-0 ps-lg-4 py-3 py-lg-0">SZYBKO</div>
+                                <div class="p-0 icon">
+                                    <svg width="15" height="24" viewBox="0 0 15 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="d-none d-lg-inline-block">
+                                        <path d="M1 1L14 12L1 23" stroke="#00BBFF" stroke-linecap="round"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-8 text-smaller text-center text-lg-start py-1 ps-3 pe-lg-0">
+                            wszystkie formalności załatwisz maksymalnie w 15 minut. Od tej chwili możesz już zacząć prowadzić biznes i zacząć realizować własne pomysły.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card shadow rounded-pill mb-4 py-3 py-lg-0">
+                    <div class="row align-items-center text-center px-4 py-2">
+                        <div class="col-12 col-lg-4">
+                            <div class="row align-items-center text-center inner">
+                                <div class="text-center icon my-2 my-lg-0">
+                                    <svg width="52" height="45" viewBox="0 0 52 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M43.465 22.2188C43.465 26.9684 41.9037 31.3581 39.2642 34.8974C38.5225 35.892 37.6956 36.8194 36.7944 37.6688C35.9208 38.4921 34.9774 39.2421 33.9738 39.9088C31.3791 41.6326 28.3824 42.8001 25.1523 43.2402" stroke="#00BBFF" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M16.1806 42.5632C7.40519 39.9673 1 31.8409 1 22.219C1 10.509 10.509 1 22.219 1C26.246 1 30.0081 2.11877 33.2158 4.06692" stroke="#00BBFF" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M9.94531 17.9864L21.9656 30.035L51.0006 1" stroke="#00BBFF" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <div class="col p-0 fw-bold text-nowrap ps-0 ps-lg-4 py-3 py-lg-0">BEZ RYZYKA</div>
+                                <div class="p-0 icon">
+                                    <svg width="15" height="24" viewBox="0 0 15 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="d-none d-lg-inline-block">
+                                        <path d="M1 1L14 12L1 23" stroke="#00BBFF" stroke-linecap="round"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-8 text-smaller text-center text-lg-start py-1 ps-3 pe-lg-0">
+                            bierzemy na siebie całą odpowiedzialność wynikającą z prowadzenia działalności. Dla Ciebie oznacza to, że nie musisz się bać kontroli z ZUS-u, czy Urzędu Skarbowego.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card shadow rounded-pill mb-4 py-3 py-lg-0">
+                    <div class="row align-items-center text-center px-4 py-2">
+                        <div class="col-12 col-lg-4">
+                            <div class="row align-items-center text-center inner">
+                                <div class="text-center icon my-2 my-lg-0">
+                                    <svg width="52" height="45" viewBox="0 0 52 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M43.465 22.2188C43.465 26.9684 41.9037 31.3581 39.2642 34.8974C38.5225 35.892 37.6956 36.8194 36.7944 37.6688C35.9208 38.4921 34.9774 39.2421 33.9738 39.9088C31.3791 41.6326 28.3824 42.8001 25.1523 43.2402" stroke="#00BBFF" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M16.1806 42.5632C7.40519 39.9673 1 31.8409 1 22.219C1 10.509 10.509 1 22.219 1C26.246 1 30.0081 2.11877 33.2158 4.06692" stroke="#00BBFF" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M9.94531 17.9864L21.9656 30.035L51.0006 1" stroke="#00BBFF" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <div class="col p-0 fw-bold text-nowrap ps-0 ps-lg-4 py-3 py-lg-0">PROSTO</div>
+                                <div class="p-0 icon">
+                                    <svg width="15" height="24" viewBox="0 0 15 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="d-none d-lg-inline-block">
+                                        <path d="M1 1L14 12L1 23" stroke="#00BBFF" stroke-linecap="round"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-8 text-smaller text-center text-lg-start py-1 ps-3 pe-lg-0">
+                            na naszych barkach spoczywają wszelkie czynności związane z obsługą księgową, podatkową i prawną. Dzięki temu możesz się skoncentrować wyłącznie na prowadzeniu biznesu.
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="h4 text-center pt-4 my-4 my-md-5">Co jeszcze możemy Ci zaoferować jako inkubator przedsiębiorczości?</h3>
+
+                <div class="row row-cols-2 row-cols-lg-3 text-center text-smaller pb-4">
+                    <div class="col mb-4 mb-lg-0">
+                        <div class="card shadow rounded-3 h-100">
+                            <div class="card-body mt-2">
+                                <img src="assets/img/icon-index-1.svg" alt="Ikona" width="60" height="60">
+                                <div class="mt-4 mb-2">Użyczenie osobowości prawnej</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-4 mb-lg-0">
+                        <div class="card shadow rounded-3 h-100">
+                            <div class="card-body mt-2">
+                                <img src="assets/img/icon-index-2.svg" alt="Ikona" width="60" height="60">
+                                <div class="mt-4 mb-2">Założenie konta bankowego</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-4 mb-lg-0">
+                        <div class="card shadow rounded-3 h-100">
+                            <div class="card-body mt-2">
+                                <img src="assets/img/icon-index-3.svg" alt="Ikona" width="60" height="60">
+                                <div class="mt-4 mb-2">Dostęp do wiedzy i doświadczenia</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hr-arrow mt-4 mt-lg-5">
+                    <svg width="56" height="26" viewBox="0 0 56 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.999998 0.999999L28 24L55 1" stroke="#E8E8E8" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+
+                <div class="h3 text-center pt-4 my-4 my-md-5">
+                    Jakie korzyści daje współpraca z inkubatorem przedsiębiorczości Firmą dla Każdego?
+                </div>
+
+                <div class="text-bigger text-justify mb-4 mb-lg-5">
+                    <p>Jest ich o wiele więcej niż tutaj wymienione. Do powyższych możemy jeszcze dodać możliwość opłacania podatku PIT jedynie w wysokości 6%. Możesz również wrzucić w koszty zakupy na firmę oraz ograniczyć wydatki stałe związane z prowadzeniem działalności. Jeżeli chcesz poczuć, jak to jest zostać własnym szefem, ale jednocześnie potrzebujesz wsparcia na samym początku, to zgłoś się do Firmy Dla Każdego. Pomożemy Ci rozwinąć skrzydła!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ SECTION -->
+<section id="faq" class="mt-3 pt-5 pb-4 pb-md-5" style="background-color: #f7f7f7">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-9 col-xxl-7">
+                <div class="h3 text-center mt-3 mb-5">FAQ - najczęściej zadawane pytania</div>
+
+                <div class="accordion accordion-flush" id="accordionFAQ">
+
+                    <div class="accordion-item border-0 border-bottom mb-4 pb-3">
+                        <h3 class="h2 accordion-header"><button class="accordion-button text-body fw-bold p-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-0" style="box-shadow:none">Na czym polega inkubator przedsiębiorczości?</button></h3>
+                        <div id="faq-0" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ"><div class="accordion-body px-0 pt-3 pb-0"><p>Inkubator przedsiębiorczości to podmiot, który pomaga początkującym, często niedoświadczonym przedsiębiorcom w stawianiu pierwszych kroków na rynku. Ich sposób działania polega na udostępnieniu własnej osobowości prawnej wraz z kompleksowym pakietem usług: księgowych, kadrowych, prawnych i biurowych, dając pełne środowisko do zaistnienia z własnym pomysłem na biznes. W zamian za to pobierają najczęściej niewielką zryczałtowaną opłatę miesięczną, konkurencyjną w stosunku do rynkowych cen usług dla biznesu.</p></div></div>
+                    </div>
+
+                    <div class="accordion-item border-0 border-bottom mb-4 pb-3">
+                        <h3 class="h2 accordion-header"><button class="accordion-button text-body fw-bold p-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-1" style="box-shadow:none">Czy inkubator przedsiębiorczości się opłaca?</button></h3>
+                        <div id="faq-1" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ"><div class="accordion-body px-0 pt-3 pb-0"><p>Prowadzenie własnej działalności to dużo więcej niż tylko świadczenie usług, czy aktywna sprzedaż produktów. Istnieje szereg obowiązków, których regularne wypełnianie jest konieczne. Nieocenioną pomoc niosą biura rachunkowe, doradcy podatkowi albo Inkubator Przedsiębiorczości oferujący pełną obsługę pomysłu biznesowego.</p></div></div>
+                    </div>
+
+                    <div class="accordion-item border-0 border-bottom mb-4 pb-3">
+                        <h3 class="h2 accordion-header"><button class="accordion-button text-body fw-bold p-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-2" style="box-shadow:none">Ile kosztuje pomoc inkubatora przedsiębiorczości?</button></h3>
+                        <div id="faq-2" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ"><div class="accordion-body px-0 pt-3 pb-0"><p>Pomoc świadczona przez inkubator przedsiębiorczości najczęściej obciążona jest kosztem kilkuset złotych miesięcznego abonamentu. W zamian za zoptymalizowaną do niewielkiej sumy, np. 400 zł netto, opłaty, można liczyć na fachową obsługę księgową, prowadzenie całości rozliczeń i sprawozdawczości wobec instytucji podatkowych oraz bieżącą pomoc i doradztwo.</p></div></div>
+                    </div>
+
+                    <div class="accordion-item border-0 border-bottom mb-4 pb-3">
+                        <h3 class="h2 accordion-header"><button class="accordion-button text-body fw-bold p-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-3" style="box-shadow:none">Jak działa inkubator przedsiębiorczości?</button></h3>
+                        <div id="faq-3" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ"><div class="accordion-body px-0 pt-3 pb-0"><p>Inkubator przedsiębiorczości to coś więcej niż tylko biuro rachunkowe. Forma działania to najczęściej organizacja pozarządowa, która udostępnia swoją podmiotowość prawną, nazwę w celach rozliczeniowych i umożliwiając nawiązywanie relacji B2B, pozwalając jednocześnie na budowanie własnej marki.</p></div></div>
+                    </div>
+
+                    <div class="accordion-item border-0 border-bottom mb-4 pb-3">
+                        <h3 class="h2 accordion-header"><button class="accordion-button text-body fw-bold p-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-4" style="box-shadow:none">Jakie usługi oferuje inkubator przedsiębiorczości?</button></h3>
+                        <div id="faq-4" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ"><div class="accordion-body px-0 pt-3 pb-0"><p>W ramach usługi preinkubacji inkubator udostępnia: własną osobowość prawną, brak konieczności rejestracji podmiotu, kompleksową księgowość, wystawianie faktur, brak konieczności odprowadzania składek na ZUS, dostęp do indywidualnego rachunku bankowego, doradztwo bieżące i fachową obsługę prawną.</p></div></div>
+                    </div>
+
+                    <div class="accordion-item border-0 border-bottom mb-4 pb-3">
+                        <h3 class="h2 accordion-header"><button class="accordion-button text-body fw-bold p-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-5" style="box-shadow:none">Jak wypłacić pieniądze z inkubatora przedsiębiorczości?</button></h3>
+                        <div id="faq-5" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ"><div class="accordion-body px-0 pt-3 pb-0"><p>W ramach inkubatora otrzymujesz rachunek bankowy do obsługi rozliczeń swojej działalności. Masz też do niego bieżący, stały dostęp. Z pomocą pracowników inkubatora przygotujesz wszystkie dokumenty do wypłaty tytułem umowy zlecenie lub umowy o dzieło i otrzymasz przelew na swoje prywatne konto.</p></div></div>
+                    </div>
+
+                    <div class="accordion-item border-0 border-bottom mb-4 pb-3">
+                        <h3 class="h2 accordion-header"><button class="accordion-button text-body fw-bold p-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-6" style="box-shadow:none">Co zyskuje osoba, która prowadzi firmę w ramach inkubatora?</button></h3>
+                        <div id="faq-6" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ"><div class="accordion-body px-0 pt-3 pb-0"><p>Prowadzenie działalności w ramach inkubatora daje przede wszystkim szansę na bezpieczne przetestowanie pomysłu na biznes. Oferuje przy tym specjalistyczne wsparcie formalne i doradcze ze strony menadżerów inkubatorów, doradztwo księgowe i prawne, a także brak konieczności opłacania składek na ZUS.</p></div></div>
+                    </div>
+
+                    <div class="accordion-item border-0 border-bottom mb-4 pb-3">
+                        <h3 class="h2 accordion-header"><button class="accordion-button text-body fw-bold p-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-7" style="box-shadow:none">Czym są akademickie inkubatory przedsiębiorczości (AIP)?</button></h3>
+                        <div id="faq-7" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ"><div class="accordion-body px-0 pt-3 pb-0"><p>Akademickie inkubatory przedsiębiorczości (AIP) to najczęściej jednostki powoływane do istnienia przez uczelnie wyższe. Mają na celu wspieranie działalności gospodarczej pracowników uczelni, studentów czy doktorantów.</p></div></div>
+                    </div>
+
+                    <div class="accordion-item border-0 border-bottom mb-4 pb-3">
+                        <h3 class="h2 accordion-header"><button class="accordion-button text-body fw-bold p-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-8" style="box-shadow:none">Czym są akceleratory biznesu?</button></h3>
+                        <div id="faq-8" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ"><div class="accordion-body px-0 pt-3 pb-0"><p>Akceleratory biznesu to podmioty, programy wspierające firmy we wczesnej fazie ich istnienia na rynku. W odróżnieniu od inkubatorów, akceleratory wymagają działającej już firmy i udzielają wsparcia przede wszystkim mentoringowego.</p></div></div>
+                    </div>
+
+                    <div class="accordion-item border-0 border-bottom mb-4 pb-3">
+                        <h3 class="h2 accordion-header"><button class="accordion-button text-body fw-bold p-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-9" style="box-shadow:none">Co to jest startup?</button></h3>
+                        <div id="faq-9" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ"><div class="accordion-body px-0 pt-3 pb-0"><p>Start-up to zwykle nowo powstała firma, młoda organizacja, która znajduje się na etapie wypracowywania modelu biznesowego mającego zapewnić jej osiągnięcie zysku.</p></div></div>
+                    </div>
+
+                    <div class="accordion-item border-0 border-bottom mb-4 pb-3">
+                        <h3 class="h2 accordion-header"><button class="accordion-button text-body fw-bold p-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-10" style="box-shadow:none">Czy każda firma to startup?</button></h3>
+                        <div id="faq-10" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ"><div class="accordion-body px-0 pt-3 pb-0"><p>Startup to zwykle młoda firma, która nie posiada jeszcze w pełni opracowanego modelu biznesowego i dopiero poszukuje najskuteczniejszego sposobu wejścia na rynek.</p></div></div>
+                    </div>
+
+                    <div class="accordion-item border-0 border-bottom mb-4 pb-3">
+                        <h3 class="h2 accordion-header"><button class="accordion-button text-body fw-bold p-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-11" style="box-shadow:none">Czym się różni startup od firmy?</button></h3>
+                        <div id="faq-11" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ"><div class="accordion-body px-0 pt-3 pb-0"><p>Start-up to zwykle młody podmiot, najczęściej z krótką historią istnienia na rynku, poszukujący odpowiedniej drogi rozwoju i optymalizacji modelu biznesowego.</p></div></div>
+                    </div>
+
+                    <div class="accordion-item border-0 border-bottom mb-4 pb-3">
+                        <h3 class="h2 accordion-header"><button class="accordion-button text-body fw-bold p-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-12" style="box-shadow:none">Jak pozyskać pieniądze na startup?</button></h3>
+                        <div id="faq-12" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ"><div class="accordion-body px-0 pt-3 pb-0"><p>Dobry pomysł na biznes to tylko część drogi do sukcesu. Konieczne jest jeszcze jego sfinansowanie. Istnieje wiele źródeł: krajowe fundusze Venture Capital, aniołów biznesu, fundusze NCBiR, wsparcie PARP, krajowe akceleratory biznesu, czy środki PFR.</p></div></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <div class="bg-dark text-muted pt-2 pt-md-4">
+        <div class="container py-4 py-md-5">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3">
+                <div class="col mb-4 mb-md-5">
+                    <a href="/" class="brand pe-5 d-inline-block">
+                        <img src="assets/img/logo-white.png" alt="Firma dla każdego - logo" width="300" height="122" class="img-fluid">
+                    </a>
+                    <div class="socials text-start text-sm-center pt-4 pt-md-5 mt-4 pe-0 pe-lg-5">
+                        <a href="https://www.facebook.com/firmadlakazdego" target="_blank" class="d-inline-block me-3" rel="nofollow" aria-label="Facebook">
+                            <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M30.1384 15.0873C30.1384 6.93094 23.3963 0.327148 15.0692 0.327148C6.74208 0.327148 0 6.93094 0 15.0873C0 22.4564 5.51421 28.5572 12.7251 29.6724V19.3513H8.88525V15.0873H12.7251V11.8291C12.7251 8.13361 14.9576 6.09999 18.4179 6.09999C20.07 6.09999 21.789 6.38426 21.789 6.38426V10.0142H19.869C17.9938 10.0142 17.4133 11.1512 17.4133 12.3102V15.0873H21.588L20.9183 19.3513H17.4133V29.6724C24.6242 28.5572 30.1384 22.4564 30.1384 15.0873Z" fill="#ffffff"/></svg>
+                        </a>
+                        <a href="#" target="_blank" class="d-inline-block me-5" rel="nofollow" aria-label="Telegram">
+                            <svg width="32" height="32" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m8 16c4.418278 0 8-3.581722 8-8s-3.581722-8-8-8-8 3.581722-8 8 3.581722 8 8 8zm-1.33048041-6.37283475 3.70945371-3.34749858c.1628067-.14449267-.0355533-.21495334-.25168-.08389334l-4.57819997 2.88833334-1.97753333-.61722c-.42706-.13076-.43012667-.42422.09588-.6352l7.706-2.9714c.3519533-.15978667.6916533.08453333.5572933.62321333l-1.3123333 6.1842c-.09164.43946-.3571667.54456-.72506667.3415667l-1.99909645-1.4769586-.96090355.9343586c-.11163333.1085333-.2.2-.4.2l.13613334-2.03953337z" fill="#fff"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col mt-2 mt-m-4 mt-sm-0 mb-3 border-both text-start text-sm-center">
+                    <div class="row justify-content-center">
+                        <div class="col">
+                            <div class="d-inline-block text-start">
+                                <ul class="nav flex-column">
+                                    <li class="pb-3"><a href="#pracodawcy" class="text-muted">Dla Pracodawców</a></li>
+                                    <li class="pb-3"><a href="#cudzoziemcy" class="text-muted">Cudzoziemcy</a></li>
+                                    <li class="pb-3"><a href="#kontakt" class="text-muted">Kontakt</a></li>
+                                    <li class="pb-3"><a href="#faq" class="text-muted">FAQ</a></li>
+                                    <li class="pb-3"><a href="#blog" class="text-muted">Blog</a></li>
+                                    <li class="pb-3"><a href="#regulamin" class="text-muted">Regulamin</a></li>
+                                    <li class="pb-3"><a href="#oplaty" class="text-muted">Opłaty</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col mb-3 text-start text-sm-center">
+                    <div class="row justify-content-center">
+                        <div class="col">
+                            <div class="d-inline-block text-start">
+                                <div class="h5 mb-3 text-muted">Kontakt</div>
+                                <p class="phones">
+                                    <span>PL</span> <a class="text-muted" href="tel:+48575594500">+48 575 594 500</a><br>
+                                    <span>EN / RUS</span> <a class="text-muted" href="tel:+48794731000">+48 794 731 000</a>
+                                </p>
+                                <p>
+                                    <a class="text-muted" href="mailto:kontakt@firmadlakazdego.pl">kontakt@firmadlakazdego.pl</a> <small>(PL i ENG)</small><br>
+                                    <a class="text-muted" href="mailto:administracja@firmadlakazdego.pl">administracja@firmadlakazdego.pl</a> <small>(UKR i RUS)</small><br>
+                                    <a class="text-muted" href="mailto:b2b@firmadlakazdego.pl">b2b@firmadlakazdego.pl</a> <small>(dla Kontrahentów)</small>
+                                </p>
+                                <div class="h5 mt-4 mb-3 text-muted">Adres</div>
+                                <p class="mb-0">
+                                    Fundacja Firma Dla Każdego<br>
+                                    ul. Lwowska 17/4<br>
+                                    00-660 Warszawa<br>
+                                    NIP: 5252625624
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-light">
+        <div class="container py-3 py-md-4">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xxl-3 text-center">
+                <div class="col text-center mb-2 mb-md-0">
+                    Copyright &copy; 2026 Firma Dla Każdego
+                </div>
+                <div class="col d-none d-xxl-block"></div>
+                <div class="col text-center">
+                    All right reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/scripts.js"></script>
+</body>
+</html>
