@@ -199,15 +199,19 @@ header.sticky-top .navbar a:hover { color: #00BBFF; }
 }
 
 .page-index .section-hero .headline {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 130%;
   font-weight: 700;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
+  white-space: nowrap;
 }
-@media screen and (min-width: 640px) { .page-index .section-hero .headline { font-size: 30px; } }
-@media screen and (min-width: 992px) { .page-index .section-hero .headline { font-size: 35px; } }
-@media screen and (min-width: 1600px) { .page-index .section-hero .headline { font-size: 40px; } }
-@media screen and (min-width: 1800px) { .page-index .section-hero .headline { font-size: 45px; } }
+@media screen and (max-width: 639px) {
+  .page-index .section-hero .headline { font-size: 16px; letter-spacing: 1px; white-space: normal; }
+}
+@media screen and (min-width: 640px) { .page-index .section-hero .headline { font-size: 24px; } }
+@media screen and (min-width: 992px) { .page-index .section-hero .headline { font-size: 30px; } }
+@media screen and (min-width: 1200px) { .page-index .section-hero .headline { font-size: 34px; } }
+@media screen and (min-width: 1600px) { .page-index .section-hero .headline { font-size: 38px; } }
 
 .page-index .section-hero .text {
   font-size: 18px;
