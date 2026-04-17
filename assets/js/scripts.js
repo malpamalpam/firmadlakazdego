@@ -73,11 +73,13 @@ document.addEventListener('DOMContentLoaded', function() {
         fadeElements.forEach(function(el) { el.classList.add('visible'); });
     }
 
-    // ===== Calculator JDG vs FDK =====
-    var calcInput = document.getElementById('calc-revenue');
-    if (calcInput) {
+    // ===== Calculator JDG vs FDK (slider version) =====
+    var calcSlider = document.getElementById('calc-slider');
+    var calcRevInput = document.getElementById('calc-revenue');
+    var calcSource = calcSlider || calcRevInput;
+    if (calcSource) {
         function updateCalculator() {
-            var revenue = parseFloat(calcInput.value) || 0;
+            var revenue = parseFloat(calcSource.value) || 0;
             var zusJDG = 1600;
             var taxJDG = Math.round(revenue * 0.12);
             var bookJDG = 400;
@@ -85,16 +87,19 @@ document.addEventListener('DOMContentLoaded', function() {
             var taxFDK = Math.round(revenue * 0.06);
             var aboFDK = 400;
             var totalFDK = taxFDK + aboFDK;
-            var savings = totalJDG - totalFDK;
+            var savings = Math.max(0, totalJDG - totalFDK);
 
-            document.getElementById('jdg-zus').textContent = zusJDG.toLocaleString('pl-PL') + ' zł';
-            document.getElementById('jdg-tax').textContent = taxJDG.toLocaleString('pl-PL') + ' zł';
-            document.getElementById('jdg-total').textContent = totalJDG.toLocaleString('pl-PL') + ' zł';
-            document.getElementById('fdk-tax').textContent = taxFDK.toLocaleString('pl-PL') + ' zł';
-            document.getElementById('fdk-total').textContent = totalFDK.toLocaleString('pl-PL') + ' zł';
-            document.getElementById('calc-savings').textContent = Math.max(0, savings).toLocaleString('pl-PL') + ' zł';
+            var el = function(id) { return document.getElementById(id); };
+            if (el('calc-display')) el('calc-display').textContent = revenue.toLocaleString('pl-PL');
+            if (el('jdg-zus')) el('jdg-zus').textContent = zusJDG.toLocaleString('pl-PL') + ' zł';
+            if (el('jdg-tax')) el('jdg-tax').textContent = taxJDG.toLocaleString('pl-PL') + ' zł';
+            if (el('jdg-total')) el('jdg-total').textContent = totalJDG.toLocaleString('pl-PL') + ' zł';
+            if (el('fdk-tax')) el('fdk-tax').textContent = taxFDK.toLocaleString('pl-PL') + ' zł';
+            if (el('fdk-total')) el('fdk-total').textContent = totalFDK.toLocaleString('pl-PL') + ' zł';
+            if (el('calc-savings')) el('calc-savings').textContent = savings.toLocaleString('pl-PL') + ' zł';
+            if (el('calc-savings-year')) el('calc-savings-year').textContent = (savings * 12).toLocaleString('pl-PL') + ' zł';
         }
-        calcInput.addEventListener('input', updateCalculator);
+        calcSource.addEventListener('input', updateCalculator);
         updateCalculator();
     }
 

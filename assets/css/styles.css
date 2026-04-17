@@ -423,6 +423,20 @@ header.sticky-top .btn-hero-cta {
 /* ===== Required field marker ===== */
 .required-star { color: #dc3545; }
 
+/* ===== BLOG CARDS ===== */
+.text-heading { color: #000 !important; }
+#blog .card:hover .text-heading { color: #00BBFF !important; }
+
+/* ===== SLIDER ===== */
+.form-range::-webkit-slider-thumb { cursor: grab; }
+.form-range::-webkit-slider-thumb:active { cursor: grabbing; }
+
+/* ===== BOUNCE animation ===== */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
 /* ===== OUTLINE PRIMARY ===== */
 .btn-outline-primary { color: #00BBFF; border-color: #00BBFF; }
 .btn-outline-primary:hover { background-color: #00BBFF; border-color: #00BBFF; color: #fff; }
