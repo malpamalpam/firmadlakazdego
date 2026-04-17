@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Firma Dla Każdego — najlepiej oceniany inkubator przedsiębiorczości w Polsce. Własna firma w 15 minut, 100% zdalnie, bez ryzyka." />
-<meta property="og:title" content="Firma Dla Każdego — Inkubator Przedsiębiorczości" />
-<meta property="og:description" content="Własna firma w 15 minut. 100% współpraca zdalna. Zero ryzyka. Niskie koszty." />
-<meta property="og:type" content="website" />
-<meta property="og:locale" content="pl_PL" />
-<title>Firma Dla Każdego — Inkubator Przedsiębiorczości</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Firma Dla Każdego — najlepiej oceniany inkubator przedsiębiorczości w Polsce. Własna firma w 15 minut, 100% zdalnie, bez ryzyka.">
+<meta property="og:title" content="Firma Dla Każdego — Inkubator Przedsiębiorczości">
+<meta property="og:description" content="Własna firma w 15 minut. 100% współpraca zdalna. Zero ryzyka. Niskie koszty.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pl_PL">
+<title>Firma Dla Każdego — Inkubator Przedsiębiorczości w Polsce</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YcnS/jBmBDHv6hF67Ij5FNIl4bDl0Cmentah" crossorigin="anonymous">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Fundacja Firma Dla Każdego",
   "url": "https://firmadlakazdego.pl",
+  "logo": "https://firmadlakazdego.pl/wp-content/themes/firmadlakazdego/assets/img/logo-dark.png",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "ul. Lwowska 17/4",
@@ -26,1283 +26,795 @@
     "addressCountry": "PL"
   },
   "telephone": "+48575594500",
-  "email": "kontakt@firmadlakazdego.pl"
+  "email": "kontakt@firmadlakazdego.pl",
+  "sameAs": [
+    "https://www.facebook.com/firmadlakazdego",
+    "https://t.me/FDK_inkubator",
+    "https://www.linkedin.com/company/firmadlakazdego"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Na czym polega inkubator przedsiębiorczości?","acceptedAnswer":{"@type":"Answer","text":"Inkubator przedsiębiorczości to podmiot, który pomaga początkującym, często niedoświadczonym przedsiębiorcom w stawianiu pierwszych kroków na rynku. Ich sposób działania polega na udostępnieniu własnej osobowości prawnej wraz z kompleksowym pakietem usług: księgowych, kadrowych, prawnych i biurowych, dając pełne środowisko do zaistnienia z własnym pomysłem na biznes."}},
+    {"@type":"Question","name":"Czy inkubator przedsiębiorczości się opłaca?","acceptedAnswer":{"@type":"Answer","text":"Prowadzenie własnej działalności to dużo więcej niż tylko świadczenie usług. Inkubator oferuje pełną obsługę pomysłu biznesowego. Zespół takiego inkubatora złożony jest z grupy osób posiadających specjalistyczną wiedzę z zakresu rachunkowości, prawa podatkowego, czy rozliczeń i obowiązków sprawozdawczych wobec poszczególnych instytucji."}},
+    {"@type":"Question","name":"Ile kosztuje pomoc inkubatora przedsiębiorczości?","acceptedAnswer":{"@type":"Answer","text":"Pomoc świadczona przez inkubator to najczęściej kilkaset złotych miesięcznego abonamentu, np. 400 zł netto, w ramach którego przedsiębiorca otrzymuje kompleksowe wsparcie w funkcjonowaniu w realiach rynkowych."}},
+    {"@type":"Question","name":"Jak działa inkubator przedsiębiorczości?","acceptedAnswer":{"@type":"Answer","text":"Inkubator przedsiębiorczości to coś więcej niż tylko biuro rachunkowe. Forma działania to najczęściej organizacja pozarządowa, która udostępnia swoją podmiotowość prawną, nazwę w celach rozliczeniowych i umożliwiając nawiązywanie relacji B2B."}},
+    {"@type":"Question","name":"Jakie usługi oferuje inkubator przedsiębiorczości?","acceptedAnswer":{"@type":"Answer","text":"W ramach szeroko pojętej usługi preinkubacji pomysłu na biznes, inkubator przedsiębiorczości udostępnia: własną osobowość prawną, brak konieczności rejestracji podmiotu, kompleksową księgowość, wystawianie faktur, brak konieczności odprowadzania składek na ZUS, dostęp do indywidualnego rachunku bankowego, doradztwo bieżące i fachową obsługę prawną."}},
+    {"@type":"Question","name":"Jak wypłacić pieniądze z inkubatora przedsiębiorczości?","acceptedAnswer":{"@type":"Answer","text":"W ramach inkubatora przedsiębiorczości otrzymujesz rachunek bankowy do obsługi rozliczeń swojej działalności. Masz też do niego bieżący, stały dostęp. Najprzyjemniejszą operacją, jaką możesz wprowadzić, jest wypłata wynagrodzenia z wypracowanych przez Ciebie zysków."}},
+    {"@type":"Question","name":"Co zyskuje osoba, która prowadzi firmę w ramach inkubatora?","acceptedAnswer":{"@type":"Answer","text":"Prowadzenie działalności w ramach inkubatora przedsiębiorczości daje przede wszystkim szansę na bezpieczne przetestowanie pomysłu na biznes, specjalistyczne wsparcie formalne i doradcze, doradztwo księgowe i prawne, a także brak konieczności opłacania składek na ZUS."}},
+    {"@type":"Question","name":"Czym są akademickie inkubatory przedsiębiorczości (AIP)?","acceptedAnswer":{"@type":"Answer","text":"Akademickie inkubatory przedsiębiorczości (AIP) to najczęściej jednostki powoływane do istnienia przez uczelnie wyższe, mające na celu wspieranie działalności gospodarczej pracowników uczelni, studentów czy doktorantów."}},
+    {"@type":"Question","name":"Czym są akceleratory biznesu?","acceptedAnswer":{"@type":"Answer","text":"Akceleratory biznesu to miejsca, podmioty, programy wspierające firmy we wczesnej fazie ich istnienia na rynku. Ich zadaniem jest nadanie kierunku i odpowiedniego tempa rozwoju młodej firmy."}},
+    {"@type":"Question","name":"Co to jest startup?","acceptedAnswer":{"@type":"Answer","text":"Start-up to zwykle nowo powstała firma, młoda organizacja, która znajduje się na etapie wypracowywania modelu biznesowego mającego zapewnić jej osiągnięcie zysku."}},
+    {"@type":"Question","name":"Czy każda firma to startup?","acceptedAnswer":{"@type":"Answer","text":"Startup to zwykle młoda firma, która nie posiada jeszcze w pełni opracowanego modelu biznesowego i dopiero poszukuje najskuteczniejszego sposobu wejścia na rynek, zwykle z nowym, innowacyjnym pomysłem."}},
+    {"@type":"Question","name":"Czym się różni startup od firmy?","acceptedAnswer":{"@type":"Answer","text":"Start-up to zwykle młody podmiot poszukujący odpowiedniej drogi rozwoju i optymalizacji modelu biznesowego. Gdy opracowany model biznesowy prowadzi do osiągnięcia zysku i zapewnia rentowność na stałym poziomie, przestaje być określany mianem start-upu i staje się firmą."}},
+    {"@type":"Question","name":"Jak pozyskać pieniądze na startup?","acceptedAnswer":{"@type":"Answer","text":"Najczęstszym źródłem finansowania startupów są środki własne (68% przypadków). Istnieje jednak wiele zewnętrznych źródeł, wśród których: krajowe fundusze Venture Capital, aniołowie biznesu, fundusze NCBiR, wsparcie PARP, krajowe akceleratory biznesu, czy środki PFR."}}
+  ]
 }
 </script>
 <style>
 :root {
-  --primary: #32373c;
-  --primary-dark: #1f2327;
-  --primary-hover: #4a5057;
-  --accent: #00bbff;
-  --accent-dark: #0099d6;
-  --dark: #32373c;
-  --dark-bg: #2a2e33;
-  --dark-footer: #1f2327;
+  --accent: #00BBFF;
+  --accent-dark: #009bd6;
+  --btn: #32373c;
+  --btn-hover: #4a5058;
   --text: #32373c;
-  --text-light: #6b7178;
-  --bg-light: #f7f8f9;
-  --bg-section: #fafbfc;
-  --white: #fff;
-  --black: #000;
-  --border: #e5e7eb;
-  --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
-  --shadow-md: 0 4px 20px rgba(0,0,0,0.07);
-  --shadow-lg: 0 10px 30px rgba(0,0,0,0.1);
-  --shadow-nav: 0 1px 3px rgba(0,0,0,0.08);
+  --text-light: #5a6068;
 }
-
-* { box-sizing: border-box; margin: 0; padding: 0; }
-
 html { scroll-behavior: smooth; }
+body { color: var(--text); }
 
-body {
-  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
-  color: var(--text);
-  line-height: 1.6;
-  background: var(--white);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+/* Typography */
+.text-bigger { font-size: 1.125rem; line-height: 1.8; }
+.text-smaller { font-size: 0.875rem; }
 
-img { max-width: 100%; height: auto; display: block; }
-
-a { color: inherit; text-decoration: none; }
-
-button { font-family: inherit; }
-
-h1, h2, h3, h4 { color: var(--dark); line-height: 1.2; letter-spacing: -0.01em; }
-h2 { font-weight: 700; }
-h3 { font-weight: 600; }
-
-.container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
-
-/* ============ NAVIGATION ============ */
-.nav {
-  position: sticky;
+/* ========== NAVBAR ========== */
+.navbar-hero {
+  position: absolute;
   top: 0;
-  z-index: 100;
-  background: var(--white);
-  box-shadow: var(--shadow-nav);
-}
-
-.nav-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 1.5rem;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.logo {
-  font-weight: 800;
-  font-size: 1.25rem;
-  color: var(--dark);
-  letter-spacing: -0.02em;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.logo-mark {
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
-  background: var(--primary);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--white);
-  font-weight: 800;
-  font-size: 0.85rem;
-  letter-spacing: 0.02em;
-  position: relative;
-}
-.logo-mark::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 8px;
-  border: 2px solid var(--accent);
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-.logo:hover .logo-mark::before { opacity: 1; }
-
-.nav-menu {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  list-style: none;
-}
-
-.nav-menu > li { position: relative; }
-
-.nav-menu a, .nav-menu .menu-btn {
-  color: var(--dark);
-  font-weight: 500;
-  font-size: 0.95rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.5rem 0;
-  transition: color 0.2s;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.25rem;
-}
-
-.nav-menu a:hover, .nav-menu .menu-btn:hover { color: var(--accent); }
-
-.dropdown {
-  position: absolute;
-  top: 100%;
   left: 0;
-  background: var(--white);
-  box-shadow: var(--shadow-lg);
-  border-radius: 8px;
-  padding: 0.5rem 0;
-  min-width: 220px;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(8px);
-  transition: all 0.2s;
-  list-style: none;
+  right: 0;
+  z-index: 1030;
+  transition: background-color 0.3s, box-shadow 0.3s;
 }
+.navbar-hero .navbar-brand img { height: 40px; }
+.navbar-hero .nav-link,
+.navbar-hero .dropdown-toggle { color: rgba(255,255,255,0.85); font-weight: 500; }
+.navbar-hero .nav-link:hover,
+.navbar-hero .nav-link:focus,
+.navbar-hero .dropdown-toggle:hover { color: #fff; }
 
-.has-dropdown:hover .dropdown,
-.has-dropdown:focus-within .dropdown {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+.navbar-hero.scrolled {
+  position: fixed;
+  background: #fff !important;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
 }
+.navbar-hero.scrolled .nav-link,
+.navbar-hero.scrolled .dropdown-toggle { color: var(--text); }
+.navbar-hero.scrolled .nav-link:hover,
+.navbar-hero.scrolled .dropdown-toggle:hover { color: var(--accent); }
 
-.dropdown li a {
-  display: block;
-  padding: 0.6rem 1rem;
-  font-size: 0.9rem;
-}
+.navbar-hero .logo-white { display: block; }
+.navbar-hero .logo-dark { display: none; }
+.navbar-hero.scrolled .logo-white { display: none; }
+.navbar-hero.scrolled .logo-dark { display: block; }
 
-.dropdown li a:hover { background: var(--bg-light); color: var(--accent); }
-
-.lang-switch {
-  display: flex;
-  gap: 0.4rem;
-  align-items: center;
-}
-
-.lang-btn {
-  width: 28px;
-  height: 20px;
+.lang-flag {
+  width: 24px;
+  height: 18px;
   border-radius: 3px;
-  border: 1px solid var(--border);
+  border: 1px solid rgba(255,255,255,0.3);
   overflow: hidden;
   cursor: pointer;
-  padding: 0;
-  background: var(--white);
-  transition: transform 0.2s;
-  display: inline-block;
-  line-height: 0;
+  transition: transform 0.15s;
 }
-.lang-btn svg { display: block; width: 100%; height: 100%; }
-.lang-btn:hover { transform: scale(1.15); }
-.lang-btn.active { outline: 2px solid var(--accent); outline-offset: 1px; }
+.lang-flag:hover { transform: scale(1.12); }
+.navbar-hero.scrolled .lang-flag { border-color: #ddd; }
 
-.hamburger {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.5rem;
-  flex-direction: column;
-  gap: 4px;
-}
-.hamburger span { display: block; width: 24px; height: 2px; background: var(--dark); transition: all 0.3s; }
-.hamburger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
-.hamburger.open span:nth-child(2) { opacity: 0; }
-.hamburger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
-
-/* ============ HERO ============ */
-.hero {
+/* ========== HERO ========== */
+.section-hero {
   position: relative;
-  min-height: 85vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #fff;
   text-align: center;
-  color: var(--white);
-  padding: 5rem 1.5rem;
-  background:
-    linear-gradient(135deg, rgba(30,34,39,0.92) 0%, rgba(50,55,60,0.88) 50%, rgba(30,34,39,0.94) 100%),
-    radial-gradient(circle at 30% 40%, #3a4048 0%, #1f2327 60%);
   overflow: hidden;
+  background: #1a1e23;
 }
-
-.hero::before {
+.section-hero .hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('wp-content/themes/firmadlakazdego/assets/img/fdk_poster.jpg') center/cover no-repeat;
+  z-index: 0;
+}
+.section-hero .hero-bg::after {
   content: '';
   position: absolute;
   inset: 0;
-  background-image:
-    radial-gradient(circle at 15% 20%, rgba(0,187,255,0.12), transparent 45%),
-    radial-gradient(circle at 85% 80%, rgba(0,187,255,0.08), transparent 50%);
-  z-index: 1;
+  background: rgba(0,0,0,0.55);
 }
-
-.hero::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(135deg, transparent 48%, rgba(0,187,255,0.05) 50%, transparent 52%),
-    linear-gradient(45deg, transparent 48%, rgba(255,255,255,0.03) 50%, transparent 52%);
-  background-size: 80px 80px;
-  z-index: 1;
-  opacity: 0.6;
-}
-
-.hero-content {
+.section-hero .hero-content {
   position: relative;
-  z-index: 2;
-  max-width: 900px;
+  z-index: 1;
+  max-width: 800px;
+  padding: 7rem 1rem 5rem;
 }
-
-.hero h1 {
-  color: var(--white);
-  font-size: clamp(1.75rem, 4vw, 2.625rem);
+.section-hero h1 {
+  font-size: clamp(1.5rem, 4vw, 2.75rem);
   font-weight: 700;
-  margin-bottom: 1.5rem;
-  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: 2rem;
+  color: #fff;
 }
-
-.hero-list {
+.hero-benefits {
   list-style: none;
+  padding: 0;
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
-  margin: 2rem 0;
-  align-items: flex-start;
-  max-width: 480px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 420px;
+  margin: 0 auto 2rem;
   text-align: left;
 }
-
-.hero-list li {
+.hero-benefits li {
   display: flex;
   align-items: center;
   gap: 0.75rem;
   font-size: 1.05rem;
   font-weight: 500;
 }
-
-.check {
-  display: inline-flex;
+.hero-check {
   width: 26px;
   height: 26px;
   min-width: 26px;
   border-radius: 50%;
   background: var(--accent);
-  align-items: center;
-  justify-content: center;
-  color: var(--white);
-  font-weight: 700;
-  font-size: 0.85rem;
-}
-
-.btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  background: var(--primary);
-  color: var(--white);
-  border-radius: 9999px;
-  padding: calc(.667em + 2px) calc(1.666em + 2px);
-  font-size: 1.05em;
-  font-weight: 600;
-  border: none;
-  cursor: pointer;
-  transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
-  letter-spacing: 0.01em;
-}
-.btn:hover { background: var(--primary-hover); transform: translateY(-2px); box-shadow: 0 8px 22px rgba(0,0,0,0.2); }
-
-.btn-accent {
-  background: var(--accent);
-  box-shadow: 0 4px 14px rgba(0,187,255,0.35);
-}
-.btn-accent:hover { background: var(--accent-dark); box-shadow: 0 8px 22px rgba(0,187,255,0.45); }
-
-.btn-outline {
-  background: var(--white);
-  color: var(--primary);
-  box-shadow: none;
-}
-.btn-outline:hover { background: var(--bg-light); color: var(--primary-dark); }
-
-/* ============ SECTIONS ============ */
-section { padding: 4.5rem 1.5rem; }
-
-.section-intro {
-  background: var(--white);
-}
-
-.intro-box {
-  max-width: 900px;
-  margin: 0 auto;
-  border-left: 4px solid var(--accent);
-  padding-left: 1.5rem;
-}
-
-.intro-box h2 {
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
-  margin-bottom: 1rem;
-  letter-spacing: -0.02em;
-}
-
-.intro-box p { font-size: 1.05rem; color: var(--text-light); }
-
-/* ============ CARDS SECTIONS ============ */
-.cards-section { background: var(--bg-light); text-align: center; }
-.cards-section.on-white { background: var(--white); }
-
-.section-title {
-  font-size: clamp(1.75rem, 3vw, 2.25rem);
-  margin-bottom: 3rem;
-  letter-spacing: -0.02em;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.card {
-  background: var(--white);
-  border-radius: 12px;
-  box-shadow: var(--shadow-md);
-  padding: 2rem;
-  text-align: center;
-  transition: all 0.3s ease;
-}
-.card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
-
-.card-icon {
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  background: rgba(0,187,255,0.1);
-  color: var(--accent);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 1.5rem;
-  transition: background 0.3s, transform 0.3s;
-}
-.card-icon svg { width: 34px; height: 34px; stroke-width: 1.75; }
-.card:hover .card-icon { background: var(--accent); color: var(--white); transform: scale(1.05); }
-
-.card h3 {
-  font-size: 1.35rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  margin-bottom: 0.75rem;
-  color: var(--dark);
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
+  color: #fff;
 }
-
-.card p { color: var(--text-light); font-size: 0.975rem; }
-
-/* ============ BENEFITS ============ */
-.benefits {
-  background: var(--dark-bg);
-  color: var(--white);
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-.benefits::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(circle at 50% 0%, rgba(0,187,255,0.08), transparent 60%);
-  pointer-events: none;
-}
-.benefits > * { position: relative; z-index: 1; }
-.benefits h2 { color: var(--white); }
-
-.benefits-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.benefit {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1.5rem;
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 12px;
-  background: rgba(255,255,255,0.03);
-  text-align: left;
-  transition: background 0.25s, transform 0.25s;
-}
-.benefit:hover { background: rgba(255,255,255,0.06); transform: translateY(-2px); }
-
-.benefit-icon {
-  width: 52px;
-  height: 52px;
-  min-width: 52px;
-  border-radius: 50%;
-  background: rgba(0,187,255,0.15);
-  color: var(--accent);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.benefit-icon svg { width: 24px; height: 24px; }
-
-.benefit-text { font-weight: 500; font-size: 1rem; }
-
-/* ============ TRUST BAR ============ */
-.trust {
-  background: var(--bg-light);
-  padding: 2rem 1.5rem;
-  text-align: center;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-.trust-label {
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--text-light);
-  margin-bottom: 1.5rem;
-}
-.trust-stats {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 3rem;
-  max-width: 900px;
-  margin: 0 auto;
-}
-.stat-item { display: flex; flex-direction: column; align-items: center; gap: 0.25rem; }
-.stat-num {
-  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
-  font-weight: 800;
-  color: var(--accent);
-  line-height: 1;
-}
-.stat-label { font-size: 0.875rem; color: var(--text-light); text-align: center; }
-.stars { color: #f5a623; font-size: 1.1rem; letter-spacing: 0.1em; }
-
-/* ============ PROCESS ============ */
-.process { background: var(--white); }
-.process-steps {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-  max-width: 1100px;
-  margin: 0 auto;
-  position: relative;
-}
-.process-steps::before {
-  content: '';
-  position: absolute;
-  top: 32px;
-  left: 12%;
-  right: 12%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--accent), transparent);
-  z-index: 0;
-}
-.step {
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
-.step-num {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background: var(--white);
-  border: 2px solid var(--accent);
-  color: var(--accent);
-  font-size: 1.5rem;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 1rem;
-  transition: all 0.3s;
-}
-.step:hover .step-num { background: var(--accent); color: var(--white); transform: scale(1.08); }
-.step h3 {
+.hero-text {
   font-size: 1.05rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
+  opacity: 0.88;
+  max-width: 620px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.7;
 }
-.step p { font-size: 0.925rem; color: var(--text-light); }
-
-/* ============ FAQ ============ */
-.faq { background: var(--white); }
-.faq-list { max-width: 860px; margin: 0 auto; }
-
-.faq-item {
-  border-bottom: 1px solid var(--border);
+.hero-chevrons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  animation: bounce-chevron 2s infinite;
+}
+.hero-chevrons svg { width: 30px; height: 18px; opacity: 0.6; }
+@keyframes bounce-chevron {
+  0%,100% { transform: translateY(0); opacity: 0.7; }
+  50% { transform: translateY(8px); opacity: 1; }
 }
 
-.faq-q {
-  width: 100%;
-  text-align: left;
-  padding: 1rem 1.5rem;
-  font-weight: 600;
-  font-size: 1.025rem;
-  background: none;
+/* ========== BTN pill ========== */
+.btn-fdk {
+  background: var(--btn);
+  color: #fff;
   border: none;
-  cursor: pointer;
+  border-radius: 9999px;
+  padding: 0.7em 1.8em;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: background 0.25s, transform 0.15s, box-shadow 0.25s;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+}
+.btn-fdk:hover {
+  background: var(--btn-hover);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.22);
+}
+
+/* ========== CONTENT SECTION ========== */
+.section-content { padding: 4rem 0; }
+.section-content h1,
+.section-content h2,
+.section-content h3,
+.section-content h4 { text-align: center; color: var(--text); }
+.section-content h1 { margin-bottom: 1.5rem; }
+.section-content h2 { margin-bottom: 1.5rem; }
+
+/* Chevron separator */
+.chevron-separator {
+  text-align: center;
+  margin: 3rem 0;
+}
+.chevron-separator svg { width: 30px; height: 18px; color: var(--accent); }
+
+/* ========== PILL CARDS (Działamy) ========== */
+.pill-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: #fff;
+  border-radius: 9999px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  padding: 1.25rem 2rem;
+  margin-bottom: 1.25rem;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.pill-card:hover {
+  box-shadow: 0 6px 28px rgba(0,0,0,0.12);
+  transform: translateY(-2px);
+}
+.pill-card-icon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  margin-top: 2px;
+}
+.pill-card-icon svg { width: 28px; height: 28px; }
+.pill-card-body { flex: 1; }
+.pill-card-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  transition: background 0.2s;
-  color: var(--dark);
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
 }
-.faq-q:hover { background: #f9f9f9; }
-
-.faq-icon {
-  width: 24px;
-  height: 24px;
-  position: relative;
-  flex-shrink: 0;
-  transition: transform 0.3s;
-}
-.faq-icon::before, .faq-icon::after {
-  content: '';
-  position: absolute;
-  background: var(--accent);
-  border-radius: 2px;
-  top: 50%;
-  left: 50%;
-}
-.faq-icon::before { width: 14px; height: 2px; transform: translate(-50%, -50%); }
-.faq-icon::after { width: 2px; height: 14px; transform: translate(-50%, -50%); transition: transform 0.3s; }
-
-.faq-item.open .faq-icon { transform: rotate(45deg); }
-
-.faq-a {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.35s ease, padding 0.35s ease;
-  padding: 0 1.5rem;
-  color: var(--text-light);
-  font-size: 0.975rem;
-}
-.faq-item.open .faq-a { padding: 0 1.5rem 1rem; }
-
-/* ============ CTA ============ */
-.cta {
-  background: var(--primary);
-  color: var(--white);
-  text-align: center;
-  padding: 5rem 2rem;
-  position: relative;
-  overflow: hidden;
-}
-.cta::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    radial-gradient(circle at 10% 20%, rgba(0,187,255,0.15), transparent 40%),
-    radial-gradient(circle at 90% 80%, rgba(0,187,255,0.1), transparent 45%);
-  pointer-events: none;
-}
-.cta > * { position: relative; z-index: 1; }
-.cta h2 {
-  color: var(--white);
-  font-size: clamp(1.6rem, 3vw, 2.125rem);
-  margin-bottom: 0.75rem;
-  letter-spacing: -0.01em;
-}
-.cta p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 2rem; }
-
-/* ============ FOOTER ============ */
-.footer {
-  background: var(--dark-footer);
-  color: #c8ccd1;
-  padding: 4rem 1.5rem 1.75rem;
-}
-
-.footer-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.2fr 1fr 1.2fr;
-  gap: 2.5rem;
-}
-
-.footer h4 {
-  color: var(--white);
+.pill-card-header strong {
   font-size: 1rem;
-  margin-bottom: 1rem;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
+  color: var(--text);
 }
+.pill-card-chevron { color: var(--accent); font-size: 0.75rem; }
+.pill-card-body p { font-size: 0.95rem; color: var(--text-light); margin: 0; line-height: 1.7; }
 
-.footer .logo { color: var(--white); margin-bottom: 1rem; }
+/* ========== ICON CARDS (Co jeszcze) ========== */
+.icon-card {
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+.icon-card-img {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1rem;
+}
+.icon-card-img img,
+.icon-card-img svg { width: 100%; height: 100%; }
+.icon-card p { font-size: 1rem; color: var(--text-light); }
+.icon-card strong { color: var(--text); }
 
-.footer p.tagline { font-size: 0.925rem; line-height: 1.7; margin-bottom: 1.25rem; }
+/* ========== FAQ ========== */
+.section-faq { background: #f7f7f7; padding: 4rem 0; }
+.section-faq h2 { text-align: center; margin-bottom: 2.5rem; }
+.accordion-item { border: none; border-bottom: 1px solid #e5e7eb; background: transparent; }
+.accordion-button {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text);
+  background: transparent;
+  box-shadow: none !important;
+  padding: 1.1rem 1.25rem;
+}
+.accordion-button:not(.collapsed) { color: var(--text); background: transparent; }
+.accordion-button::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%2300BBFF' viewBox='0 0 16 16'%3E%3Cpath d='M8 1v14M1 8h14' stroke='%2300BBFF' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+  transition: transform 0.3s;
+  width: 16px;
+  height: 16px;
+}
+.accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%2300BBFF' viewBox='0 0 16 16'%3E%3Cpath d='M1 8h14' stroke='%2300BBFF' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+  transform: none;
+}
+.accordion-body { color: var(--text-light); font-size: 0.95rem; line-height: 1.75; padding-top: 0; }
 
-.socials { display: flex; gap: 0.6rem; }
-
-.social-link {
+/* ========== FOOTER ========== */
+.footer-main { background: #212529; color: #9ca3af; padding: 3.5rem 0 1.5rem; }
+.footer-main h5 { color: #fff; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1rem; }
+.footer-main a { color: #9ca3af; text-decoration: none; transition: color 0.2s; }
+.footer-main a:hover { color: var(--accent); }
+.footer-logo { height: 36px; margin-bottom: 1rem; }
+.footer-social {
+  display: flex;
+  gap: 0.5rem;
+}
+.footer-social a {
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.07);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: var(--white);
-  transition: background 0.25s, transform 0.2s;
+  color: #fff;
+  transition: background 0.2s, transform 0.15s;
 }
-.social-link:hover { background: var(--accent); transform: translateY(-2px); }
-.social-link svg { width: 18px; height: 18px; }
+.footer-social a:hover { background: var(--accent); transform: translateY(-2px); color: #fff; }
+.footer-social svg { width: 18px; height: 18px; }
+.footer-links { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+.footer-links a { font-size: 0.9rem; }
+.footer-contact { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.6rem; }
+.footer-contact li { display: flex; gap: 0.5rem; align-items: flex-start; font-size: 0.9rem; }
+.footer-contact svg { width: 16px; height: 16px; min-width: 16px; color: var(--accent); margin-top: 3px; }
+.footer-contact .label { font-size: 0.8rem; color: #7f8794; display: block; }
+.footer-copyright { background: #f8f9fa; color: #6b7280; }
+.footer-copyright .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
 
-.footer-nav ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
-.footer-nav a { font-size: 0.925rem; transition: color 0.2s; }
-.footer-nav a:hover { color: var(--accent); }
-
-.contact-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
-.contact-list li { display: flex; gap: 0.6rem; align-items: flex-start; font-size: 0.925rem; }
-.contact-list svg { width: 18px; height: 18px; min-width: 18px; color: var(--accent); margin-top: 2px; }
-.contact-list a:hover { color: var(--accent); }
-
-.footer-bottom {
-  max-width: 1200px;
-  margin: 2rem auto 0;
-  border-top: 1px solid rgba(255,255,255,0.1);
-  padding-top: 1.5rem;
-  text-align: center;
-  font-size: 0.85rem;
-  color: #8a92a6;
-}
-
-/* ============ COOKIE BANNER ============ */
-.cookie {
+/* ========== COOKIE ========== */
+.cookie-banner {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  background: var(--white);
-  box-shadow: 0 -4px 20px rgba(0,0,0,0.12);
+  background: #fff;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+  border-top: 1px solid #e5e7eb;
   padding: 1.25rem 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.25rem;
-  z-index: 200;
-  flex-wrap: wrap;
-  border-top: 1px solid var(--border);
+  z-index: 1050;
+  transition: transform 0.3s;
 }
-.cookie-inner {
-  max-width: 1200px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-.cookie p { font-size: 0.925rem; color: var(--text); flex: 1; min-width: 240px; }
-.cookie-actions { display: flex; gap: 0.6rem; flex-wrap: wrap; }
-.cookie .btn { padding: 0.6rem 1.1rem; font-size: 0.925rem; box-shadow: none; }
-.cookie .btn-ghost {
-  background: var(--white);
-  color: var(--dark);
-  border: 1px solid #ccc;
-  border-radius: 9999px;
-  padding: 0.6rem 1.1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-.cookie .btn-ghost:hover { background: var(--bg-light); }
+.cookie-banner.hidden { transform: translateY(100%); pointer-events: none; }
 
-/* ============ MOBILE ============ */
-@media (max-width: 800px) {
-  .nav-menu {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 85%;
-    max-width: 340px;
-    height: 100vh;
-    background: var(--white);
+/* ========== MOBILE ========== */
+@media (max-width: 767.98px) {
+  .section-hero .hero-content { padding: 6rem 1rem 4rem; }
+  .section-hero .hero-bg {
+    background-image: url('wp-content/themes/firmadlakazdego/assets/img/fdk_mobile.webp');
+  }
+  .pill-card {
+    border-radius: 1.5rem;
+    padding: 1rem 1.25rem;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 5rem 1.5rem 2rem;
-    gap: 0.25rem;
-    box-shadow: -4px 0 20px rgba(0,0,0,0.15);
-    transition: right 0.3s ease;
-    overflow-y: auto;
+    gap: 0.5rem;
   }
-  .nav-menu.open { right: 0; }
-  .nav-menu > li { width: 100%; border-bottom: 1px solid var(--border); }
-  .nav-menu > li:last-child { border-bottom: none; }
-  .nav-menu a, .nav-menu .menu-btn { padding: 0.9rem 0; width: 100%; }
-
-  .dropdown {
-    position: static;
-    box-shadow: none;
-    opacity: 1;
-    visibility: visible;
-    transform: none;
-    padding: 0 0 0.5rem 1rem;
-    min-width: unset;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s;
-  }
-  .has-dropdown.open .dropdown { max-height: 400px; }
-
-  .hamburger { display: flex; }
-
-  .lang-switch { margin-left: auto; margin-right: 0.75rem; }
-
-  .cards { grid-template-columns: 1fr; gap: 1.25rem; }
-  .benefits-grid { grid-template-columns: 1fr; }
-  .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
-  .trust-stats { gap: 1.5rem; }
-  .process-steps { grid-template-columns: 1fr 1fr; }
-  .process-steps::before { display: none; }
-  section { padding: 3rem 1.25rem; }
-  .hero { min-height: 70vh; }
-
-  .cookie { flex-direction: column; align-items: stretch; text-align: center; }
-  .cookie-actions { justify-content: center; }
+  .pill-card-header { flex-wrap: wrap; }
+  .footer-copyright .container { justify-content: center; text-align: center; gap: 0.25rem; }
 }
-
-.visually-hidden {
-  position: absolute; width: 1px; height: 1px;
-  padding: 0; margin: -1px; overflow: hidden;
-  clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+@media (max-width: 991.98px) {
+  .navbar-hero .navbar-collapse {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+    margin-top: 0.5rem;
+  }
+  .navbar-hero .navbar-collapse .nav-link,
+  .navbar-hero .navbar-collapse .dropdown-toggle { color: var(--text) !important; }
+  .navbar-hero .navbar-collapse .nav-link:hover,
+  .navbar-hero .navbar-collapse .dropdown-toggle:hover { color: var(--accent) !important; }
 }
 </style>
 </head>
 <body>
 
-<!-- NAVIGATION -->
-<header class="nav" role="banner">
-  <div class="nav-inner">
-    <a href="#" class="logo" aria-label="Firma Dla Każdego — strona główna">
-      <span class="logo-mark" aria-hidden="true">FDK</span>
-      <span>Firma Dla Każdego</span>
+<!-- ====== NAVBAR ====== -->
+<nav class="navbar navbar-expand-lg navbar-hero" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="wp-content/themes/firmadlakazdego/assets/img/logo-white.png" alt="Firma Dla Każdego" class="logo-white" height="40">
+      <img src="wp-content/themes/firmadlakazdego/assets/img/logo-dark.png" alt="Firma Dla Każdego" class="logo-dark" height="40">
     </a>
-
-    <nav aria-label="Menu główne">
-      <ul class="nav-menu" id="navMenu">
-        <li class="has-dropdown">
-          <button class="menu-btn" aria-haspopup="true" aria-expanded="false">Oferta ▾</button>
-          <ul class="dropdown">
-            <li><a href="#">Programiści / Graficy</a></li>
-            <li><a href="#">E-commerce</a></li>
-            <li><a href="#">Architekci</a></li>
-            <li><a href="#">Tłumacze / Lektorzy</a></li>
-            <li><a href="#">Muzycy</a></li>
-            <li><a href="#">Inne branże</a></li>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Otwórz menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav align-items-lg-center gap-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Oferta</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Programiści / Graficy</a></li>
+            <li><a class="dropdown-item" href="#">E-commerce</a></li>
+            <li><a class="dropdown-item" href="#">Architekci</a></li>
+            <li><a class="dropdown-item" href="#">Tłumacze / Lektorzy</a></li>
+            <li><a class="dropdown-item" href="#">Muzycy</a></li>
+            <li><a class="dropdown-item" href="#">Inne branże</a></li>
           </ul>
         </li>
-        <li class="has-dropdown">
-          <button class="menu-btn" aria-haspopup="true" aria-expanded="false">Usługi ▾</button>
-          <ul class="dropdown">
-            <li><a href="#">Biznesplany</a></li>
-            <li><a href="#">Program partnerski</a></li>
-            <li><a href="#">Inne</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Usługi</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Biznesplany</a></li>
+            <li><a class="dropdown-item" href="#">Program partnerski</a></li>
+            <li><a class="dropdown-item" href="#">Inne</a></li>
           </ul>
         </li>
-        <li><a href="#">Dla Pracodawców</a></li>
-        <li><a href="#">Cudzoziemcy</a></li>
-        <li><a href="#">Konsultacje online</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#about">O Nas</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#cta">Kontakt</a></li>
-
-        <li class="lang-switch" role="group" aria-label="Wybór języka">
-          <button class="lang-btn active" type="button" aria-label="Polski" title="Polski">
-            <svg viewBox="0 0 6 4" xmlns="http://www.w3.org/2000/svg"><rect width="6" height="2" fill="#fff"/><rect y="2" width="6" height="2" fill="#dc143c"/></svg>
+        <li class="nav-item"><a class="nav-link" href="#">Dla Pracodawców</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Cudzoziemcy</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Konsultacje online</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="#intro">O Nas</a></li>
+        <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="#kontakt">Kontakt</a></li>
+        <li class="nav-item ms-lg-2 d-flex align-items-center gap-1">
+          <button class="lang-flag" type="button" aria-label="Polski" title="Polski">
+            <svg viewBox="0 0 6 4" width="24" height="18"><rect width="6" height="2" fill="#fff"/><rect y="2" width="6" height="2" fill="#dc143c"/></svg>
           </button>
-          <button class="lang-btn" type="button" aria-label="English" title="English">
-            <svg viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg"><clipPath id="t"><path d="M0,0 v30 h60 v-30 z"/></clipPath><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6" clip-path="url(#t)"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" stroke-width="4" clip-path="url(#t)"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></svg>
+          <button class="lang-flag" type="button" aria-label="English" title="English">
+            <svg viewBox="0 0 60 30" width="24" height="18"><clipPath id="t"><path d="M0,0v30h60V0z"/></clipPath><path d="M0,0v30h60V0z" fill="#012169"/><path d="M0,0L60,30M60,0L0,30" stroke="#fff" stroke-width="6" clip-path="url(#t)"/><path d="M0,0L60,30M60,0L0,30" stroke="#C8102E" stroke-width="4" clip-path="url(#t)"/><path d="M30,0v30M0,15h60" stroke="#fff" stroke-width="10"/><path d="M30,0v30M0,15h60" stroke="#C8102E" stroke-width="6"/></svg>
           </button>
-          <button class="lang-btn" type="button" aria-label="Русский" title="Русский">
-            <svg viewBox="0 0 9 6" xmlns="http://www.w3.org/2000/svg"><rect width="9" height="2" fill="#fff"/><rect y="2" width="9" height="2" fill="#0039a6"/><rect y="4" width="9" height="2" fill="#d52b1e"/></svg>
+          <button class="lang-flag" type="button" aria-label="Русский" title="Русский">
+            <svg viewBox="0 0 9 6" width="24" height="18"><rect width="9" height="2" fill="#fff"/><rect y="2" width="9" height="2" fill="#0039a6"/><rect y="4" width="9" height="2" fill="#d52b1e"/></svg>
           </button>
         </li>
       </ul>
-    </nav>
-
-    <button class="hamburger" id="hamburger" aria-label="Otwórz menu" aria-expanded="false" aria-controls="navMenu">
-      <span></span><span></span><span></span>
-    </button>
+    </div>
   </div>
-</header>
+</nav>
+
+<!-- ====== HERO ====== -->
+<section class="section-hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <h1>Najlepiej oceniany inkubator przedsiębiorczości w&nbsp;Polsce</h1>
+    <ul class="hero-benefits">
+      <li><span class="hero-check" aria-hidden="true">&#10003;</span> Własna firma w 15 minut</li>
+      <li><span class="hero-check" aria-hidden="true">&#10003;</span> 100% współpraca zdalna</li>
+      <li><span class="hero-check" aria-hidden="true">&#10003;</span> Zero ryzyka prowadzenia firmy</li>
+      <li><span class="hero-check" aria-hidden="true">&#10003;</span> Niskie koszty prowadzenia firmy</li>
+    </ul>
+    <p class="hero-text">Chcesz rozpocząć swoją działalność? Sprawdź, ile możesz z nami zaoszczędzić. Skontaktuj się z nami i zacznij już dziś.</p>
+    <a href="#kontakt" class="btn btn-fdk">Skontaktuj się z nami</a>
+    <div class="hero-chevrons mt-5">
+      <svg viewBox="0 0 30 18" fill="none"><polyline points="2,2 15,14 28,2" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <svg viewBox="0 0 30 18" fill="none" style="margin-top:-6px;opacity:0.4"><polyline points="2,2 15,14 28,2" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+  </div>
+</section>
 
 <main>
 
-<!-- HERO -->
-<section class="hero" aria-label="Sekcja powitalna">
-  <div class="hero-content">
-    <h1>Najlepiej oceniany inkubator przedsiębiorczości w Polsce</h1>
-    <ul class="hero-list" aria-label="Kluczowe korzyści">
-      <li><span class="check" aria-hidden="true">✓</span> Własna firma w 15 minut</li>
-      <li><span class="check" aria-hidden="true">✓</span> 100% współpraca zdalna</li>
-      <li><span class="check" aria-hidden="true">✓</span> Zero ryzyka prowadzenia firmy</li>
-      <li><span class="check" aria-hidden="true">✓</span> Niskie koszty prowadzenia firmy</li>
-    </ul>
-    <a href="#cta" class="btn" aria-label="Skontaktuj się z nami">Skontaktuj się z nami</a>
+<!-- ====== CONTENT SECTION ====== -->
+<section class="section-content" id="intro">
+  <div class="container">
+
+    <!-- Intro -->
+    <h1>Inkubator przedsiębiorczości - Jak Ci możemy pomóc?</h1>
+    <p class="text-bigger text-center mx-auto mb-4" style="max-width:900px;">Jesteśmy najlepiej ocenianym inkubatorem przedsiębiorczości w Polsce. Możesz spełnić marzenie o&nbsp;własnej firmie i założyć ją już w ciągu 15&nbsp;minut. Gwarantujemy również niskie koszty prowadzenia działalności. Dowiedz się, jak działa Firma Dla Każdego i jakie daje korzyści. Naszym celem jest wspieranie przedsiębiorczości zarówno wśród Polaków, jak i&nbsp;obcokrajowców.</p>
+
+    <!-- Chevron separator -->
+    <div class="chevron-separator">
+      <svg viewBox="0 0 30 18" fill="none"><polyline points="2,2 15,14 28,2" stroke="#00BBFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+
+    <!-- Działamy -->
+    <h2>Działamy:</h2>
+    <div class="mx-auto mb-4" style="max-width:800px;">
+
+      <!-- SZYBKO -->
+      <div class="pill-card">
+        <div class="pill-card-icon">
+          <svg viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="13" stroke="#00BBFF" stroke-width="2"/><polyline points="8,14 12,18 20,10" stroke="#00BBFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        </div>
+        <div class="pill-card-body">
+          <div class="pill-card-header">
+            <strong>SZYBKO</strong>
+            <span class="pill-card-chevron">&#9658;</span>
+          </div>
+          <p>wszystkie formalności załatwisz maksymalnie w 15 minut. Od tej chwili możesz już zacząć prowadzić biznes i&nbsp;zacząć realizować własne pomysły.</p>
+        </div>
+      </div>
+
+      <!-- BEZ RYZYKA -->
+      <div class="pill-card">
+        <div class="pill-card-icon">
+          <svg viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="13" stroke="#00BBFF" stroke-width="2"/><polyline points="8,14 12,18 20,10" stroke="#00BBFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        </div>
+        <div class="pill-card-body">
+          <div class="pill-card-header">
+            <strong>BEZ RYZYKA</strong>
+            <span class="pill-card-chevron">&#9658;</span>
+          </div>
+          <p>bierzemy na siebie całą odpowiedzialność wynikającą z prowadzenia działalności. Dla Ciebie oznacza to, że nie musisz się bać kontroli z&nbsp;ZUS-u, czy Urzędu Skarbowego.</p>
+        </div>
+      </div>
+
+      <!-- PROSTO -->
+      <div class="pill-card">
+        <div class="pill-card-icon">
+          <svg viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="13" stroke="#00BBFF" stroke-width="2"/><polyline points="8,14 12,18 20,10" stroke="#00BBFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        </div>
+        <div class="pill-card-body">
+          <div class="pill-card-header">
+            <strong>PROSTO</strong>
+            <span class="pill-card-chevron">&#9658;</span>
+          </div>
+          <p>na naszych barkach spoczywają wszelkie czynności związane z obsługą księgową, podatkową i&nbsp;prawną. Dzięki temu możesz się skoncentrować wyłącznie na prowadzeniu biznesu.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Co jeszcze -->
+    <h4 class="text-center mt-5 mb-4">Co jeszcze możemy Ci zaoferować jako inkubator przedsiębiorczości?</h4>
+
+    <div class="row g-4 mb-5" style="max-width:900px;margin-left:auto;margin-right:auto;">
+      <div class="col-md-4">
+        <div class="icon-card">
+          <div class="icon-card-img">
+            <svg width="61" height="59" viewBox="0 0 61 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.457 54.1131C14.457 54.1131 15.8981 53.2342 19.0683 53.2342C25.6971 53.2342 29.7319 57.3358 35.2079 56.7498C40.6838 56.1639 58.8407 42.9804 58.8407 42.9804C61.7228 40.9296 58.8407 35.9492 54.5177 38.5859L40.1074 46.203M40.1074 46.203C44.4304 44.7382 43.854 38 39.2427 38C39.2427 38 32.614 38 30.0201 38C27.4263 38 23.3914 35.0703 20.2212 35.0703C17.0509 35.0703 14.457 36.8281 14.457 36.8281M40.1074 46.203H28.0027" stroke="#00BBFF" stroke-width="2" stroke-linecap="round"/>
+              <path d="M1 33H8.48968C11.7849 33 14.4561 35.6713 14.4561 38.9665V51.8756C14.4561 55.1708 11.7849 57.8421 8.48968 57.8421H1" stroke="#00BBFF" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="9.15714" cy="38.956" r="2.39932" stroke="#00BBFF" stroke-width="2" stroke-linecap="round"/>
+              <path d="M36.1802 31C35.024 31 33.952 30.8394 32.964 30.5183C31.997 30.2201 31.1877 29.7728 30.536 29.1765C30.3679 29.0618 30.2628 28.9127 30.2207 28.7292C30.1787 28.5686 30.1787 28.3966 30.2207 28.2131C30.2838 28.0296 30.3679 27.869 30.473 27.7314C30.5991 27.6167 30.7462 27.5479 30.9144 27.525C31.0826 27.525 31.2613 27.5938 31.4505 27.7314C32.0811 28.236 32.8168 28.6145 33.6577 28.8668C34.4985 29.1421 35.3604 29.2797 36.2432 29.2797C37.1261 29.2797 37.9144 29.1191 38.6081 28.798C39.3018 28.4769 39.8378 27.9952 40.2162 27.3529C40.5946 26.7107 40.7838 25.9423 40.7838 25.0477C40.7838 24.0844 40.5631 23.2586 40.1216 22.5705C39.6802 21.8824 38.8814 21.2401 37.7252 20.6437L34.509 18.9922C33.3529 18.3729 32.4384 17.7765 31.7658 17.2031C31.1141 16.6067 30.6517 15.9645 30.3784 15.2764C30.1261 14.5882 30 13.8313 30 13.0056C30 12.111 30.1997 11.2394 30.5991 10.3907C31.0195 9.51905 31.5345 8.83093 32.1441 8.32631L31.955 8.94562C31.7868 8.67037 31.6291 8.31484 31.482 7.87902C31.3348 7.42027 31.2613 6.8239 31.2613 6.0899C31.2613 4.8054 31.545 3.71587 32.1126 2.82131C32.6802 1.92675 33.4474 1.23862 34.4144 0.756937C35.3814 0.252312 36.464 0 37.6622 0C38.7342 0 39.7327 0.160562 40.6577 0.481687C41.6036 0.779874 42.4234 1.22716 43.1171 1.82353C43.2853 1.96116 43.3904 2.13319 43.4324 2.33962C43.4955 2.52312 43.4955 2.70662 43.4324 2.89012C43.3904 3.05069 43.3063 3.19978 43.1802 3.3374C43.0541 3.45209 42.9069 3.50944 42.7387 3.50944C42.5706 3.50944 42.3919 3.44062 42.2027 3.303C41.6141 2.79837 40.8994 2.4199 40.0586 2.16759C39.2387 1.89234 38.4084 1.75472 37.5676 1.75472C36.7477 1.75472 36.0015 1.91528 35.3288 2.23641C34.6772 2.55753 34.1622 3.03922 33.7838 3.68147C33.4054 4.30078 33.2162 5.06918 33.2162 5.98668C33.2162 6.92712 33.4369 7.7414 33.8784 8.42952C34.3198 9.11765 35.1186 9.7599 36.2748 10.3563L39.491 12.0422C40.6682 12.6386 41.5721 13.2349 42.2027 13.8313C42.8544 14.4277 43.3168 15.0699 43.5901 15.758C43.8634 16.4232 44 17.1802 44 18.0289C44 18.9234 43.7898 19.8065 43.3694 20.6781C42.97 21.5268 42.455 22.2035 41.8243 22.7081L42.0135 22.0888C42.1817 22.3411 42.3393 22.6966 42.4865 23.1554C42.6547 23.6141 42.7387 24.2105 42.7387 24.9445C42.7387 26.2061 42.4444 27.2841 41.8559 28.1787C41.2883 29.0962 40.5105 29.7958 39.5225 30.2775C38.5345 30.7592 37.4204 31 36.1802 31ZM31.7973 12.7647C31.7973 13.6363 32.0495 14.4277 32.5541 15.1387C33.0586 15.8269 33.994 16.5265 35.3604 17.2375L38.1351 18.6826C39.018 19.1184 39.7327 19.5771 40.2793 20.0588C40.8258 20.5405 41.2462 21.0107 41.5405 21.4695H40.8468C41.2883 21.0795 41.6246 20.6093 41.8559 20.0588C42.0871 19.4854 42.2027 18.8775 42.2027 18.2353C42.2027 17.3407 41.9504 16.5609 41.4459 15.8957C40.9625 15.2075 40.027 14.508 38.6396 13.7969L35.8649 12.3518C35.003 11.8931 34.2883 11.4343 33.7207 10.9756C33.1742 10.4939 32.7538 10.0237 32.4595 9.56493L33.1216 9.53052C32.7012 9.9434 32.3754 10.4251 32.1441 10.9756C31.9129 11.5261 31.7973 12.1225 31.7973 12.7647Z" fill="black"/>
+            </svg>
+          </div>
+          <p>Użyczenie <strong>osobowości prawnej</strong></p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="icon-card">
+          <div class="icon-card-img">
+            <svg width="59" height="67" viewBox="0 0 59 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M52.0173 66.6031H45.8399C45.4849 66.6031 45.1298 66.3901 44.9878 66.0351L43.1416 61.7037C40.5855 62.2008 32.4198 63.5499 26.1003 61.2777L22.9051 66.2481C22.7631 66.5321 22.4791 66.6741 22.1241 66.6741H16.8696C16.3726 66.6741 15.9466 66.2481 15.9466 65.7511L15.7336 57.1594C13.7454 55.5973 3.94667 48.0707 1.88751 46.0115C-0.668684 43.4553 0.112376 37.7749 0.112376 37.4909C0.183381 37.0648 0.5384 36.7098 1.03544 36.7098H4.65674C4.72775 36.7098 4.72771 36.7098 4.79872 36.7098C4.79872 36.7098 6.78689 36.7808 9.34308 32.7335C10.1951 31.3134 10.5502 30.1063 10.2661 29.1122C9.98212 27.9052 8.91707 27.3371 8.91707 27.3371C8.56204 27.1241 8.349 26.6981 8.49101 26.272C8.49101 26.13 9.20108 23.6448 12.6803 23.6448C15.8756 23.6448 20.1359 29.5383 20.988 30.6744C21.272 31.1004 21.201 31.6684 20.7749 31.9525C20.3489 32.2365 19.7809 32.1655 19.4968 31.7395C17.6507 29.1123 14.3135 25.491 12.6803 25.491C11.4733 25.491 10.8342 25.917 10.5502 26.201C11.0472 26.6981 11.7573 27.4791 12.0413 28.6152C12.4673 30.1773 12.0413 31.8815 10.9052 33.7276C7.85198 38.485 5.22478 38.627 4.65674 38.556H1.88751C1.7455 40.3311 1.8875 43.3843 3.1656 44.6624C5.36677 46.8636 17.0117 55.8813 17.1537 55.9523C17.3667 56.0943 17.5087 56.3783 17.5087 56.6623L17.7217 64.757H21.556L24.8933 59.5736C25.1063 59.2185 25.6033 59.0765 26.0294 59.2185C32.9169 62.0588 43.3547 59.7156 43.4257 59.7156C43.8517 59.6446 44.2778 59.8576 44.4908 60.2836L46.4079 64.757H51.0943V55.8103C51.0943 55.5263 51.1653 55.3133 51.3783 55.1712C51.8043 54.7452 61.106 45.5145 54.6445 34.2246C45.8399 18.7455 23.8282 28.3312 23.6152 28.4022C23.1181 28.6152 22.6211 28.4022 22.4081 27.9051C22.1951 27.4081 22.4081 26.9111 22.9051 26.6981C23.1181 26.6271 46.6209 16.4023 56.2777 33.3016C62.8102 44.6624 54.6445 54.4612 53.0114 56.2363V65.68C52.9404 66.1771 52.5144 66.6031 52.0173 66.6031Z" fill="#00BBFF"/>
+              <path d="M37.2479 21.7277C31.2835 21.7277 26.4551 16.8993 26.4551 10.8638C26.4551 4.89937 31.2835 0 37.2479 0C43.2124 0 48.0407 4.82836 48.0407 10.8638C48.0407 16.8993 43.2124 21.7277 37.2479 21.7277ZM37.2479 1.91716C32.3485 1.91716 28.3012 5.96445 28.3012 10.9348C28.3012 15.9052 32.2775 19.9525 37.2479 19.9525C42.1473 19.9525 46.1946 15.9052 46.1946 10.9348C46.1946 5.96445 42.2183 1.91716 37.2479 1.91716Z" fill="black"/>
+              <path d="M38.1003 15.6212H36.4672C34.9051 15.6212 33.627 14.3431 33.627 12.781C33.627 12.2839 34.053 11.8579 34.55 11.8579C35.0471 11.8579 35.4731 12.2839 35.4731 12.781C35.4731 13.349 35.8991 13.775 36.4672 13.775H38.1003C38.6683 13.775 39.0944 13.349 39.0944 12.781C39.0944 12.2129 38.6683 11.7869 38.1003 11.7869H36.4672C34.9051 11.7869 33.627 10.5088 33.627 8.94666C33.627 7.38454 34.9051 6.10645 36.4672 6.10645H38.1003C39.6624 6.10645 40.9405 7.38454 40.9405 8.94666C40.9405 9.4437 40.5145 9.86972 40.0174 9.86972C39.5204 9.86972 39.0944 9.4437 39.0944 8.94666C39.0944 8.37862 38.6683 7.95259 38.1003 7.95259H36.4672C35.8991 7.95259 35.4731 8.37862 35.4731 8.94666C35.4731 9.51471 35.8991 9.94073 36.4672 9.94073H38.1003C39.6624 9.94073 40.9405 11.2188 40.9405 12.781C40.8695 14.4141 39.5914 15.6212 38.1003 15.6212Z" fill="black"/>
+              <path d="M37.2473 8.0236C36.7502 8.0236 36.3242 7.59758 36.3242 7.10054V5.32541C36.3242 4.82837 36.7502 4.40234 37.2473 4.40234C37.7443 4.40234 38.1703 4.82837 38.1703 5.32541V7.10054C38.1703 7.59758 37.7443 8.0236 37.2473 8.0236Z" fill="black"/>
+              <path d="M37.2473 17.3967C36.7502 17.3967 36.3242 16.9706 36.3242 16.4736V14.6985C36.3242 14.2014 36.7502 13.7754 37.2473 13.7754C37.7443 13.7754 38.1703 14.2014 38.1703 14.6985V16.4736C38.1703 17.0417 37.7443 17.3967 37.2473 17.3967Z" fill="black"/>
+              <path d="M45.627 32.237C45.485 32.237 45.414 32.237 45.272 32.166C37.5324 29.1128 30.6449 32.095 30.5739 32.166C30.0768 32.379 29.5798 32.166 29.3668 31.669C29.1538 31.1719 29.3668 30.6749 29.7928 30.4619C30.0768 30.3199 37.4614 27.0536 45.911 30.4619C46.4081 30.6749 46.6211 31.1719 46.4081 31.669C46.3371 32.024 45.982 32.237 45.627 32.237Z" fill="#00BBFF"/>
+            </svg>
+          </div>
+          <p>Założenie <strong>konta bankowego</strong></p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="icon-card">
+          <div class="icon-card-img">
+            <svg width="62" height="60" viewBox="0 0 62 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18.9383 19C13.6538 21.2388 7.65951 24.4392 1 22.9193V54.7578C15.1346 56.8912 23.5 44.0438 31 50.8385V44.0806" stroke="#00BBFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M43.0617 19C48.3462 21.2388 54.3405 24.4392 61 22.9193V54.7578C46.8654 56.8912 38.5 44.0438 31 50.8385V44.0806" stroke="#00BBFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M31 52.7882C23.7629 45.9887 17.6392 60.924 4 58.7891V54.7049" stroke="#00BBFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M31 52.7882C38.2371 45.9887 44.3608 60.924 58 58.7891V54.7049" stroke="#00BBFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M18.4902 13.5689C18.4902 6.62723 24.1172 1 31.0591 1C38.001 1 43.628 6.62723 43.628 13.5689C43.628 17.4096 41.7664 20.2321 39.5295 23.1322C34.8844 29.1434 35.4309 30.7828 35.4309 30.7828H26.6873C26.6873 30.7828 27.2338 29.1434 22.5888 23.1322C20.3518 20.2321 18.4902 17.4096 18.4902 13.5689Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="25.3125" y="30.5684" width="11.3725" height="4.54902" rx="2.27451" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="25.3125" y="35.1172" width="11.3725" height="4.54902" rx="2.27451" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M27.5898 39.667H33.601V40.4867C33.601 42.1466 32.2554 43.4923 30.5954 43.4923V43.4923C28.9355 43.4923 27.5898 42.1466 27.5898 40.4867V39.667Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M29.0938 30.5102V15.209" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M33.4648 30.5102V15.209" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M29.094 14.9357C29.094 13.5776 27.9931 12.4766 26.6349 12.4766C25.2768 12.4766 24.1758 13.5776 24.1758 14.9357C24.1758 16.2938 25.2768 17.3948 26.6349 17.3948" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M35.924 17.3948C37.2821 17.3948 38.3831 16.2938 38.3831 14.9357C38.3831 13.5776 37.2821 12.4766 35.924 12.4766C34.5658 12.4766 33.4648 13.5776 33.4648 14.9357" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M26.3633 17.3945H35.6533" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <p>Dostęp do <strong>wiedzy i&nbsp;doświadczenia</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chevron separator -->
+    <div class="chevron-separator">
+      <svg viewBox="0 0 30 18" fill="none"><polyline points="2,2 15,14 28,2" stroke="#00BBFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+
+    <!-- Korzyści -->
+    <h3 class="text-center">Jakie korzyści daje współpraca z inkubatorem przedsiębiorczości Firmą dla Każdego?</h3>
+    <p class="text-bigger text-center mx-auto mt-3" style="max-width:900px;">Jest ich o wiele więcej niż tutaj wymienione. Do powyższych możemy jeszcze dodać możliwość opłacania podatku <strong>PIT jedynie w wysokości 6%.</strong> Możesz również wrzucić w&nbsp;koszty zakupy na firmę oraz <strong>ograniczyć wydatki stałe związane z&nbsp;prowadzeniem działalności.</strong> Jeżeli chcesz poczuć, jak to jest zostać własnym szefem, ale jednocześnie potrzebujesz wsparcia na samym początku, to zgłoś się do Firmy Dla Każdego. Pomożemy Ci rozwinąć skrzydła!</p>
+
   </div>
 </section>
 
-<!-- INTRO -->
-<section class="section-intro" id="about">
-  <div class="intro-box">
-    <h2>Od posiadania własnej firmy dzieli Cię 15 minut</h2>
-    <p>Jesteśmy najlepiej ocenianym inkubatorem przedsiębiorczości w Polsce. Pomagamy zarówno obywatelom polskim, jak i cudzoziemcom rozpocząć własną działalność gospodarczą — szybko, bezpiecznie i bez zbędnych formalności.</p>
-  </div>
-</section>
+<!-- ====== FAQ ====== -->
+<section class="section-faq" id="faq">
+  <div class="container">
+    <h2>FAQ - najczęściej zadawane pytania</h2>
+    <div class="accordion mx-auto" id="faqAccordion" style="max-width:900px;">
 
-<!-- HOW WE WORK -->
-<section class="cards-section" aria-labelledby="dzialamy-title">
-  <h2 class="section-title" id="dzialamy-title">Działamy</h2>
-  <div class="cards">
-    <article class="card">
-      <div class="card-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-        </svg>
+      <div class="accordion-item">
+        <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">Na czym polega inkubator przedsiębiorczości?</button></h3>
+        <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Inkubator przedsiębiorczości to podmiot, który pomaga początkującym, często niedoświadczonym przedsiębiorcom w stawianiu pierwszych kroków na rynku. Ich sposób działania polega na udostępnieniu własnej osobowości prawnej wraz z&nbsp;kompleksowym pakietem usług: księgowych, kadrowych, prawnych i&nbsp;biurowych, dając pełne środowisko do zaistnienia z własnym pomysłem na biznes. W&nbsp;zamian za to pobierają najczęściej niewielką zryczałtowaną opłatę miesięczną, konkurencyjną w stosunku do rynkowych cen usług dla biznesu.</div></div>
       </div>
-      <h3>SZYBKO</h3>
-      <p>Cały proces rejestracji zajmuje zaledwie 15 minut. Bez kolejek, bez wizyt w urzędach — wszystko online.</p>
-    </article>
 
-    <article class="card">
-      <div class="card-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-        </svg>
+      <div class="accordion-item">
+        <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">Czy inkubator przedsiębiorczości się opłaca?</button></h3>
+        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Prowadzenie własnej działalności to dużo więcej niż tylko świadczenie usług, czy aktywna sprzedaż produktów. Istnieje szereg obowiązków, których regularne wypełnianie jest konieczne. Nieocenioną pomoc niosą biura rachunkowe, doradcy podatkowi albo Inkubator Przedsiębiorczości oferujący pełną obsługę pomysłu biznesowego. Zespół takiego inkubatora złożony jest z grupy osób posiadających specjalistyczną wiedzę z zakresu rachunkowości, prawa podatkowego, czy rozliczeń i&nbsp;obowiązków sprawozdawczych wobec poszczególnych instytucji.</div></div>
       </div>
-      <h3>BEZ RYZYKA</h3>
-      <p>Organizacja bierze na siebie odpowiedzialność formalną. Nie musisz martwić się o ZUS, urząd skarbowy ani kontrole.</p>
-    </article>
 
-    <article class="card">
-      <div class="card-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="20 6 9 17 4 12"></polyline>
-        </svg>
+      <div class="accordion-item">
+        <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">Ile kosztuje pomoc inkubatora przedsiębiorczości?</button></h3>
+        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Pomoc świadczona przez inkubator przedsiębiorczości najczęściej obciążona jest kosztem kilkuset złotych miesięcznego abonamentu, w ramach którego przedsiębiorca otrzymuje kompleksowe wsparcie w funkcjonowaniu w realiach rynkowych. W zamian za zoptymalizowaną do niewielkiej sumy, np. 400&nbsp;zł netto, opłaty, można liczyć na fachową obsługę księgową, prowadzenie całości rozliczeń i&nbsp;sprawozdawczości wobec instytucji podatkowych oraz bieżącą pomoc i&nbsp;doradztwo w doborze optymalnego i bezpiecznego sposobu działania.</div></div>
       </div>
-      <h3>PROSTO</h3>
-      <p>Zapewniamy kompleksową obsługę księgową, podatkową, prawną i biurową. Ty skupiasz się na swojej pracy.</p>
-    </article>
-  </div>
-</section>
 
-<!-- TRUST BAR -->
-<section class="trust" aria-label="Zaufanie i statystyki">
-  <p class="trust-label">Zaufało nam tysiące przedsiębiorców</p>
-  <div class="trust-stats">
-    <div class="stat-item">
-      <span class="stat-num">10+</span>
-      <span class="stat-label">lat doświadczenia</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-num">5000+</span>
-      <span class="stat-label">zadowolonych klientów</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-num">4.9</span>
-      <span class="stat-label"><span class="stars" aria-hidden="true">★★★★★</span><br>ocena klientów</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-num">15 min</span>
-      <span class="stat-label">czas rejestracji</span>
-    </div>
-  </div>
-</section>
+      <div class="accordion-item">
+        <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">Jak działa inkubator przedsiębiorczości?</button></h3>
+        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Inkubator przedsiębiorczości to coś więcej niż tylko biuro rachunkowe. Forma działania to najczęściej organizacja pozarządowa, która udostępnia swoją podmiotowość prawną, nazwę w celach rozliczeniowych i&nbsp;umożliwiając nawiązywanie relacji B2B, pozwalając jednocześnie na budowanie własnej marki, rozpoznawalności na rynku. Inkubator przejmuje przy tym obowiązki rozliczeniowe, pozwalając pomysłodawcy inkubowanego biznesu skupić się na rozwoju działalności.</div></div>
+      </div>
 
-<!-- PROCESS -->
-<section class="process cards-section" aria-labelledby="process-title">
-  <h2 class="section-title" id="process-title">Jak to działa?</h2>
-  <div class="process-steps">
-    <div class="step">
-      <div class="step-num" aria-hidden="true">1</div>
-      <h3>Kontakt</h3>
-      <p>Wypełniasz formularz lub dzwonisz — dobieramy ofertę pod Twoją branżę.</p>
-    </div>
-    <div class="step">
-      <div class="step-num" aria-hidden="true">2</div>
-      <h3>Umowa</h3>
-      <p>Podpisujesz umowę elektronicznie — bez wychodzenia z domu.</p>
-    </div>
-    <div class="step">
-      <div class="step-num" aria-hidden="true">3</div>
-      <h3>Start</h3>
-      <p>Otrzymujesz dostęp do panelu, faktur i konta bankowego — działasz od razu.</p>
-    </div>
-    <div class="step">
-      <div class="step-num" aria-hidden="true">4</div>
-      <h3>Wsparcie</h3>
-      <p>Korzystasz z obsługi księgowej, prawnej i mentorskiej przez cały czas.</p>
+      <div class="accordion-item">
+        <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">Jakie usługi oferuje inkubator przedsiębiorczości?</button></h3>
+        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">W ramach szeroko pojętej usługi preinkubacji pomysłu na biznes, inkubator przedsiębiorczości udostępnia: własną osobowość prawną, brak konieczności rejestracji podmiotu, kompleksową księgowość, wystawianie faktur w systemie inkubatora oraz ich rozliczanie, brak konieczności odprowadzania składek na ZUS, dostęp do indywidualnego rachunku bankowego, doradztwo bieżące i fachową obsługę prawną, a&nbsp;także dodatkowe usługi, tj.: obsługę korespondencji, szkolenia dla Beneficjentów inkubatora, czy dostęp do specjalnych ofert podmiotów partnerskich.</div></div>
+      </div>
+
+      <div class="accordion-item">
+        <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">Jak wypłacić pieniądze z inkubatora przedsiębiorczości?</button></h3>
+        <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">W ramach inkubatora przedsiębiorczości otrzymujesz rachunek bankowy do obsługi rozliczeń swojej działalności. Masz też do niego bieżący, stały dostęp, więc zawsze możesz sprawdzić status płatności wystawionych faktur. Ten rachunek służy Ci także do dokonywania zapłaty za zakupione na potrzeby działalności usługi, produkty do sprzedaży, czy urządzenia potrzebne do bieżącego funkcjonowania. Najprzyjemniejszą operacją, jaką możesz wprowadzić, jest wypłata wynagrodzenia z wypracowanych przez Ciebie zysków. Z&nbsp;pomocą pracowników inkubatora przygotujesz wszystkie dokumenty do wypłaty tytułem umowy zlecenie lub umowy o&nbsp;dzieło i&nbsp;otrzymasz przelew na swoje prywatne konto.</div></div>
+      </div>
+
+      <div class="accordion-item">
+        <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7" aria-expanded="false" aria-controls="faq7">Co zyskuje osoba, która prowadzi firmę w ramach inkubatora?</button></h3>
+        <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Prowadzenie działalności w ramach inkubatora przedsiębiorczości daje przede wszystkim szansę na bezpieczne przetestowanie pomysłu na biznes. Oferuje przy tym specjalistyczne wsparcie formalne i doradcze ze strony menadżerów inkubatorów. Najważniejsze obszary takiego wsparcia to przede wszystkim doradztwo księgowe i&nbsp;prawne, skomplikowane dla osób bez dużego doświadczenia w biznesie, a&nbsp;także np.&nbsp;brak konieczności opłacania składek na ZUS.</div></div>
+      </div>
+
+      <div class="accordion-item">
+        <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8" aria-expanded="false" aria-controls="faq8">Czym są akademickie inkubatory przedsiębiorczości (AIP)?</button></h3>
+        <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Akademickie inkubatory przedsiębiorczości (w skrócie AIP) to najczęściej jednostki powoływane do istnienia przez uczelnie wyższe. Mają na celu wspieranie działalności gospodarczej pracowników uczelni, studentów czy doktorantów. W praktyce takie wsparcie oznacza brak konieczności rejestracji własnej firmy w jakiejkolwiek formie, dzięki tzw. użyczeniu osobowości prawnej podmiotu świadczącego usługę inkubatora. Dalsze korzyści to bieżąca pomoc w dokonywaniu rozliczeń z&nbsp;kontrahentami, czy wsparcie ekspertów z rachunkowości i&nbsp;prawa.</div></div>
+      </div>
+
+      <div class="accordion-item">
+        <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq9" aria-expanded="false" aria-controls="faq9">Czym są akceleratory biznesu?</button></h3>
+        <div id="faq9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Akceleratory biznesu to miejsca, podmioty, programy wspierające firmy we wczesnej fazie ich istnienia na rynku. Ich zadaniem jest nadanie kierunku i odpowiedniego tempa rozwoju młodej firmy. W odróżnieniu od inkubatorów, akceleratory wymagają działającej już firmy i&nbsp;udzielają wsparcia przede wszystkim mentoringowego, w postaci kontaktów biznesowych i&nbsp;wsparcia doradczego w&nbsp;kierunku pozyskania finansowania dalszego rozwoju.</div></div>
+      </div>
+
+      <div class="accordion-item">
+        <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq10" aria-expanded="false" aria-controls="faq10">Co to jest startup?</button></h3>
+        <div id="faq10" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Start-up, czy też startup, to zwykle nowo powstała firma, młoda organizacja, która znajduje się na etapie wypracowywania modelu biznesowego mającego zapewnić jej osiągnięcie zysku. Najczęstszymi cechami startupów są: krótki dotychczasowy okres ich istnienia, innowacyjność pomysłu, jego skalowalność, czy nieprzeciętny spodziewany zysk z&nbsp;jednoczesnym wyższym ryzykiem w przypadku niepowodzenia.</div></div>
+      </div>
+
+      <div class="accordion-item">
+        <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq11" aria-expanded="false" aria-controls="faq11">Czy każda firma to startup?</button></h3>
+        <div id="faq11" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Startup to zwykle młoda firma, która nie posiada jeszcze w pełni opracowanego modelu biznesowego i dopiero poszukuje najskuteczniejszego sposobu wejścia na rynek, zwykle z nowym, innowacyjnym pomysłem, produktem. Z uwagi na fakt, że nie można jego przyszłego działania odwzorować na żadnym innym przykładzie, niesie ze sobą większe ryzyko niepowodzenia, zaś w przypadku powodzenia — również spodziewany zysk zwykle jest dużo wyższy, niż w&nbsp;przypadku „przeciętnej" młodej firmy.</div></div>
+      </div>
+
+      <div class="accordion-item">
+        <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq12" aria-expanded="false" aria-controls="faq12">Czym się różni startup od firmy?</button></h3>
+        <div id="faq12" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Start-up to zwykle młody podmiot, najczęściej z krótką historią istnienia na rynku, poszukujący odpowiedniej drogi rozwoju i optymalizacji modelu biznesowego. W praktyce oznacza to badanie, określanie najlepszego sposobu wprowadzenia produktu lub usługi na rynek, z jednoczesnym stałym jego ulepszaniem. Gdy opracowany model biznesowy prowadzi do osiągnięcia zysku i&nbsp;zapewnia rentowność na stałym poziomie, przestaje być określany mianem start-upu i&nbsp;staje się firmą.</div></div>
+      </div>
+
+      <div class="accordion-item">
+        <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq13" aria-expanded="false" aria-controls="faq13">Jak pozyskać pieniądze na startup?</button></h3>
+        <div id="faq13" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Dobry pomysł na biznes to tylko część drogi do sukcesu start-upu. Konieczne jest jeszcze jego sfinansowanie i najczęstszym źródłem są środki własne. Ich udział wg raportu Polskie Startupy 2022 opracowanego przez Fundację Startup Poland, to aż 68% przypadków. Istnieje jednak wiele zewnętrznych źródeł finansowania, wśród których wymienić należy przede wszystkim krajowe fundusze Venture Capital, aniołów biznesu, fundusze NCBiR, wsparcie PARP, krajowe akceleratory biznesu, czy środki PFR.</div></div>
+      </div>
+
     </div>
   </div>
-</section>
-
-<!-- OFFER -->
-<section class="cards-section on-white" aria-labelledby="oferta-title">
-  <h2 class="section-title" id="oferta-title">Co oferujemy?</h2>
-  <div class="cards">
-    <article class="card">
-      <div class="card-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-          <polyline points="14 2 14 8 20 8"></polyline>
-          <line x1="16" y1="13" x2="8" y2="13"></line>
-          <line x1="16" y1="17" x2="8" y2="17"></line>
-          <polyline points="10 9 9 9 8 9"></polyline>
-        </svg>
-      </div>
-      <h3>Użyczenie osobowości prawnej</h3>
-      <p>Działasz legalnie pod naszą osobowością prawną — bez konieczności zakładania własnej firmy.</p>
-    </article>
-
-    <article class="card">
-      <div class="card-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M3 21h18"></path>
-          <path d="M3 10h18"></path>
-          <path d="M5 6l7-4 7 4"></path>
-          <path d="M4 10v11"></path>
-          <path d="M20 10v11"></path>
-          <path d="M8 14v3"></path>
-          <path d="M12 14v3"></path>
-          <path d="M16 14v3"></path>
-        </svg>
-      </div>
-      <h3>Założenie konta bankowego</h3>
-      <p>Pomagamy w założeniu dedykowanego konta bankowego do prowadzenia działalności.</p>
-    </article>
-
-    <article class="card">
-      <div class="card-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
-          <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
-        </svg>
-      </div>
-      <h3>Dostęp do wiedzy i doświadczenia</h3>
-      <p>Otrzymujesz wsparcie mentorskie, dostęp do szkoleń i doświadczenia naszych ekspertów.</p>
-    </article>
-  </div>
-</section>
-
-<!-- BENEFITS -->
-<section class="benefits" aria-labelledby="korzysci-title">
-  <h2 class="section-title" id="korzysci-title">Dlaczego warto?</h2>
-  <div class="benefits-grid">
-    <div class="benefit">
-      <div class="benefit-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="12" y1="1" x2="12" y2="23"></line>
-          <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-        </svg>
-      </div>
-      <div class="benefit-text">Stawka podatku PIT od 6%</div>
-    </div>
-    <div class="benefit">
-      <div class="benefit-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="18" y1="20" x2="18" y2="10"></line>
-          <line x1="12" y1="20" x2="12" y2="4"></line>
-          <line x1="6" y1="20" x2="6" y2="14"></line>
-        </svg>
-      </div>
-      <div class="benefit-text">Możliwość odliczania kosztów uzyskania przychodu</div>
-    </div>
-    <div class="benefit">
-      <div class="benefit-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 2v20"></path>
-          <path d="M17 7H9.5a2.5 2.5 0 0 0 0 5h5a2.5 2.5 0 0 1 0 5H7"></path>
-        </svg>
-      </div>
-      <div class="benefit-text">Niższe koszty prowadzenia działalności</div>
-    </div>
-    <div class="benefit">
-      <div class="benefit-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-          <circle cx="9" cy="7" r="4"></circle>
-          <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-          <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-        </svg>
-      </div>
-      <div class="benefit-text">Indywidualna opieka mentorska</div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="faq" id="faq" aria-labelledby="faq-title">
-  <h2 class="section-title" id="faq-title">Najczęściej zadawane pytania</h2>
-  <div class="faq-list">
-    <div class="faq-item">
-      <button class="faq-q" aria-expanded="false">
-        <span>Czym jest inkubator przedsiębiorczości?</span>
-        <span class="faq-icon" aria-hidden="true"></span>
-      </button>
-      <div class="faq-a"><p>Inkubator przedsiębiorczości to organizacja wspierająca początkujących przedsiębiorców, oferując im przestrzeń prawną, księgową i mentorską do rozwoju własnej działalności bez konieczności zakładania firmy.</p></div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q" aria-expanded="false">
-        <span>Ile to kosztuje?</span>
-        <span class="faq-icon" aria-hidden="true"></span>
-      </button>
-      <div class="faq-a"><p>Miesięczny koszt współpracy to kilkaset złotych netto (od ok. 400 PLN). W cenie otrzymujesz pełną obsługę księgową, prawną i administracyjną.</p></div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q" aria-expanded="false">
-        <span>Jak wygląda proces rejestracji?</span>
-        <span class="faq-icon" aria-hidden="true"></span>
-      </button>
-      <div class="faq-a"><p>Wystarczy 15 minut. Wypełniasz formularz online, podpisujesz umowę elektronicznie i możesz rozpocząć działalność od razu.</p></div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q" aria-expanded="false">
-        <span>Czy mogę wystawiać faktury?</span>
-        <span class="faq-icon" aria-hidden="true"></span>
-      </button>
-      <div class="faq-a"><p>Tak, w ramach inkubatora wystawiasz faktury na swoich klientów, korzystając z naszego numeru NIP.</p></div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q" aria-expanded="false">
-        <span>Czy to jest legalne?</span>
-        <span class="faq-icon" aria-hidden="true"></span>
-      </button>
-      <div class="faq-a"><p>Tak, inkubatory przedsiębiorczości działają w pełni legalnie na podstawie polskiego prawa.</p></div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q" aria-expanded="false">
-        <span>Jak wygląda wypłata środków?</span>
-        <span class="faq-icon" aria-hidden="true"></span>
-      </button>
-      <div class="faq-a"><p>Środki z Twoich faktur trafiają na dedykowane konto, a następnie są wypłacane na Twoje konto osobiste po potrąceniu kosztów.</p></div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q" aria-expanded="false">
-        <span>Dla kogo jest inkubator?</span>
-        <span class="faq-icon" aria-hidden="true"></span>
-      </button>
-      <div class="faq-a"><p>Dla każdego, kto chce rozpocząć własną działalność — freelancerzy, programiści, graficy, tłumacze, muzycy, architekci i wiele innych branż.</p></div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q" aria-expanded="false">
-        <span>Czy cudzoziemcy mogą korzystać z inkubatora?</span>
-        <span class="faq-icon" aria-hidden="true"></span>
-      </button>
-      <div class="faq-a"><p>Tak, obsługujemy zarówno obywateli polskich, jak i cudzoziemców. Oferujemy też pomoc w legalizacji pobytu.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta" id="cta">
-  <h2>Chcesz rozpocząć swoją działalność?</h2>
-  <p>Skontaktuj się z nami i zacznij już dziś.</p>
-  <a href="mailto:kontakt@firmadlakazdego.pl" class="btn btn-outline">Napisz do nas</a>
 </section>
 
 </main>
 
-<!-- FOOTER -->
-<footer class="footer" role="contentinfo">
-  <div class="footer-inner">
-    <div>
-      <div class="logo" style="color: var(--white);">
-        <span class="logo-mark" aria-hidden="true">FDK</span>
-        <span>Firma Dla Każdego</span>
+<!-- ====== FOOTER ====== -->
+<footer class="footer-main">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- Col 1: Logo + Socials -->
+      <div class="col-lg-4">
+        <img src="wp-content/themes/firmadlakazdego/assets/img/logo-white.png" alt="Firma Dla Każdego" class="footer-logo">
+        <div class="footer-social mt-3">
+          <a href="https://www.facebook.com/firmadlakazdego" aria-label="Facebook" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+          </a>
+          <a href="https://t.me/FDK_inkubator" aria-label="Telegram" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.94 15.34l-.4 4.04c.57 0 .82-.25 1.12-.55l2.7-2.57 5.6 4.1c1.02.57 1.76.27 2.02-.95l3.66-17.18c.3-1.52-.55-2.12-1.55-1.75L1.4 9.12c-1.5.57-1.48 1.4-.25 1.77L6.6 12.52l12.4-7.82c.58-.38 1.12-.17.68.2"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/firmadlakazdego" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+        </div>
       </div>
-      <p class="tagline">Fundacja Firma Dla Każdego — inkubator przedsiębiorczości wspierający przedsiębiorców w Polsce.</p>
-      <div class="socials" aria-label="Media społecznościowe">
-        <a href="#" class="social-link" aria-label="Facebook">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
-        </a>
-        <a href="#" class="social-link" aria-label="Telegram">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.94 15.34l-.4 4.04c.57 0 .82-.25 1.12-.55l2.7-2.57 5.6 4.1c1.02.57 1.76.27 2.02-.95l3.66-17.18.01-.01c.3-1.52-.55-2.12-1.55-1.75L1.4 9.12c-1.5.57-1.48 1.4-.25 1.77L6.6 12.52l12.4-7.82c.58-.38 1.12-.17.68.2"/></svg>
-        </a>
+
+      <!-- Col 2: Navigation -->
+      <div class="col-lg-3">
+        <h5>Nawigacja</h5>
+        <ul class="footer-links">
+          <li><a href="#">Dla Pracodawców</a></li>
+          <li><a href="#">Cudzoziemcy</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Regulamin</a></li>
+          <li><a href="#">Opłaty</a></li>
+        </ul>
       </div>
+
+      <!-- Col 3: Contact -->
+      <div class="col-lg-5">
+        <h5>Kontakt</h5>
+        <ul class="footer-contact">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c1.21.34 2 .57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <div><a href="tel:+48575594500">PL: +48 575 594 500</a></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c1.21.34 2 .57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <div><a href="tel:+48794731000">EN / RUS: +48 794 731 000</a></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <div><a href="mailto:kontakt@firmadlakazdego.pl">kontakt@firmadlakazdego.pl</a><span class="label">(język PL i&nbsp;ENG)</span></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <div><a href="mailto:administracja@firmadlakazdego.pl">administracja@firmadlakazdego.pl</a><span class="label">(język UKR i&nbsp;RUS)</span></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <div><a href="mailto:b2b@firmadlakazdego.pl">b2b@firmadlakazdego.pl</a><span class="label">(dla Kontrahentów)</span></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div>Fundacja Firma Dla Każdego<br>ul. Lwowska 17/4<br>00-660 Warszawa</div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18"/></svg>
+            <div>NIP: 5252625624</div>
+          </li>
+        </ul>
+      </div>
+
     </div>
-
-    <nav class="footer-nav" aria-label="Nawigacja w stopce">
-      <h4>Nawigacja</h4>
-      <ul>
-        <li><a href="#">Dla Pracodawców</a></li>
-        <li><a href="#">Cudzoziemcy</a></li>
-        <li><a href="#cta">Kontakt</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Regulamin</a></li>
-        <li><a href="#">Opłaty</a></li>
-      </ul>
-    </nav>
-
-    <div>
-      <h4>Kontakt</h4>
-      <ul class="contact-list">
-        <li>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          <a href="tel:+48575594500">PL: +48 575 594 500</a>
-        </li>
-        <li>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          <a href="tel:+48794731000">EN: +48 794 731 000</a>
-        </li>
-        <li>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <a href="mailto:kontakt@firmadlakazdego.pl">kontakt@firmadlakazdego.pl</a>
-        </li>
-        <li>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <a href="mailto:administracja@firmadlakazdego.pl">administracja@firmadlakazdego.pl</a>
-        </li>
-        <li>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <a href="mailto:b2b@firmadlakazdego.pl">b2b@firmadlakazdego.pl</a>
-        </li>
-        <li>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <span>ul. Lwowska 17/4, 00-660 Warszawa</span>
-        </li>
-        <li>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18"/></svg>
-          <span>NIP: 5252625624</span>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    Copyright © 2026 Firma Dla Każdego — Wszelkie prawa zastrzeżone
   </div>
 </footer>
 
-<!-- COOKIE BANNER -->
-<div class="cookie" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Informacja o plikach cookies">
-  <div class="cookie-inner">
-    <p>Nasza strona korzysta z plików cookies w celu zapewnienia najlepszej jakości usług.</p>
-    <div class="cookie-actions">
-      <button class="btn" id="cookieAccept">Zaakceptuj wszystkie</button>
-      <button class="btn-ghost" id="cookieManage">Zarządzaj zgodami</button>
+<!-- Copyright bar -->
+<div class="footer-copyright py-3">
+  <div class="container">
+    <span>Copyright &copy; 2026 Firma Dla Każdego</span>
+    <span>All right reserved.</span>
+  </div>
+</div>
+
+<!-- ====== COOKIE BANNER ====== -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookies">
+  <div class="container d-flex align-items-center justify-content-between gap-3 flex-wrap">
+    <div style="flex:1;min-width:280px;">
+      <p class="mb-1 fw-semibold">Nasza strona korzysta z plików cookies</p>
+      <p class="mb-0 text-smaller" style="color:var(--text-light);">Używamy plików cookies, aby zapewnić najlepszą jakość korzystania z naszej strony internetowej. Jeżeli zgadzasz się na używanie wszystkich plików cookies, kliknij &bdquo;Zaakceptuj wszystkie&rdquo;, jeśli natomiast chcesz określić warunki przechowywania lub dostępu, możesz to zrobić w Twojej przeglądarce lub poprzez kliknięcie przycisku &bdquo;Zarządzaj zgodami&rdquo;.</p>
+    </div>
+    <div class="d-flex gap-2 flex-wrap">
+      <button class="btn btn-fdk btn-sm" id="cookieAccept">Zaakceptuj wszystkie</button>
+      <button class="btn btn-outline-secondary btn-sm rounded-pill" id="cookieManage">Zarządzaj zgodami</button>
     </div>
   </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script>
 (function(){
-  // ===== Hamburger / mobile menu =====
-  const hamburger = document.getElementById('hamburger');
-  const navMenu = document.getElementById('navMenu');
-  hamburger.addEventListener('click', () => {
-    const isOpen = navMenu.classList.toggle('open');
-    hamburger.classList.toggle('open', isOpen);
-    hamburger.setAttribute('aria-expanded', String(isOpen));
-  });
+  // ===== Navbar: transparent -> white sticky on scroll =====
+  var nav = document.getElementById('mainNav');
+  var hero = document.getElementById('hero');
 
-  // Close mobile menu on link click
-  navMenu.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      if (window.innerWidth <= 800) {
-        navMenu.classList.remove('open');
-        hamburger.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', 'false');
-      }
-    });
-  });
-
-  // ===== Mobile dropdowns (tap to expand) =====
-  document.querySelectorAll('.has-dropdown .menu-btn').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      if (window.innerWidth <= 800) {
-        e.preventDefault();
-        const parent = btn.parentElement;
-        parent.classList.toggle('open');
-        btn.setAttribute('aria-expanded', String(parent.classList.contains('open')));
-      }
-    });
-  });
-
-  // ===== Language switcher =====
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-    });
-  });
-
-  // ===== FAQ accordion =====
-  document.querySelectorAll('.faq-q').forEach(q => {
-    q.addEventListener('click', () => {
-      const item = q.parentElement;
-      const answer = item.querySelector('.faq-a');
-      const isOpen = item.classList.toggle('open');
-      q.setAttribute('aria-expanded', String(isOpen));
-      if (isOpen) {
-        answer.style.maxHeight = answer.scrollHeight + 'px';
-      } else {
-        answer.style.maxHeight = '0';
-      }
-    });
-  });
+  function handleScroll() {
+    var heroBottom = hero.offsetTop + hero.offsetHeight;
+    if (window.scrollY > heroBottom - 80) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+  }
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  handleScroll();
 
   // ===== Cookie banner =====
-  const cookieBanner = document.getElementById('cookieBanner');
-  const cookieAccept = document.getElementById('cookieAccept');
-  const cookieManage = document.getElementById('cookieManage');
-
+  var cb = document.getElementById('cookieBanner');
   try {
-    if (localStorage.getItem('fdk_cookies_accepted') === '1') {
-      cookieBanner.style.display = 'none';
+    if (localStorage.getItem('fdk_cookies') === '1') {
+      cb.classList.add('hidden');
     }
   } catch(e) {}
 
-  cookieAccept.addEventListener('click', () => {
-    try { localStorage.setItem('fdk_cookies_accepted', '1'); } catch(e) {}
-    cookieBanner.style.display = 'none';
+  document.getElementById('cookieAccept').addEventListener('click', function() {
+    try { localStorage.setItem('fdk_cookies', '1'); } catch(e) {}
+    cb.classList.add('hidden');
   });
 
-  cookieManage.addEventListener('click', () => {
+  document.getElementById('cookieManage').addEventListener('click', function() {
     alert('Panel zarządzania zgodami — w tej wersji demo wszystkie kategorie są opcjonalne.');
+  });
+
+  // ===== Language flags =====
+  document.querySelectorAll('.lang-flag').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.lang-flag').forEach(function(b) { b.style.outline = 'none'; });
+      btn.style.outline = '2px solid #00BBFF';
+      btn.style.outlineOffset = '1px';
+    });
   });
 })();
 </script>
