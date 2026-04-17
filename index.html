@@ -44,13 +44,15 @@
                 <div class="d-block d-lg-flex pe-0 pe-xxl-4 me-0 me-lg-5">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item px-1 px-lg-0 px-xl-2 px-xxl-3"><a class="nav-link" href="#co-robimy">O nas</a></li>
+                        <li class="nav-item px-1 px-lg-0 px-xl-2 px-xxl-3"><a class="nav-link" href="#co-robimy">Dla Pracodawców</a></li>
+                        <li class="nav-item px-1 px-lg-0 px-xl-2 px-xxl-3"><a class="nav-link" href="#co-robimy">Cudzoziemcy</a></li>
+                        <li class="nav-item px-1 px-lg-0 px-xl-2 px-xxl-3"><a class="nav-link" href="#blog">Blog</a></li>
                         <li class="nav-item px-1 px-lg-0 px-xl-2 px-xxl-3"><a class="nav-link" href="#faq">FAQ</a></li>
                         <li class="nav-item px-1 px-lg-0 px-xl-2 px-xxl-3"><a class="nav-link" href="#kontakt">Kontakt</a></li>
                     </ul>
                 </div>
-                <!-- Przycisk "Umów konsultację" — wyróżniony w prawym rogu navbara -->
-                <!-- WŁAŚCICIEL: Podmień TWOJ-LINK-CAL-COM na link Cal.com lub Calendly, np. "firmadlakazdego/konsultacja" -->
-                <a href="https://cal.com/TWOJ-LINK-CAL-COM" target="_blank" class="btn btn-nav-cta d-none d-lg-inline-block ms-3 cal-link-external">Umów konsultację</a>
+                <!-- WŁAŚCICIEL: Podmień TWOJ-LINK-CAL-COM na link Cal.com/Calendly -->
+                <a href="https://cal.com/TWOJ-LINK-CAL-COM" target="_blank" class="btn btn-hero-cta d-none d-lg-inline-block ms-3 cal-link-external">Umów konsultację</a>
             </div>
             <!-- [4] Language switcher — UKRYTY do czasu wersji EN/RU -->
             <!-- WŁAŚCICIEL: Odkomentuj gdy dodasz wersje EN/RU strony -->
@@ -91,22 +93,32 @@
                 </div>
             </div>
         </div>
-        <div class="text d-inline-block border-top-1 pt-4 pb-5 position-relative">
+        <div class="text d-inline-block border-top-1 pt-4 pb-4 position-relative">
             <p class="mt-2 mb-3">Chcesz rozpocząć swoją działalność? Sprawdź, ile możesz z nami zaoszczędzić.<br class="d-none d-md-inline-block">Skontaktuj się z nami i zacznij już dziś.</p>
-            <a href="#kontakt" class="btn btn-fdk btn-lg px-5 py-3">Skontaktuj się z nami</a>
+            <a href="#kontakt" class="btn btn-hero-cta btn-lg px-5 py-3">Skontaktuj się z nami</a>
         </div>
 
-        <!-- COUNTERY — na hero, na tle wideo -->
-        <div class="hero-counters mt-5 pt-4 border-top border-white border-opacity-25">
-            <div class="row text-center row-cols-1 row-cols-md-3 g-4">
-                <div class="col"><span class="counter-value display-4 fw-bold" data-target="20">0</span><span class="display-4 fw-bold">+</span><div class="mt-1 opacity-75">lat doświadczenia</div></div>
-                <div class="col"><span class="counter-value display-4 fw-bold" data-target="10000">0</span><span class="display-4 fw-bold">+</span><div class="mt-1 opacity-75">klientów</div></div>
-                <div class="col"><span class="counter-value display-4 fw-bold" data-target="95">0</span><span class="display-4 fw-bold">%</span><div class="mt-1 opacity-75">zadowolonych klientów</div></div>
+        <!-- COUNTERY — WEWNĄTRZ hero, na tle wideo -->
+        <div class="hero-counters mt-4 pt-4">
+            <div class="row text-center row-cols-3 g-0">
+                <div class="col hero-counter-item">
+                    <span class="counter-value hero-counter-num" data-target="20">0</span><span class="hero-counter-num">+</span>
+                    <div class="hero-counter-label">lat doświadczenia</div>
+                </div>
+                <div class="col hero-counter-item">
+                    <span class="counter-value hero-counter-num" data-target="10000">0</span><span class="hero-counter-num">+</span>
+                    <div class="hero-counter-label">klientów</div>
+                </div>
+                <div class="col hero-counter-item">
+                    <span class="counter-value hero-counter-num" data-target="95">0</span><span class="hero-counter-num">%</span>
+                    <div class="hero-counter-label">zadowolonych klientów</div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="arrows position-absolute bottom-0 start-50 translate-middle-x pb-4 pb-md-5">
-        <svg width="45" height="45" viewBox="0 0 66 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M64.3377 2L33.1688 21.4805L2 2" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/><path d="M64.3377 22.2598L33.1688 41.7403L2 22.2598" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/></svg>
+    <!-- Strzałka scroll-down pod counterami -->
+    <div class="text-center pb-3 position-relative" style="z-index:1; margin-top:-10px">
+        <svg width="35" height="35" viewBox="0 0 66 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="arrows-small"><path d="M64.3377 2L33.1688 21.4805L2 2" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-linecap="round"/><path d="M64.3377 22.2598L33.1688 41.7403L2 22.2598" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-linecap="round"/></svg>
     </div>
 </section>
 
