@@ -315,6 +315,33 @@ footer .phones span { display: inline-block; min-width: 50px; margin-right: 15px
 /* ===== CALCULATOR ===== */
 #kalkulator .form-control:focus { border-color: #00BBFF; box-shadow: 0 0 0 0.2rem rgba(0,187,255,.15); }
 
+/* ===== PARTNERS LOGO BAR ===== */
+.partners-track {
+  overflow: hidden;
+  position: relative;
+}
+.partners-slide {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  animation: scrollLogos 20s linear infinite;
+  width: max-content;
+}
+.partners-slide img {
+  opacity: 0.5;
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+.partners-slide img:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+@keyframes scrollLogos {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 /* ===== OUTLINE PRIMARY ===== */
 .btn-outline-primary { color: #00BBFF; border-color: #00BBFF; }
 .btn-outline-primary:hover { background-color: #00BBFF; border-color: #00BBFF; color: #fff; }
