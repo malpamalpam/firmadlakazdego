@@ -160,17 +160,21 @@ header.sticky-top .navbar a:hover { color: #00BBFF; }
 
 /* ===== HERO ===== */
 .page-index .section-hero {
-  padding-top: 175px;
-  padding-bottom: 75px;
+  padding-top: 120px;
+  padding-bottom: 40px;
   position: relative;
   background-color: #292623;
   overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 @media screen and (min-width: 992px) {
-  .page-index .section-hero { padding-top: 260px; padding-bottom: 60px; }
+  .page-index .section-hero { padding-top: 140px; padding-bottom: 40px; }
 }
 @media screen and (min-width: 1200px) {
-  .page-index .section-hero { padding-top: 280px; padding-bottom: 80px; }
+  .page-index .section-hero { padding-top: 160px; padding-bottom: 50px; }
 }
 
 .page-index .section-hero .bg {
@@ -359,14 +363,14 @@ header.sticky-top .btn-hero-cta {
   width: max-content;
 }
 .partners-slide img {
-  opacity: 0.5;
-  filter: grayscale(100%);
+  opacity: 0.85;
   transition: all 0.3s ease;
   flex-shrink: 0;
 }
+.partners-slide a { display: flex; align-items: center; }
 .partners-slide img:hover {
   opacity: 1;
-  filter: grayscale(0%);
+  transform: scale(1.05);
 }
 @keyframes scrollLogos {
   0% { transform: translateX(0); }
