@@ -1,2 +1,7 @@
 User-agent: *
 Disallow: /
+# NOTE: Disallow all — strona w trybie staging/noindex.
+# Gdy strona będzie produkcyjna, zmień na:
+# User-agent: *
+# Allow: /
+# Sitemap: https://fdk-site.vercel.app/sitemap.xml
