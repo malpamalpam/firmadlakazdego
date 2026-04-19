@@ -382,9 +382,8 @@
                             <li class="pb-3"><a href="#co-robimy" class="text-muted">O nas</a></li>
                             <li class="pb-3"><a href="#kontakt" class="text-muted">Kontakt</a></li>
                             <li class="pb-3"><a href="#faq" class="text-muted">FAQ</a></li>
-                            <!-- TODO: Dodać treść regulaminu i cennika, wtedy odkomentować -->
-                            <!-- <li class="pb-3"><a href="#" class="text-muted" data-bs-toggle="modal" data-bs-target="#regulaminModal">Regulamin</a></li> -->
-                            <!-- <li class="pb-3"><a href="#" class="text-muted" data-bs-toggle="modal" data-bs-target="#oplatyModal">Opłaty</a></li> -->
+                            <li class="pb-3"><a href="regulamin.html" class="text-muted">Regulamin</a></li>
+                            <li class="pb-3"><a href="#" class="text-muted" data-bs-toggle="modal" data-bs-target="#oplatyModal">Opłaty</a></li>
                         </ul>
                     </div></div></div>
                 </div>
@@ -411,16 +410,58 @@
     </div>
 </footer>
 
-<!-- [3] MODALE: Regulamin i Opłaty -->
-<div class="modal fade" id="regulaminModal" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Regulamin</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zamknij"></button></div><div class="modal-body">
-<!-- WŁAŚCICIEL: Wklej tutaj treść regulaminu -->
-<p>Treść regulaminu zostanie dodana wkrótce. Skontaktuj się z nami, aby otrzymać regulamin w formie dokumentu.</p>
-</div></div></div></div>
-
-<div class="modal fade" id="oplatyModal" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Cennik / Opłaty</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zamknij"></button></div><div class="modal-body">
-<!-- WŁAŚCICIEL: Wklej tutaj cennik -->
-<p>Cennik zostanie dodany wkrótce. Skontaktuj się z nami, aby otrzymać szczegółowy cennik usług.</p>
-</div></div></div></div>
+<!-- MODAL: Opłaty z formularzem płatności -->
+<div class="modal fade" id="oplatyModal" tabindex="-1" aria-labelledby="oplatyModalLabel">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-0 pb-0">
+                <h5 class="modal-title fw-bold" id="oplatyModalLabel">Dokonaj opłaty</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zamknij"></button>
+            </div>
+            <div class="modal-body px-4 pb-4">
+                <p class="text-muted mb-4">Wypełnij formularz i wybierz metodę płatności.</p>
+                <form id="payment-form">
+                    <div class="row g-3 mb-3">
+                        <div class="col-6">
+                            <label for="pay-name" class="form-label">Imię <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="pay-name" name="name" required>
+                        </div>
+                        <div class="col-6">
+                            <label for="pay-surname" class="form-label">Nazwisko <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="pay-surname" name="surname" required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="pay-email" class="form-label">E-mail <span class="text-danger">*</span></label>
+                        <input type="email" class="form-control" id="pay-email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="pay-title" class="form-label">Tytuł płatności <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="pay-title" name="title" placeholder="np. Abonament miesięczny, Konsultacja" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="pay-amount" class="form-label">Kwota (PLN) <span class="text-danger">*</span></label>
+                        <div class="input-group">
+                            <input type="number" class="form-control form-control-lg" id="pay-amount" name="amount" min="1" step="0.01" placeholder="400.00" required>
+                            <span class="input-group-text fw-bold">PLN</span>
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <!-- WŁAŚCICIEL: Podmień linki na swoje konta Stripe i PayPal -->
+                        <button type="button" class="btn btn-lg text-white fw-bold" style="background:#635bff" onclick="payWithStripe()">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="white" class="me-2" style="vertical-align:-3px"><path d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697 0 12.165 0 9.667 0 7.589.654 6.104 1.872 4.56 3.147 3.757 4.992 3.757 7.218c0 4.039 2.467 5.76 6.476 7.219 2.585.92 3.445 1.574 3.445 2.583 0 .98-.84 1.545-2.354 1.545-1.875 0-4.965-.921-7.076-2.19l-.892 5.494C5.259 22.897 8.109 24 11.662 24c2.586 0 4.735-.681 6.25-1.842 1.638-1.247 2.462-3.127 2.462-5.564 0-4.123-2.51-5.836-6.398-7.444z"/></svg>
+                            Zapłać przez Stripe
+                        </button>
+                        <button type="button" class="btn btn-lg text-white fw-bold" style="background:#0070ba" onclick="payWithPayPal()">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="white" class="me-2" style="vertical-align:-3px"><path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106zm14.146-14.42a3.35 3.35 0 0 0-.607-.541c1.27 5.04-1.89 8.334-7.498 8.334h-2.19c-.524 0-.968.382-1.05.9l-1.466 9.297a.641.641 0 0 0 .633.74h3.237c.459 0 .85-.334.922-.788l.038-.195.73-4.627.047-.254a.929.929 0 0 1 .922-.788h.58c3.76 0 6.705-1.528 7.565-5.946.36-1.847.174-3.388-.863-4.132z"/></svg>
+                            Zapłać przez PayPal
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- COOKIE BANNER -->
 <div id="cookie-banner" class="position-fixed bottom-0 start-0 w-100 p-3 p-md-4" style="background:#1a1e23;z-index:9999;display:none">

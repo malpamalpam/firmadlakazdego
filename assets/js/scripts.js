@@ -163,3 +163,39 @@ function acceptCookies() {
     localStorage.setItem('cookies-accepted', 'true');
     document.getElementById('cookie-banner').style.display = 'none';
 }
+
+// ===== Payment functions =====
+// WŁAŚCICIEL: Podmień TWOJ_STRIPE_LINK na link z Stripe Payment Links
+// oraz TWOJ_PAYPAL_EMAIL na adres PayPal firmy
+function payWithStripe() {
+    var form = document.getElementById('payment-form');
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    var name = document.getElementById('pay-name').value + ' ' + document.getElementById('pay-surname').value;
+    var email = document.getElementById('pay-email').value;
+    var title = document.getElementById('pay-title').value;
+    var amount = document.getElementById('pay-amount').value;
+    // Stripe Payment Link — WŁAŚCICIEL: podmień na swój link
+    // Możesz utworzyć Payment Link w dashboard.stripe.com → Payment Links
+    var stripeUrl = 'https://buy.stripe.com/TWOJ_STRIPE_LINK'
+        + '?prefilled_email=' + encodeURIComponent(email)
+        + '&client_reference_id=' + encodeURIComponent(title + ' | ' + name);
+    window.open(stripeUrl, '_blank');
+}
+
+function payWithPayPal() {
+    var form = document.getElementById('payment-form');
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    var name = document.getElementById('pay-name').value + ' ' + document.getElementById('pay-surname').value;
+    var email = document.getElementById('pay-email').value;
+    var title = document.getElementById('pay-title').value;
+    var amount = document.getElementById('pay-amount').value;
+    // PayPal.me lub PayPal payment link
+    var paypalUrl = 'https://www.paypal.com/cgi-bin/webscr'
+        + '?business=kontakt@firmadlakazdego.pl'
+        + '&cmd=_xclick'
+        + '&currency_code=PLN'
+        + '&amount=' + encodeURIComponent(amount)
+        + '&item_name=' + encodeURIComponent(title + ' - ' + name)
+        + '&email=' + encodeURIComponent(email);
+    window.open(paypalUrl, '_blank');
+}
