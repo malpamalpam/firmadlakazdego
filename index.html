@@ -24,6 +24,12 @@
     <meta name="twitter:image" content="https://fdk-site.vercel.app/assets/img/logo-dark.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/styles.css" rel="stylesheet">
+    <!-- Cal.com Embed Popup -->
+    <script>
+    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init", {origin:"https://cal.com"});
+    Cal("ui", {"styles":{"branding":{"brandColor":"#00BBFF"}},"hideEventTypeDetails":false,"layout":"month_view"});
+    </script>
     <!-- [5] Schema.org Organization -->
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Fundacja Firma Dla Każdego","url":"https://firmadlakazdego.pl","logo":"https://fdk-site.vercel.app/assets/img/logo-dark.png","address":{"@type":"PostalAddress","streetAddress":"ul. Lwowska 17/4","addressLocality":"Warszawa","postalCode":"00-660","addressCountry":"PL"},"contactPoint":[{"@type":"ContactPoint","telephone":"+48-575-594-500","contactType":"customer service","availableLanguage":"Polish"},{"@type":"ContactPoint","telephone":"+48-794-731-000","contactType":"customer service","availableLanguage":["English","Russian"]}],"sameAs":["https://www.facebook.com/firmadlakazdego","https://www.instagram.com/firmadlakazdego","https://t.me/FDK_inkubator"]}</script>
     <!-- [5] Schema.org FAQPage -->
@@ -58,15 +64,14 @@
                 <div class="d-block d-lg-flex pe-0 pe-xxl-4 me-0 me-lg-5">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item px-1 px-lg-0 px-xl-2 px-xxl-3"><a class="nav-link" href="o-nas.html">O nas</a></li>
-                        <!-- TODO: Stworzyć dedykowane podstrony dla-pracodawcow.html i cudzoziemcy.html -->
-                        <li class="nav-item px-1 px-lg-0 px-xl-2 px-xxl-3"><a class="nav-link" href="#pakiet">Dla Pracodawców</a></li>
-                        <li class="nav-item px-1 px-lg-0 px-xl-2 px-xxl-3"><a class="nav-link" href="#kontakt">Cudzoziemcy</a></li>
+                        <li class="nav-item px-1 px-lg-0 px-xl-2 px-xxl-3"><a class="nav-link" href="dla-pracodawcow.html">Dla Pracodawców</a></li>
+                        <li class="nav-item px-1 px-lg-0 px-xl-2 px-xxl-3"><a class="nav-link" href="cudzoziemcy.html">Cudzoziemcy</a></li>
                         <li class="nav-item px-1 px-lg-0 px-xl-2 px-xxl-3"><a class="nav-link" href="https://firmadlakazdego.pl/blog/" target="_blank">Blog</a></li>
                         <li class="nav-item px-1 px-lg-0 px-xl-2 px-xxl-3"><a class="nav-link" href="faq.html">FAQ</a></li>
                         <li class="nav-item px-1 px-lg-0 px-xl-2 px-xxl-3"><a class="nav-link" href="#kontakt">Kontakt</a></li>
                     </ul>
                 </div>
-                <a href="https://cal.com/firmadlakazdego" target="_blank" class="btn btn-hero-cta d-none d-lg-inline-block ms-3">Umów konsultację</a>
+                <button data-cal-link="firmadlakazdego" data-cal-config='{"layout":"month_view"}' class="btn btn-hero-cta d-none d-lg-inline-block ms-3">Umów konsultację</button>
             </div>
             <!-- [4] Language switcher — UKRYTY do czasu wersji EN/RU -->
             <!-- WŁAŚCICIEL: Odkomentuj gdy dodasz wersje EN/RU strony -->
@@ -170,10 +175,10 @@
     <div class="container">
         <h2 class="text-center mb-4 mb-md-5">Co robimy?</h2>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 justify-content-center">
-            <div class="col fade-in"><a href="#pakiet" class="card shadow rounded-3 h-100 p-4 text-center text-decoration-none card-hover"><div class="card-body"><img src="assets/img/icon-index-1.svg" alt="Inkubator" width="60" height="60" class="mb-3" loading="lazy"><h3 class="h5 fw-bold">Inkubator Przedsiębiorczości</h3><p class="text-smaller text-muted mb-0">Preinkubacja, osobowość prawna, księgowość, brak ZUS — rozpocznij działalność bez formalności.</p></div></a></div>
-            <div class="col fade-in"><a href="#kontakt" class="card shadow rounded-3 h-100 p-4 text-center text-decoration-none card-hover"><div class="card-body"><img src="assets/img/icon-index-2.svg" alt="Cudzoziemcy" width="60" height="60" class="mb-3" loading="lazy"><h3 class="h5 fw-bold">Obsługa Cudzoziemców</h3><p class="text-smaller text-muted mb-0">Legalizacja pobytu i pracy, zezwolenia, karty pobytu — pełne wsparcie w języku PL/EN/RU/UA.</p></div></a></div>
-            <div class="col fade-in"><a href="#kontakt" class="card shadow rounded-3 h-100 p-4 text-center text-decoration-none card-hover"><div class="card-body"><img src="assets/img/icon-index-3.svg" alt="Biznesplany" width="60" height="60" class="mb-3" loading="lazy"><h3 class="h5 fw-bold">Biznesplany</h3><p class="text-smaller text-muted mb-0">Profesjonalne biznesplany na potrzeby dotacji, kredytów i inwestorów.</p></div></a></div>
-            <div class="col fade-in"><a href="#kontakt" class="card shadow rounded-3 h-100 p-4 text-center text-decoration-none card-hover"><div class="card-body"><img src="assets/img/icon-index-4.svg" alt="Inne usługi" width="60" height="60" class="mb-3" loading="lazy"><h3 class="h5 fw-bold">Inne usługi</h3><p class="text-smaller text-muted mb-0">Wynajem adresu, program partnerski i inne usługi wspierające Twój biznes.</p></div></a></div>
+            <div class="col fade-in"><a href="inkubator.html" class="card shadow rounded-3 h-100 p-4 text-center text-decoration-none card-hover"><div class="card-body"><img src="assets/img/icon-index-1.svg" alt="Ikona inkubatora przedsiębiorczości" width="60" height="60" class="mb-3" loading="lazy"><h3 class="h5 fw-bold">Inkubator Przedsiębiorczości</h3><p class="text-smaller text-muted mb-0">Preinkubacja, osobowość prawna, księgowość, brak ZUS — rozpocznij działalność bez formalności.</p></div></a></div>
+            <div class="col fade-in"><a href="cudzoziemcy.html" class="card shadow rounded-3 h-100 p-4 text-center text-decoration-none card-hover"><div class="card-body"><img src="assets/img/icon-index-2.svg" alt="Ikona obsługi cudzoziemców" width="60" height="60" class="mb-3" loading="lazy"><h3 class="h5 fw-bold">Obsługa Cudzoziemców</h3><p class="text-smaller text-muted mb-0">Legalizacja pobytu i pracy, zezwolenia, karty pobytu — pełne wsparcie w języku PL/EN/RU/UA.</p></div></a></div>
+            <div class="col fade-in"><a href="uslugi.html" class="card shadow rounded-3 h-100 p-4 text-center text-decoration-none card-hover"><div class="card-body"><img src="assets/img/icon-index-3.svg" alt="Ikona biznesplanów" width="60" height="60" class="mb-3" loading="lazy"><h3 class="h5 fw-bold">Biznesplany</h3><p class="text-smaller text-muted mb-0">Profesjonalne biznesplany na potrzeby dotacji, kredytów i inwestorów.</p></div></a></div>
+            <div class="col fade-in"><a href="uslugi.html" class="card shadow rounded-3 h-100 p-4 text-center text-decoration-none card-hover"><div class="card-body"><img src="assets/img/icon-index-4.svg" alt="Ikona dodatkowych usług biznesowych" width="60" height="60" class="mb-3" loading="lazy"><h3 class="h5 fw-bold">Inne usługi</h3><p class="text-smaller text-muted mb-0">Wynajem adresu, program partnerski i inne usługi wspierające Twój biznes.</p></div></a></div>
         </div>
     </div>
 </section>
