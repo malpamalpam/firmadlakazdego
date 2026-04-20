@@ -1,14 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 100" width="280" height="100">
-  <!-- Blue background -->
-  <rect width="280" height="100" rx="6" fill="#0B4DA2"/>
-  <!-- Three arcs -->
-  <path d="M100 42 Q120 10, 140 6 Q160 10, 180 42" stroke="white" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-  <path d="M108 44 Q125 16, 140 12 Q155 16, 172 44" stroke="white" stroke-width="2.8" fill="none" stroke-linecap="round"/>
-  <path d="M116 46 Q130 24, 140 20 Q150 24, 164 46" stroke="white" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-  <!-- Head -->
-  <circle cx="140" cy="32" r="5" fill="white"/>
-  <!-- Body arms spread -->
-  <path d="M105 68 C112 48, 128 42, 140 40 C152 42, 168 48, 175 68" stroke="white" stroke-width="5" fill="none" stroke-linecap="round"/>
-  <!-- Text MEDICOVER -->
-  <text x="140" y="88" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="22" fill="white" text-anchor="middle" letter-spacing="3">MEDICOVER</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" width="240" height="80">
+  <defs>
+    <clipPath id="mc-clip"><rect width="240" height="80" rx="6"/></clipPath>
+  </defs>
+  <rect width="240" height="80" rx="6" fill="#0B4DA2"/>
+  <g clip-path="url(#mc-clip)">
+    <!-- Arc 1 (outer) -->
+    <path d="M85 38 C95 18, 110 10, 120 8 C130 10, 145 18, 155 38" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <!-- Arc 2 (middle) -->
+    <path d="M90 38 C98 22, 110 15, 120 13 C130 15, 142 22, 150 38" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Arc 3 (inner) -->
+    <path d="M95 38 C101 26, 112 20, 120 18 C128 20, 139 26, 145 38" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <!-- Head -->
+    <circle cx="120" cy="28" r="4" fill="white"/>
+    <!-- Body - Y shape -->
+    <path d="M100 58 Q105 42, 120 36 Q135 42, 140 58" stroke="white" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+    <line x1="120" y1="44" x2="120" y2="56" stroke="white" stroke-width="4" stroke-linecap="round"/>
+    <!-- Text -->
+    <text x="120" y="74" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="16" fill="white" text-anchor="middle" letter-spacing="2.5">MEDICOVER</text>
+  </g>
 </svg>
