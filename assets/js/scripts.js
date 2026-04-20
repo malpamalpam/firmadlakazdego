@@ -190,6 +190,25 @@ function submitContactForm(e) {
     });
 }
 
+// ===== Opinie toggle =====
+var opinieExpanded = false;
+function toggleOpinie() {
+    var container = document.getElementById('opinie-container');
+    var fade = document.getElementById('opinie-fade');
+    var btn = document.querySelector('#opinie-toggle button');
+    if (!opinieExpanded) {
+        container.style.maxHeight = 'none';
+        fade.style.display = 'none';
+        btn.textContent = 'Zwiń';
+        opinieExpanded = true;
+    } else {
+        container.style.maxHeight = '400px';
+        fade.style.display = 'block';
+        btn.textContent = 'Czytaj więcej';
+        opinieExpanded = false;
+    }
+}
+
 // ===== Cookie accept =====
 function acceptCookies() {
     localStorage.setItem('cookies-accepted', 'true');

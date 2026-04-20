@@ -339,13 +339,19 @@
 </section>
 
 <!-- ==================== 9. OPINIE ==================== -->
-<section id="opinie" class="py-3 py-md-4" style="max-height:400px;overflow:hidden">
+<section id="opinie" class="py-3 py-md-4 position-relative">
     <div class="container">
         <h2 class="text-center mb-4">Opinie naszych klientów</h2>
-
-        <!-- Elfsight Google Reviews -->
-        <script src="https://elfsightcdn.com/platform.js" async></script>
-        <div class="elfsight-app-604a7529-e26f-40f6-b3e0-0fff024a9959" data-elfsight-app-lazy></div>
+        <div id="opinie-container" style="max-height:400px;overflow:hidden;position:relative;transition:max-height 0.5s ease">
+            <!-- Elfsight Google Reviews -->
+            <script src="https://elfsightcdn.com/platform.js" async></script>
+            <div class="elfsight-app-604a7529-e26f-40f6-b3e0-0fff024a9959" data-elfsight-app-lazy></div>
+            <!-- Gradient fade -->
+            <div id="opinie-fade" style="position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(transparent,#ffffff);pointer-events:none"></div>
+        </div>
+        <div class="text-center mt-3" id="opinie-toggle">
+            <button class="btn btn-outline-primary px-4" onclick="toggleOpinie()">Czytaj więcej</button>
+        </div>
     </div>
 </section>
 
