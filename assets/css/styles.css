@@ -454,3 +454,11 @@ header.sticky-top .btn-hero-cta {
 /* ===== OUTLINE PRIMARY ===== */
 .btn-outline-primary { color: #00BBFF; border-color: #00BBFF; }
 .btn-outline-primary:hover { background-color: #00BBFF; border-color: #00BBFF; color: #fff; }
+
+/* ===== SKIP LINK (WCAG) ===== */
+.skip-link { position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden; }
+.skip-link:focus { position:static;width:auto;height:auto;padding:8px 16px;background:#00BBFF;color:#fff;z-index:9999;text-decoration:none;font-weight:bold; }
+
+/* ===== FOOTER SPACING ===== */
+main + footer { margin-top: 0; }
+section:last-of-type { margin-bottom: 0; padding-bottom: 40px; }
