@@ -129,6 +129,7 @@ header .navbar .navbar-collapse.collapsing a { color: #000000; }
 
 header .navbar-dark a { color: #ffffff; }
 header .navbar .nav-item { padding: 0 5px; }
+header .navbar .nav-link { font-size: 1.2rem; }
 
 header.sticky-top .navbar {
   background-color: #fff;
