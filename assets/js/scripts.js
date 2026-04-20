@@ -216,8 +216,6 @@ function acceptCookies() {
 }
 
 // ===== Payment functions =====
-// WŁAŚCICIEL: Podmień TWOJ_STRIPE_LINK na link z Stripe Payment Links
-// oraz TWOJ_PAYPAL_EMAIL na adres PayPal firmy
 function payWithStripe() {
     var form = document.getElementById('payment-form');
     if (!form.checkValidity()) { form.reportValidity(); return; }
@@ -225,9 +223,8 @@ function payWithStripe() {
     var email = document.getElementById('pay-email').value;
     var title = document.getElementById('pay-title').value;
     var amount = document.getElementById('pay-amount').value;
-    // Stripe Payment Link — WŁAŚCICIEL: podmień na swój link
-    // Możesz utworzyć Payment Link w dashboard.stripe.com → Payment Links
-    var stripeUrl = 'https://buy.stripe.com/TWOJ_STRIPE_LINK'
+
+    var stripeUrl = 'https://buy.stripe.com/8x2bJ0cJ1fBfbO84bo5gc00'
         + '?prefilled_email=' + encodeURIComponent(email)
         + '&client_reference_id=' + encodeURIComponent(title + ' | ' + name);
     window.open(stripeUrl, '_blank');
