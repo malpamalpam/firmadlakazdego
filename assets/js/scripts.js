@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', function() {
             rotatorItems[currentSlide].classList.remove('active');
             currentSlide = (currentSlide + 1) % rotatorItems.length;
             rotatorItems[currentSlide].classList.add('active');
-        }, 3000);
+        }, 4000);
     }
 
     // ===== Cookie Banner =====
