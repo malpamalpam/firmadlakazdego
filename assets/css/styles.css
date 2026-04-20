@@ -460,6 +460,16 @@ header.sticky-top .btn-hero-cta {
 @media screen and (max-width: 991px) {
   .dropdown.flex-shrink-0 { position: absolute; right: 60px; top: 12px; }
 }
+/* Navbar items wrap fix */
+header .navbar .navbar-collapse { flex-wrap: nowrap; }
+header .navbar .btn-hero-cta { font-size: 0.75rem !important; padding: 5px 10px !important; white-space: nowrap; }
+@media screen and (min-width: 992px) and (max-width: 1399px) {
+  header .navbar .nav-link { font-size: 0.95rem !important; padding-left: 4px !important; padding-right: 4px !important; }
+  header .navbar .btn-hero-cta { font-size: 0.7rem !important; padding: 4px 8px !important; }
+}
+@media screen and (min-width: 1400px) {
+  header .navbar .btn-hero-cta { font-size: 0.8rem !important; padding: 6px 14px !important; }
+}
 
 /* ===== SKIP LINK (WCAG) ===== */
 .skip-link { position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden; }
