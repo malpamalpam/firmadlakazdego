@@ -13,7 +13,7 @@ Dane: ul. Lwowska 17/4, 00-660 Warszawa. KRS: 0000569410, NIP: 5252625624, REGON
 
 Dla kogo: freelancerzy, wolne zawody — programiści, graficy, architekci, tłumacze, marketingowcy, lektorzy, copywriterzy, influencerzy, e-commerce, muzycy, dziennikarze, cudzoziemcy. NIE: budowlanka, fryzjerstwo, kosmetyka, mechanika, gastronomia.
 
-Koszt: 400 zł netto/miesiąc. W cenie: osobowość prawna, księgowość, kadry, doradztwo prawne (do 5h/rok), podatkowe, subkonto bankowe, biuro (5h/mies.). Skalowanie: do 10k→400zł, 10-30k→700zł, 30k+→1050zł.
+Koszt: 400 zł netto/miesiąc. W cenie: osobowość prawna, księgowość, kadry, doradztwo prawne (do 5h/rok), podatkowe, subkonto bankowe. Skalowanie: do 10k→400zł, 10-30k→700zł, 30k+→1050zł.
 
 Opodatkowanie:
 - Umowa o dzieło z prawami autorskimi: PIT 6%, brak ZUS (programiści, graficy, architekci, muzycy)
