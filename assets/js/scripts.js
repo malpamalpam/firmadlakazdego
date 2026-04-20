@@ -199,12 +199,14 @@ function toggleOpinie() {
     if (!opinieExpanded) {
         container.style.maxHeight = 'none';
         fade.style.display = 'none';
-        btn.textContent = 'Zwiń';
+        btn.textContent = 'Zwiń opinię';
+        btn.style.background = '#32373c';
         opinieExpanded = true;
     } else {
         container.style.maxHeight = '400px';
         fade.style.display = 'block';
-        btn.textContent = 'Czytaj więcej';
+        btn.textContent = 'Czytaj więcej opinii';
+        btn.style.background = '#00BBFF';
         opinieExpanded = false;
     }
 }
