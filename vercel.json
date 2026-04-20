@@ -1,8 +1,12 @@
 {
-  "buildCommand": "",
-  "outputDirectory": ".",
   "cleanUrls": true,
   "trailingSlash": false,
+  "functions": {
+    "api/chat.js": {
+      "memory": 256,
+      "maxDuration": 30
+    }
+  },
   "headers": [
     {
       "source": "/(.*)",
