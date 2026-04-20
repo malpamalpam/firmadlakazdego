@@ -129,6 +129,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // ===== Hero Rotator =====
+    var rotatorItems = document.querySelectorAll('.hero-rotator-item');
+    if (rotatorItems.length > 1) {
+        var currentSlide = 0;
+        setInterval(function() {
+            rotatorItems[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % rotatorItems.length;
+            rotatorItems[currentSlide].classList.add('active');
+        }, 3000);
+    }
+
     // ===== Cookie Banner =====
     var cookieBanner = document.getElementById('cookie-banner');
     if (cookieBanner && !localStorage.getItem('cookies-accepted')) {

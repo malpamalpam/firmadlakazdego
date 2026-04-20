@@ -432,6 +432,19 @@ header.sticky-top .btn-hero-cta {
 .form-range::-webkit-slider-thumb { cursor: grab; }
 .form-range::-webkit-slider-thumb:active { cursor: grabbing; }
 
+/* ===== HERO ROTATOR ===== */
+.hero-rotator { position: relative; min-height: 80px; }
+@media screen and (min-width: 992px) { .hero-rotator { min-height: 90px; } }
+.hero-rotator-item {
+  position: absolute; top: 0; left: 0; width: 100%;
+  opacity: 0; transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.hero-rotator-item.active {
+  position: relative;
+  opacity: 1; transform: translateY(0);
+}
+
 /* ===== BOUNCE animation ===== */
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
