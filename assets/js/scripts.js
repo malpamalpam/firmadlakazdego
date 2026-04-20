@@ -136,26 +136,47 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// ===== [2] Formularz kontaktowy — mailto: fallback =====
-// WŁAŚCICIEL: Możesz podłączyć Formspree (action="https://formspree.io/f/TWOJ-ID")
-// lub EmailJS (emailjs.init('KEY'), emailjs.sendForm(...))
-function sendEmail(e) {
+// ===== Formularz kontaktowy — wysyłka przez API =====
+function submitContactForm(e) {
     e.preventDefault();
     var form = e.target;
+    var btn = form.querySelector('button[type="submit"]');
     var name = form.querySelector('#cf-name').value;
     var email = form.querySelector('#cf-email').value;
     var phone = form.querySelector('#cf-phone').value;
     var message = form.querySelector('#cf-message').value;
 
-    var subject = encodeURIComponent('Zapytanie ze strony FDK - ' + name);
-    var body = encodeURIComponent(
-        'Imię: ' + name + '\n' +
-        'Email: ' + email + '\n' +
-        'Telefon: ' + phone + '\n\n' +
-        'Wiadomość:\n' + message
-    );
+    btn.disabled = true;
+    btn.textContent = 'Wysyłanie...';
 
-    window.location.href = 'mailto:kontakt@firmadlakazdego.pl?subject=' + subject + '&body=' + body;
+    fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: name, email: email, phone: phone, message: message })
+    })
+    .then(function(res) { return res.json(); })
+    .then(function(data) {
+        if (data.success) {
+            form.reset();
+            btn.textContent = 'Wysłano! ✓';
+            btn.style.backgroundColor = '#28a745';
+            setTimeout(function() {
+                btn.disabled = false;
+                btn.textContent = 'Wyślij wiadomość';
+                btn.style.backgroundColor = '';
+            }, 4000);
+        } else {
+            throw new Error(data.error);
+        }
+    })
+    .catch(function() {
+        // Fallback — mailto
+        var subject = encodeURIComponent('Zapytanie ze strony FDK - ' + name);
+        var body = encodeURIComponent('Imię: ' + name + '\nEmail: ' + email + '\nTelefon: ' + phone + '\n\nWiadomość:\n' + message);
+        window.location.href = 'mailto:kontakt@firmadlakazdego.pl?subject=' + subject + '&body=' + body;
+        btn.disabled = false;
+        btn.textContent = 'Wyślij wiadomość';
+    });
 }
 
 // ===== Cookie accept =====
