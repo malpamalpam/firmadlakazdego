@@ -129,57 +129,74 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Section: Dzialamy - Pill Cards */}
+        {/* Section: Jak Dzialamy - Process Steps */}
         <section className="pb-12 md:pb-20">
           <div className="container mx-auto px-5">
-            <h2 className="text-2xl md:text-3xl text-center mb-10">Dzialamy:</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              {/* SZYBKO */}
-              <div className="pill-card">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-[var(--accent)]/10 flex items-center justify-center flex-shrink-0">
-                    <svg className="w-6 h-6 text-[var(--accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
+            <h2 className="text-2xl md:text-3xl text-center mb-4">Jak dzialamy?</h2>
+            <p className="text-center text-[var(--body-color)] mb-12 max-w-2xl mx-auto">
+              Wspolpraca z nami jest prosta i przejrzysta. Caly proces mozna zamknac w 4 krokach.
+            </p>
+
+            <div className="max-w-5xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-0">
+                {[
+                  {
+                    num: "01",
+                    title: "Kontakt i konsultacja",
+                    desc: "Skontaktuj sie z nami. Omowimy Twoj pomysl na biznes i dopasujemy najlepsze rozwiazanie.",
+                    icon: (
+                      <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
+                    ),
+                  },
+                  {
+                    num: "02",
+                    title: "Podpisanie umowy",
+                    desc: "Podpisujemy umowe wspolpracy. Otrzymujesz NIP, REGON i mozliwosc wystawiania faktur.",
+                    icon: (
+                      <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                    ),
+                  },
+                  {
+                    num: "03",
+                    title: "Rozpoczecie dzialalnosci",
+                    desc: "Zaczynasz dzialac legalnie. Wystawiasz faktury, obsluguesz klientow, rozwijasz biznes.",
+                    icon: (
+                      <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                    ),
+                  },
+                  {
+                    num: "04",
+                    title: "Biezace wsparcie",
+                    desc: "Zapewniamy ksiegowosc, doradztwo prawne i biznesowe przez caly okres wspolpracy.",
+                    icon: (
+                      <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                    ),
+                  },
+                ].map((step, index) => (
+                  <div key={step.num} className="relative text-center px-4 py-8 group">
+                    {/* Connector line */}
+                    {index < 3 && (
+                      <div className="hidden md:block absolute top-[72px] right-0 w-1/2 h-0.5 bg-gradient-to-r from-[var(--accent)]/40 to-[var(--accent)]/40 z-0" />
+                    )}
+                    {index > 0 && (
+                      <div className="hidden md:block absolute top-[72px] left-0 w-1/2 h-0.5 bg-gradient-to-r from-[var(--accent)]/40 to-[var(--accent)]/40 z-0" />
+                    )}
+                    {/* Number */}
+                    <div className="text-5xl font-bold text-[var(--accent)]/15 mb-2">{step.num}</div>
+                    {/* Icon circle */}
+                    <div className="w-16 h-16 rounded-full bg-[var(--accent)] text-white flex items-center justify-center mx-auto mb-4 relative z-10 group-hover:scale-110 transition-transform">
+                      {step.icon}
+                    </div>
+                    <h3 className="text-lg font-bold mb-3">{step.title}</h3>
+                    <p className="text-sm text-[var(--body-color)] leading-relaxed">{step.desc}</p>
                   </div>
-                  <h3 className="text-xl font-bold text-[var(--accent)]">SZYBKO</h3>
-                </div>
-                <p className="text-[var(--body-color)]">
-                  wszystkie formalnosci zalatwisz maksymalnie w 15 minut. Od tej chwili mozesz
-                  juz zaczac prowadzic biznes i zaczac realizowac wlasne pomysly.
-                </p>
+                ))}
               </div>
 
-              {/* BEZ RYZYKA */}
-              <div className="pill-card">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-[var(--accent)]/10 flex items-center justify-center flex-shrink-0">
-                    <svg className="w-6 h-6 text-[var(--accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold text-[var(--accent)]">BEZ RYZYKA</h3>
-                </div>
-                <p className="text-[var(--body-color)]">
-                  bierzemy na siebie cala odpowiedzialnosc wynikajaca z prowadzenia dzialalnosci.
-                  Dla Ciebie oznacza to, ze nie musisz sie bac kontroli z ZUS-u, czy Urzedu Skarbowego.
-                </p>
-              </div>
-
-              {/* PROSTO */}
-              <div className="pill-card">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-[var(--accent)]/10 flex items-center justify-center flex-shrink-0">
-                    <svg className="w-6 h-6 text-[var(--accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold text-[var(--accent)]">PROSTO</h3>
-                </div>
-                <p className="text-[var(--body-color)]">
-                  na naszych barkach spoczywaja wszelkie czynnosci zwiazane z obsluga ksiegowa,
-                  podatkowa i prawna. Dzieki temu mozesz sie skoncentrowac wylacznie na prowadzeniu biznesu.
-                </p>
+              <div className="text-center mt-10">
+                <Link href="/jak-dzialamy" className="btn-fdk text-lg px-10 py-4">
+                  Dowiedz sie wiecej
+                </Link>
               </div>
             </div>
           </div>
@@ -244,6 +261,19 @@ export default function HomePage() {
                   Kazdego. Pomozemy Ci rozwinac skrzydla!
                 </p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Opinie Section */}
+        <section id="opinie" className="py-12 md:py-20">
+          <div className="container mx-auto px-5">
+            <h2 className="text-2xl md:text-3xl text-center mb-10">
+              Opinie naszych klientow
+            </h2>
+            <div>
+              <script src="https://elfsightcdn.com/platform.js" async></script>
+              <div className="elfsight-app-604a7529-e26f-40f6-b3e0-0fff024a9959" data-elfsight-app-lazy></div>
             </div>
           </div>
         </section>

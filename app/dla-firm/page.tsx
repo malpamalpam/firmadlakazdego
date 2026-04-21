@@ -1,4 +1,5 @@
 import PageLayout from "@/components/PageLayout";
+import CooperationSteps from "@/components/CooperationSteps";
 import Link from "next/link";
 import type { Metadata } from "next";
 
@@ -69,6 +70,8 @@ export default function CompaniesPage() {
           </div>
         </div>
       </section>
+
+      <CooperationSteps />
     </PageLayout>
   );
 }

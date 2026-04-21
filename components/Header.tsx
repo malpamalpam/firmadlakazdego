@@ -55,7 +55,7 @@ export default function Header({ transparent = false }: HeaderProps) {
           {/* Oferta dropdown */}
           <div className="relative" onMouseEnter={() => setOfertaOpen(true)} onMouseLeave={() => setOfertaOpen(false)}>
             <button className={`flex items-center gap-1 py-2 lg:py-0 px-2 text-sm font-medium ${isLight ? "text-white" : "text-gray-700"} hover:text-[var(--accent)] transition-colors`} onClick={() => setOfertaOpen(!ofertaOpen)}>
-              Oferta
+              Dla kogo inkubator?
               <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
             </button>
             {ofertaOpen && (
@@ -88,11 +88,10 @@ export default function Header({ transparent = false }: HeaderProps) {
 
           {/* Direct nav items */}
           {[
+            { label: "Dla Cudzoziemcow", href: "/dla-cudzoziemcow" },
             { label: "Dla Pracodawcow", href: "/dla-pracodawcow" },
-            { label: "Cudzoziemcy", href: "/dla-cudzoziemcow" },
-            { label: "Konsultacje online", href: "/konsultacje" },
-            { label: "Blog", href: "/blog" },
             { label: "O Nas", href: "/o-nas" },
+            { label: "Blog", href: "/blog" },
             { label: "FAQ", href: "/#faq" },
             { label: "Kontakt", href: "/kontakt" },
           ].map((item) => (
@@ -103,6 +102,7 @@ export default function Header({ transparent = false }: HeaderProps) {
 
           {/* Language */}
           <div className="flex items-center gap-1 pt-2 lg:pt-0 border-t lg:border-0 mt-2 lg:mt-0 pl-2">
+            <span className={`text-sm font-bold ${isLight ? "text-white" : "text-gray-700"} transition-colors`}>PL</span>
             <svg width="22" height="22" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" className="rounded-full">
               <rect x="31.4453" y="25" width="37.8889" height="25" transform="rotate(-180 31.4453 25)" fill="white"/>
               <rect x="31.4453" y="25" width="37.8889" height="13.3333" transform="rotate(-180 31.4453 25)" fill="#CC0000"/>

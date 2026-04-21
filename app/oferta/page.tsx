@@ -1,4 +1,5 @@
 import PageLayout from "@/components/PageLayout";
+import CooperationSteps from "@/components/CooperationSteps";
 import Link from "next/link";
 import type { Metadata } from "next";
 
@@ -81,6 +82,8 @@ export default function OfferPage() {
           </div>
         </div>
       </section>
+
+      <CooperationSteps />
 
       {/* Contact CTA */}
       <section className="pb-8 md:pb-16">

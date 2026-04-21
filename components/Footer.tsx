@@ -47,14 +47,18 @@ export default function Footer() {
             <div className="sm:text-center">
               <div className="inline-block text-left">
                 <h5 className="text-gray-400 font-semibold mb-3">Kontakt</h5>
-                <p className="mb-1">
-                  <span className="text-gray-500">PL</span>{" "}
+                <div className="grid grid-cols-[auto_1fr] gap-x-3 gap-y-1 items-center mb-3">
+                  <span className="flex items-center gap-2 text-gray-500">
+                    <svg className="w-4 h-4 text-[var(--accent)] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                    PL
+                  </span>
                   <a className="text-gray-400 hover:text-white transition-colors" href="tel:+48575594500">+48 575 594 500</a>
-                </p>
-                <p className="mb-3">
-                  <span className="text-gray-500">EN / RUS</span>{" "}
+                  <span className="flex items-center gap-2 text-gray-500">
+                    <svg className="w-4 h-4 text-[var(--accent)] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0-11V3m0 0a5 5 0 00-5 5m5-5a5 5 0 015 5M8 14s1.5 2 4 2 4-2 4-2" /></svg>
+                    EN / UA / RU
+                  </span>
                   <a className="text-gray-400 hover:text-white transition-colors" href="tel:+48794731000">+48 794 731 000</a>
-                </p>
+                </div>
                 <p className="mb-1">
                   <a className="text-gray-400 hover:text-white transition-colors" href="mailto:kontakt@firmadlakazdego.pl">kontakt@firmadlakazdego.pl</a>
                   <span className="text-gray-600 text-xs ml-1">(PL i ENG)</span>
