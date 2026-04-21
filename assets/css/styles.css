@@ -495,6 +495,31 @@ header .navbar .btn-hero-cta { font-size: 1.01rem !important; padding: 5px 11px 
 .skip-link { position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden; }
 .skip-link:focus { position:static;width:auto;height:auto;padding:8px 16px;background:#00BBFF;color:#fff;z-index:9999;text-decoration:none;font-weight:bold; }
 
+/* ===== FOOTER PHONES GRID ===== */
+.footer-phones {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4px 12px;
+  align-items: baseline;
+}
+.footer-phones .phone-label {
+  font-weight: 600;
+  white-space: nowrap;
+}
+.footer-phones .phone-desc {
+  grid-column: 1 / -1;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  opacity: 0.7;
+  padding-bottom: 4px;
+}
+
+/* ===== COOPERATION STEPS ===== */
+.cooperation-steps { background-color: #f7f7f7; }
+.cooperation-steps .step-num { font-size: 3rem; font-weight: 800; color: rgba(0,187,255,0.15); line-height: 1; }
+.cooperation-steps .step-icon { width: 56px; height: 56px; border-radius: 50%; background: #00BBFF; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.75rem; }
+.cooperation-steps .step-icon svg { width: 28px; height: 28px; }
+
 /* ===== FOOTER SPACING ===== */
 main + footer { margin-top: 0; }
 section:last-of-type { margin-bottom: 0; padding-bottom: 40px; }
