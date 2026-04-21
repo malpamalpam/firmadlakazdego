@@ -128,8 +128,7 @@ header .navbar .navbar-collapse.show a,
 header .navbar .navbar-collapse.collapsing a { color: #000000; }
 
 header .navbar-dark a { color: #ffffff; }
-header .navbar .nav-item { padding: 0 5px; }
-header .navbar .nav-link { font-size: 1.2rem; }
+header .navbar .nav-item { padding: 0 2px; }
 
 header.sticky-top .navbar {
   background-color: #fff;
@@ -469,6 +468,21 @@ header .navbar .btn-hero-cta { font-size: 0.75rem !important; padding: 5px 10px 
 }
 @media screen and (min-width: 1400px) {
   header .navbar .btn-hero-cta { font-size: 0.8rem !important; padding: 6px 14px !important; }
+}
+
+/* ===== LANGUAGE SWITCHER ===== */
+.lang-switcher-btn { color: #fff !important; border: 1px solid rgba(255,255,255,0.5); border-radius: 4px; padding: 2px 8px !important; }
+header.sticky-top .lang-switcher-btn { color: #333 !important; border-color: rgba(0,0,0,0.2); }
+
+/* ===== NAV LINKS: smaller + subtle borders ===== */
+header .navbar .nav-link { font-size: 0.84rem; border: 1px solid rgba(255,255,255,0.15); border-radius: 4px; padding: 4px 8px !important; margin: 0 1px; }
+header.sticky-top .navbar .nav-link { border-color: rgba(0,0,0,0.08); }
+header .navbar .nav-link:hover { border-color: #00BBFF; }
+header .navbar .dropdown-toggle.nav-link { font-size: 0.84rem; }
+
+@media screen and (min-width: 992px) and (max-width: 1399px) {
+  header .navbar .nav-link { font-size: 0.72rem !important; padding: 3px 4px !important; }
+  header .navbar .dropdown-toggle.nav-link { font-size: 0.72rem !important; }
 }
 
 /* ===== SKIP LINK (WCAG) ===== */
