@@ -499,8 +499,9 @@ header .navbar .btn-hero-cta { font-size: 1.01rem !important; padding: 5px 11px 
 .footer-phones {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 4px 12px;
+  gap: 8px 12px;
   align-items: baseline;
+  margin-bottom: 12px;
 }
 .footer-phones .phone-label {
   font-weight: 600;
