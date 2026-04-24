@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
             var bookJDG = 400;
             var totalJDG = zusJDG + taxJDG + bookJDG;
             var taxFDK = Math.round(revenue * 0.06);
-            var aboFDK = 400;
+            var aboFDK = revenue <= 10000 ? 400 : (revenue <= 30000 ? 700 : 1050);
             var totalFDK = taxFDK + aboFDK;
             var savings = Math.max(0, totalJDG - totalFDK);
 
@@ -95,6 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (el('jdg-tax')) el('jdg-tax').textContent = taxJDG.toLocaleString('pl-PL') + ' zł';
             if (el('jdg-total')) el('jdg-total').textContent = totalJDG.toLocaleString('pl-PL') + ' zł';
             if (el('fdk-tax')) el('fdk-tax').textContent = taxFDK.toLocaleString('pl-PL') + ' zł';
+            if (el('fdk-abo')) el('fdk-abo').textContent = aboFDK.toLocaleString('pl-PL') + ' zł';
             if (el('fdk-total')) el('fdk-total').textContent = totalFDK.toLocaleString('pl-PL') + ' zł';
             if (el('calc-savings')) el('calc-savings').textContent = savings.toLocaleString('pl-PL') + ' zł';
             if (el('calc-savings-year')) el('calc-savings-year').textContent = (savings * 12).toLocaleString('pl-PL') + ' zł';
