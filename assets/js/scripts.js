@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
             var bookJDG = 400;
             var totalJDG = zusJDG + taxJDG + bookJDG;
             var taxFDK = Math.round(revenue * 0.06);
-            var aboFDK = revenue <= 10000 ? 400 : (revenue <= 30000 ? 700 : 1050);
+            var aboFDK = revenue <= 10000 ? 400 : (revenue <= 30000 ? 750 : 1050);
             var totalFDK = taxFDK + aboFDK;
             var savings = Math.max(0, totalJDG - totalFDK);
 
