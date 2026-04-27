@@ -78,6 +78,10 @@ document.addEventListener('DOMContentLoaded', function() {
     var calcRevInput = document.getElementById('calc-revenue');
     var calcSource = calcSlider || calcRevInput;
     if (calcSource) {
+        // Detect currency suffix from page language (UA uses "зл", others use "zł")
+        var pageLang = document.documentElement.lang || 'pl';
+        var currSuffix = (pageLang === 'uk') ? ' зл' : ' zł';
+
         function updateCalculator() {
             var revenue = parseFloat(calcSource.value) || 0;
             var zusJDG = 1600;
@@ -91,14 +95,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
             var el = function(id) { return document.getElementById(id); };
             if (el('calc-display')) el('calc-display').textContent = revenue.toLocaleString('pl-PL');
-            if (el('jdg-zus')) el('jdg-zus').textContent = zusJDG.toLocaleString('pl-PL') + ' zł';
-            if (el('jdg-tax')) el('jdg-tax').textContent = taxJDG.toLocaleString('pl-PL') + ' zł';
-            if (el('jdg-total')) el('jdg-total').textContent = totalJDG.toLocaleString('pl-PL') + ' zł';
-            if (el('fdk-tax')) el('fdk-tax').textContent = taxFDK.toLocaleString('pl-PL') + ' zł';
-            if (el('fdk-abo')) el('fdk-abo').textContent = aboFDK.toLocaleString('pl-PL') + ' zł';
-            if (el('fdk-total')) el('fdk-total').textContent = totalFDK.toLocaleString('pl-PL') + ' zł';
-            if (el('calc-savings')) el('calc-savings').textContent = savings.toLocaleString('pl-PL') + ' zł';
-            if (el('calc-savings-year')) el('calc-savings-year').textContent = (savings * 12).toLocaleString('pl-PL') + ' zł';
+            if (el('jdg-zus')) el('jdg-zus').textContent = zusJDG.toLocaleString('pl-PL') + currSuffix;
+            if (el('jdg-tax')) el('jdg-tax').textContent = taxJDG.toLocaleString('pl-PL') + currSuffix;
+            if (el('jdg-total')) el('jdg-total').textContent = totalJDG.toLocaleString('pl-PL') + currSuffix;
+            if (el('fdk-tax')) el('fdk-tax').textContent = taxFDK.toLocaleString('pl-PL') + currSuffix;
+            if (el('fdk-abo')) el('fdk-abo').textContent = aboFDK.toLocaleString('pl-PL') + currSuffix;
+            if (el('fdk-total')) el('fdk-total').textContent = totalFDK.toLocaleString('pl-PL') + currSuffix;
+            if (el('calc-savings')) el('calc-savings').textContent = savings.toLocaleString('pl-PL') + currSuffix;
+            if (el('calc-savings-year')) el('calc-savings-year').textContent = (savings * 12).toLocaleString('pl-PL') + currSuffix;
         }
         calcSource.addEventListener('input', updateCalculator);
         updateCalculator();

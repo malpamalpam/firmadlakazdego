@@ -28,7 +28,7 @@
     <script type="text/javascript">
     (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
     Cal("init", "konsultacja-legalizacyjna", {origin:"https://app.cal.com"});
-    Cal.ns["konsultacja-legalizacyjna"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+    Cal.ns["konsultacja-legalizacyjna"]("ui", {"hideEventTypeDetails":false,"layout":"month_view","locale":"ru","weekStart":"Monday"});
     </script>
     <!-- [5] Schema.org Organization -->
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Fundacja Firma Dla Każdego","url":"https://firmadlakazdego.pl","logo":"https://firmadlakazdego.pl/assets/img/logo-dark.png","address":{"@type":"PostalAddress","streetAddress":"ul. Lwowska 17/4","addressLocality":"Warszawa","postalCode":"00-660","addressCountry":"PL"},"contactPoint":[{"@type":"ContactPoint","telephone":"+48-575-594-500","contactType":"customer service","availableLanguage":"Polish"},{"@type":"ContactPoint","telephone":"+48-794-731-000","contactType":"customer service","availableLanguage":["English","Russian"]}],"sameAs":["https://www.facebook.com/firmadlakazdego","https://www.instagram.com/firmadlakazdego","https://t.me/FDK_inkubator"]}</script>
@@ -305,7 +305,7 @@
         <div class="card shadow-lg rounded-4 p-4 p-md-5 border-0">
             <label for="calc-revenue" class="form-label fw-bold fs-5">Ваш ежемесячный доход нетто:</label>
             <div class="input-group input-group-lg mb-4">
-                <input type="range" class="form-range mt-2" id="calc-slider" min="2000" max="30000" step="500" value="8000" style="accent-color:#00BBFF">
+                <input type="range" class="form-range mt-2" id="calc-slider" min="2000" max="50000" step="500" value="8000" style="accent-color:#00BBFF">
             </div>
             <div class="text-center mb-4">
                 <span class="badge rounded-pill fs-4 px-4 py-2" style="background:#00BBFF"><span id="calc-display">8 000</span> PLN</span>
@@ -325,7 +325,7 @@
                         <div class="d-flex align-items-center gap-2 mb-3"><div class="rounded-circle d-flex align-items-center justify-content-center" style="width:40px;height:40px;background:rgba(0,187,255,0.15)"><svg width="20" height="20" fill="none" stroke="#00BBFF" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><h4 class="h5 fw-bold mb-0" style="color:#00BBFF">FDK</h4></div>
                         <div class="d-flex justify-content-between mb-2"><span>ZUS</span><strong class="text-success">0 zł</strong></div>
                         <div class="d-flex justify-content-between mb-2"><span>Налог (6%)</span><strong id="fdk-tax">480 zł</strong></div>
-                        <div class="d-flex justify-content-between mb-2"><span>Абонемент FDK</span><strong>400 zł</strong></div>
+                        <div class="d-flex justify-content-between mb-2"><span>Абонемент FDK</span><strong id="fdk-abo">400 zł</strong></div>
                         <hr><div class="d-flex justify-content-between"><span class="fw-bold">Итого расходов:</span><span class="fw-bold fs-5" style="color:#00BBFF" id="fdk-total">880 zł</span></div>
                     </div>
                 </div>
