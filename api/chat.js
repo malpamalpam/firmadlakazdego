@@ -25,7 +25,7 @@ NIE: budowlanka, fryzjerstwo, kosmetyka, mechanika, gastronomia (branże wymagaj
 
 KOSZT WSPÓŁPRACY:
 - Do 10 000 zł przychodu → 400 zł netto/mies.
-- 10 001 – 30 000 zł → 750 zł netto/mies.
+- 10 001 – 30 000 zł → 700 zł netto/mies.
 - Powyżej 30 000 zł → 1 050 zł netto/mies.
 
 W cenie: użyczenie osobowości prawnej (NIP, REGON), indywidualny rachunek bankowy (subkonto), kompleksowa księgowość, wystawianie faktur VAT, brak ZUS, PIT od 6%, doradztwo prawne (do 5h/rok) i podatkowe, doradztwo biznesowe, powierzchnia biurowa w Warszawie (do 5h/mies.), dostęp do CRM: https://finanse.firmadlakazdego.pl/

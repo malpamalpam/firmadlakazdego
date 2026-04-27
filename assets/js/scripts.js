@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
             var bookJDG = 400;
             var totalJDG = zusJDG + taxJDG + bookJDG;
             var taxFDK = Math.round(revenue * 0.06);
-            var aboFDK = revenue <= 10000 ? 400 : (revenue <= 30000 ? 750 : 1050);
+            var aboFDK = revenue <= 10000 ? 400 : (revenue <= 30000 ? 700 : 1050);
             var totalFDK = taxFDK + aboFDK;
             var savings = Math.max(0, totalJDG - totalFDK);
 
@@ -145,6 +145,61 @@ document.addEventListener('DOMContentLoaded', function() {
     var cookieBanner = document.getElementById('cookie-banner');
     if (cookieBanner && !localStorage.getItem('cookies-accepted')) {
         cookieBanner.style.display = 'block';
+    }
+
+    // ===== Language switcher — preserve current subpage =====
+    var langLinks = document.querySelectorAll('.lang-switcher-btn + .dropdown-menu a.dropdown-item, .lang-switcher-btn ~ .dropdown-menu a.dropdown-item');
+    if (langLinks.length > 0) {
+        var path = window.location.pathname;
+        // Determine current language prefix and page
+        var langPrefixes = ['en/', 'uk/', 'ru/'];
+        var currentLang = '';
+        var currentPage = path;
+
+        langPrefixes.forEach(function(prefix) {
+            var idx = path.indexOf('/' + prefix);
+            if (idx !== -1) {
+                currentLang = prefix;
+                currentPage = path.substring(idx + prefix.length + 1);
+            }
+        });
+
+        // If no language prefix found, we're on PL
+        if (!currentLang) {
+            // Extract page name from root path
+            var parts = path.split('/');
+            currentPage = parts[parts.length - 1] || '';
+        }
+
+        // Only update links if we're on a subpage (not index/homepage)
+        if (currentPage && currentPage !== 'index.html' && currentPage !== '') {
+            langLinks.forEach(function(link) {
+                var href = link.getAttribute('href');
+                if (!href || href === '#') return;
+
+                // Determine the base path for this link's language
+                var isRoot = (href === '/' || href === '../' || href === './');
+                var isLangRoot = false;
+                langPrefixes.forEach(function(prefix) {
+                    if (href.indexOf(prefix) !== -1 && (href.endsWith(prefix) || href.endsWith(prefix.slice(0, -1)))) {
+                        isLangRoot = true;
+                    }
+                });
+
+                if (isRoot || isLangRoot) {
+                    // Build new href preserving the current page
+                    var newHref;
+                    if (href === '/' || href === '../') {
+                        // Link to PL — append current page at root
+                        newHref = (currentLang ? '../' : '') + currentPage;
+                    } else {
+                        // Link to another language — append current page
+                        newHref = href + (href.endsWith('/') ? '' : '/') + currentPage;
+                    }
+                    link.setAttribute('href', newHref);
+                }
+            });
+        }
     }
 });
 
