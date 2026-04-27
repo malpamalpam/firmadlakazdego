@@ -155,51 +155,32 @@ document.addEventListener('DOMContentLoaded', function() {
     var langLinks = document.querySelectorAll('.lang-switcher-btn + .dropdown-menu a.dropdown-item, .lang-switcher-btn ~ .dropdown-menu a.dropdown-item');
     if (langLinks.length > 0) {
         var path = window.location.pathname;
-        // Determine current language prefix and page
-        var langPrefixes = ['en/', 'uk/', 'ru/'];
-        var currentLang = '';
-        var currentPage = path;
+        // Extract current language prefix and subpage
+        var langMatch = path.match(/^\/(uk|en|ru)(\/|$)/);
+        var currentLang = langMatch ? langMatch[1] : 'pl';
+        // Get the subpage part (without language prefix, without .html)
+        var subpage = path.replace(/^\/(uk|en|ru)/, '').replace(/\.html$/, '').replace(/^\/+/, '');
 
-        langPrefixes.forEach(function(prefix) {
-            var idx = path.indexOf('/' + prefix);
-            if (idx !== -1) {
-                currentLang = prefix;
-                currentPage = path.substring(idx + prefix.length + 1);
-            }
-        });
-
-        // If no language prefix found, we're on PL
-        if (!currentLang) {
-            // Extract page name from root path
-            var parts = path.split('/');
-            currentPage = parts[parts.length - 1] || '';
-        }
-
-        // Only update links if we're on a subpage (not index/homepage)
-        if (currentPage && currentPage !== 'index.html' && currentPage !== '') {
+        // Only update links if we're on a subpage (not homepage)
+        if (subpage && subpage !== 'index' && subpage !== '') {
             langLinks.forEach(function(link) {
                 var href = link.getAttribute('href');
                 if (!href || href === '#') return;
 
-                // Determine the base path for this link's language
-                var isRoot = (href === '/' || href === '../' || href === './');
-                var isLangRoot = false;
-                langPrefixes.forEach(function(prefix) {
-                    if (href.indexOf(prefix) !== -1 && (href.endsWith(prefix) || href.endsWith(prefix.slice(0, -1)))) {
-                        isLangRoot = true;
-                    }
-                });
+                // Check if this link points to a language homepage
+                var targetLang = null;
+                if (href === '/' || href === '../' || href === '/index.html') targetLang = 'pl';
+                if (href.match(/^\/?uk\/?$/) || href === '../uk/' || href === './') {
+                    if (href === './' && currentLang === 'uk') targetLang = 'uk';
+                    else if (href !== './') targetLang = 'uk';
+                }
+                if (href.match(/^\/?en\/?$/) || href === '../en/') targetLang = 'en';
+                if (href.match(/^\/?ru\/?$/) || href === '../ru/') targetLang = 'ru';
+                if (href === './' && currentLang === 'en') targetLang = 'en';
+                if (href === './' && currentLang === 'ru') targetLang = 'ru';
 
-                if (isRoot || isLangRoot) {
-                    // Build new href preserving the current page
-                    var newHref;
-                    if (href === '/' || href === '../') {
-                        // Link to PL — append current page at root
-                        newHref = (currentLang ? '../' : '') + currentPage;
-                    } else {
-                        // Link to another language — append current page
-                        newHref = href + (href.endsWith('/') ? '' : '/') + currentPage;
-                    }
+                if (targetLang) {
+                    var newHref = targetLang === 'pl' ? '/' + subpage : '/' + targetLang + '/' + subpage;
                     link.setAttribute('href', newHref);
                 }
             });
