@@ -58,7 +58,10 @@
     { "source": "/ru/jak-dzialamy", "destination": "/jak-dzialamy.html" },
     { "source": "/ru/blog", "destination": "/blog.html" },
     { "source": "/ru/inkubator-przedsiebiorczosci", "destination": "/inkubator-przedsiebiorczosci.html" },
-    { "source": "/ru/inne-uslugi", "destination": "/inne-uslugi.html" }
+    { "source": "/ru/inne-uslugi", "destination": "/inne-uslugi.html" },
+    { "source": "/uk/assets/:path*", "destination": "/assets/:path*" },
+    { "source": "/en/assets/:path*", "destination": "/assets/:path*" },
+    { "source": "/ru/assets/:path*", "destination": "/assets/:path*" }
   ],
   "headers": [
     {
