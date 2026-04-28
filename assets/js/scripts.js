@@ -198,7 +198,58 @@ document.addEventListener('DOMContentLoaded', function() {
         'inne-uslugi':    { en: 'other-services',   uk: 'inshi-poslugy',  ru: 'drugie-uslugi' },
         'other-services': { pl: 'inne-uslugi',      uk: 'inshi-poslugy',  ru: 'drugie-uslugi' },
         'inshi-poslugy':  { pl: 'inne-uslugi',      en: 'other-services', ru: 'drugie-uslugi' },
-        'drugie-uslugi':  { pl: 'inne-uslugi',      en: 'other-services', uk: 'inshi-poslugy' }
+        'drugie-uslugi':  { pl: 'inne-uslugi',      en: 'other-services', uk: 'inshi-poslugy' },
+
+        'legalizacja-pobytu-i-pracy':        { en: 'residence-and-work-permits',           uk: 'legalizatsiya-perebuvannya',    ru: 'legalizatsiya-prebyvaniya' },
+        'residence-and-work-permits':        { pl: 'legalizacja-pobytu-i-pracy',           uk: 'legalizatsiya-perebuvannya',    ru: 'legalizatsiya-prebyvaniya' },
+        'legalizatsiya-perebuvannya':        { pl: 'legalizacja-pobytu-i-pracy',           en: 'residence-and-work-permits',    ru: 'legalizatsiya-prebyvaniya' },
+        'legalizatsiya-prebyvaniya':         { pl: 'legalizacja-pobytu-i-pracy',           en: 'residence-and-work-permits',    uk: 'legalizatsiya-perebuvannya' },
+        'legalizatsiya':                     { pl: 'legalizacja-pobytu-i-pracy',           en: 'residence-and-work-permits',    uk: 'legalizatsiya-perebuvannya', ru: 'legalizatsiya-prebyvaniya' },
+        'legalization':                      { pl: 'legalizacja-pobytu-i-pracy',           en: 'residence-and-work-permits',    uk: 'legalizatsiya-perebuvannya', ru: 'legalizatsiya-prebyvaniya' },
+
+        'pakiety-sportowe-i-medyczne':       { en: 'sports-and-medical-packages',          uk: 'sportyvni-ta-medychni-pakety',  ru: 'sportivnye-i-meditsinskie-pakety' },
+        'sports-and-medical-packages':       { pl: 'pakiety-sportowe-i-medyczne',          uk: 'sportyvni-ta-medychni-pakety',  ru: 'sportivnye-i-meditsinskie-pakety' },
+        'sportyvni-ta-medychni-pakety':      { pl: 'pakiety-sportowe-i-medyczne',          en: 'sports-and-medical-packages',   ru: 'sportivnye-i-meditsinskie-pakety' },
+        'sportivnye-i-meditsinskie-pakety':  { pl: 'pakiety-sportowe-i-medyczne',          en: 'sports-and-medical-packages',   uk: 'sportyvni-ta-medychni-pakety' },
+        'sports-medical-packages':           { pl: 'pakiety-sportowe-i-medyczne',          en: 'sports-and-medical-packages',   uk: 'sportyvni-ta-medychni-pakety', ru: 'sportivnye-i-meditsinskie-pakety' },
+        'sportyvni-medychni-pakety':         { pl: 'pakiety-sportowe-i-medyczne',          en: 'sports-and-medical-packages',   ru: 'sportivnye-i-meditsinskie-pakety' },
+        'sportivnye-meditsinskie-pakety':    { pl: 'pakiety-sportowe-i-medyczne',          en: 'sports-and-medical-packages',   uk: 'sportyvni-ta-medychni-pakety' },
+
+        'polisy-ubezpieczeniowe':            { en: 'insurance-policies',                   uk: 'strakhovi-polisy',              ru: 'strakhovye-polisy' },
+        'insurance-policies':                { pl: 'polisy-ubezpieczeniowe',               uk: 'strakhovi-polisy',              ru: 'strakhovye-polisy' },
+        'strakhovi-polisy':                  { pl: 'polisy-ubezpieczeniowe',               en: 'insurance-policies',            ru: 'strakhovye-polisy' },
+        'strakhovye-polisy':                 { pl: 'polisy-ubezpieczeniowe',               en: 'insurance-policies',            uk: 'strakhovi-polisy' },
+        'insurance':                         { pl: 'polisy-ubezpieczeniowe',               en: 'insurance-policies',            uk: 'strakhovi-polisy', ru: 'strakhovye-polisy' },
+        'strakhuvannya':                     { pl: 'polisy-ubezpieczeniowe',               en: 'insurance-policies',            ru: 'strakhovye-polisy' },
+        'strakhovanie':                      { pl: 'polisy-ubezpieczeniowe',               en: 'insurance-policies',            uk: 'strakhovi-polisy' },
+
+        'tlumaczenia-przysiegle':            { en: 'sworn-translations',                   uk: 'prysiazhnyi-pereklad',          ru: 'prisyazhnyy-perevod' },
+        'sworn-translations':                { pl: 'tlumaczenia-przysiegle',               uk: 'prysiazhnyi-pereklad',          ru: 'prisyazhnyy-perevod' },
+        'prysiazhnyi-pereklad':              { pl: 'tlumaczenia-przysiegle',               en: 'sworn-translations',            ru: 'prisyazhnyy-perevod' },
+        'prisyazhnyy-perevod':               { pl: 'tlumaczenia-przysiegle',               en: 'sworn-translations',            uk: 'prysiazhnyi-pereklad' },
+        'prisyazhnyj-perevod':               { pl: 'tlumaczenia-przysiegle',               en: 'sworn-translations',            uk: 'prysiazhnyi-pereklad' },
+
+        'pomoc-prawna':                      { en: 'legal-assistance',                     uk: 'pravova-dopomoha',              ru: 'pravovaya-pomoshch' },
+        'legal-assistance':                  { pl: 'pomoc-prawna',                         uk: 'pravova-dopomoha',              ru: 'pravovaya-pomoshch' },
+        'legal-help':                        { pl: 'pomoc-prawna',                         en: 'legal-assistance',              uk: 'pravova-dopomoha', ru: 'pravovaya-pomoshch' },
+        'pravova-dopomoha':                  { pl: 'pomoc-prawna',                         en: 'legal-assistance',              ru: 'pravovaya-pomoshch' },
+        'pravovaya-pomoshch':                { pl: 'pomoc-prawna',                         en: 'legal-assistance',              uk: 'pravova-dopomoha' },
+
+        'sprawy-urzedowe':                   { en: 'official-matters',                     uk: 'ofitsiyni-spravy',              ru: 'ofitsialnye-dela' },
+        'official-matters':                  { pl: 'sprawy-urzedowe',                      uk: 'ofitsiyni-spravy',              ru: 'ofitsialnye-dela' },
+        'government-procedures':             { pl: 'sprawy-urzedowe',                      en: 'official-matters',              uk: 'ofitsiyni-spravy', ru: 'ofitsialnye-dela' },
+        'ofitsiyni-spravy':                  { pl: 'sprawy-urzedowe',                      en: 'official-matters',              ru: 'ofitsialnye-dela' },
+        'ofitsialnye-dela':                  { pl: 'sprawy-urzedowe',                      en: 'official-matters',              uk: 'ofitsiyni-spravy' },
+        'uriadovi-spravy':                   { pl: 'sprawy-urzedowe',                      en: 'official-matters',              ru: 'ofitsialnye-dela' },
+        'gosudarstvennye-dela':              { pl: 'sprawy-urzedowe',                      en: 'official-matters',              uk: 'ofitsiyni-spravy' },
+
+        'uslugi-dla-firm-cudzoziemcy':               { en: 'services-for-employers-of-foreigners', uk: 'poslugy-dlya-firm-inozemtsiv', ru: 'uslugi-dlya-firm-inostrantsev' },
+        'services-for-employers-of-foreigners':      { pl: 'uslugi-dla-firm-cudzoziemcy',          uk: 'poslugy-dlya-firm-inozemtsiv', ru: 'uslugi-dlya-firm-inostrantsev' },
+        'services-for-companies':                    { pl: 'uslugi-dla-firm-cudzoziemcy',          en: 'services-for-employers-of-foreigners', uk: 'poslugy-dlya-firm-inozemtsiv', ru: 'uslugi-dlya-firm-inostrantsev' },
+        'poslugy-dlya-firm-inozemtsiv':              { pl: 'uslugi-dla-firm-cudzoziemcy',          en: 'services-for-employers-of-foreigners', ru: 'uslugi-dlya-firm-inostrantsev' },
+        'poslugy-dlya-firm':                         { pl: 'uslugi-dla-firm-cudzoziemcy',          en: 'services-for-employers-of-foreigners', ru: 'uslugi-dlya-firm-inostrantsev' },
+        'uslugi-dlya-firm-inostrantsev':             { pl: 'uslugi-dla-firm-cudzoziemcy',          en: 'services-for-employers-of-foreigners', uk: 'poslugy-dlya-firm-inozemtsiv' },
+        'uslugi-dlya-firm':                          { pl: 'uslugi-dla-firm-cudzoziemcy',          en: 'services-for-employers-of-foreigners', uk: 'poslugy-dlya-firm-inozemtsiv' }
     };
 
     var langLinks = document.querySelectorAll('.lang-switcher-btn + .dropdown-menu a.dropdown-item, .lang-switcher-btn ~ .dropdown-menu a.dropdown-item');
@@ -220,9 +271,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 else if (href.match(/^\/?ru\/?$/) || href === '../ru/') targetLang = 'ru';
                 else if (href === './') targetLang = currentLang;
 
-                if (targetLang && targetLang !== currentLang) {
+                if (targetLang) {
                     var newSlug = subpage;
-                    if (slugMap[subpage] && slugMap[subpage][targetLang]) {
+                    if (targetLang !== currentLang && slugMap[subpage] && slugMap[subpage][targetLang]) {
                         newSlug = slugMap[subpage][targetLang];
                     }
                     var newHref = targetLang === 'pl' ? '/' + newSlug : '/' + targetLang + '/' + newSlug;

@@ -102,18 +102,43 @@
 </section>
 
 <!-- ==================== KALKULATOR ==================== -->
-<section id="kalkulator" class="py-4 py-md-5" style="background-color:#f7f7f7">
-    <div class="container"><div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 col-xxl-6">
-        <h2 class="text-center mb-2">Kalkulator: JDG vs FDK</h2>
-        <p class="text-center text-muted mb-4">Sprawdź, ile zaoszczędzisz z inkubatorem FDK jako sprzedawca e-commerce.</p>
-        <div class="card shadow rounded-3 p-4">
-            <label for="calc-revenue" class="form-label fw-bold">Twój miesięczny przychód (netto):</label>
-            <div class="input-group mb-4"><input type="number" class="form-control form-control-lg" id="calc-revenue" value="15000" min="0" step="500"><span class="input-group-text">PLN</span></div>
-            <div class="row g-3">
-                <div class="col-6"><div class="card bg-light border-0 p-3 text-center h-100"><div class="fw-bold mb-2">JDG</div><div class="text-smaller mb-1">ZUS: <strong id="jdg-zus">1 600 zl</strong></div><div class="text-smaller mb-1">Podatek: <strong id="jdg-tax">1 800 zl</strong></div><div class="text-smaller mb-1">Księgowość: <strong>~400 zl</strong></div><hr class="my-2"><div class="fw-bold text-danger">Razem: <span id="jdg-total">3 800 zl</span></div></div></div>
-                <div class="col-6"><div class="card border-0 p-3 text-center h-100" style="background-color:#e8f9ff"><div class="fw-bold mb-2" style="color:#00BBFF">FDK</div><div class="text-smaller mb-1">ZUS: <strong>wg przepisow*</strong></div><div class="text-smaller mb-1">Podatek: <strong id="fdk-tax">wg stawki</strong></div><div class="text-smaller mb-1">Abonament: <strong>400 zl</strong></div><hr class="my-2"><div class="fw-bold" style="color:#00BBFF">Abonament: <span id="fdk-total">400 zl</span></div></div></div>
+<section id="kalkulator" class="py-5" style="background: linear-gradient(135deg, #1a1e23, #292d33)">
+    <div class="container"><div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 col-xxl-7">
+        <h2 class="text-center text-white mb-2">Kalkulator: JDG vs FDK</h2>
+        <p class="text-center mb-4" style="color:rgba(255,255,255,0.6)">Sprawdź, ile zaoszczędzisz z inkubatorem FDK</p>
+        <div class="card shadow-lg rounded-4 p-4 p-md-5 border-0">
+            <label for="calc-revenue" class="form-label fw-bold fs-5">Twój miesięczny przychód netto:</label>
+            <div class="input-group input-group-lg mb-4">
+                <input type="range" class="form-range mt-2" id="calc-slider" min="2000" max="50000" step="500" value="8000" style="accent-color:#00BBFF">
             </div>
-            <div class="text-center mt-4 p-3 rounded-3" style="background-color:#d4edda"><span class="fw-bold fs-5 text-success">Oszczędzasz: <span id="calc-savings">2 500 zl</span> miesięcznie!</span></div>
+            <div class="text-center mb-4">
+                <span class="badge rounded-pill fs-4 px-4 py-2" style="background:#00BBFF"><span id="calc-display">8 000</span> PLN</span>
+            </div>
+            <div class="row g-3 mb-4">
+                <div class="col-md-6">
+                    <div class="rounded-3 p-4 h-100" style="background:#fff5f5; border:2px solid #ffcccc">
+                        <div class="d-flex align-items-center gap-2 mb-3"><div class="rounded-circle d-flex align-items-center justify-content-center" style="width:40px;height:40px;background:#ffcccc"><svg width="20" height="20" fill="none" stroke="#dc3545" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4.5c-.77-.833-2.694-.833-3.464 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg></div><h4 class="h5 fw-bold mb-0">JDG</h4></div>
+                        <div class="d-flex justify-content-between mb-2"><span>ZUS (duży)</span><strong id="jdg-zus">1 600 zł</strong></div>
+                        <div class="d-flex justify-content-between mb-2"><span>Podatek (12%)</span><strong id="jdg-tax">960 zł</strong></div>
+                        <div class="d-flex justify-content-between mb-2"><span>Księgowość</span><strong>~400 zł</strong></div>
+                        <hr><div class="d-flex justify-content-between"><span class="fw-bold">Razem kosztów:</span><span class="fw-bold text-danger fs-5" id="jdg-total">2 960 zł</span></div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="rounded-3 p-4 h-100" style="background:#f0faff; border:2px solid #00BBFF">
+                        <div class="d-flex align-items-center gap-2 mb-3"><div class="rounded-circle d-flex align-items-center justify-content-center" style="width:40px;height:40px;background:rgba(0,187,255,0.15)"><svg width="20" height="20" fill="none" stroke="#00BBFF" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><h4 class="h5 fw-bold mb-0" style="color:#00BBFF">FDK</h4></div>
+                        <div class="d-flex justify-content-between mb-2"><span>ZUS</span><strong class="text-success">0 zł</strong></div>
+                        <div class="d-flex justify-content-between mb-2"><span>Podatek (6%)</span><strong id="fdk-tax">480 zł</strong></div>
+                        <div class="d-flex justify-content-between mb-2"><span>Abonament FDK</span><strong id="fdk-abo">400 zł</strong></div>
+                        <hr><div class="d-flex justify-content-between"><span class="fw-bold">Razem kosztów:</span><span class="fw-bold fs-5" style="color:#00BBFF" id="fdk-total">880 zł</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center p-4 rounded-3" style="background:linear-gradient(135deg,#d4edda,#c3e6cb)">
+                <div class="text-success fw-bold mb-1">Twoja oszczędność miesięcznie:</div>
+                <div class="display-5 fw-bold text-success" id="calc-savings">2 080 zł</div>
+                <div class="text-muted mt-1">rocznie: <strong class="text-success" id="calc-savings-year">24 960 zł</strong></div>
+            </div>
         </div>
     </div></div></div>
 </section>

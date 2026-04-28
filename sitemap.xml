@@ -648,41 +648,270 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/blog" />
   </url>
 
-  <!-- PL-ONLY PAGES (priority 0.6) -->
+  <!-- LEGALIZACJA-POBYTU-I-PRACY (priority 0.6) -->
   <url>
     <loc>https://fdk-site.vercel.app/legalizacja-pobytu-i-pracy</loc>
     <lastmod>2026-04-28</lastmod>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/legalizacja-pobytu-i-pracy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/residence-and-work-permits" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/legalizatsiya-perebuvannya" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/legalizatsiya-prebyvaniya" />
   </url>
   <url>
-    <loc>https://fdk-site.vercel.app/pakiety-sportowe-i-medyczne</loc>
+    <loc>https://fdk-site.vercel.app/en/residence-and-work-permits</loc>
     <lastmod>2026-04-28</lastmod>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/legalizacja-pobytu-i-pracy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/residence-and-work-permits" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/legalizatsiya-perebuvannya" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/legalizatsiya-prebyvaniya" />
   </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/uk/legalizatsiya-perebuvannya</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/legalizacja-pobytu-i-pracy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/residence-and-work-permits" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/legalizatsiya-perebuvannya" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/legalizatsiya-prebyvaniya" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/ru/legalizatsiya-prebyvaniya</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/legalizacja-pobytu-i-pracy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/residence-and-work-permits" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/legalizatsiya-perebuvannya" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/legalizatsiya-prebyvaniya" />
+  </url>
+
+  <!-- POLISY-UBEZPIECZENIOWE (priority 0.6) -->
   <url>
     <loc>https://fdk-site.vercel.app/polisy-ubezpieczeniowe</loc>
     <lastmod>2026-04-28</lastmod>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/polisy-ubezpieczeniowe" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/insurance-policies" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/strakhovi-polisy" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/strakhovye-polisy" />
   </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/en/insurance-policies</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/polisy-ubezpieczeniowe" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/insurance-policies" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/strakhovi-polisy" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/strakhovye-polisy" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/uk/strakhovi-polisy</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/polisy-ubezpieczeniowe" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/insurance-policies" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/strakhovi-polisy" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/strakhovye-polisy" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/ru/strakhovye-polisy</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/polisy-ubezpieczeniowe" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/insurance-policies" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/strakhovi-polisy" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/strakhovye-polisy" />
+  </url>
+
+  <!-- TLUMACZENIA-PRZYSIEGLE (priority 0.6) -->
   <url>
     <loc>https://fdk-site.vercel.app/tlumaczenia-przysiegle</loc>
     <lastmod>2026-04-28</lastmod>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/tlumaczenia-przysiegle" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/sworn-translations" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/prysiazhnyi-pereklad" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/prisyazhnyy-perevod" />
   </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/en/sworn-translations</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/tlumaczenia-przysiegle" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/sworn-translations" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/prysiazhnyi-pereklad" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/prisyazhnyy-perevod" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/uk/prysiazhnyi-pereklad</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/tlumaczenia-przysiegle" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/sworn-translations" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/prysiazhnyi-pereklad" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/prisyazhnyy-perevod" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/ru/prisyazhnyy-perevod</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/tlumaczenia-przysiegle" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/sworn-translations" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/prysiazhnyi-pereklad" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/prisyazhnyy-perevod" />
+  </url>
+
+  <!-- POMOC-PRAWNA (priority 0.6) -->
   <url>
     <loc>https://fdk-site.vercel.app/pomoc-prawna</loc>
     <lastmod>2026-04-28</lastmod>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/pomoc-prawna" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/legal-assistance" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/pravova-dopomoha" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/pravovaya-pomoshch" />
   </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/en/legal-assistance</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/pomoc-prawna" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/legal-assistance" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/pravova-dopomoha" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/pravovaya-pomoshch" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/uk/pravova-dopomoha</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/pomoc-prawna" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/legal-assistance" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/pravova-dopomoha" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/pravovaya-pomoshch" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/ru/pravovaya-pomoshch</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/pomoc-prawna" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/legal-assistance" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/pravova-dopomoha" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/pravovaya-pomoshch" />
+  </url>
+
+  <!-- SPRAWY-URZEDOWE (priority 0.6) -->
   <url>
     <loc>https://fdk-site.vercel.app/sprawy-urzedowe</loc>
     <lastmod>2026-04-28</lastmod>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/sprawy-urzedowe" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/official-matters" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/ofitsiyni-spravy" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/ofitsialnye-dela" />
   </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/en/official-matters</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/sprawy-urzedowe" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/official-matters" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/ofitsiyni-spravy" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/ofitsialnye-dela" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/uk/ofitsiyni-spravy</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/sprawy-urzedowe" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/official-matters" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/ofitsiyni-spravy" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/ofitsialnye-dela" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/ru/ofitsialnye-dela</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/sprawy-urzedowe" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/official-matters" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/ofitsiyni-spravy" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/ofitsialnye-dela" />
+  </url>
+
+  <!-- PAKIETY-SPORTOWE-I-MEDYCZNE (priority 0.6) -->
+  <url>
+    <loc>https://fdk-site.vercel.app/pakiety-sportowe-i-medyczne</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/pakiety-sportowe-i-medyczne" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/sports-and-medical-packages" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/sportyvni-ta-medychni-pakety" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/sportivnye-i-meditsinskie-pakety" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/en/sports-and-medical-packages</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/pakiety-sportowe-i-medyczne" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/sports-and-medical-packages" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/sportyvni-ta-medychni-pakety" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/sportivnye-i-meditsinskie-pakety" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/uk/sportyvni-ta-medychni-pakety</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/pakiety-sportowe-i-medyczne" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/sports-and-medical-packages" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/sportyvni-ta-medychni-pakety" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/sportivnye-i-meditsinskie-pakety" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/ru/sportivnye-i-meditsinskie-pakety</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/pakiety-sportowe-i-medyczne" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/sports-and-medical-packages" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/sportyvni-ta-medychni-pakety" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/sportivnye-i-meditsinskie-pakety" />
+  </url>
+
+  <!-- USLUGI-DLA-FIRM-CUDZOZIEMCY (priority 0.6) -->
   <url>
     <loc>https://fdk-site.vercel.app/uslugi-dla-firm-cudzoziemcy</loc>
     <lastmod>2026-04-28</lastmod>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/uslugi-dla-firm-cudzoziemcy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/services-for-employers-of-foreigners" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/poslugy-dlya-firm-inozemtsiv" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/uslugi-dlya-firm-inostrantsev" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/en/services-for-employers-of-foreigners</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/uslugi-dla-firm-cudzoziemcy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/services-for-employers-of-foreigners" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/poslugy-dlya-firm-inozemtsiv" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/uslugi-dlya-firm-inostrantsev" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/uk/poslugy-dlya-firm-inozemtsiv</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/uslugi-dla-firm-cudzoziemcy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/services-for-employers-of-foreigners" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/poslugy-dlya-firm-inozemtsiv" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/uslugi-dlya-firm-inostrantsev" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/ru/uslugi-dlya-firm-inostrantsev</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/uslugi-dla-firm-cudzoziemcy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/services-for-employers-of-foreigners" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/poslugy-dlya-firm-inozemtsiv" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/uslugi-dlya-firm-inostrantsev" />
   </url>
 
 </urlset>
