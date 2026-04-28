@@ -151,36 +151,81 @@ document.addEventListener('DOMContentLoaded', function() {
         cookieBanner.style.display = 'block';
     }
 
-    // ===== Language switcher — preserve current subpage =====
+    // ===== Language switcher — preserve current subpage with slug translation =====
+    var slugMap = {
+        'programisci':    { en: 'programmers',      uk: 'programisty',    ru: 'programmisty' },
+        'programmers':    { pl: 'programisci',      uk: 'programisty',    ru: 'programmisty' },
+        'programisty':    { pl: 'programisci',      en: 'programmers',    ru: 'programmisty' },
+        'programmisty':   { pl: 'programisci',      en: 'programmers',    uk: 'programisty' },
+        'architekci':     { en: 'architects',       uk: 'architekty',     ru: 'arhitektory' },
+        'architects':     { pl: 'architekci',       uk: 'architekty',     ru: 'arhitektory' },
+        'architekty':     { pl: 'architekci',       en: 'architects',     ru: 'arhitektory' },
+        'arhitektory':    { pl: 'architekci',       en: 'architects',     uk: 'architekty' },
+        'tlumacze':       { en: 'translators',      uk: 'perekladachi',   ru: 'perevodchiki' },
+        'translators':    { pl: 'tlumacze',         uk: 'perekladachi',   ru: 'perevodchiki' },
+        'perekladachi':   { pl: 'tlumacze',         en: 'translators',    ru: 'perevodchiki' },
+        'perevodchiki':   { pl: 'tlumacze',         en: 'translators',    uk: 'perekladachi' },
+        'muzycy':         { en: 'musicians',        uk: 'muzykanty',      ru: 'muzykanty' },
+        'musicians':      { pl: 'muzycy',           uk: 'muzykanty',      ru: 'muzykanty' },
+        'muzykanty':      { pl: 'muzycy',           en: 'musicians' },
+        'inne-branze':       { en: 'other-industries',  uk: 'inshi-galuzi',   ru: 'drugie-otrasli' },
+        'other-industries':  { pl: 'inne-branze',       uk: 'inshi-galuzi',   ru: 'drugie-otrasli' },
+        'inshi-galuzi':      { pl: 'inne-branze',       en: 'other-industries', ru: 'drugie-otrasli' },
+        'drugie-otrasli':    { pl: 'inne-branze',       en: 'other-industries', uk: 'inshi-galuzi' },
+        'cudzoziemcy':    { en: 'foreigners',       uk: 'inozemtsi',      ru: 'inostrantsy' },
+        'foreigners':     { pl: 'cudzoziemcy',      uk: 'inozemtsi',      ru: 'inostrantsy' },
+        'inozemtsi':      { pl: 'cudzoziemcy',      en: 'foreigners',     ru: 'inostrantsy' },
+        'inostrantsy':    { pl: 'cudzoziemcy',      en: 'foreigners',     uk: 'inozemtsi' },
+        'dla-pracodawcow': { en: 'employers',       uk: 'robotodavtsi',   ru: 'rabotodateli' },
+        'employers':       { pl: 'dla-pracodawcow', uk: 'robotodavtsi',   ru: 'rabotodateli' },
+        'robotodavtsi':    { pl: 'dla-pracodawcow', en: 'employers',      ru: 'rabotodateli' },
+        'rabotodateli':    { pl: 'dla-pracodawcow', en: 'employers',      uk: 'robotodavtsi' },
+        'o-nas':          { en: 'about',            uk: 'pro-nas' },
+        'about':          { pl: 'o-nas',            uk: 'pro-nas',        ru: 'o-nas' },
+        'pro-nas':        { pl: 'o-nas',            en: 'about',          ru: 'o-nas' },
+        'kontakt':        { en: 'contact' },
+        'contact':        { pl: 'kontakt',          uk: 'kontakt',        ru: 'kontakt' },
+        'regulamin':      { en: 'terms',            uk: 'reglament',      ru: 'reglament' },
+        'terms':          { pl: 'regulamin',        uk: 'reglament',      ru: 'reglament' },
+        'reglament':      { pl: 'regulamin',        en: 'terms' },
+        'jak-dzialamy':       { en: 'how-it-works',       uk: 'yak-my-pratsyuyemo', ru: 'kak-my-rabotaem' },
+        'how-it-works':       { pl: 'jak-dzialamy',       uk: 'yak-my-pratsyuyemo', ru: 'kak-my-rabotaem' },
+        'yak-my-pratsyuyemo': { pl: 'jak-dzialamy',       en: 'how-it-works',       ru: 'kak-my-rabotaem' },
+        'kak-my-rabotaem':    { pl: 'jak-dzialamy',       en: 'how-it-works',       uk: 'yak-my-pratsyuyemo' },
+        'inkubator-przedsiebiorczosci': { en: 'incubator', uk: 'inkubator', ru: 'inkubator' },
+        'incubator':      { pl: 'inkubator-przedsiebiorczosci', uk: 'inkubator', ru: 'inkubator' },
+        'inkubator':      { pl: 'inkubator-przedsiebiorczosci', en: 'incubator' },
+        'inne-uslugi':    { en: 'other-services',   uk: 'inshi-poslugy',  ru: 'drugie-uslugi' },
+        'other-services': { pl: 'inne-uslugi',      uk: 'inshi-poslugy',  ru: 'drugie-uslugi' },
+        'inshi-poslugy':  { pl: 'inne-uslugi',      en: 'other-services', ru: 'drugie-uslugi' },
+        'drugie-uslugi':  { pl: 'inne-uslugi',      en: 'other-services', uk: 'inshi-poslugy' }
+    };
+
     var langLinks = document.querySelectorAll('.lang-switcher-btn + .dropdown-menu a.dropdown-item, .lang-switcher-btn ~ .dropdown-menu a.dropdown-item');
     if (langLinks.length > 0) {
         var path = window.location.pathname;
-        // Extract current language prefix and subpage
         var langMatch = path.match(/^\/(uk|en|ru)(\/|$)/);
         var currentLang = langMatch ? langMatch[1] : 'pl';
-        // Get the subpage part (without language prefix, without .html)
         var subpage = path.replace(/^\/(uk|en|ru)/, '').replace(/\.html$/, '').replace(/^\/+/, '');
 
-        // Only update links if we're on a subpage (not homepage)
         if (subpage && subpage !== 'index' && subpage !== '') {
             langLinks.forEach(function(link) {
                 var href = link.getAttribute('href');
                 if (!href || href === '#') return;
 
-                // Check if this link points to a language homepage
                 var targetLang = null;
-                if (href === '/' || href === '../' || href === '/index.html') targetLang = 'pl';
-                if (href.match(/^\/?uk\/?$/) || href === '../uk/' || href === './') {
-                    if (href === './' && currentLang === 'uk') targetLang = 'uk';
-                    else if (href !== './') targetLang = 'uk';
-                }
-                if (href.match(/^\/?en\/?$/) || href === '../en/') targetLang = 'en';
-                if (href.match(/^\/?ru\/?$/) || href === '../ru/') targetLang = 'ru';
-                if (href === './' && currentLang === 'en') targetLang = 'en';
-                if (href === './' && currentLang === 'ru') targetLang = 'ru';
+                if (href === '/' || href === '../') targetLang = 'pl';
+                else if (href.match(/^\/?en\/?$/) || href === '../en/') targetLang = 'en';
+                else if (href.match(/^\/?uk\/?$/) || href === '../uk/') targetLang = 'uk';
+                else if (href.match(/^\/?ru\/?$/) || href === '../ru/') targetLang = 'ru';
+                else if (href === './') targetLang = currentLang;
 
-                if (targetLang) {
-                    var newHref = targetLang === 'pl' ? '/' + subpage : '/' + targetLang + '/' + subpage;
+                if (targetLang && targetLang !== currentLang) {
+                    var newSlug = subpage;
+                    if (slugMap[subpage] && slugMap[subpage][targetLang]) {
+                        newSlug = slugMap[subpage][targetLang];
+                    }
+                    var newHref = targetLang === 'pl' ? '/' + newSlug : '/' + targetLang + '/' + newSlug;
                     link.setAttribute('href', newHref);
                 }
             });

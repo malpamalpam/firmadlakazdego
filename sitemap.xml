@@ -1,25 +1,688 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://fdk-site.vercel.app/</loc><lastmod>2026-04-20</lastmod><priority>1.0</priority></url>
-  <url><loc>https://fdk-site.vercel.app/o-nas</loc><lastmod>2026-04-20</lastmod><priority>0.8</priority></url>
-  <url><loc>https://fdk-site.vercel.app/dla-pracodawcow</loc><lastmod>2026-04-20</lastmod><priority>0.8</priority></url>
-  <url><loc>https://fdk-site.vercel.app/cudzoziemcy</loc><lastmod>2026-04-20</lastmod><priority>0.8</priority></url>
-  <url><loc>https://fdk-site.vercel.app/blog</loc><lastmod>2026-04-20</lastmod><priority>0.8</priority></url>
-  <url><loc>https://fdk-site.vercel.app/faq</loc><lastmod>2026-04-20</lastmod><priority>0.8</priority></url>
-  <url><loc>https://fdk-site.vercel.app/regulamin</loc><lastmod>2026-04-20</lastmod><priority>0.5</priority></url>
-  <url><loc>https://fdk-site.vercel.app/inkubator-przedsiebiorczosci</loc><lastmod>2026-04-20</lastmod><priority>0.8</priority></url>
-  <url><loc>https://fdk-site.vercel.app/inne-uslugi</loc><lastmod>2026-04-20</lastmod><priority>0.7</priority></url>
-  <url><loc>https://fdk-site.vercel.app/programisci</loc><lastmod>2026-04-20</lastmod><priority>0.7</priority></url>
-  <url><loc>https://fdk-site.vercel.app/ecommerce</loc><lastmod>2026-04-20</lastmod><priority>0.7</priority></url>
-  <url><loc>https://fdk-site.vercel.app/architekci</loc><lastmod>2026-04-20</lastmod><priority>0.7</priority></url>
-  <url><loc>https://fdk-site.vercel.app/tlumacze</loc><lastmod>2026-04-20</lastmod><priority>0.7</priority></url>
-  <url><loc>https://fdk-site.vercel.app/muzycy</loc><lastmod>2026-04-20</lastmod><priority>0.7</priority></url>
-  <url><loc>https://fdk-site.vercel.app/inne-branze</loc><lastmod>2026-04-20</lastmod><priority>0.7</priority></url>
-  <url><loc>https://fdk-site.vercel.app/legalizacja-pobytu-i-pracy</loc><lastmod>2026-04-20</lastmod><priority>0.7</priority></url>
-  <url><loc>https://fdk-site.vercel.app/pakiety-sportowe-i-medyczne</loc><lastmod>2026-04-20</lastmod><priority>0.6</priority></url>
-  <url><loc>https://fdk-site.vercel.app/polisy-ubezpieczeniowe</loc><lastmod>2026-04-20</lastmod><priority>0.6</priority></url>
-  <url><loc>https://fdk-site.vercel.app/tlumaczenia-przysiegle</loc><lastmod>2026-04-20</lastmod><priority>0.6</priority></url>
-  <url><loc>https://fdk-site.vercel.app/pomoc-prawna</loc><lastmod>2026-04-20</lastmod><priority>0.6</priority></url>
-  <url><loc>https://fdk-site.vercel.app/sprawy-urzedowe</loc><lastmod>2026-04-20</lastmod><priority>0.6</priority></url>
-  <url><loc>https://fdk-site.vercel.app/uslugi-dla-firm-cudzoziemcy</loc><lastmod>2026-04-20</lastmod><priority>0.7</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- HOMEPAGE (priority 1.0) -->
+  <url>
+    <loc>https://fdk-site.vercel.app/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/en</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/uk</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/ru</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru" />
+  </url>
+
+  <!-- PROGRAMISCI (priority 0.8) -->
+  <url>
+    <loc>https://fdk-site.vercel.app/programisci</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/programisci" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/programmers" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/programisty" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/programmisty" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/en/programmers</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/programisci" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/programmers" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/programisty" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/programmisty" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/uk/programisty</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/programisci" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/programmers" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/programisty" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/programmisty" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/ru/programmisty</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/programisci" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/programmers" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/programisty" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/programmisty" />
+  </url>
+
+  <!-- ECOMMERCE (priority 0.8) -->
+  <url>
+    <loc>https://fdk-site.vercel.app/ecommerce</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/ecommerce" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/ecommerce" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/ecommerce" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/ecommerce" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/en/ecommerce</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/ecommerce" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/ecommerce" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/ecommerce" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/ecommerce" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/uk/ecommerce</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/ecommerce" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/ecommerce" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/ecommerce" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/ecommerce" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/ru/ecommerce</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/ecommerce" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/ecommerce" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/ecommerce" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/ecommerce" />
+  </url>
+
+  <!-- ARCHITEKCI (priority 0.8) -->
+  <url>
+    <loc>https://fdk-site.vercel.app/architekci</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/architekci" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/architects" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/architekty" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/arhitektory" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/en/architects</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/architekci" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/architects" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/architekty" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/arhitektory" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/uk/architekty</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/architekci" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/architects" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/architekty" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/arhitektory" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/ru/arhitektory</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/architekci" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/architects" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/architekty" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/arhitektory" />
+  </url>
+
+  <!-- TLUMACZE (priority 0.8) -->
+  <url>
+    <loc>https://fdk-site.vercel.app/tlumacze</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/tlumacze" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/translators" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/perekladachi" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/perevodchiki" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/en/translators</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/tlumacze" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/translators" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/perekladachi" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/perevodchiki" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/uk/perekladachi</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/tlumacze" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/translators" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/perekladachi" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/perevodchiki" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/ru/perevodchiki</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/tlumacze" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/translators" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/perekladachi" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/perevodchiki" />
+  </url>
+
+  <!-- MUZYCY (priority 0.8) -->
+  <url>
+    <loc>https://fdk-site.vercel.app/muzycy</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/muzycy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/musicians" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/muzykanty" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/muzykanty" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/en/musicians</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/muzycy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/musicians" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/muzykanty" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/muzykanty" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/uk/muzykanty</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/muzycy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/musicians" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/muzykanty" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/muzykanty" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/ru/muzykanty</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/muzycy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/musicians" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/muzykanty" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/muzykanty" />
+  </url>
+
+  <!-- INNE-BRANZE (priority 0.8) -->
+  <url>
+    <loc>https://fdk-site.vercel.app/inne-branze</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/inne-branze" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/other-industries" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/inshi-galuzi" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/drugie-otrasli" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/en/other-industries</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/inne-branze" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/other-industries" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/inshi-galuzi" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/drugie-otrasli" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/uk/inshi-galuzi</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/inne-branze" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/other-industries" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/inshi-galuzi" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/drugie-otrasli" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/ru/drugie-otrasli</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/inne-branze" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/other-industries" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/inshi-galuzi" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/drugie-otrasli" />
+  </url>
+
+  <!-- CUDZOZIEMCY (priority 0.8) -->
+  <url>
+    <loc>https://fdk-site.vercel.app/cudzoziemcy</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/cudzoziemcy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/foreigners" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/inozemtsi" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/inostrantsy" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/en/foreigners</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/cudzoziemcy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/foreigners" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/inozemtsi" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/inostrantsy" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/uk/inozemtsi</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/cudzoziemcy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/foreigners" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/inozemtsi" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/inostrantsy" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/ru/inostrantsy</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/cudzoziemcy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/foreigners" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/inozemtsi" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/inostrantsy" />
+  </url>
+
+  <!-- DLA-PRACODAWCOW (priority 0.8) -->
+  <url>
+    <loc>https://fdk-site.vercel.app/dla-pracodawcow</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/dla-pracodawcow" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/employers" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/robotodavtsi" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/rabotodateli" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/en/employers</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/dla-pracodawcow" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/employers" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/robotodavtsi" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/rabotodateli" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/uk/robotodavtsi</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/dla-pracodawcow" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/employers" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/robotodavtsi" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/rabotodateli" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/ru/rabotodateli</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/dla-pracodawcow" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/employers" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/robotodavtsi" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/rabotodateli" />
+  </url>
+
+  <!-- O-NAS (priority 0.8) -->
+  <url>
+    <loc>https://fdk-site.vercel.app/o-nas</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/o-nas" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/about" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/pro-nas" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/o-nas" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/en/about</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/o-nas" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/about" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/pro-nas" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/o-nas" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/uk/pro-nas</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/o-nas" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/about" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/pro-nas" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/o-nas" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/ru/o-nas</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/o-nas" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/about" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/pro-nas" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/o-nas" />
+  </url>
+
+  <!-- FAQ (priority 0.8) -->
+  <url>
+    <loc>https://fdk-site.vercel.app/faq</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/faq" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/faq" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/faq" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/faq" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/en/faq</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/faq" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/faq" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/faq" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/faq" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/uk/faq</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/faq" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/faq" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/faq" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/faq" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/ru/faq</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/faq" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/faq" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/faq" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/faq" />
+  </url>
+
+  <!-- KONTAKT (priority 0.8) -->
+  <url>
+    <loc>https://fdk-site.vercel.app/kontakt</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/kontakt" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/contact" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/kontakt" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/kontakt" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/en/contact</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/kontakt" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/contact" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/kontakt" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/kontakt" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/uk/kontakt</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/kontakt" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/contact" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/kontakt" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/kontakt" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/ru/kontakt</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/kontakt" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/contact" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/kontakt" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/kontakt" />
+  </url>
+
+  <!-- REGULAMIN (priority 0.8) -->
+  <url>
+    <loc>https://fdk-site.vercel.app/regulamin</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/regulamin" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/terms" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/reglament" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/reglament" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/en/terms</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/regulamin" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/terms" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/reglament" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/reglament" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/uk/reglament</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/regulamin" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/terms" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/reglament" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/reglament" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/ru/reglament</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/regulamin" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/terms" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/reglament" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/reglament" />
+  </url>
+
+  <!-- JAK-DZIALAMY (priority 0.8) -->
+  <url>
+    <loc>https://fdk-site.vercel.app/jak-dzialamy</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/jak-dzialamy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/how-it-works" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/yak-my-pratsyuyemo" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/kak-my-rabotaem" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/en/how-it-works</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/jak-dzialamy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/how-it-works" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/yak-my-pratsyuyemo" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/kak-my-rabotaem" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/uk/yak-my-pratsyuyemo</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/jak-dzialamy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/how-it-works" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/yak-my-pratsyuyemo" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/kak-my-rabotaem" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/ru/kak-my-rabotaem</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/jak-dzialamy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/how-it-works" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/yak-my-pratsyuyemo" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/kak-my-rabotaem" />
+  </url>
+
+  <!-- INKUBATOR-PRZEDSIEBIORCZOSCI (priority 0.8) -->
+  <url>
+    <loc>https://fdk-site.vercel.app/inkubator-przedsiebiorczosci</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/inkubator-przedsiebiorczosci" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/incubator" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/inkubator" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/inkubator" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/en/incubator</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/inkubator-przedsiebiorczosci" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/incubator" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/inkubator" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/inkubator" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/uk/inkubator</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/inkubator-przedsiebiorczosci" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/incubator" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/inkubator" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/inkubator" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/ru/inkubator</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/inkubator-przedsiebiorczosci" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/incubator" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/inkubator" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/inkubator" />
+  </url>
+
+  <!-- INNE-USLUGI (priority 0.8) -->
+  <url>
+    <loc>https://fdk-site.vercel.app/inne-uslugi</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/inne-uslugi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/other-services" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/inshi-poslugy" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/drugie-uslugi" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/en/other-services</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/inne-uslugi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/other-services" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/inshi-poslugy" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/drugie-uslugi" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/uk/inshi-poslugy</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/inne-uslugi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/other-services" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/inshi-poslugy" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/drugie-uslugi" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/ru/drugie-uslugi</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/inne-uslugi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/other-services" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/inshi-poslugy" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/drugie-uslugi" />
+  </url>
+
+  <!-- BLOG (priority 0.8) -->
+  <url>
+    <loc>https://fdk-site.vercel.app/blog</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/blog" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/blog" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/blog" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/blog" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/en/blog</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/blog" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/blog" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/blog" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/blog" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/uk/blog</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/blog" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/blog" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/blog" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/blog" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/ru/blog</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/blog" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/blog" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/blog" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/blog" />
+  </url>
+
+  <!-- PL-ONLY PAGES (priority 0.6) -->
+  <url>
+    <loc>https://fdk-site.vercel.app/legalizacja-pobytu-i-pracy</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/pakiety-sportowe-i-medyczne</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/polisy-ubezpieczeniowe</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/tlumaczenia-przysiegle</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/pomoc-prawna</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/sprawy-urzedowe</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/uslugi-dla-firm-cudzoziemcy</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.6</priority>
+  </url>
+
 </urlset>
