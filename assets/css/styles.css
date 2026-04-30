@@ -131,13 +131,13 @@ header .navbar-dark a { color: #ffffff; }
 header .navbar .nav-item { padding: 0 2px; }
 
 header.sticky-top .navbar {
-  background-color: #fff;
-  box-shadow: 2px -5px 10px 0px #000;
+  background-color: #1a1e23;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
   transition: all .15s ease-in-out;
 }
-header.sticky-top .navbar .logo-dark { display: inline-block !important; }
-header.sticky-top .navbar .logo-white { display: none !important; }
-header.sticky-top .navbar a { color: #000; }
+header.sticky-top .navbar .logo-dark { display: none !important; }
+header.sticky-top .navbar .logo-white { display: inline-block !important; }
+header.sticky-top .navbar a { color: #fff; }
 header.sticky-top .navbar a:hover { color: #00BBFF; }
 
 /* ===== HR ARROW ===== */
@@ -472,7 +472,7 @@ header .navbar .btn-hero-cta { font-size: 0.75rem !important; padding: 5px 10px 
 
 /* ===== LANGUAGE SWITCHER ===== */
 .lang-switcher-btn { color: #fff !important; font-size: 1.01rem !important; background: rgba(0,0,0,0.25); border: none; border-radius: 5px; padding: 5px 11px !important; }
-header.sticky-top .lang-switcher-btn { color: #333 !important; background: rgba(0,0,0,0.06); }
+header.sticky-top .lang-switcher-btn { color: #fff !important; background: rgba(255,255,255,0.1); }
 .lang-switcher-btn:hover { background: rgba(0,187,255,0.15) !important; }
 @media screen and (min-width: 992px) and (max-width: 1399px) {
   .lang-switcher-btn { font-size: 0.87rem !important; padding: 4px 6px !important; }
@@ -480,7 +480,7 @@ header.sticky-top .lang-switcher-btn { color: #333 !important; background: rgba(
 
 /* ===== NAV LINKS ===== */
 header .navbar .nav-link { font-size: 1.01rem; background: rgba(0,0,0,0.25); border: none; border-radius: 5px; padding: 5px 11px !important; margin: 0 1px; }
-header.sticky-top .navbar .nav-link { background: rgba(0,0,0,0.06); }
+header.sticky-top .navbar .nav-link { background: rgba(255,255,255,0.1); }
 header .navbar .nav-link:hover { background: rgba(0,187,255,0.15); }
 header .navbar .dropdown-toggle.nav-link { font-size: 1.01rem; }
 header .navbar .btn-hero-cta { font-size: 1.01rem !important; padding: 5px 11px !important; white-space: nowrap; }
