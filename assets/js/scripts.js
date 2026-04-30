@@ -306,13 +306,7 @@ function submitContactForm(e) {
     .then(function(data) {
         if (data.success) {
             form.reset();
-            btn.textContent = 'Wysłano! ✓';
-            btn.style.backgroundColor = '#28a745';
-            setTimeout(function() {
-                btn.disabled = false;
-                btn.textContent = 'Wyślij wiadomość';
-                btn.style.backgroundColor = '';
-            }, 4000);
+            window.location.href = '/dziekujemy.html';
         } else {
             throw new Error(data.error);
         }
@@ -323,7 +317,7 @@ function submitContactForm(e) {
         var body = encodeURIComponent('Imię: ' + name + '\nEmail: ' + email + '\nTelefon: ' + phone + '\n\nWiadomość:\n' + message);
         window.location.href = 'mailto:kontakt@firmadlakazdego.pl?subject=' + subject + '&body=' + body;
         btn.disabled = false;
-        btn.textContent = 'Wyślij wiadomość';
+        btn.textContent = 'Umów bezpłatną konsultację';
     });
 }
 

@@ -16,8 +16,8 @@ export const siteConfig = {
   // === DANE DO PODMIANY ===
   contact: {
     email: "kontakt@getpermit.pl",
-    phone: "+48 XXX XXX XXX",
-    whatsapp: "48XXXXXXXXX",
+    phone: "+48 575 594 500",
+    whatsapp: "48575594500",
     telegram: "getpermit",
     address: {
       street: "ul. Lwowska 17/4",
@@ -40,7 +40,7 @@ export const siteConfig = {
 
   // Statystyki na stronie głównej
   stats: {
-    yearsOfExperience: 7,
+    foundedYear: 2015,
     clientsServed: 1000,
     successRate: 92,
   },

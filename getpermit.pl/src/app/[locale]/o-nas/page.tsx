@@ -33,7 +33,7 @@ export default async function AboutPage({
     {
       icon: Users,
       title: "Doświadczenie",
-      desc: "Ponad 10 lat pracy z cudzoziemcami z całego świata.",
+      desc: "Od 2015 roku pomagamy cudzoziemcom z całego świata.",
     },
     {
       icon: Award,
@@ -56,7 +56,7 @@ export default async function AboutPage({
               {tNav("about")}
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-primary/70 md:text-xl">
-              {siteConfig.legalName} to organizacja, która od ponad dekady pomaga
+              {siteConfig.legalName} to organizacja, która od 2015 roku pomaga
               cudzoziemcom legalnie żyć i pracować w Polsce. Łączymy doświadczenie
               prawników, ekspertów imigracyjnych i tłumaczy — wszystko po to, by
               proces legalizacji był dla Ciebie jasny, szybki i bezstresowy.

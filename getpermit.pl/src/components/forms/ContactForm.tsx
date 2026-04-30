@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslations, useLocale } from "next-intl";
+import { useRouter } from "next/navigation";
 import { contactFormSchema, type ContactFormValues } from "@/lib/validations";
 import { Button } from "@/components/ui/Button";
 import { ALL_SERVICES, localized } from "@/lib/services";
@@ -21,6 +22,7 @@ export function ContactForm({ defaultService, compact }: ContactFormProps) {
   const t = useTranslations("contact.form");
   const tErrors = useTranslations("errors");
   const locale = useLocale();
+  const router = useRouter();
   const [status, setStatus] = useState<FormStatus>("idle");
 
   const {
@@ -52,6 +54,8 @@ export function ContactForm({ defaultService, compact }: ContactFormProps) {
       if (!res.ok) throw new Error("Network error");
       setStatus("success");
       reset();
+      const thankYouPath = locale === "pl" ? `/${locale}/dziekujemy` : `/${locale}/thank-you`;
+      router.push(thankYouPath);
     } catch {
       setStatus("error");
     }
@@ -93,6 +97,7 @@ export function ContactForm({ defaultService, compact }: ContactFormProps) {
         aria-hidden="true"
       />
 
+      {/* Name */}
       <div>
         <label htmlFor="name" className={labelBase}>
           {t("name")} <span className="text-accent">*</span>
@@ -110,35 +115,41 @@ export function ContactForm({ defaultService, compact }: ContactFormProps) {
         )}
       </div>
 
+      {/* Phone — required */}
       <div>
-        <label htmlFor="email" className={labelBase}>
-          {t("email")} <span className="text-accent">*</span>
+        <label htmlFor="phone" className={labelBase}>
+          {t("phone")} <span className="text-accent">*</span>
         </label>
         <input
-          id="email"
-          {...register("email")}
-          type="email"
-          placeholder={t("emailPlaceholder")}
+          id="phone"
+          {...register("phone")}
+          type="tel"
+          placeholder={t("phonePlaceholder")}
           className={inputBase}
-          aria-invalid={!!errors.email}
+          aria-invalid={!!errors.phone}
         />
-        {errors.email && (
-          <p className="mt-1 text-xs text-red-600">{translateError(errors.email.message)}</p>
+        {errors.phone && (
+          <p className="mt-1 text-xs text-red-600">{translateError(errors.phone.message)}</p>
         )}
       </div>
 
+      {/* Email — optional */}
       {!compact && (
         <div>
-          <label htmlFor="phone" className={labelBase}>
-            {t("phone")}
+          <label htmlFor="email" className={labelBase}>
+            {t("email")}
           </label>
           <input
-            id="phone"
-            {...register("phone")}
-            type="tel"
-            placeholder={t("phonePlaceholder")}
+            id="email"
+            {...register("email")}
+            type="email"
+            placeholder={t("emailPlaceholder")}
             className={inputBase}
+            aria-invalid={!!errors.email}
           />
+          {errors.email && (
+            <p className="mt-1 text-xs text-red-600">{translateError(errors.email.message)}</p>
+          )}
         </div>
       )}
 
@@ -161,9 +172,10 @@ export function ContactForm({ defaultService, compact }: ContactFormProps) {
         </select>
       </div>
 
+      {/* Message — optional */}
       <div>
         <label htmlFor="message" className={labelBase}>
-          {t("message")} <span className="text-accent">*</span>
+          {t("message")}
         </label>
         <textarea
           id="message"
@@ -171,11 +183,7 @@ export function ContactForm({ defaultService, compact }: ContactFormProps) {
           rows={compact ? 3 : 5}
           placeholder={t("messagePlaceholder")}
           className={cn(inputBase, "resize-none")}
-          aria-invalid={!!errors.message}
         />
-        {errors.message && (
-          <p className="mt-1 text-xs text-red-600">{translateError(errors.message.message)}</p>
-        )}
       </div>
 
       <label className="flex cursor-pointer items-start gap-2.5 text-xs text-primary/70">
@@ -190,15 +198,18 @@ export function ContactForm({ defaultService, compact }: ContactFormProps) {
         <p className="text-xs text-red-600">{translateError(errors.consent.message)}</p>
       )}
 
-      <Button
-        type="submit"
-        variant="accent"
-        size={compact ? "md" : "lg"}
-        className="w-full"
-        disabled={status === "submitting"}
-      >
-        {status === "submitting" ? t("submitting") : t("submit")}
-      </Button>
+      <div>
+        <Button
+          type="submit"
+          variant="accent"
+          size={compact ? "md" : "lg"}
+          className="w-full"
+          disabled={status === "submitting"}
+        >
+          {status === "submitting" ? t("submitting") : t("submit")}
+        </Button>
+        <p className="mt-2 text-center text-xs text-primary/50">{t("responseTime")}</p>
+      </div>
 
       {status === "error" && (
         <div className="flex items-start gap-2 rounded-lg border border-red-200 bg-red-50 p-3 text-xs text-red-700">

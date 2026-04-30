@@ -11,12 +11,12 @@
   "hero": {
     "badge": "Pomoc prawna dla cudzoziemców",
     "title": "Legalizacja pobytu i pracy, firma B2B — wszystko w jednym miejscu.",
-    "subtitle": "Zezwolenie na pracę, karta pobytu czasowego, blue card, rezydent długoterminowy UE, własna firma — szybko i kompleksowo, 92% skuteczności, 10+ lat doświadczenia.",
+    "subtitle": "Zezwolenie na pracę, karta pobytu czasowego, blue card, rezydent długoterminowy UE, własna firma — szybko i kompleksowo, 92% skuteczności, na rynku od 2015 roku.",
     "ctaPrimary": "Skontaktuj się z nami!",
     "blogCta": "Czytaj blog"
   },
   "stats": {
-    "years": "Lat doświadczenia",
+    "years": "Na rynku od",
     "clients": "Zadowolonych klientów",
     "success": "Skuteczność spraw"
   },
@@ -48,17 +48,18 @@
     "form": {
       "name": "Imię i nazwisko",
       "namePlaceholder": "Jan Kowalski",
-      "email": "Adres email",
+      "email": "Adres email (opcjonalnie)",
       "emailPlaceholder": "jan@example.com",
-      "phone": "Telefon (opcjonalnie)",
+      "phone": "Telefon",
       "phonePlaceholder": "+48 600 000 000",
       "service": "Interesuje mnie usługa",
       "servicePlaceholder": "Wybierz usługę",
-      "message": "Twoja wiadomość",
-      "messagePlaceholder": "Opisz krótko swoją sytuację...",
+      "message": "Twoja wiadomość (opcjonalnie)",
+      "messagePlaceholder": "Np. jestem grafikiem, zarabiam ok. 8000 zł netto/mies. — chcę się dowiedzieć ile zaoszczędzę",
       "consent": "Wyrażam zgodę na przetwarzanie moich danych osobowych w celu udzielenia odpowiedzi.",
-      "submit": "Wyślij wiadomość",
+      "submit": "Umów bezpłatną konsultację",
       "submitting": "Wysyłanie...",
+      "responseTime": "Odpowiadamy w ciągu 24 godzin roboczych",
       "success": "Dziękujemy! Odpowiemy w ciągu 24 godzin.",
       "error": "Wystąpił błąd. Spróbuj ponownie lub napisz na nasz email."
     },
@@ -364,6 +365,12 @@
     "message": "Używamy ciasteczek niezbędnych do działania panelu klienta (sesja, język). Nie używamy trackingu ani reklam. Więcej w naszej polityce prywatności.",
     "accept": "Rozumiem",
     "privacyLink": "Polityka prywatności"
+  },
+  "thankYou": {
+    "title": "Dziękujemy za kontakt!",
+    "subtitle": "Otrzymaliśmy Twoje zgłoszenie. Skontaktujemy się z Tobą w ciągu 24 godzin roboczych.",
+    "calculatorCta": "Sprawdź ile zaoszczędzisz z nami",
+    "backHome": "Wróć na stronę główną"
   },
   "blog": {
     "metaTitle": "Blog — getpermit.pl",

@@ -50,18 +50,16 @@ export async function POST(request: Request) {
     await resend.emails.send({
       from,
       to,
-      replyTo: email,
+      replyTo: email || undefined,
       subject: `[getpermit.pl] Nowe zapytanie: ${service || "ogólne"} (${locale})`,
       html: `
         <h2>Nowe zapytanie ze strony getpermit.pl</h2>
         <p><strong>Imię:</strong> ${escapeHtml(name)}</p>
-        <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-        ${phone ? `<p><strong>Telefon:</strong> ${escapeHtml(phone)}</p>` : ""}
+        <p><strong>Telefon:</strong> ${escapeHtml(phone)}</p>
+        ${email ? `<p><strong>Email:</strong> ${escapeHtml(email)}</p>` : ""}
         ${service ? `<p><strong>Usługa:</strong> ${escapeHtml(service)}</p>` : ""}
         <p><strong>Język:</strong> ${escapeHtml(locale)}</p>
-        <hr />
-        <p><strong>Wiadomość:</strong></p>
-        <p>${escapeHtml(message).replace(/\n/g, "<br />")}</p>
+        ${message ? `<hr /><p><strong>Wiadomość:</strong></p><p>${escapeHtml(message).replace(/\n/g, "<br />")}</p>` : ""}
       `,
     });
     return NextResponse.json({ ok: true });

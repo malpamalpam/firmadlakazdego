@@ -7,11 +7,10 @@ import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { LanguageSwitcher } from "./LanguageSwitcher";
-import { Menu, X } from "lucide-react";
+import { siteConfig } from "@/config/site";
+import { Menu, X, Phone } from "lucide-react";
 
-// Anchor sections that exist on the homepage. Localized labels for the
-// homepage section nav (other locales fall back to PL — multilingual labels
-// can be added to /src/locales/*.json under nav.* later).
+// Anchor sections that exist on the homepage.
 const SECTIONS = [
   { id: "uslugi", label: "Usługi" },
   { id: "proces", label: "Jak działamy" },
@@ -25,6 +24,15 @@ export function Header() {
 
   const [mobileOpen, setMobileOpen] = useState(false);
   const [active, setActive] = useState<string | null>(null);
+  const [scrolled, setScrolled] = useState(false);
+
+  // Track scroll for shadow effect
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   // Track which section is currently in view (homepage only)
   useEffect(() => {
@@ -40,7 +48,6 @@ export function Header() {
         ([entry]) => {
           if (entry.isIntersecting) setActive(id);
         },
-        // section is "active" once it crosses upper-mid of viewport
         { rootMargin: "-40% 0px -55% 0px", threshold: 0 }
       );
       obs.observe(el);
@@ -49,14 +56,20 @@ export function Header() {
     return () => observers.forEach((o) => o.disconnect());
   }, [onHome]);
 
-  // Build the right href for a section anchor depending on current page
   const sectionHref = (id: string) =>
     onHome ? `#${id}` : `/${locale}/#${id}`;
 
+  const phoneNumber = siteConfig.contact.phone;
+  const phoneHref = `tel:${phoneNumber.replace(/\s/g, "")}`;
+
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-primary/10 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
+    <header
+      className={`sticky top-0 z-50 w-full border-b border-primary/10 bg-white/95 backdrop-blur transition-shadow duration-300 supports-[backdrop-filter]:bg-white/80 ${
+        scrolled ? "shadow-sm" : ""
+      }`}
+    >
       <Container>
-        <div className="flex h-16 items-center justify-between md:h-20">
+        <div className="flex h-14 items-center justify-between md:h-20">
           {/* Logo */}
           <Link
             href="/"
@@ -114,6 +127,13 @@ export function Header() {
           </nav>
 
           <div className="hidden items-center gap-4 md:flex">
+            <a
+              href={phoneHref}
+              className="flex items-center gap-1.5 text-sm font-medium text-primary/70 transition-colors hover:text-primary"
+            >
+              <Phone className="h-4 w-4" />
+              {phoneNumber}
+            </a>
             <LanguageSwitcher />
             <Link href="/kontakt">
               <Button variant="primary" size="sm">
@@ -128,16 +148,25 @@ export function Header() {
             </a>
           </div>
 
-          {/* Mobile toggle */}
-          <button
-            type="button"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-md text-primary md:hidden"
-            onClick={() => setMobileOpen((v) => !v)}
-            aria-label="Otwórz menu nawigacji"
-            aria-expanded={mobileOpen}
-          >
-            {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
+          {/* Mobile: phone icon + menu toggle */}
+          <div className="flex items-center gap-2 md:hidden">
+            <a
+              href={phoneHref}
+              className="inline-flex h-10 w-10 items-center justify-center rounded-md text-primary"
+              aria-label="Zadzwoń"
+            >
+              <Phone className="h-5 w-5" />
+            </a>
+            <button
+              type="button"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-md text-primary"
+              onClick={() => setMobileOpen((v) => !v)}
+              aria-label="Otwórz menu nawigacji"
+              aria-expanded={mobileOpen}
+            >
+              {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile menu */}

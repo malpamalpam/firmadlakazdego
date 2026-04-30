@@ -73,7 +73,7 @@ export function StatsSection() {
   }, []);
 
   const items = [
-    { value: siteConfig.stats.yearsOfExperience, suffix: "+", label: t("years") },
+    { value: siteConfig.stats.foundedYear, suffix: "", label: t("years") },
     { value: siteConfig.stats.clientsServed, suffix: "+", label: t("clients") },
     { value: siteConfig.stats.successRate, suffix: "%", label: t("success") },
   ];

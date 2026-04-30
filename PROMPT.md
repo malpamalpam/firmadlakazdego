@@ -28,9 +28,9 @@ Dane rejestrowe:
 - Prezes: Grzegorz Stępień
 
 Kluczowe liczby:
-- 20+ lat doświadczenia
+- na rynku od 2015 roku
 - 10 000+ obsłużonych klientów
-- 95% zadowolenia klientów
+- ocena 4.8/5 w Google
 - 18-osobowy wielojęzyczny zespół
 
 ══════════════════════════════════════════════

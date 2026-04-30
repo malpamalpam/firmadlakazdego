@@ -2,10 +2,10 @@ import { z } from "zod";
 
 export const contactFormSchema = z.object({
   name: z.string().min(2, "min:2"),
-  email: z.string().email("email"),
-  phone: z.string().optional().or(z.literal("")),
+  email: z.string().email("email").optional().or(z.literal("")),
+  phone: z.string().min(6, "min:6"),
   service: z.string().optional().or(z.literal("")),
-  message: z.string().min(10, "min:10"),
+  message: z.string().optional().or(z.literal("")),
   consent: z.literal(true, {
     errorMap: () => ({ message: "consent" }),
   }),

@@ -11,12 +11,12 @@
   "hero": {
     "badge": "Legal help for foreigners",
     "title": "Legalization of residence and work, B2B company — everything in one place.",
-    "subtitle": "Work permit, temporary residence card, Blue Card, EU long-term resident, your own business — fast and comprehensive, 92% success rate, 10+ years of experience.",
+    "subtitle": "Work permit, temporary residence card, Blue Card, EU long-term resident, your own business — fast and comprehensive, 92% success rate, on the market since 2015.",
     "ctaPrimary": "Contact us!",
     "blogCta": "Read the blog"
   },
   "stats": {
-    "years": "Years of experience",
+    "years": "On the market since",
     "clients": "Happy clients",
     "success": "Success rate"
   },
@@ -48,17 +48,18 @@
     "form": {
       "name": "Full name",
       "namePlaceholder": "John Doe",
-      "email": "Email address",
+      "email": "Email address (optional)",
       "emailPlaceholder": "john@example.com",
-      "phone": "Phone (optional)",
+      "phone": "Phone",
       "phonePlaceholder": "+48 600 000 000",
       "service": "Service of interest",
       "servicePlaceholder": "Select a service",
-      "message": "Your message",
-      "messagePlaceholder": "Briefly describe your situation...",
+      "message": "Your message (optional)",
+      "messagePlaceholder": "E.g. I'm a graphic designer, earning about 8000 PLN net/month — I want to find out how much I can save",
       "consent": "I consent to the processing of my personal data for the purpose of receiving a response.",
-      "submit": "Send message",
+      "submit": "Book a free consultation",
       "submitting": "Sending...",
+      "responseTime": "We respond within 24 business hours",
       "success": "Thank you! We will respond within 24 hours.",
       "error": "An error occurred. Please try again or email us directly."
     },
@@ -364,6 +365,12 @@
     "message": "We use cookies essential for the client panel to function (session, language). No tracking, no ads. More in our privacy policy.",
     "accept": "Got it",
     "privacyLink": "Privacy policy"
+  },
+  "thankYou": {
+    "title": "Thank you for reaching out!",
+    "subtitle": "We received your inquiry. We will contact you within 24 business hours.",
+    "calculatorCta": "Check how much you can save with us",
+    "backHome": "Back to homepage"
   },
   "blog": {
     "metaTitle": "Blog — getpermit.pl",

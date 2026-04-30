@@ -14,7 +14,7 @@ export function HeroSection() {
   const locale = useLocale();
 
   const stats = [
-    { target: siteConfig.stats.yearsOfExperience, suffix: "+", label: tStats("years") },
+    { target: siteConfig.stats.foundedYear, suffix: "", label: tStats("years") },
     { target: siteConfig.stats.clientsServed, suffix: "+", label: tStats("clients") },
     { target: siteConfig.stats.successRate, suffix: "%", label: tStats("success") },
   ];

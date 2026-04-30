@@ -17,7 +17,7 @@ Dane rejestrowe:
 - Adres korespondencyjny / do faktur: ul. Lwowska 5/15, 00-660 Warszawa
 - KRS: 0000569410, NIP: 5252625624, REGON: 362170026
 - Prezes: Grzegorz Stępień
-- 20+ lat doświadczenia, 10 000+ klientów, 95% zadowolenia, 18-osobowy zespół
+- na rynku od 2015 roku, 10 000+ klientów, ocena 4.8/5 w Google, 18-osobowy zespół
 
 DLA KOGO INKUBATOR:
 TAK: freelancerzy, programiści, graficy, designerzy, architekci, tłumacze, lektorzy, copywriterzy, dziennikarze, marketingowcy, influencerzy, muzycy, artyści, e-commerce, cudzoziemcy, studenci <26 lat, pracodawcy.
