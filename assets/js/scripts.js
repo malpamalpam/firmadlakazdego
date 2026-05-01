@@ -314,7 +314,7 @@ function submitContactForm(e) {
     if (name.length < 2) { alert('Imię musi mieć minimum 2 znaki.'); return; }
     var phoneDigits = phone.replace(/\D/g, '');
     if (phoneDigits.length < 9) { alert('Numer telefonu musi mieć minimum 9 cyfr.'); return; }
-    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { alert('Podaj poprawny adres e-mail.'); return; }
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { alert('Podaj poprawny adres e-mail.'); return; }
     if (message && message.length < 10) { alert('Wiadomość musi mieć minimum 10 znaków.'); return; }
 
     btn.disabled = true;
