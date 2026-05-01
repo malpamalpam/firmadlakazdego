@@ -34,15 +34,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="twitter:title" content="Firma Dla Każdego — Inkubator Przedsiębiorczości">
     <meta name="twitter:description" content="Własna firma w 15 minut, bez ZUS, 100% zdalnie. Najlepiej oceniany inkubator w Polsce.">
     <meta name="twitter:image" content="https://firmadlakazdego.pl/assets/img/logo-dark.png">
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"></noscript>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/styles.css" rel="stylesheet">
-    <!-- Cal.com Embed -->
-    <script type="text/javascript">
-    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-    Cal("init", "konsultacja-legalizacyjna", {origin:"https://app.cal.com"});
-    Cal.ns["konsultacja-legalizacyjna"]("ui", {"hideEventTypeDetails":false,"layout":"month_view","locale":"pl","weekStart":"Monday"});
-    </script>
+    <!-- Cal.com Embed — załadowany na końcu body -->
     <!-- [5] Schema.org Organization -->
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Fundacja Firma Dla Każdego","url":"https://firmadlakazdego.pl","logo":"https://firmadlakazdego.pl/assets/img/logo-dark.png","address":{"@type":"PostalAddress","streetAddress":"ul. Lwowska 17/4","addressLocality":"Warszawa","postalCode":"00-660","addressCountry":"PL"},"contactPoint":[{"@type":"ContactPoint","telephone":"+48-575-594-500","contactType":"customer service","availableLanguage":"Polish"},{"@type":"ContactPoint","telephone":"+48-794-731-000","contactType":"customer service","availableLanguage":["English","Russian"]}],"sameAs":["https://www.facebook.com/firmadlakazdego","https://www.instagram.com/firmadlakazdego","https://t.me/FDK_inkubator"]}</script>
     <!-- [5] Schema.org FAQPage -->
@@ -78,8 +72,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <nav class="navbar navbar-expand-lg fixed-top w-100 navbar-dark px-3 py-2" id="main-nav" aria-label="Main navigation">
         <div class="container-fluid px-0 px-md-3 position-relative">
             <a class="navbar-brand me-2 me-xl-5" href="/">
-                <img src="assets/img/logo-white.png" alt="Firma dla każdego - logo" width="130" height="53" class="logo-white d-inline-block align-text-top" fetchpriority="high">
-                <img src="assets/img/logo-dark.png" alt="Firma dla każdego - logo" width="130" height="53" class="logo-dark d-none align-text-top" fetchpriority="high">
+                <picture class="logo-white d-inline-block align-text-top"><source srcset="assets/img/logo-white.webp" type="image/webp"><img src="assets/img/logo-white.png" alt="Firma dla każdego - logo" width="130" height="53" fetchpriority="high"></picture>
+                <picture class="logo-dark d-none align-text-top"><source srcset="assets/img/logo-dark.webp" type="image/webp"><img src="assets/img/logo-dark.png" alt="Firma dla każdego - logo" width="130" height="53" fetchpriority="high"></picture>
             </a>
             <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSideCollapse" aria-label="Navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSideCollapse">
@@ -188,18 +182,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="partners-slide">
                 <a href="https://www.etsy.com" target="_blank" rel="noopener"><img src="assets/img/partners/etsy.svg" alt="Etsy" height="32" loading="lazy"></a>
                 <a href="https://www.payu.pl" target="_blank" rel="noopener"><img src="assets/img/partners/payu.svg" alt="PayU" height="32" loading="lazy"></a>
-                <a href="https://www.upwork.com" target="_blank" rel="noopener"><img src="assets/img/Upwork-logo.svg.png" alt="Upwork" height="32" loading="lazy"></a>
+                <a href="https://www.upwork.com" target="_blank" rel="noopener"><picture><source srcset="assets/img/Upwork-logo.svg.webp" type="image/webp"><img src="assets/img/Upwork-logo.svg.png" alt="Upwork" width="64" height="32" loading="lazy"></picture></a>
                 <a href="https://www.deel.com" target="_blank" rel="noopener"><img src="assets/img/partners/deel.svg" alt="Deel" height="32" loading="lazy"></a>
-                <a href="https://www.medicover.pl" target="_blank" rel="noopener"><img src="assets/img/Medicover-pion-biale.png" alt="Medicover" height="40" loading="lazy"></a>
+                <a href="https://www.medicover.pl" target="_blank" rel="noopener"><picture><source srcset="assets/img/Medicover-pion-biale.webp" type="image/webp"><img src="assets/img/Medicover-pion-biale.png" alt="Medicover" width="40" height="40" loading="lazy"></picture></a>
                 <a href="https://www.benefitsystems.pl/multisport" target="_blank" rel="noopener"><img src="assets/img/partners/multisport.svg" alt="MultiSport" height="32" loading="lazy"></a>
                 <a href="https://www.przelewy24.pl" target="_blank" rel="noopener"><img src="assets/img/partners/przelewy24.svg" alt="Przelewy24" height="32" loading="lazy"></a>
                 <a href="https://www.fiverr.com" target="_blank" rel="noopener"><img src="assets/img/partners/fiverr.svg" alt="Fiverr" height="32" loading="lazy"></a>
                 <!-- duplikat do seamless loop -->
                 <a href="https://www.etsy.com" target="_blank" rel="noopener"><img src="assets/img/partners/etsy.svg" alt="Etsy" height="32" loading="lazy"></a>
                 <a href="https://www.payu.pl" target="_blank" rel="noopener"><img src="assets/img/partners/payu.svg" alt="PayU" height="32" loading="lazy"></a>
-                <a href="https://www.upwork.com" target="_blank" rel="noopener"><img src="assets/img/Upwork-logo.svg.png" alt="Upwork" height="32" loading="lazy"></a>
+                <a href="https://www.upwork.com" target="_blank" rel="noopener"><picture><source srcset="assets/img/Upwork-logo.svg.webp" type="image/webp"><img src="assets/img/Upwork-logo.svg.png" alt="Upwork" width="64" height="32" loading="lazy"></picture></a>
                 <a href="https://www.deel.com" target="_blank" rel="noopener"><img src="assets/img/partners/deel.svg" alt="Deel" height="32" loading="lazy"></a>
-                <a href="https://www.medicover.pl" target="_blank" rel="noopener"><img src="assets/img/Medicover-pion-biale.png" alt="Medicover" height="40" loading="lazy"></a>
+                <a href="https://www.medicover.pl" target="_blank" rel="noopener"><picture><source srcset="assets/img/Medicover-pion-biale.webp" type="image/webp"><img src="assets/img/Medicover-pion-biale.png" alt="Medicover" width="40" height="40" loading="lazy"></picture></a>
                 <a href="https://www.benefitsystems.pl/multisport" target="_blank" rel="noopener"><img src="assets/img/partners/multisport.svg" alt="MultiSport" height="32" loading="lazy"></a>
                 <a href="https://www.przelewy24.pl" target="_blank" rel="noopener"><img src="assets/img/partners/przelewy24.svg" alt="Przelewy24" height="32" loading="lazy"></a>
                 <a href="https://www.fiverr.com" target="_blank" rel="noopener"><img src="assets/img/partners/fiverr.svg" alt="Fiverr" height="32" loading="lazy"></a>
@@ -389,9 +383,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h2 class="text-center mb-3">Program Partnerski</h2>
         <p class="text-center text-muted mb-5">Poleć nas znajomym i zarabiaj. Za każdego poleconego klienta otrzymujesz prowizję.</p>
         <div class="row text-center g-4 justify-content-center">
-            <div class="col-md-4 fade-in"><div class="p-4"><div class="display-4 mb-3">📤</div><h5 class="fw-bold">1. Poleć nas</h5><p class="text-muted">Poleć nas znajomemu — powiedz mu o inkubatorze FDK lub wyślij mu link do naszej strony.</p></div></div>
-            <div class="col-md-4 fade-in"><div class="p-4"><div class="display-4 mb-3">🤝</div><h5 class="fw-bold">2. Klient dołącza</h5><p class="text-muted">Twój znajomy rejestruje się w inkubatorze i zaczyna współpracę. Przy podpisywaniu umowy podaje Twoje dane jako osoby polecającej.</p></div></div>
-            <div class="col-md-4 fade-in"><div class="p-4"><div class="display-4 mb-3">💰</div><h5 class="fw-bold">3. Zarabiasz prowizję</h5><p class="text-muted">Po podpisaniu umowy i opłacie pierwszego miesiąca przez poleconą osobę — otrzymujesz bonus za polecenie.</p></div></div>
+            <div class="col-md-4 fade-in"><div class="p-4"><div class="display-4 mb-3">📤</div><h3 class="h5 fw-bold">1. Poleć nas</h3><p class="text-muted">Poleć nas znajomemu — powiedz mu o inkubatorze FDK lub wyślij mu link do naszej strony.</p></div></div>
+            <div class="col-md-4 fade-in"><div class="p-4"><div class="display-4 mb-3">🤝</div><h3 class="h5 fw-bold">2. Klient dołącza</h3><p class="text-muted">Twój znajomy rejestruje się w inkubatorze i zaczyna współpracę. Przy podpisywaniu umowy podaje Twoje dane jako osoby polecającej.</p></div></div>
+            <div class="col-md-4 fade-in"><div class="p-4"><div class="display-4 mb-3">💰</div><h3 class="h5 fw-bold">3. Zarabiasz prowizję</h3><p class="text-muted">Po podpisaniu umowy i opłacie pierwszego miesiąca przez poleconą osobę — otrzymujesz bonus za polecenie.</p></div></div>
         </div>
         <div class="text-center mt-4"><a href="#kontakt" class="btn btn-fdk btn-lg px-5 py-3">Dołącz do programu partnerskiego</a></div>
     </div>
@@ -402,9 +396,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="container">
         <h2 class="text-center mb-4">Opinie naszych klientów</h2>
         <div id="opinie-container">
-            <!-- Elfsight Google Reviews -->
-            <script src="https://elfsightcdn.com/platform.js" async></script>
+            <!-- Elfsight Google Reviews — lazy-loaded gdy sekcja w viewport -->
             <div class="elfsight-app-604a7529-e26f-40f6-b3e0-0fff024a9959" data-elfsight-app-lazy></div>
+            <script>
+            (function(){var loaded=false;var el=document.getElementById('opinie-container');if(el&&'IntersectionObserver' in window){var obs=new IntersectionObserver(function(entries){if(entries[0].isIntersecting&&!loaded){loaded=true;var s=document.createElement('script');s.src='https://elfsightcdn.com/platform.js';s.async=true;document.body.appendChild(s);obs.disconnect()}},{rootMargin:'200px'});obs.observe(el)}else{var s=document.createElement('script');s.src='https://elfsightcdn.com/platform.js';s.async=true;document.body.appendChild(s)}})();
+            </script>
         </div>
     </div>
 </section>
@@ -423,7 +419,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="mb-3 form-check">
                         <input type="checkbox" class="form-check-input" id="cf-rodo" required>
                         <label class="form-check-label text-smaller" for="cf-rodo">
-                            Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z <a href="https://firmadlakazdego.pl/polityka-prywatnosci/" target="_blank">Polityką Prywatności</a>. Administratorem danych jest Fundacja Firma dla Każdego, ul. Lwowska 17/4, 00-660 Warszawa (NIP: 5252625624). <span class="required-star">*</span>
+                            Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z <a href="/polityka-prywatnosci/">Polityką Prywatności</a>. Administratorem danych jest Fundacja Firma dla Każdego, ul. Lwowska 17/4, 00-660 Warszawa (NIP: 5252625624). <span class="required-star">*</span>
                         </label>
                     </div>
                     <button type="submit" class="btn btn-hero-cta btn-lg w-100">Umów bezpłatną konsultację</button>
@@ -431,12 +427,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </form>
             </div>
             <div class="col-lg-4 offset-lg-1">
-                <h5 class="fw-bold mb-3">Dane kontaktowe</h5>
+                <h3 class="h5 fw-bold mb-3">Dane kontaktowe</h3>
                 <p class="mb-2">📞 <a href="tel:+48575594500" class="text-body">+48 575 594 500</a> <small class="text-muted">(PL)</small></p>
                 <p class="mb-2">📞 <a href="tel:+48794731000" class="text-body">+48 794 731 000</a> <small class="text-muted">(EN/UA/RU)</small></p>
                 <p class="mb-2">✉️ <a href="mailto:kontakt@firmadlakazdego.pl" class="text-body">kontakt@firmadlakazdego.pl</a></p>
                 <p class="mb-4">✉️ <a href="mailto:administracja@firmadlakazdego.pl" class="text-body">administracja@firmadlakazdego.pl</a></p>
-                <h5 class="fw-bold mb-3">Adres</h5>
+                <h3 class="h5 fw-bold mb-3">Adres</h3>
                 <p>Fundacja Firma Dla Każdego<br>ul. Lwowska 17/4<br>00-660 Warszawa</p>
             </div>
         </div>
@@ -468,7 +464,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="container py-4 py-md-5">
             <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3">
                 <div class="col mb-4 mb-md-5">
-                    <a href="/" class="brand pe-5 d-inline-block"><img src="assets/img/logo-white.png" alt="Firma dla każdego - logo" width="300" height="122" class="img-fluid"></a>
+                    <a href="/" class="brand pe-5 d-inline-block"><picture><source srcset="assets/img/logo-white.webp" type="image/webp"><img src="assets/img/logo-white.png" alt="Firma dla każdego - logo" width="300" height="122" class="img-fluid"></picture></a>
                     <div class="socials text-start text-sm-center pt-4 pt-md-5 mt-4 pe-0 pe-lg-5 d-flex gap-3 justify-content-start justify-content-sm-center">
                         <!-- Facebook -->
                         <a href="https://www.facebook.com/firmadlakazdego" target="_blank" rel="nofollow" aria-label="Facebook"><svg width="32" height="32" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M30.1384 15.0873C30.1384 6.93094 23.3963 0.327148 15.0692 0.327148C6.74208 0.327148 0 6.93094 0 15.0873C0 22.4564 5.51421 28.5572 12.7251 29.6724V19.3513H8.88525V15.0873H12.7251V11.8291C12.7251 8.13361 14.9576 6.09999 18.4179 6.09999C20.07 6.09999 21.789 6.38426 21.789 6.38426V10.0142H19.869C17.9938 10.0142 17.4133 11.1512 17.4133 12.3102V15.0873H21.588L20.9183 19.3513H17.4133V29.6724C24.6242 28.5572 30.1384 22.4564 30.1384 15.0873Z" fill="#ffffff"/></svg></a>
@@ -521,7 +517,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header border-0 pb-0">
-                <h5 class="modal-title fw-bold" id="oplatyModalLabel">Dokonaj opłaty</h5>
+                <h4 class="modal-title fw-bold" id="oplatyModalLabel">Dokonaj opłaty</h4>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zamknij"></button>
             </div>
             <div class="modal-body px-4 pb-4">
@@ -578,7 +574,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/scripts.js"></script>
 <!-- FDK AI Chatbot Widget -->
 <script src="assets/js/chatbot.js" defer></script>
@@ -604,6 +600,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         a.addEventListener('click',function(e){e.preventDefault();document.getElementById('kalkulator').scrollIntoView({behavior:'smooth'})});
     });
 })();
+</script>
+<!-- Cal.com Embed (przeniesiony z head — nie blokuje renderowania) -->
+<script type="text/javascript">
+(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", "konsultacja-legalizacyjna", {origin:"https://app.cal.com"});
+Cal.ns["konsultacja-legalizacyjna"]("ui", {"hideEventTypeDetails":false,"layout":"month_view","locale":"pl","weekStart":"Monday"});
 </script>
 </body>
 </html>
