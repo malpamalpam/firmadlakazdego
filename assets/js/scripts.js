@@ -84,10 +84,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
         function updateCalculator() {
             var revenue = parseFloat(calcSource.value) || 0;
-            var zusJDG = 1600;
-            var taxJDG = Math.round(revenue * 0.12);
+
+            // === JDG (skala podatkowa) ===
+            var zusJDG = 1825;  // Duży ZUS 2025: społeczne ~1600 + FP/FS ~225
+            // Składka zdrowotna: 9% od dochodu (skala), minimum 314 zł
+            var incomeJDG = Math.max(0, revenue - zusJDG);
+            var healthJDG = Math.max(314, Math.round(incomeJDG * 0.09));
+            // Podatek dochodowy: 12% do 120k rocznie (10k/mies.), 32% powyżej
+            var annualIncome = incomeJDG * 12;
+            var taxJDG;
+            if (annualIncome <= 120000) {
+                taxJDG = Math.round(incomeJDG * 0.12);
+            } else {
+                var threshold = 10000; // 120k/12
+                taxJDG = Math.round(threshold * 0.12 + Math.max(0, incomeJDG - threshold) * 0.32);
+            }
             var bookJDG = 400;
-            var totalJDG = zusJDG + taxJDG + bookJDG;
+            var totalJDG = zusJDG + healthJDG + taxJDG + bookJDG;
+
+            // === FDK (umowa o dzieło, max 20k/mies. = 240k rocznie) ===
             var taxFDK = Math.round(revenue * 0.06);
             var aboFDK = revenue <= 10000 ? 400 : (revenue <= 30000 ? 700 : 1050);
             var totalFDK = taxFDK + aboFDK;
@@ -96,6 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
             var el = function(id) { return document.getElementById(id); };
             if (el('calc-display')) el('calc-display').textContent = revenue.toLocaleString('pl-PL');
             if (el('jdg-zus')) el('jdg-zus').textContent = zusJDG.toLocaleString('pl-PL') + currSuffix;
+            if (el('jdg-health')) el('jdg-health').textContent = healthJDG.toLocaleString('pl-PL') + currSuffix;
             if (el('jdg-tax')) el('jdg-tax').textContent = taxJDG.toLocaleString('pl-PL') + currSuffix;
             if (el('jdg-total')) el('jdg-total').textContent = totalJDG.toLocaleString('pl-PL') + currSuffix;
             if (el('fdk-tax')) el('fdk-tax').textContent = taxFDK.toLocaleString('pl-PL') + currSuffix;
@@ -289,10 +305,17 @@ function submitContactForm(e) {
     e.preventDefault();
     var form = e.target;
     var btn = form.querySelector('button[type="submit"]');
-    var name = form.querySelector('#cf-name').value;
-    var email = form.querySelector('#cf-email').value;
-    var phone = form.querySelector('#cf-phone').value;
-    var message = form.querySelector('#cf-message').value;
+    var name = form.querySelector('#cf-name').value.trim();
+    var email = form.querySelector('#cf-email').value.trim();
+    var phone = form.querySelector('#cf-phone').value.trim();
+    var message = form.querySelector('#cf-message').value.trim();
+
+    // Walidacja client-side
+    if (name.length < 2) { alert('Imię musi mieć minimum 2 znaki.'); return; }
+    var phoneDigits = phone.replace(/\D/g, '');
+    if (phoneDigits.length < 9) { alert('Numer telefonu musi mieć minimum 9 cyfr.'); return; }
+    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { alert('Podaj poprawny adres e-mail.'); return; }
+    if (message && message.length < 10) { alert('Wiadomość musi mieć minimum 10 znaków.'); return; }
 
     btn.disabled = true;
     btn.textContent = 'Wysyłanie...';
@@ -306,7 +329,7 @@ function submitContactForm(e) {
     .then(function(data) {
         if (data.success) {
             form.reset();
-            window.location.href = '/dziekujemy.html';
+            window.location.href = '/dziekujemy/';
         } else {
             throw new Error(data.error);
         }

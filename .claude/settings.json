@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node c:/Users/gstep/fdk-site/_add_gtm.js)",
+      "Bash(cmd /c \"node c:/Users/gstep/fdk-site/_add_gtm.js\")",
+      "Bash(C:/Windows/System32/cmd.exe /c \"node c:/Users/gstep/fdk-site/_add_gtm.js\")"
+    ]
+  }
+}

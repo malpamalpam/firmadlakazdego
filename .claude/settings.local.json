@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:fdk-site.vercel.app)"
+      "WebFetch(domain:fdk-site.vercel.app)",
+      "Bash(python _fix_en_pages.py)",
+      "Bash(python3 c:/Users/gstep/fdk-site/_fix_uk.py)"
     ]
   }
 }
