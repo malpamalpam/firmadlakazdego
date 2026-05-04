@@ -10,6 +10,13 @@
       "maxDuration": 30
     }
   },
+  "rewrites": [
+    { "source": "/programisci-graficy/", "destination": "/programisci" },
+    { "source": "/e-commerce/", "destination": "/ecommerce" },
+    { "source": "/tlumacze-lektorzy/", "destination": "/tlumacze" },
+    { "source": "/zespol-fundacji-firma-dla-kazdego/", "destination": "/o-nas" },
+    { "source": "/:path*/assets/:file*", "destination": "/assets/:file*" }
+  ],
   "headers": [
     {
       "source": "/(.*)",
