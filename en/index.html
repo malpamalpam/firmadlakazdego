@@ -374,10 +374,46 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section id="opinie" class="py-3 py-md-4">
     <div class="container">
         <h2 class="text-center mb-4">Customer Reviews</h2>
-        <div id="opinie-container">
-            <!-- Elfsight Google Reviews -->
-            <script src="https://elfsightcdn.com/platform.js" async></script>
-            <div class="elfsight-app-604a7529-e26f-40f6-b3e0-0fff024a9959" data-elfsight-app-lazy></div>
+        <div class="reviews-carousel position-relative">
+            <div class="reviews-track" id="reviews-track">
+                <div class="review-card">
+                    <div class="review-stars mb-2" aria-label="Rating 5 out of 5">★★★★★</div>
+                    <p class="review-text">"Working with the Firma Dla Każdego Foundation was a bullseye. From the very beginning I felt taken care of — help with documents, quick contact, zero unnecessary bureaucracy. Thanks to the incubator I can invoice clients from all over Europe without setting up my own company. I recommend it to every freelancer!"</p>
+                    <div class="review-author fw-bold">Anna K.</div>
+                    <div class="review-role text-muted">IT Freelancer</div>
+                    <div class="review-source mt-1"><small class="text-muted">Source: Google</small></div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars mb-2" aria-label="Rating 5 out of 5">★★★★★</div>
+                    <p class="review-text">"As a foreigner in Poland, I was looking for a legal way to work as a freelancer. The Foundation explained everything, helped with documents and now I can invoice calmly. Very professional approach and fast communication. I recommend it to everyone!"</p>
+                    <div class="review-author fw-bold">Dmytro S.</div>
+                    <div class="review-role text-muted">Programmer, Ukraine</div>
+                    <div class="review-source mt-1"><small class="text-muted">Source: Google</small></div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars mb-2" aria-label="Rating 5 out of 5">★★★★★</div>
+                    <p class="review-text">"I'm a translator working with several agencies simultaneously. The FDK incubator allows me to settle everything in one place, without registering a business. The support is very helpful and I issue invoices through CRM in a few minutes. Great solution for people working with multiple contractors."</p>
+                    <div class="review-author fw-bold">Marta W.</div>
+                    <div class="review-role text-muted">Translator</div>
+                    <div class="review-source mt-1"><small class="text-muted">Source: Google</small></div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars mb-2" aria-label="Rating 5 out of 5">★★★★★</div>
+                    <p class="review-text">"I've been cooperating with the Foundation for over a year. Everything is clear, transparent, with no payment delays. For a foreign freelancer this is the ideal option — no need to understand Polish tax law, they take care of everything. Very satisfied!"</p>
+                    <div class="review-author fw-bold">Aleksei R.</div>
+                    <div class="review-role text-muted">Graphic Designer, Belarus</div>
+                    <div class="review-source mt-1"><small class="text-muted">Source: Google</small></div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars mb-2" aria-label="Rating 5 out of 5">★★★★★</div>
+                    <p class="review-text">"I run an online store for a German client and needed a simple way to invoice without my own company. FDK turned out to be the ideal solution — everything legal, fast and without complications. The foundation team is always available and happy to help. Highly recommend!"</p>
+                    <div class="review-author fw-bold">Karolina M.</div>
+                    <div class="review-role text-muted">E-commerce Specialist</div>
+                    <div class="review-source mt-1"><small class="text-muted">Source: Google</small></div>
+                </div>
+            </div>
+            <button class="reviews-btn reviews-btn-prev" aria-label="Previous review" type="button">‹</button>
+            <button class="reviews-btn reviews-btn-next" aria-label="Next review" type="button">›</button>
         </div>
     </div>
 </section>
@@ -552,6 +588,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/js/scripts.js"></script>
+<script>
+(function(){var track=document.getElementById('reviews-track');if(!track)return;var cards=track.querySelectorAll('.review-card');var idx=0;var autoTimer;function getVisible(){if(window.innerWidth>=1200)return 3;if(window.innerWidth>=768)return 2;return 1}function slide(){var v=getVisible();var maxIdx=cards.length-v;if(idx>maxIdx)idx=maxIdx;if(idx<0)idx=0;var cardW=cards[0].offsetWidth+24;track.style.transform='translateX(-'+idx*cardW+'px)'}document.querySelector('.reviews-btn-prev').addEventListener('click',function(){idx--;slide();resetAuto()});document.querySelector('.reviews-btn-next').addEventListener('click',function(){idx++;slide();resetAuto()});function autoPlay(){autoTimer=setInterval(function(){idx++;if(idx>cards.length-getVisible())idx=0;slide()},5000)}function resetAuto(){clearInterval(autoTimer);autoPlay()}autoPlay();window.addEventListener('resize',slide)})();
+</script>
 <!-- FDK AI Chatbot Widget -->
 <script src="../assets/js/chatbot.js" defer></script>
 </body>

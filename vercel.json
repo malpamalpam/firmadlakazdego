@@ -15,6 +15,9 @@
     { "source": "/e-commerce/", "destination": "/ecommerce" },
     { "source": "/tlumacze-lektorzy/", "destination": "/tlumacze" },
     { "source": "/zespol-fundacji-firma-dla-kazdego/", "destination": "/o-nas" },
+    { "source": "/inne/", "destination": "/inne-uslugi" },
+    { "source": "/ru/privacy-policy/", "destination": "/polityka-prywatnosci" },
+    { "source": "/uk/privacy-policy/", "destination": "/polityka-prywatnosci" },
     { "source": "/:path*/assets/:file*", "destination": "/assets/:file*" }
   ],
   "headers": [

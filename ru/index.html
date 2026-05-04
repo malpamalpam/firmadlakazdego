@@ -374,10 +374,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section id="opinie" class="py-3 py-md-4">
     <div class="container">
         <h2 class="text-center mb-4">Отзывы наших клиентов</h2>
-        <div id="opinie-container">
-            <!-- Elfsight Google Reviews -->
-            <script src="https://elfsightcdn.com/platform.js" async></script>
-            <div class="elfsight-app-604a7529-e26f-40f6-b3e0-0fff024a9959" data-elfsight-app-lazy></div>
+        <div class="reviews-carousel position-relative">
+            <div class="reviews-track" id="reviews-track">
+                <div class="review-card"><div class="review-stars mb-2" aria-label="Оценка 5 из 5">★★★★★</div><p class="review-text">"Сотрудничество с Фондом Firma Dla Każdego — попадание в десятку. С самого начала я чувствовала заботу — помощь с документами, быстрый контакт, ноль лишней бюрократии. Благодаря инкубатору я спокойно выставляю счета клиентам со всей Европы без регистрации собственной фирмы. Рекомендую каждому фрилансеру!"</p><div class="review-author fw-bold">Anna K.</div><div class="review-role text-muted">Фрилансер IT</div><div class="review-source mt-1"><small class="text-muted">Источник: Google</small></div></div>
+                <div class="review-card"><div class="review-stars mb-2" aria-label="Оценка 5 из 5">★★★★★</div><p class="review-text">"Як іноземець у Польщі шукав легальний спосіб працювати як фрілансер. Фундація все пояснила, допомогла з документами і тепер я спокійно виставляю рахунки. Дуже професійний підхід і швидка комунікація. Рекомендую всім!"</p><div class="review-author fw-bold">Dmytro S.</div><div class="review-role text-muted">Программист, Украина</div><div class="review-source mt-1"><small class="text-muted">Источник: Google</small></div></div>
+                <div class="review-card"><div class="review-stars mb-2" aria-label="Оценка 5 из 5">★★★★★</div><p class="review-text">"Я переводчица и работаю с несколькими агентствами одновременно. Инкубатор FDK позволяет мне рассчитываться в одном месте, без регистрации деятельности. Обслуживание очень полезное, а счета я выставляю через CRM за несколько минут. Отличное решение для людей, работающих с несколькими заказчиками."</p><div class="review-author fw-bold">Marta W.</div><div class="review-role text-muted">Переводчица</div><div class="review-source mt-1"><small class="text-muted">Источник: Google</small></div></div>
+                <div class="review-card"><div class="review-stars mb-2" aria-label="Оценка 5 из 5">★★★★★</div><p class="review-text">"Сотрудничаю с Фондом уже больше года. Всё чётко, прозрачно, без задержек с выплатами. Для фрилансера-иностранца это идеальный вариант — не нужно разбираться в польском налоговом законодательстве, всё берут на себя. Очень доволен!"</p><div class="review-author fw-bold">Aleksei R.</div><div class="review-role text-muted">Графический дизайнер, Беларусь</div><div class="review-source mt-1"><small class="text-muted">Источник: Google</small></div></div>
+                <div class="review-card"><div class="review-stars mb-2" aria-label="Оценка 5 из 5">★★★★★</div><p class="review-text">"Я веду интернет-магазин для клиента из Германии и нуждалась в простом способе выставлять счета без собственной фирмы. FDK оказалось идеальным решением — всё легально, быстро и без сложностей. Команда фонда всегда доступна и охотно помогает. Горячо рекомендую!"</p><div class="review-author fw-bold">Karolina M.</div><div class="review-role text-muted">Специалист e-commerce</div><div class="review-source mt-1"><small class="text-muted">Источник: Google</small></div></div>
+            </div>
+            <button class="reviews-btn reviews-btn-prev" aria-label="Предыдущий отзыв" type="button">‹</button>
+            <button class="reviews-btn reviews-btn-next" aria-label="Следующий отзыв" type="button">›</button>
         </div>
     </div>
 </section>
@@ -552,6 +558,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/js/scripts.js"></script>
+<script>
+(function(){var track=document.getElementById('reviews-track');if(!track)return;var cards=track.querySelectorAll('.review-card');var idx=0;var autoTimer;function getVisible(){if(window.innerWidth>=1200)return 3;if(window.innerWidth>=768)return 2;return 1}function slide(){var v=getVisible();var maxIdx=cards.length-v;if(idx>maxIdx)idx=maxIdx;if(idx<0)idx=0;var cardW=cards[0].offsetWidth+24;track.style.transform='translateX(-'+idx*cardW+'px)'}document.querySelector('.reviews-btn-prev').addEventListener('click',function(){idx--;slide();resetAuto()});document.querySelector('.reviews-btn-next').addEventListener('click',function(){idx++;slide();resetAuto()});function autoPlay(){autoTimer=setInterval(function(){idx++;if(idx>cards.length-getVisible())idx=0;slide()},5000)}function resetAuto(){clearInterval(autoTimer);autoPlay()}autoPlay();window.addEventListener('resize',slide)})();
+</script>
 <!-- FDK AI Chatbot Widget -->
 <script src="../assets/js/chatbot.js" defer></script>
 </body>

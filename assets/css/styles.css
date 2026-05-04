@@ -55,6 +55,9 @@ h1, h2, h3, h4, h5, h6 {
 a { color: #000000; text-decoration: none; }
 a:hover { color: #00BBFF; }
 
+/* WCAG AA contrast fix — Bootstrap text-muted #6c757d is too low on #f7f7f7 */
+.text-muted { color: #595959 !important; }
+
 .text-smaller { font-size: 85% !important; }
 .text-bigger { font-size: 115% !important; }
 
@@ -288,7 +291,8 @@ footer .socials a:hover { opacity: 1; }
 footer .border-both { border: none; }
 @media screen and (min-width: 576px) { footer .border-both { border-left: 1px solid rgba(255,255,255,0.12); } }
 @media screen and (min-width: 992px) { footer .border-both { border-right: 1px solid rgba(255,255,255,0.12); } }
-footer a { color: #9b9b9b; }
+footer .text-muted { color: #adb5bd !important; }
+footer a { color: #adb5bd; }
 footer a:hover { color: #ffffff !important; }
 footer .nav a { font-size: 1.1rem; font-weight: 500; }
 footer .phones span { display: inline-block; min-width: 50px; margin-right: 15px; }
@@ -304,9 +308,9 @@ footer .phones span { display: inline-block; min-width: 50px; margin-right: 15px
 .hero-counters { position: relative; z-index: 1; }
 .hero-counter-item { padding: 0 10px; }
 .hero-counter-item:not(:last-child) { border-right: 1px solid rgba(255,255,255,0.25); }
-.hero-counter-num { font-size: 2.2rem; font-weight: 700; display: inline; color: #ffffff; }
+.hero-counter-num { font-size: 2.2rem; font-weight: 700; display: inline; color: #ffffff; font-variant-numeric: tabular-nums; }
 @media screen and (min-width: 768px) { .hero-counter-num { font-size: 3rem; } }
-.hero-counter-label { font-size: 0.85rem; opacity: 0.7; margin-top: 2px; color: #ffffff; }
+.hero-counter-label { font-size: 0.85rem; opacity: 0.85; margin-top: 2px; color: #ffffff; }
 .text-heading { color: #000000; }
 .counter-value { display: inline; }
 
@@ -345,6 +349,11 @@ header.sticky-top .btn-hero-cta {
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+/* No-JS fallback — show all content when JS is disabled */
+.no-js .fade-in {
+  opacity: 1;
+  transform: none;
 }
 
 /* ===== CARD HOVER ===== */
@@ -517,6 +526,60 @@ header .navbar .btn-hero-cta { font-size: 1.01rem !important; padding: 5px 11px 
 .cooperation-steps .step-num { font-size: 3rem; font-weight: 800; color: rgba(0,187,255,0.15); line-height: 1; }
 .cooperation-steps .step-icon { width: 56px; height: 56px; border-radius: 50%; background: #00BBFF; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.75rem; }
 .cooperation-steps .step-icon svg { width: 28px; height: 28px; }
+
+/* ===== REVIEWS CAROUSEL ===== */
+.reviews-carousel { overflow: hidden; position: relative; }
+.reviews-track {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.4s ease;
+  scroll-snap-type: x mandatory;
+}
+.review-card {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-sizing: border-box;
+}
+@media (min-width: 768px) {
+  .review-card { flex: 0 0 calc(50% - 12px); }
+}
+@media (min-width: 1200px) {
+  .review-card { flex: 0 0 calc(33.333% - 16px); }
+}
+.review-stars { color: #fbbf24; font-size: 1.3rem; letter-spacing: 2px; }
+.review-text { font-size: 0.95rem; line-height: 1.6; color: #5A5A5A; }
+.review-author { font-size: 0.95rem; }
+.review-role { font-size: 0.85rem; }
+.reviews-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #e0e0e0;
+  background: rgba(255,255,255,0.95);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 2;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+.reviews-btn:hover { border-color: #00BBFF; color: #00BBFF; }
+.reviews-btn-prev { left: -8px; }
+.reviews-btn-next { right: -8px; }
+@media (max-width: 767px) {
+  .reviews-btn-prev { left: 4px; }
+  .reviews-btn-next { right: 4px; }
+}
 
 /* ===== FOOTER SPACING ===== */
 main + footer { margin-top: 0; }
