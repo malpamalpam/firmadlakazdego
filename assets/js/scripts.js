@@ -73,6 +73,32 @@ document.addEventListener('DOMContentLoaded', function() {
         fadeElements.forEach(function(el) { el.classList.add('visible'); });
     }
 
+    // ===== Lazy background images =====
+    var lazyBgs = document.querySelectorAll('.lazy-bg[data-bg]');
+    function loadBg(el) {
+        var url = el.getAttribute('data-bg');
+        if (!url) return;
+        var cur = getComputedStyle(el).backgroundImage;
+        if (cur && cur !== 'none') {
+            el.style.backgroundImage = cur + ",url('" + url + "')";
+        } else {
+            el.style.backgroundImage = "url('" + url + "')";
+        }
+        el.style.backgroundSize = 'cover';
+        el.style.backgroundPosition = 'center';
+        el.removeAttribute('data-bg');
+    }
+    if (lazyBgs.length > 0 && 'IntersectionObserver' in window) {
+        var bgObs = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) { loadBg(entry.target); bgObs.unobserve(entry.target); }
+            });
+        }, { rootMargin: '200px' });
+        lazyBgs.forEach(function(el) { bgObs.observe(el); });
+    } else {
+        lazyBgs.forEach(loadBg);
+    }
+
     // ===== Calculator JDG vs FDK (slider version) =====
     var calcSlider = document.getElementById('calc-slider');
     var calcRevInput = document.getElementById('calc-revenue');
