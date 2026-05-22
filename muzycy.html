@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" class="no-js">
+<script>document.documentElement.classList.remove('no-js')</script>
 <head>
     <meta charset="utf-8">
 <!-- Google Tag Manager -->
@@ -10,9 +11,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-PD48WSK');</script>
 <!-- End Google Tag Manager -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no, email=no">
     <title>Inkubator dla Muzyków - Firma Dla Każdego</title>
     <meta name="description" content="Inkubator przedsiębiorczości dla muzyków i artystów. Rozliczaj koncerty, lekcje i nagrania bez JDG, bez ZUS, z PIT 6%. Legalna działalność artystyczna.">
-    <meta name="robots" content="noindex, nofollow">
+    <meta name="robots" content="index, follow">
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
     <link rel="alternate" hreflang="pl" href="https://firmadlakazdego.pl/muzycy" />
     <link rel="alternate" hreflang="en" href="https://firmadlakazdego.pl/en/musicians" />
@@ -206,7 +208,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h2 class="text-center mb-4 mb-md-5">Skontaktuj się z nami</h2>
         <div class="row justify-content-center">
             <div class="col-lg-6 mb-4 mb-lg-0">
-                <form id="contact-form" onsubmit="sendEmail(event)">
+                <form id="contact-form" action="/api/contact" method="POST" onsubmit="submitContactForm(event)">
                     <div class="mb-3"><label for="cf-name" class="form-label">Imię i nazwisko</label><input type="text" class="form-control" id="cf-name" name="name" required></div>
                     <div class="mb-3"><label for="cf-email" class="form-label">E-mail</label><input type="email" class="form-control" id="cf-email" name="email" required></div>
                     <div class="mb-3"><label for="cf-phone" class="form-label">Telefon</label><input type="tel" class="form-control" id="cf-phone" name="phone"></div>

@@ -20,12 +20,5 @@
     { "source": "/uk/privacy-policy/", "destination": "/polityka-prywatnosci" },
     { "source": "/:path*/assets/:file*", "destination": "/assets/:file*" }
   ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
-      ]
-    }
-  ]
+  "headers": []
 }

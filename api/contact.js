@@ -10,8 +10,8 @@ export default async function handler(req, res) {
     try {
         const { name, email, phone, message } = req.body;
 
-        if (!name || !email || !message) {
-            return res.status(400).json({ error: 'Wymagane pola: imię, email, wiadomość' });
+        if (!name || !email || !phone) {
+            return res.status(400).json({ error: 'Wymagane pola: imię, email, telefon' });
         }
 
         // Wysyłka przez Resend API
@@ -35,7 +35,7 @@ export default async function handler(req, res) {
                         + '<p><strong>Telefon:</strong> ' + (phone || 'nie podano') + '</p>'
                         + '<hr>'
                         + '<p><strong>Wiadomość:</strong></p>'
-                        + '<p>' + message.replace(/\n/g, '<br>') + '</p>'
+                        + '<p>' + (message ? message.replace(/\n/g, '<br>') : '<em>nie podano</em>') + '</p>'
                         + '<hr>'
                         + '<p style="color:#999;font-size:12px">Wysłano z formularza kontaktowego fdk-site.vercel.app</p>',
                 }),

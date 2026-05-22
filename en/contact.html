@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
+<script>document.documentElement.classList.remove('no-js')</script>
 <head>
     <meta charset="utf-8">
 <!-- Google Tag Manager -->
@@ -10,9 +11,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-PD48WSK');</script>
 <!-- End Google Tag Manager -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no, email=no">
     <title>Contact — Firma Dla Każdego</title>
     <meta name="description" content="Contact the Firma Dla Każdego business incubator. Phone, e-mail, contact form. Support in 4 languages.">
-    <meta name="robots" content="noindex, nofollow">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://firmadlakazdego.pl/en/contact">
     <link rel="icon" type="image/png" href="../assets/img/favicon.png">
     <link rel="alternate" hreflang="pl" href="https://firmadlakazdego.pl/kontakt" />
@@ -66,7 +68,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="row justify-content-center">
             <div class="col-lg-6 mb-5 mb-lg-0">
                 <h2 class="h4 fw-bold mb-4">Write to us</h2>
-                <form id="contact-form" onsubmit="submitContactForm(event)">
+                <form id="contact-form" action="/api/contact" method="POST" onsubmit="submitContactForm(event)">
                     <div class="mb-3"><label for="cf-name" class="form-label">Full name <span class="required-star">*</span></label><input type="text" class="form-control" id="cf-name" name="name" required></div>
                     <div class="mb-3"><label for="cf-email" class="form-label">E-mail <span class="required-star">*</span></label><input type="email" class="form-control" id="cf-email" name="email" required></div>
                     <div class="mb-3"><label for="cf-phone" class="form-label">Phone <small class="text-muted">(optional)</small></label><input type="tel" class="form-control" id="cf-phone" name="phone"></div>
