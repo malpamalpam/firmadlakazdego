@@ -141,15 +141,18 @@ header .navbar .navbar-collapse.collapsing a { color: #000000; }
 header .navbar-dark a { color: #ffffff; }
 header .navbar .nav-item { padding: 0 2px; }
 
-header.sticky-top .navbar {
+header.sticky-top .navbar-dark {
   background-color: #1a1e23;
   box-shadow: 0 2px 12px rgba(0,0,0,0.3);
   transition: all .15s ease-in-out;
 }
-header.sticky-top .navbar .logo-dark { display: none !important; }
-header.sticky-top .navbar .logo-white { display: inline-block !important; }
-header.sticky-top .navbar a { color: #fff; }
-header.sticky-top .navbar a:hover { color: #00BBFF; }
+header.sticky-top .navbar-dark .logo-dark { display: none !important; }
+header.sticky-top .navbar-dark .logo-white { display: inline-block !important; }
+header.sticky-top .navbar-dark a { color: #fff; }
+header.sticky-top .navbar-dark a:hover { color: #00BBFF; }
+/* Subpage navbar-light — keep light appearance when sticky */
+header.sticky-top .navbar-light .nav-link { background: rgba(0,0,0,0.06); color: rgba(0,0,0,0.7); }
+header.sticky-top .navbar-light .nav-link:hover { background: rgba(0,187,255,0.12); }
 
 /* ===== HR ARROW ===== */
 .hr-arrow {
@@ -346,7 +349,7 @@ header .btn-hero-cta {
   padding: 8px 20px;
   border-radius: 4px;
 }
-header.sticky-top .btn-hero-cta {
+header.sticky-top .navbar-dark .btn-hero-cta {
   background-color: #00BBFF;
   color: #ffffff !important;
 }
@@ -496,7 +499,7 @@ header .navbar .btn-hero-cta { font-size: 0.75rem !important; padding: 5px 10px 
 
 /* ===== LANGUAGE SWITCHER ===== */
 .lang-switcher-btn { color: #fff !important; font-size: 1.01rem !important; background: rgba(0,0,0,0.25); border: none; border-radius: 5px; padding: 5px 11px !important; }
-header.sticky-top .lang-switcher-btn { color: #fff !important; background: rgba(255,255,255,0.1); }
+header.sticky-top .navbar-dark .lang-switcher-btn { color: #fff !important; background: rgba(255,255,255,0.1); }
 .lang-switcher-btn:hover { background: rgba(0,187,255,0.15) !important; }
 @media screen and (min-width: 992px) and (max-width: 1399px) {
   .lang-switcher-btn { font-size: 0.87rem !important; padding: 4px 6px !important; }
@@ -504,7 +507,7 @@ header.sticky-top .lang-switcher-btn { color: #fff !important; background: rgba(
 
 /* ===== NAV LINKS ===== */
 header .navbar .nav-link { font-size: 1.01rem; background: rgba(0,0,0,0.25); border: none; border-radius: 5px; padding: 5px 11px !important; margin: 0 1px; }
-header.sticky-top .navbar .nav-link { background: rgba(255,255,255,0.1); }
+header.sticky-top .navbar-dark .nav-link { background: rgba(255,255,255,0.1); }
 header .navbar .nav-link:hover { background: rgba(0,187,255,0.15); }
 header .navbar .dropdown-toggle.nav-link { font-size: 1.01rem; }
 header .navbar .btn-hero-cta { font-size: 1.01rem !important; padding: 5px 11px !important; white-space: nowrap; }
@@ -593,17 +596,19 @@ header .navbar .btn-hero-cta { font-size: 1.01rem !important; padding: 5px 11px 
 }
 
 /* ===== MOBILE OVERFLOW FIXES ===== */
-@media (max-width: 575.98px) {
-  /* Hero buttons: stack vertically on small screens */
+@media (max-width: 767.98px) {
+  /* Hero buttons: stack vertically on phones (portrait + landscape) */
   .section-hero .text .btn { display: block; width: 100%; white-space: normal; }
   .section-hero .text .btn + .btn { margin-left: 0 !important; }
-  /* Hero counter font size */
-  .hero-counter-num { font-size: 1.6rem; }
-  .hero-counter-label { font-size: 0.75rem; }
   /* Footer: prevent long emails from overflowing */
   footer a[href^="mailto"] { word-break: break-all; overflow-wrap: break-word; }
   /* Ensure minimum 16px font in footer to prevent iOS auto-zoom */
   footer { font-size: 16px; }
+}
+@media (max-width: 575.98px) {
+  /* Hero counter font size — extra small screens only */
+  .hero-counter-num { font-size: 1.6rem; }
+  .hero-counter-label { font-size: 0.75rem; }
 }
 
 /* ===== FOOTER SPACING ===== */

@@ -1,7 +1,8 @@
-// ===== Sticky header on scroll =====
+// ===== Sticky header on scroll (homepage only) =====
 document.addEventListener('DOMContentLoaded', function() {
     var header = document.querySelector('header');
-    if (header) {
+    var isHomepage = document.body.classList.contains('page-index');
+    if (header && isHomepage) {
         window.addEventListener('scroll', function() {
             if (window.scrollY > 100) {
                 header.classList.add('sticky-top');
