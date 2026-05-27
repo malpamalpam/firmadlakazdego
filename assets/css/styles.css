@@ -503,6 +503,11 @@ header .navbar .btn-hero-cta { font-size: 0.75rem !important; padding: 5px 10px 
 .lang-switcher-btn { color: #333 !important; font-size: 1.01rem !important; background: rgba(0,0,0,0.08); border: none; border-radius: 5px; padding: 5px 11px !important; }
 .navbar-dark .lang-switcher-btn { color: #fff !important; background: rgba(255,255,255,0.15); }
 header.sticky-top .navbar-dark .lang-switcher-btn { color: #fff !important; background: rgba(255,255,255,0.1); }
+/* Mobile: navbar expands with white bg — force dark text on lang switcher */
+@media (max-width: 991.98px) {
+  .navbar-dark .navbar-collapse.show .lang-switcher-btn,
+  .navbar-dark .navbar-collapse.collapsing .lang-switcher-btn { color: #333 !important; background: rgba(0,0,0,0.08) !important; }
+}
 .lang-switcher-btn:hover { background: rgba(0,187,255,0.15) !important; }
 @media screen and (min-width: 992px) and (max-width: 1399px) {
   .lang-switcher-btn { font-size: 0.87rem !important; padding: 4px 6px !important; }
@@ -615,6 +620,65 @@ a[href^="tel:"] {
 @media (max-width: 767px) {
   .reviews-btn-prev { left: 4px; }
   .reviews-btn-next { right: 4px; }
+}
+
+/* ===== MOBILE NAVBAR SCROLL ===== */
+/* fixed-top navbar: expanded menu can exceed viewport — make it scrollable */
+@media (max-width: 991.98px) {
+  .navbar-collapse.show {
+    max-height: calc(100dvh - 64px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  /* Dropdowns opened inside mobile scroll container: static position prevents overflow clipping */
+  .navbar-collapse.show .dropdown.show > .dropdown-menu {
+    position: static !important;
+    float: none;
+    transform: none !important;
+    box-shadow: none !important;
+    border-radius: 6px;
+    margin-top: 4px;
+  }
+  /* Lang switcher on mobile: show as flat inline pills — no toggle needed */
+  .navbar-collapse.show .dropdown:has(.lang-switcher-btn) .lang-switcher-btn { display: none !important; }
+  .navbar-collapse.show .dropdown:has(.lang-switcher-btn) .dropdown-menu {
+    display: flex !important;
+    position: static !important;
+    transform: none !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 2px 0 !important;
+    min-width: 0 !important;
+  }
+  .navbar-collapse.show .dropdown:has(.lang-switcher-btn) .dropdown-inner {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    gap: 4px;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    min-width: 0 !important;
+    list-style: none;
+    margin: 0;
+  }
+  .navbar-collapse.show .dropdown:has(.lang-switcher-btn) .dropdown-item {
+    display: inline-block !important;
+    width: auto !important;
+    padding: 4px 10px !important;
+    border-radius: 5px !important;
+    background: rgba(0,0,0,0.08) !important;
+    font-size: 0.85rem !important;
+    color: #333 !important;
+    white-space: nowrap;
+  }
+  .navbar-collapse.show .dropdown:has(.lang-switcher-btn) .dropdown-item:hover {
+    background: rgba(0,187,255,0.15) !important;
+    color: #333 !important;
+  }
 }
 
 /* ===== MOBILE OVERFLOW FIXES ===== */

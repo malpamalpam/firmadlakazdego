@@ -10,6 +10,9 @@
       "maxDuration": 30
     }
   },
+  "redirects": [
+    { "source": "/other-industries/", "destination": "/en/other-industries/", "permanent": false }
+  ],
   "rewrites": [
     { "source": "/programisci-graficy/", "destination": "/programisci" },
     { "source": "/e-commerce/", "destination": "/ecommerce" },
