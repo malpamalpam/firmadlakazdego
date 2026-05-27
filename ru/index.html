@@ -3,6 +3,14 @@
 <script>document.documentElement.classList.remove('no-js')</script>
 <head>
     <meta charset="utf-8">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+    <link rel="dns-prefetch" href="//images.unsplash.com">
+    <link rel="preconnect" href="https://app.cal.com" crossorigin>
+    <link rel="dns-prefetch" href="//app.cal.com">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -39,7 +47,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="preload" href="../assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="../assets/css/bootstrap.min.css"></noscript>
     <link href="../assets/css/styles.css" rel="stylesheet">
-    <link rel="preload" href="../assets/img/fdk_mobile.webp" as="image" type="image/webp">
+    <link rel="preload" href="../assets/img/fdk_mobile.webp" as="image" type="image/webp" media="(max-width: 49.99em)">
+    <link rel="preload" href="../assets/img/fdk_poster.jpg" as="image" media="(min-width: 50em)">
     <link rel="preload" href="../assets/font/Montserrat-Bold.woff" as="font" type="font/woff" crossorigin>
     <link rel="preload" href="../assets/font/Montserrat-Regular.woff" as="font" type="font/woff" crossorigin>
     <!-- Cal.com Embed — lazy-loaded in body on first interaction -->
@@ -86,7 +95,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <li class="nav-item px-1 px-lg-0 px-xl-2 px-xxl-3"><a class="nav-link" href="/ru/o-nas/">О нас</a></li>
                         <li class="nav-item px-1 px-lg-0 px-xl-2 px-xxl-3"><a class="nav-link" href="/ru/blog/">Блог</a></li>
                         <li class="nav-item px-1 px-lg-0 px-xl-2 px-xxl-3"><a class="nav-link" href="/ru/faq/">FAQ</a></li>
-                        <li class="nav-item px-1 px-lg-0 px-xl-2 px-xxl-3"><a class="nav-link" href="/ru/#kontakt">Контакт</a></li>
+                        <li class="nav-item px-1 px-lg-0 px-xl-2 px-xxl-3"><a class="nav-link" href="/ru/kontakt/">Контакт</a></li>
                     </ul>
                 </div>
                 <button data-cal-link="firmadlakazdego.pl/konsultacja-legalizacyjna" data-cal-namespace="konsultacja-legalizacyjna" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}' class="btn btn-hero-cta d-none d-lg-inline-block ms-2" style="font-size:0.75rem;padding:5px 10px">Консультация</button>
@@ -109,7 +118,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ==================== 1. HERO ==================== -->
 <section class="section-hero text-white px-0 px-md-3">
     <style>.bg{background-image:url('../assets/img/fdk_mobile.webp')}@media(min-width:50em){.bg{background-image:url('../assets/img/fdk_poster.jpg')}}</style>
-    <div class="bg"><video loop="true" autoplay="true" muted="true" preload="true" class="position-absolute"></video></div>
+    <div class="bg"><video loop autoplay muted playsinline preload="none" class="position-absolute"></video></div>
     <script>
     window.onload=videoInit;window.onresize=videoInit;
     function videoInit(){let v=document.querySelector('.bg video');if(window.innerWidth>800){if(!v.querySelector('source')){let s=document.createElement('source');s.setAttribute('src','../assets/video/fdk.mp4');s.setAttribute('type','video/mp4');v.appendChild(s);v.play()}}else{v.pause();v.removeAttribute('src');v.load()}}
@@ -330,7 +339,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="row g-3 mb-4">
                 <div class="col-md-6">
                     <div class="rounded-3 p-4 h-100" style="background:#fff5f5; border:2px solid #ffcccc">
-                        <div class="d-flex align-items-center gap-2 mb-3"><div class="rounded-circle d-flex align-items-center justify-content-center" style="width:40px;height:40px;background:#ffcccc"><svg width="20" height="20" fill="none" stroke="#dc3545" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4.5c-.77-.833-2.694-.833-3.464 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg></div><h4 class="h5 fw-bold mb-0">ИП (JDG)</h4></div>
+                        <div class="d-flex align-items-center gap-2 mb-3"><div class="rounded-circle d-flex align-items-center justify-content-center" style="width:40px;height:40px;background:#ffcccc"><svg width="20" height="20" fill="none" stroke="#dc3545" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4.5c-.77-.833-2.694-.833-3.464 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg></div><h3 class="h5 fw-bold mb-0">ИП (JDG)</h3></div>
                         <div class="d-flex justify-content-between mb-2"><span>ZUS (полный)</span><strong id="jdg-zus">1 600 zł</strong></div>
                         <div class="d-flex justify-content-between mb-2"><span>Налог (12%)</span><strong id="jdg-tax">960 zł</strong></div>
                         <div class="d-flex justify-content-between mb-2"><span>Бухгалтерия</span><strong>~400 zł</strong></div>
@@ -339,7 +348,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 <div class="col-md-6">
                     <div class="rounded-3 p-4 h-100" style="background:#f0faff; border:2px solid #00BBFF">
-                        <div class="d-flex align-items-center gap-2 mb-3"><div class="rounded-circle d-flex align-items-center justify-content-center" style="width:40px;height:40px;background:rgba(0,187,255,0.15)"><svg width="20" height="20" fill="none" stroke="#00BBFF" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><h4 class="h5 fw-bold mb-0" style="color:#00BBFF">FDK</h4></div>
+                        <div class="d-flex align-items-center gap-2 mb-3"><div class="rounded-circle d-flex align-items-center justify-content-center" style="width:40px;height:40px;background:rgba(0,187,255,0.15)"><svg width="20" height="20" fill="none" stroke="#00BBFF" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><h3 class="h5 fw-bold mb-0" style="color:#00BBFF">FDK</h3></div>
                         <div class="d-flex justify-content-between mb-2"><span>ZUS</span><strong class="text-success">0 zł</strong></div>
                         <div class="d-flex justify-content-between mb-2"><span>Налог (6%)</span><strong id="fdk-tax">480 zł</strong></div>
                         <div class="d-flex justify-content-between mb-2"><span>Абонемент FDK</span><strong id="fdk-abo">400 zł</strong></div>
@@ -362,9 +371,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h2 class="text-center mb-3">Партнёрская программа</h2>
         <p class="text-center text-muted mb-5">Рекомендуйте нас знакомым и зарабатывайте. За каждого привлечённого клиента вы получаете комиссию.</p>
         <div class="row text-center g-4 justify-content-center">
-            <div class="col-md-4 fade-in"><div class="p-4"><div class="display-4 mb-3">📤</div><h5 class="fw-bold">1. Рекомендуйте нас</h5><p class="text-muted">Порекомендуйте нас знакомому — расскажите об инкубаторе FDK или отправьте ссылку на наш сайт.</p></div></div>
-            <div class="col-md-4 fade-in"><div class="p-4"><div class="display-4 mb-3">🤝</div><h5 class="fw-bold">2. Клиент присоединяется</h5><p class="text-muted">Ваш знакомый регистрируется в инкубаторе и начинает сотрудничество. При подписании договора указывает ваши данные как рекомендателя.</p></div></div>
-            <div class="col-md-4 fade-in"><div class="p-4"><div class="display-4 mb-3">💰</div><h5 class="fw-bold">3. Вы получаете комиссию</h5><p class="text-muted">После подписания договора и оплаты первого месяца рекомендованным лицом — вы получаете бонус за рекомендацию.</p></div></div>
+            <div class="col-md-4 fade-in"><div class="p-4"><div class="display-4 mb-3">📤</div><h3 class="fw-bold">1. Рекомендуйте нас</h3><p class="text-muted">Порекомендуйте нас знакомому — расскажите об инкубаторе FDK или отправьте ссылку на наш сайт.</p></div></div>
+            <div class="col-md-4 fade-in"><div class="p-4"><div class="display-4 mb-3">🤝</div><h3 class="fw-bold">2. Клиент присоединяется</h3><p class="text-muted">Ваш знакомый регистрируется в инкубаторе и начинает сотрудничество. При подписании договора указывает ваши данные как рекомендателя.</p></div></div>
+            <div class="col-md-4 fade-in"><div class="p-4"><div class="display-4 mb-3">💰</div><h3 class="fw-bold">3. Вы получаете комиссию</h3><p class="text-muted">После подписания договора и оплаты первого месяца рекомендованным лицом — вы получаете бонус за рекомендацию.</p></div></div>
         </div>
         <div class="text-center mt-4"><a href="#kontakt" class="btn btn-fdk btn-lg px-5 py-3">Присоединиться к партнёрской программе</a></div>
     </div>
@@ -410,12 +419,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </form>
             </div>
             <div class="col-lg-4 offset-lg-1">
-                <h5 class="fw-bold mb-3">Контактные данные</h5>
+                <h3 class="fw-bold mb-3">Контактные данные</h3>
                 <p class="mb-2">📞 <a href="tel:+48794731000" class="text-body fw-bold">+48 794 731 000</a> <small class="text-muted">(RU/EN/UA)</small></p>
                 <p class="mb-2">📞 <a href="tel:+48575594500" class="text-body">+48 575 594 500</a> <small class="text-muted">(PL)</small></p>
                 <p class="mb-2">✉️ <a href="mailto:kontakt@firmadlakazdego.pl" class="text-body">kontakt@firmadlakazdego.pl</a></p>
                 <p class="mb-4">✉️ <a href="mailto:b2b@firmadlakazdego.pl" class="text-body">b2b@firmadlakazdego.pl</a></p>
-                <h5 class="fw-bold mb-3">Адрес</h5>
+                <h3 class="fw-bold mb-3">Адрес</h3>
                 <p>Fundacja Firma Dla Każdego<br>ul. Lwowska 17/4<br>00-660 Warszawa</p>
             </div>
         </div>
@@ -500,7 +509,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header border-0 pb-0">
-                <h5 class="modal-title fw-bold" id="oplatyModalLabel">Произвести оплату</h5>
+                <h3 class="modal-title fw-bold" id="oplatyModalLabel">Произвести оплату</h3>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
             </div>
             <div class="modal-body px-4 pb-4">

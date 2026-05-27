@@ -300,7 +300,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var path = window.location.pathname;
         var langMatch = path.match(/^\/(uk|en|ru)(\/|$)/);
         var currentLang = langMatch ? langMatch[1] : 'pl';
-        var subpage = path.replace(/^\/(uk|en|ru)/, '').replace(/\.html$/, '').replace(/^\/+/, '');
+        var subpage = path.replace(/^\/(uk|en|ru)/, '').replace(/\.html$/, '').replace(/^\/+/, '').replace(/\/+$/, '');
 
         if (subpage && subpage !== 'index' && subpage !== '') {
             langLinks.forEach(function(link) {
@@ -332,42 +332,59 @@ function submitContactForm(e) {
     e.preventDefault();
     var form = e.target;
     var btn = form.querySelector('button[type="submit"]');
+    var btnOrigText = btn.textContent;
     var name = form.querySelector('#cf-name').value.trim();
     var email = form.querySelector('#cf-email').value.trim();
     var phone = form.querySelector('#cf-phone').value.trim();
-    var message = form.querySelector('#cf-message').value.trim();
+    var msgEl = form.querySelector('#cf-message');
+    var message = msgEl ? msgEl.value.trim() : '';
+
+    // Detect current language
+    var pageLang = document.documentElement.lang || 'pl';
+    var lang = pageLang.substring(0, 2);
+
+    var msgs = {
+        pl: { name: 'Imię musi mieć minimum 2 znaki.', phone: 'Numer telefonu musi mieć minimum 9 cyfr.', email: 'Podaj poprawny adres e-mail.', msg: 'Wiadomość musi mieć minimum 10 znaków.', sending: 'Wysyłanie...' },
+        en: { name: 'Name must be at least 2 characters.', phone: 'Phone number must have at least 9 digits.', email: 'Please enter a valid email address.', msg: 'Message must be at least 10 characters.', sending: 'Sending...' },
+        uk: { name: 'Ім\'я має містити мінімум 2 символи.', phone: 'Номер телефону має містити мінімум 9 цифр.', email: 'Введіть дійсну адресу електронної пошти.', msg: 'Повідомлення має містити мінімум 10 символів.', sending: 'Відправлення...' },
+        ru: { name: 'Имя должно содержать минимум 2 символа.', phone: 'Номер телефона должен содержать минимум 9 цифр.', email: 'Введите действительный адрес электронной почты.', msg: 'Сообщение должно содержать минимум 10 символов.', sending: 'Отправка...' }
+    };
+    var m = msgs[lang] || msgs.pl;
 
     // Walidacja client-side
-    if (name.length < 2) { alert('Imię musi mieć minimum 2 znaki.'); return; }
+    if (name.length < 2) { alert(m.name); return; }
     var phoneDigits = phone.replace(/\D/g, '');
-    if (phoneDigits.length < 9) { alert('Numer telefonu musi mieć minimum 9 cyfr.'); return; }
-    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { alert('Podaj poprawny adres e-mail.'); return; }
-    if (message && message.length < 10) { alert('Wiadomość musi mieć minimum 10 znaków.'); return; }
+    if (phoneDigits.length < 9) { alert(m.phone); return; }
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { alert(m.email); return; }
+    if (message && message.length < 10) { alert(m.msg); return; }
 
     btn.disabled = true;
-    btn.textContent = 'Wysyłanie...';
+    btn.textContent = m.sending;
+
+    // Locale-aware thank-you redirect
+    var thankYou = { pl: '/dziekujemy/', en: '/en/dziekujemy/', uk: '/uk/dziekujemy/', ru: '/ru/dziekujemy/' };
 
     fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name: name, email: email, phone: phone, message: message })
+        body: JSON.stringify({ name: name, email: email, phone: phone, message: message, lang: lang })
     })
     .then(function(res) { return res.json(); })
     .then(function(data) {
         if (data.success) {
             form.reset();
-            window.location.href = '/dziekujemy/';
+            window.location.href = thankYou[lang] || '/dziekujemy/';
         } else {
             throw new Error(data.error);
         }
     })
     .catch(function() {
         // Fallback — mailto
-        var subject = encodeURIComponent('Zapytanie ze strony FDK - ' + name);
-        var body = encodeURIComponent('Imię: ' + name + '\nEmail: ' + email + '\nTelefon: ' + phone + '\n\nWiadomość:\n' + message);
+        var subject = encodeURIComponent('Inquiry from FDK website - ' + name);
+        var body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nPhone: ' + phone + '\n\nMessage:\n' + message);
         window.location.href = 'mailto:kontakt@firmadlakazdego.pl?subject=' + subject + '&body=' + body;
         btn.disabled = false;
-        btn.textContent = 'Umów bezpłatną konsultację';
+        btn.textContent = btnOrigText;
     });
 }
 

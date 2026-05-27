@@ -500,7 +500,8 @@ header .navbar .btn-hero-cta { font-size: 0.75rem !important; padding: 5px 10px 
 }
 
 /* ===== LANGUAGE SWITCHER ===== */
-.lang-switcher-btn { color: #fff !important; font-size: 1.01rem !important; background: rgba(0,0,0,0.25); border: none; border-radius: 5px; padding: 5px 11px !important; }
+.lang-switcher-btn { color: #333 !important; font-size: 1.01rem !important; background: rgba(0,0,0,0.08); border: none; border-radius: 5px; padding: 5px 11px !important; }
+.navbar-dark .lang-switcher-btn { color: #fff !important; background: rgba(255,255,255,0.15); }
 header.sticky-top .navbar-dark .lang-switcher-btn { color: #fff !important; background: rgba(255,255,255,0.1); }
 .lang-switcher-btn:hover { background: rgba(0,187,255,0.15) !important; }
 @media screen and (min-width: 992px) and (max-width: 1399px) {
@@ -535,6 +536,25 @@ header .navbar .btn-hero-cta { font-size: 1.01rem !important; padding: 5px 11px 
 .footer-phones .phone-label {
   font-weight: 600;
   white-space: nowrap;
+}
+.footer-phones a[href^="tel:"] {
+  white-space: nowrap;
+  word-break: keep-all;
+}
+/* Phone links across the site — mobile-friendly */
+a[href^="tel:"] {
+  white-space: nowrap;
+  word-break: keep-all;
+  display: inline-block;
+}
+@media (max-width: 575.98px) {
+  .footer-phones {
+    grid-template-columns: 1fr;
+    gap: 4px 0;
+  }
+  .footer-phones .phone-label {
+    margin-top: 8px;
+  }
 }
 
 /* ===== COOPERATION STEPS ===== */
