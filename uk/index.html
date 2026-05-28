@@ -11,12 +11,8 @@
     <link rel="dns-prefetch" href="//images.unsplash.com">
     <link rel="preconnect" href="https://app.cal.com" crossorigin>
     <link rel="dns-prefetch" href="//app.cal.com">
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PD48WSK');</script>
+<!-- Google Tag Manager — lazy loaded on first interaction -->
+<script>window.dataLayer=window.dataLayer||[];(function(){var l=false;function g(){if(l)return;l=true;var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtm.js?id=GTM-PD48WSK';document.head.appendChild(s);}['mouseover','touchstart','scroll','keydown'].forEach(function(e){window.addEventListener(e,g,{once:true,passive:true})});setTimeout(g,4000);})();</script>
 <!-- End Google Tag Manager -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no, email=no">
@@ -46,7 +42,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="twitter:image" content="https://firmadlakazdego.pl/assets/img/logo-dark.png">
     <link rel="preload" href="../assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="../assets/css/bootstrap.min.css"></noscript>
-    <link href="../assets/css/styles.css" rel="stylesheet">
+    <link rel="preload" href="../assets/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="../assets/css/styles.css"></noscript>
     <link rel="preload" href="../assets/img/fdk_mobile.webp" as="image" type="image/webp" media="(max-width: 49.99em)">
     <link rel="preload" href="../assets/img/fdk_poster.jpg" as="image" media="(min-width: 50em)">
     <link rel="preload" href="../assets/font/Montserrat-Bold.woff" as="font" type="font/woff" crossorigin>
@@ -54,6 +51,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- Cal.com Embed — lazy-loaded in body on first interaction -->
     <!-- [5] Schema.org Organization -->
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Fundacja Firma Dla Każdego","url":"https://firmadlakazdego.pl","logo":"https://firmadlakazdego.pl/assets/img/logo-dark.png","address":{"@type":"PostalAddress","streetAddress":"ul. Lwowska 17/4","addressLocality":"Warszawa","postalCode":"00-660","addressCountry":"PL"},"contactPoint":[{"@type":"ContactPoint","telephone":"+48-575-594-500","contactType":"customer service","availableLanguage":"Polish"},{"@type":"ContactPoint","telephone":"+48-794-731-000","contactType":"customer service","availableLanguage":["English","Russian","Ukrainian"]}],"sameAs":["https://www.facebook.com/firmadlakazdego","https://www.instagram.com/firmadlakazdego","https://t.me/FDK_inkubator"]}</script>
+    <style>@font-face{font-family:'Montserrat';src:url('/assets/font/Montserrat-Regular.woff') format('woff');font-weight:400;font-display:swap}@font-face{font-family:'Montserrat';src:url('/assets/font/Montserrat-Bold.woff') format('woff');font-weight:700;font-display:swap}html{overflow-x:clip}body{font-family:'Montserrat',sans-serif;font-weight:400;font-size:1rem;line-height:1.6;color:#5A5A5A}h1,h2,h3,h4,h5,h6{color:#000;font-weight:500;line-height:1.3}.page-index .section-hero{padding-top:160px;padding-bottom:30px;position:relative;background-color:#1a1e23;overflow:hidden;min-height:100vh;display:flex;flex-direction:column;justify-content:center}.page-index .section-hero .bg{position:absolute;opacity:.18;width:100%;height:100%;top:0;left:0;background-position:center;background-repeat:no-repeat;background-size:cover}.page-index .section-hero .headline{font-size:18px;line-height:130%;font-weight:700;letter-spacing:2px}.page-index .section-hero .text{font-size:18px;line-height:26px;font-weight:500;border-top:1px solid #fff}@media(min-width:640px){.page-index .section-hero .headline{font-size:24px}}@media(min-width:992px){.page-index .section-hero{padding-top:180px}.page-index .section-hero .headline{font-size:30px}}@media(min-width:1200px){.page-index .section-hero{padding-top:200px}.page-index .section-hero .headline{font-size:34px}}</style>
     <!-- [5] Schema.org FAQPage -->
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Що потрібно зробити, щоб відкрити фірму у Фундації?","acceptedAnswer":{"@type":"Answer","text":"Потрібно звернутися до Фундації через форму заявки, телефоном або електронною поштою. Після ознайомлення з матеріалами та прийняття умов відбувається підписання договору."}},{"@type":"Question","name":"Чи потрібно бути студентом, щоб відкрити фірму у Фундації?","acceptedAnswer":{"@type":"Answer","text":"Ні, Фундація підтримує всіх осіб незалежно від статусу. Виключені — ресторанна, будівельна та медична галузі."}},{"@type":"Question","name":"Чи потрібно платити внески ZUS?","acceptedAnswer":{"@type":"Answer","text":"Студенти до 26 років не платять ZUS і PIT. Особи, які виконують авторські роботи, звільнені від ZUS. У торговельних галузях розрахунок через умову злецення генерує обов'язок ZUS."}},{"@type":"Question","name":"Які податки потрібно платити?","acceptedAnswer":{"@type":"Answer","text":"ПДВ (якщо не звільнені), податок на доходи PIT 6% або 9,6% залежно від діяльності, можливо ZUS у торговельних галузях. Особи до 26 років не платять PIT."}},{"@type":"Question","name":"Що входить до пакету за 400 зл на місяць?","acceptedAnswer":{"@type":"Answer","text":"Надання юридичної особистості Фундації, бухгалтерія, юридичне, податкове та кадрове консультування."}},{"@type":"Question","name":"Чи можу я працювати з контрагентом на умовах B2B?","acceptedAnswer":{"@type":"Answer","text":"Так, це така ж форма співпраці, як з власною фірмою, з тією різницею, що стороною договору буде Фундація."}},{"@type":"Question","name":"Чи можу мати власний логотип та назву фірми?","acceptedAnswer":{"@type":"Answer","text":"Так, імідж своєї марки ви формуєте самостійно. Дані Фундації навіть не повинні бути на вашому сайті."}}]}</script>
 </head>
