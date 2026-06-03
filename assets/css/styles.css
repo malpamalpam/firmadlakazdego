@@ -99,6 +99,39 @@ a:hover { color: #00BBFF; }
 /* ===== NO-JS FALLBACK: show nav when Bootstrap JS unavailable ===== */
 .no-js .navbar-collapse { display: block !important; height: auto !important; }
 
+/* No-JS fallback — dropdowns open on focus-within (works without Bootstrap JS) */
+.no-js .nav-item.dropdown:focus-within > .dropdown-menu,
+.no-js .dropdown:focus-within > .dropdown-menu {
+  display: block;
+}
+
+/* No-JS: hide JS-dependent lang dropdown, show inline fallback */
+.no-js .lang-dropdown-js { display: none !important; }
+.lang-inline-nojs { display: none; }
+.no-js .lang-inline-nojs {
+  display: inline-flex !important;
+  gap: 6px;
+  align-items: center;
+  margin-left: 8px;
+}
+.no-js .lang-inline-nojs a {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 5px;
+  background: rgba(0,0,0,0.08);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+}
+.no-js .lang-inline-nojs a:hover {
+  background: rgba(0,187,255,0.15);
+}
+.no-js .lang-inline-nojs a.active {
+  background: rgba(0,187,255,0.2);
+  color: #00BBFF;
+}
+
 /* ===== HEADER ===== */
 header { z-index: 1; }
 header nav { z-index: 9; }
