@@ -212,7 +212,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'perevodchiki':   { pl: 'tlumacze-lektorzy', en: 'translators',   uk: 'perekladachi' },
         'muzycy':         { en: 'musicians',        uk: 'muzykanty',      ru: 'muzykanty' },
         'musicians':      { pl: 'muzycy',           uk: 'muzykanty',      ru: 'muzykanty' },
-        'muzykanty':      { pl: 'muzycy',           en: 'musicians' },
+        'muzykanty':      { pl: 'muzycy',           en: 'musicians',     ru: 'muzykanty',  uk: 'muzykanty' },
         'inkubator-przedsiebiorczosci': { en: 'other-industries', uk: 'inshi-galuzi', ru: 'drugie-otrasli' },
         'other-industries':  { pl: 'inkubator-przedsiebiorczosci', uk: 'inshi-galuzi',   ru: 'drugie-otrasli' },
         'inshi-galuzi':      { pl: 'inkubator-przedsiebiorczosci', en: 'other-industries', ru: 'drugie-otrasli' },
@@ -229,17 +229,22 @@ document.addEventListener('DOMContentLoaded', function() {
         'about':          { pl: 'zespol-fundacji-firma-dla-kazdego', uk: 'pro-nas', ru: 'o-nas' },
         'pro-nas':        { pl: 'zespol-fundacji-firma-dla-kazdego', en: 'about', ru: 'o-nas' },
         'o-nas':          { pl: 'zespol-fundacji-firma-dla-kazdego', en: 'about', uk: 'pro-nas' },
-        'kontakt':        { en: 'contact' },
+        'kontakt':        { en: 'contact',          uk: 'kontakt',        ru: 'kontakt' },
         'contact':        { pl: 'kontakt',          uk: 'kontakt',        ru: 'kontakt' },
+        'faq':            { en: 'faq',              uk: 'faq',            ru: 'faq' },
+        'blog':           { en: 'blog',             uk: 'blog',           ru: 'blog' },
         'regulamin':      { en: 'terms',            uk: 'reglament',      ru: 'reglament' },
         'terms':          { pl: 'regulamin',        uk: 'reglament',      ru: 'reglament' },
-        'reglament':      { pl: 'regulamin',        en: 'terms' },
+        'reglament':      { pl: 'regulamin',        en: 'terms',          uk: 'reglament',  ru: 'reglament' },
+        'polityka-prywatnosci': { en: 'privacy-policy', uk: 'polityka-prywatnosci', ru: 'polityka-prywatnosci' },
+        'privacy-policy':      { pl: 'polityka-prywatnosci', uk: 'polityka-prywatnosci', ru: 'polityka-prywatnosci' },
+        'sygnalista':     { en: 'sygnalista',       uk: 'sygnalista',     ru: 'sygnalista' },
         'jak-dzialamy':       { en: 'how-it-works',       uk: 'yak-my-pratsyuyemo', ru: 'kak-my-rabotaem' },
         'how-it-works':       { pl: 'jak-dzialamy',       uk: 'yak-my-pratsyuyemo', ru: 'kak-my-rabotaem' },
         'yak-my-pratsyuyemo': { pl: 'jak-dzialamy',       en: 'how-it-works',       ru: 'kak-my-rabotaem' },
         'kak-my-rabotaem':    { pl: 'jak-dzialamy',       en: 'how-it-works',       uk: 'yak-my-pratsyuyemo' },
         'incubator':      { pl: 'inkubator-przedsiebiorczosci', uk: 'inkubator', ru: 'inkubator' },
-        'inkubator':      { pl: 'inkubator-przedsiebiorczosci', en: 'incubator' },
+        'inkubator':      { pl: 'inkubator-przedsiebiorczosci', en: 'incubator', uk: 'inkubator', ru: 'inkubator' },
         'inne-uslugi':    { en: 'other-services',   uk: 'inshi-poslugy',  ru: 'drugie-uslugi' },
         'other-services': { pl: 'inne-uslugi',      uk: 'inshi-poslugy',  ru: 'drugie-uslugi' },
         'inshi-poslugy':  { pl: 'inne-uslugi',      en: 'other-services', ru: 'drugie-uslugi' },
@@ -298,30 +303,88 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     var langLinks = document.querySelectorAll('.lang-switcher-btn + .dropdown-menu a.dropdown-item, .lang-switcher-btn ~ .dropdown-menu a.dropdown-item');
-    if (langLinks.length > 0) {
+    // Also rewrite no-JS fallback links
+    var noJsLinks = document.querySelectorAll('.lang-inline-nojs a');
+    var allLangLinks = [];
+    langLinks.forEach(function(l) { allLangLinks.push(l); });
+    noJsLinks.forEach(function(l) { allLangLinks.push(l); });
+
+    if (allLangLinks.length > 0) {
         var path = window.location.pathname;
         var langMatch = path.match(/^\/(uk|en|ru)(\/|$)/);
         var currentLang = langMatch ? langMatch[1] : 'pl';
         var subpage = path.replace(/^\/(uk|en|ru)/, '').replace(/\.html$/, '').replace(/^\/+/, '').replace(/\/+$/, '');
 
         if (subpage && subpage !== 'index' && subpage !== '') {
-            langLinks.forEach(function(link) {
+            allLangLinks.forEach(function(link) {
                 var href = link.getAttribute('href');
                 if (!href || href === '#') return;
 
                 var targetLang = null;
-                if (href === '/' || href === '../') targetLang = 'pl';
-                else if (href.match(/^\/?en\/?$/) || href === '../en/') targetLang = 'en';
-                else if (href.match(/^\/?uk\/?$/) || href === '../uk/') targetLang = 'uk';
-                else if (href.match(/^\/?ru\/?$/) || href === '../ru/') targetLang = 'ru';
-                else if (href === './') targetLang = currentLang;
+                if (href === '/' || href === '../' || href === '../../') targetLang = 'pl';
+                else if (href.match(/^\/?en\/?$/) || href.match(/\.\.\/en\/?$/)) targetLang = 'en';
+                else if (href.match(/^\/?uk\/?$/) || href.match(/\.\.\/uk\/?$/)) targetLang = 'uk';
+                else if (href.match(/^\/?ru\/?$/) || href.match(/\.\.\/ru\/?$/)) targetLang = 'ru';
+                else if (href === './' || href === '.') targetLang = currentLang;
 
                 if (targetLang) {
-                    var newSlug = subpage;
-                    if (targetLang !== currentLang && slugMap[subpage] && slugMap[subpage][targetLang]) {
+                    // Blog slug translation map (EN uses English slugs via Vercel rewrites)
+                    var blogSlugMap = {
+                        'maly-zus-plus-2026': { en: 'small-zus-plus-2026' },
+                        'small-zus-plus-2026': { pl: 'maly-zus-plus-2026', uk: 'maly-zus-plus-2026', ru: 'maly-zus-plus-2026' },
+                        'firma-w-polsce-cudzoziemiec': { en: 'business-in-poland-foreigner' },
+                        'business-in-poland-foreigner': { pl: 'firma-w-polsce-cudzoziemiec', uk: 'firma-w-polsce-cudzoziemiec', ru: 'firma-w-polsce-cudzoziemiec' },
+                        'forma-opodatkowania-2026': { en: 'tax-form-2026' },
+                        'tax-form-2026': { pl: 'forma-opodatkowania-2026', uk: 'forma-opodatkowania-2026', ru: 'forma-opodatkowania-2026' },
+                        'freelancer-inkubator-czy-firma': { en: 'freelancer-incubator-or-company' },
+                        'freelancer-incubator-or-company': { pl: 'freelancer-inkubator-czy-firma', uk: 'freelancer-inkubator-czy-firma', ru: 'freelancer-inkubator-czy-firma' },
+                        'jak-sprawdzic-zwrot-podatku': { en: 'how-to-check-tax-refund' },
+                        'how-to-check-tax-refund': { pl: 'jak-sprawdzic-zwrot-podatku', uk: 'jak-sprawdzic-zwrot-podatku', ru: 'jak-sprawdzic-zwrot-podatku' },
+                        'ksef-faktury-papierowe-2026': { en: 'ksef-paper-invoices-2026' },
+                        'ksef-paper-invoices-2026': { pl: 'ksef-faktury-papierowe-2026', uk: 'ksef-faktury-papierowe-2026', ru: 'ksef-faktury-papierowe-2026' },
+                        'l4-umowa-zlecenie-2025': { en: 'sick-leave-civil-contract-2025' },
+                        'sick-leave-civil-contract-2025': { pl: 'l4-umowa-zlecenie-2025', uk: 'l4-umowa-zlecenie-2025', ru: 'l4-umowa-zlecenie-2025' },
+                        'najnizsza-krajowa-2026': { en: 'minimum-wage-2026' },
+                        'minimum-wage-2026': { pl: 'najnizsza-krajowa-2026', uk: 'najnizsza-krajowa-2026', ru: 'najnizsza-krajowa-2026' },
+                        'najnizsza-krajowa-na-reke-2026': { en: 'minimum-wage-take-home-2026' },
+                        'minimum-wage-take-home-2026': { pl: 'najnizsza-krajowa-na-reke-2026', uk: 'najnizsza-krajowa-na-reke-2026', ru: 'najnizsza-krajowa-na-reke-2026' },
+                        'niebieska-karta-ue': { en: 'eu-blue-card' },
+                        'eu-blue-card': { pl: 'niebieska-karta-ue', uk: 'niebieska-karta-ue', ru: 'niebieska-karta-ue' },
+                        'nowy-wzor-wniosku-pobyt-czasowy': { en: 'new-residence-application-form' },
+                        'new-residence-application-form': { pl: 'nowy-wzor-wniosku-pobyt-czasowy', uk: 'nowy-wzor-wniosku-pobyt-czasowy', ru: 'nowy-wzor-wniosku-pobyt-czasowy' },
+                        'ochrona-czasowa-ukraincow': { en: 'temporary-protection-ukrainians' },
+                        'temporary-protection-ukrainians': { pl: 'ochrona-czasowa-ukraincow', uk: 'ochrona-czasowa-ukraincow', ru: 'ochrona-czasowa-ukraincow' },
+                        'odwieszenie-dzialalnosci-2025': { en: 'resuming-business-2025' },
+                        'resuming-business-2025': { pl: 'odwieszenie-dzialalnosci-2025', uk: 'odwieszenie-dzialalnosci-2025', ru: 'odwieszenie-dzialalnosci-2025' },
+                        'optymalizacja-podatkowa-2026': { en: 'tax-optimization-2026' },
+                        'tax-optimization-2026': { pl: 'optymalizacja-podatkowa-2026', uk: 'optymalizacja-podatkowa-2026', ru: 'optymalizacja-podatkowa-2026' },
+                        'podpis-epuap-2025': { en: 'epuap-signature-2025' },
+                        'epuap-signature-2025': { pl: 'podpis-epuap-2025', uk: 'podpis-epuap-2025', ru: 'podpis-epuap-2025' },
+                        'ubezpieczenie-zdrowotne-bez-pracy-2025': { en: 'health-insurance-without-job-2025' },
+                        'health-insurance-without-job-2025': { pl: 'ubezpieczenie-zdrowotne-bez-pracy-2025', uk: 'ubezpieczenie-zdrowotne-bez-pracy-2025', ru: 'ubezpieczenie-zdrowotne-bez-pracy-2025' },
+                        'wakacje-skladkowe-zus-2025': { en: 'zus-contribution-holiday-2025' },
+                        'zus-contribution-holiday-2025': { pl: 'wakacje-skladkowe-zus-2025', uk: 'wakacje-skladkowe-zus-2025', ru: 'wakacje-skladkowe-zus-2025' },
+                        'wnioski-pobytowe-online-mos': { en: 'residence-applications-online-mos' },
+                        'residence-applications-online-mos': { pl: 'wnioski-pobytowe-online-mos', uk: 'wnioski-pobytowe-online-mos', ru: 'wnioski-pobytowe-online-mos' },
+                        'zasilek-dla-bezrobotnych-2026': { en: 'unemployment-benefits-2026' },
+                        'unemployment-benefits-2026': { pl: 'zasilek-dla-bezrobotnych-2026', uk: 'zasilek-dla-bezrobotnych-2026', ru: 'zasilek-dla-bezrobotnych-2026' },
+                        'dzialalnosc-nierejestrowana-2026': { en: 'unregistered-activity-2026' },
+                        'unregistered-activity-2026': { pl: 'dzialalnosc-nierejestrowana-2026', uk: 'dzialalnosc-nierejestrowana-2026', ru: 'dzialalnosc-nierejestrowana-2026' }
+                    };
+
+                    // Handle blog paths: blog/slug-name
+                    var isBlogPost = subpage.match(/^blog\/(.+)$/);
+                    var newSlug;
+                    if (isBlogPost) {
+                        var blogSlug = isBlogPost[1];
+                        var translatedSlug = blogSlugMap[blogSlug] && blogSlugMap[blogSlug][targetLang];
+                        newSlug = 'blog/' + (translatedSlug || blogSlug);
+                    } else if (targetLang !== currentLang && slugMap[subpage] && slugMap[subpage][targetLang]) {
                         newSlug = slugMap[subpage][targetLang];
+                    } else {
+                        newSlug = subpage;
                     }
-                    var newHref = targetLang === 'pl' ? '/' + newSlug : '/' + targetLang + '/' + newSlug;
+                    var newHref = targetLang === 'pl' ? '/' + newSlug + '/' : '/' + targetLang + '/' + newSlug + '/';
                     link.setAttribute('href', newHref);
                 }
             });
@@ -449,3 +512,70 @@ function payWithPayPal() {
         + '&email=' + encodeURIComponent(email);
     window.open(paypalUrl, '_blank');
 }
+
+// ===== [pt6] Dynamic payment modal injection for subpages =====
+document.addEventListener('DOMContentLoaded', function() {
+    // If modal trigger exists but modal HTML is missing, inject it
+    if (document.querySelector('[data-bs-target="#oplatyModal"]') && !document.getElementById('oplatyModal')) {
+        var lang = (document.documentElement.lang || 'pl').substring(0, 2);
+        var t = {
+            pl: { comment: 'MODAL: Opłaty z formularzem płatności', title: 'Dokonaj opłaty', close: 'Zamknij', desc: 'Wypełnij formularz i wybierz metodę płatności.', fname: 'Imię', lname: 'Nazwisko', email: 'E-mail', ptitle: 'Tytuł płatności', ptitlePh: 'np. Abonament miesięczny, Konsultacja', amount: 'Kwota (PLN)', stripe: 'Zapłać przez Stripe', paypal: 'Zapłać przez PayPal' },
+            en: { comment: 'MODAL: Fees with payment form', title: 'Make a payment', close: 'Close', desc: 'Fill in the form and choose a payment method.', fname: 'First name', lname: 'Last name', email: 'E-mail', ptitle: 'Payment title', ptitlePh: 'e.g. Monthly subscription, Consultation', amount: 'Amount (PLN)', stripe: 'Pay with Stripe', paypal: 'Pay with PayPal' },
+            uk: { comment: 'MODAL: Оплати з формою платежу', title: 'Здійснити оплату', close: 'Закрити', desc: 'Заповніть форму та оберіть спосіб оплати.', fname: "Ім'я", lname: 'Прізвище', email: 'E-mail', ptitle: 'Призначення платежу', ptitlePh: 'напр. Місячний абонемент, Консультація', amount: 'Сума (PLN)', stripe: 'Сплатити через Stripe', paypal: 'Сплатити через PayPal' },
+            ru: { comment: 'MODAL: Оплата с формой платежа', title: 'Произвести оплату', close: 'Закрыть', desc: 'Заполните форму и выберите способ оплаты.', fname: 'Имя', lname: 'Фамилия', email: 'E-mail', ptitle: 'Назначение платежа', ptitlePh: 'напр. Ежемесячный абонемент, Консультация', amount: 'Сумма (PLN)', stripe: 'Оплатить через Stripe', paypal: 'Оплатить через PayPal' }
+        };
+        var m = t[lang] || t.pl;
+        var stripeSvg = '<svg width="20" height="20" viewBox="0 0 24 24" fill="white" class="me-2" style="vertical-align:-3px"><path d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697 0 12.165 0 9.667 0 7.589.654 6.104 1.872 4.56 3.147 3.757 4.992 3.757 7.218c0 4.039 2.467 5.76 6.476 7.219 2.585.92 3.445 1.574 3.445 2.583 0 .98-.84 1.545-2.354 1.545-1.875 0-4.965-.921-7.076-2.19l-.892 5.494C5.259 22.897 8.109 24 11.662 24c2.586 0 4.735-.681 6.25-1.842 1.638-1.247 2.462-3.127 2.462-5.564 0-4.123-2.51-5.836-6.398-7.444z"/></svg>';
+        var paypalSvg = '<svg width="20" height="20" viewBox="0 0 24 24" fill="white" class="me-2" style="vertical-align:-3px"><path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106zm14.146-14.42a3.35 3.35 0 0 0-.607-.541c1.27 5.04-1.89 8.334-7.498 8.334h-2.19c-.524 0-.968.382-1.05.9l-1.466 9.297a.641.641 0 0 0 .633.74h3.237c.459 0 .85-.334.922-.788l.038-.195.73-4.627.047-.254a.929.929 0 0 1 .922-.788h.58c3.76 0 6.705-1.528 7.565-5.946.36-1.847.174-3.388-.863-4.132z"/></svg>';
+
+        var html = '<!-- ' + m.comment + ' -->'
+            + '<div class="modal fade" id="oplatyModal" tabindex="-1" aria-labelledby="oplatyModalLabel">'
+            + '<div class="modal-dialog modal-dialog-centered"><div class="modal-content">'
+            + '<div class="modal-header border-0 pb-0">'
+            + '<span class="modal-title fw-bold fs-4" id="oplatyModalLabel">' + m.title + '</span>'
+            + '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="' + m.close + '"></button></div>'
+            + '<div class="modal-body px-4 pb-4">'
+            + '<p class="text-muted mb-4">' + m.desc + '</p>'
+            + '<form id="payment-form">'
+            + '<div class="row g-3 mb-3">'
+            + '<div class="col-6"><label for="pay-name" class="form-label">' + m.fname + ' <span class="text-danger">*</span></label>'
+            + '<input type="text" class="form-control" id="pay-name" name="name" required></div>'
+            + '<div class="col-6"><label for="pay-surname" class="form-label">' + m.lname + ' <span class="text-danger">*</span></label>'
+            + '<input type="text" class="form-control" id="pay-surname" name="surname" required></div></div>'
+            + '<div class="mb-3"><label for="pay-email" class="form-label">' + m.email + ' <span class="text-danger">*</span></label>'
+            + '<input type="email" class="form-control" id="pay-email" name="email" required></div>'
+            + '<div class="mb-3"><label for="pay-title" class="form-label">' + m.ptitle + ' <span class="text-danger">*</span></label>'
+            + '<input type="text" class="form-control" id="pay-title" name="title" placeholder="' + m.ptitlePh + '" required></div>'
+            + '<div class="mb-4"><label for="pay-amount" class="form-label">' + m.amount + ' <span class="text-danger">*</span></label>'
+            + '<div class="input-group"><input type="number" class="form-control form-control-lg" id="pay-amount" name="amount" min="1" step="0.01" placeholder="400.00" required>'
+            + '<span class="input-group-text fw-bold">PLN</span></div></div>'
+            + '<div class="d-grid gap-2">'
+            + '<button type="button" class="btn btn-lg text-white fw-bold" style="background:#635bff" onclick="payWithStripe()">' + stripeSvg + ' ' + m.stripe + '</button>'
+            + '<button type="button" class="btn btn-lg text-white fw-bold" style="background:#0070ba" onclick="payWithPayPal()">' + paypalSvg + ' ' + m.paypal + '</button>'
+            + '</div></form></div></div></div></div>';
+
+        document.body.insertAdjacentHTML('beforeend', html);
+    }
+
+    // ===== [pt7] Enhance contact form validation attributes =====
+    var cf = document.getElementById('contact-form');
+    if (cf) {
+        var nameInput = cf.querySelector('#cf-name');
+        var emailInput = cf.querySelector('#cf-email');
+        var phoneInput = cf.querySelector('#cf-phone');
+        var messageInput = cf.querySelector('#cf-message');
+
+        if (nameInput && !nameInput.hasAttribute('minlength')) {
+            nameInput.setAttribute('minlength', '2');
+        }
+        if (emailInput && !emailInput.hasAttribute('pattern')) {
+            emailInput.setAttribute('pattern', '^[^\\s@]+@[^\\s@]+\\.[^\\s@]{2,}$');
+        }
+        if (phoneInput && phoneInput.hasAttribute('required') && !phoneInput.hasAttribute('pattern')) {
+            phoneInput.setAttribute('pattern', '[\\d\\s\\+\\-]{9,}');
+        }
+        if (messageInput && messageInput.hasAttribute('required') && !messageInput.hasAttribute('minlength')) {
+            messageInput.setAttribute('minlength', '10');
+        }
+    }
+});

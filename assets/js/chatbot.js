@@ -3,30 +3,43 @@
     var chatOpen = false;
     var messages = [];
 
+    // Detect page language
+    var pageLang = (document.documentElement.lang || 'pl').substring(0, 2);
+    var chatI18n = {
+        pl: { open: 'Otwórz czat', close: 'Zamknij czat', subtitle: 'Asystent AI • Online', greeting: 'Dzień dobry! Jestem asystentem Fundacji Firma Dla Każdego. W czym mogę pomóc?', placeholder: 'Napisz wiadomość...', send: 'Wyślij', error: 'Przepraszam, nie udało się połączyć. Proszę o kontakt: +48 575 594 500 lub kontakt@firmadlakazdego.pl.', apiError: 'Przepraszam, wystąpił błąd. Proszę spróbować ponownie lub skontaktować się z nami: +48 575 594 500.' },
+        en: { open: 'Open chat', close: 'Close chat', subtitle: 'AI Assistant • Online', greeting: 'Hello! I am the assistant of the Firma Dla Każdego Foundation. How can I help you?', placeholder: 'Write a message...', send: 'Send', error: 'Sorry, the connection failed. Please contact us: +48 794 731 000 or kontakt@firmadlakazdego.pl.', apiError: 'Sorry, an error occurred. Please try again or contact us: +48 794 731 000.' },
+        uk: { open: 'Відкрити чат', close: 'Закрити чат', subtitle: 'ШІ-асистент • Онлайн', greeting: 'Доброго дня! Я асистент Фундації Firma Dla Każdego. Чим можу допомогти?', placeholder: 'Напишіть повідомлення...', send: 'Надіслати', error: 'Вибачте, не вдалося з\'єднатися. Зверніться до нас: +48 794 731 000 або administracja@firmadlakazdego.pl.', apiError: 'Вибачте, сталася помилка. Спробуйте ще раз або зверніться до нас: +48 794 731 000.' },
+        ru: { open: 'Открыть чат', close: 'Закрыть чат', subtitle: 'ИИ-ассистент • Онлайн', greeting: 'Добрый день! Я ассистент Фонда Firma Dla Każdego. Чем могу помочь?', placeholder: 'Напишите сообщение...', send: 'Отправить', error: 'Извините, не удалось подключиться. Свяжитесь с нами: +48 794 731 000 или administracja@firmadlakazdego.pl.', apiError: 'Извините, произошла ошибка. Попробуйте ещё раз или свяжитесь с нами: +48 794 731 000.' }
+    };
+    var t = chatI18n[pageLang] || chatI18n.pl;
+
+    // Resolve logo path — works from both root and subdirectories
+    var logoPath = (pageLang !== 'pl') ? '../assets/img/logo-dark.png' : 'assets/img/logo-dark.png';
+
     // Create widget HTML
     var widget = document.createElement('div');
     widget.id = 'fdk-chat-widget';
     widget.innerHTML = `
-        <button id="fdk-chat-toggle" aria-label="Otwórz czat">
+        <button id="fdk-chat-toggle" aria-label="${t.open}">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z"/><path d="M7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/></svg>
         </button>
         <div id="fdk-chat-window" style="display:none">
             <div id="fdk-chat-header">
                 <div style="display:flex;align-items:center;gap:10px">
-                    <img src="assets/img/logo-dark.png" alt="FDK" height="28" onerror="this.style.display='none'">
+                    <img src="${logoPath}" alt="FDK" height="28" onerror="this.style.display='none'">
                     <div>
                         <div style="font-weight:700;font-size:14px">Firma Dla Każdego</div>
-                        <div style="font-size:11px;opacity:0.7">Asystent AI • Online</div>
+                        <div style="font-size:11px;opacity:0.7">${t.subtitle}</div>
                     </div>
                 </div>
-                <button id="fdk-chat-close" aria-label="Zamknij czat">&times;</button>
+                <button id="fdk-chat-close" aria-label="${t.close}">&times;</button>
             </div>
             <div id="fdk-chat-messages">
-                <div class="fdk-msg fdk-bot">Dzień dobry! Jestem asystentem Fundacji Firma Dla Każdego. W czym mogę pomóc?</div>
+                <div class="fdk-msg fdk-bot">${t.greeting}</div>
             </div>
             <form id="fdk-chat-form">
-                <input type="text" id="fdk-chat-input" placeholder="Napisz wiadomość..." autocomplete="off">
-                <button type="submit" aria-label="Wyślij">
+                <input type="text" id="fdk-chat-input" placeholder="${t.placeholder}" autocomplete="off">
+                <button type="submit" aria-label="${t.send}">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="#00BBFF"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
                 </button>
             </form>
@@ -99,18 +112,18 @@
         fetch('/api/chat', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ messages: messages })
+            body: JSON.stringify({ messages: messages, lang: pageLang })
         })
         .then(function(res) { return res.json(); })
         .then(function(data) {
             typing.remove();
-            var reply = data.reply || 'Przepraszam, wystąpił błąd. Proszę spróbować ponownie lub skontaktować się z nami: +48 575 594 500.';
+            var reply = data.reply || t.apiError;
             addMessage(reply, 'bot');
             messages.push({ role: 'assistant', content: reply });
         })
         .catch(function() {
             typing.remove();
-            addMessage('Przepraszam, nie udało się połączyć. Proszę o kontakt: +48 575 594 500 lub kontakt@firmadlakazdego.pl.', 'bot');
+            addMessage(t.error, 'bot');
         });
     });
 

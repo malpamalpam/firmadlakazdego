@@ -404,6 +404,15 @@ header.sticky-top .navbar-dark .btn-hero-cta {
   opacity: 1;
   transform: none;
 }
+/* No-JS: "Dla kogo" section — stack items in single column for readability */
+.no-js #dla-kogo .row { flex-direction: column; }
+.no-js #dla-kogo .row > .col { flex: 0 0 100%; max-width: 100%; }
+.no-js #dla-kogo .card { flex-direction: row; align-items: center; }
+.no-js #dla-kogo .card .lazy-bg,
+.no-js #dla-kogo .card > div:first-child:not(.card-body) { width: 80px; height: 60px !important; flex-shrink: 0; border-radius: 6px 0 0 6px; }
+.no-js #dla-kogo .card .card-body { text-align: left !important; }
+/* No-JS: load background images eagerly (lazy-bg won't load via JS) */
+.no-js .lazy-bg[data-bg] { background-size: cover; background-position: center; }
 
 /* ===== CARD HOVER ===== */
 .card-hover { transition: transform 0.2s ease, box-shadow 0.2s ease; color: #5A5A5A; }
@@ -712,6 +721,23 @@ a[href^="tel:"] {
     background: rgba(0,187,255,0.15) !important;
     color: #333 !important;
   }
+}
+
+/* ===== iPad / tablet responsiveness ===== */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Ensure proper viewport reset when navigating from subpage to homepage */
+  .page-index .section-hero { min-height: 100vh; min-height: 100dvh; }
+  /* Fix hero buttons wrapping on iPad */
+  .section-hero .text .btn { white-space: normal; }
+  /* Calculator columns on iPad portrait */
+  #kalkulator .row.g-3 > .col-md-6 { flex: 0 0 50%; max-width: 50%; }
+}
+
+/* ===== Burger menu visibility fix ===== */
+@media (max-width: 991.98px) {
+  .navbar-toggler { position: relative; z-index: 10; flex-shrink: 0; }
+  /* Prevent lang switcher from overlapping burger button */
+  .navbar .dropdown:has(.lang-switcher-btn) { order: -1; }
 }
 
 /* ===== MOBILE OVERFLOW FIXES ===== */

@@ -115,14 +115,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="col-lg-6 mb-5 mb-lg-0">
                 <h2 class="h4 fw-bold mb-4">Napisz do nas</h2>
                 <form id="contact-form" action="/api/contact" method="POST" onsubmit="submitContactForm(event)">
-                    <div class="mb-3"><label for="cf-name" class="form-label">Imię i nazwisko <span class="required-star">*</span></label><input type="text" class="form-control" id="cf-name" name="name" required></div>
-                    <div class="mb-3"><label for="cf-email" class="form-label">E-mail <span class="required-star">*</span></label><input type="email" class="form-control" id="cf-email" name="email" required></div>
+                    <div class="mb-3"><label for="cf-name" class="form-label">Imię i nazwisko <span class="required-star">*</span></label><input type="text" class="form-control" id="cf-name" name="name" required minlength="2"></div>
+                    <div class="mb-3"><label for="cf-email" class="form-label">E-mail <span class="required-star">*</span></label><input type="email" class="form-control" id="cf-email" name="email" required pattern="^[^\s@]+@[^\s@]+\.[^\s@]{2,}$"></div>
                     <div class="mb-3"><label for="cf-phone" class="form-label">Telefon <small class="text-muted">(opcjonalnie)</small></label><input type="tel" class="form-control" id="cf-phone" name="phone"></div>
-                    <div class="mb-3"><label for="cf-message" class="form-label">Wiadomość <span class="required-star">*</span></label><textarea class="form-control" id="cf-message" name="message" rows="5" required></textarea></div>
+                    <div class="mb-3"><label for="cf-message" class="form-label">Wiadomość <span class="required-star">*</span></label><textarea class="form-control" id="cf-message" name="message" rows="5" required minlength="10"></textarea></div>
                     <div class="mb-3 form-check">
                         <input type="checkbox" class="form-check-input" id="cf-rodo" required>
                         <label class="form-check-label text-smaller" for="cf-rodo">
-                            Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z <a href="https://firmadlakazdego.pl/polityka-prywatnosci/" target="_blank">Polityką Prywatności</a>. Administratorem danych jest Fundacja Firma dla Każdego, ul. Lwowska 17/4, 00-660 Warszawa (NIP: 5252625624). <span class="required-star">*</span>
+                            Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z <a href="/polityka-prywatnosci/" target="_blank">Polityką Prywatności</a>. Administratorem danych jest Fundacja Firma dla Każdego, ul. Lwowska 17/4, 00-660 Warszawa (NIP: 5252625624). <span class="required-star">*</span>
                         </label>
                     </div>
                     <button type="submit" class="btn btn-hero-cta btn-lg w-100">Wyślij wiadomość</button>

@@ -101,7 +101,7 @@ export default async function handler(req, res) {
     }
 
     try {
-        const { messages } = req.body;
+        const { messages, lang } = req.body;
 
         if (!messages || !Array.isArray(messages)) {
             return res.status(400).json({ error: 'Messages array required' });
@@ -109,6 +109,14 @@ export default async function handler(req, res) {
 
         // Limit conversation to last 20 messages
         const recentMessages = messages.slice(-20);
+
+        // Add language hint as system context if page language is not Polish
+        var systemPrompt = SYSTEM_PROMPT;
+        if (lang && lang !== 'pl') {
+            var langNames = { en: 'English', uk: 'Ukrainian', ru: 'Russian' };
+            var langName = langNames[lang] || lang;
+            systemPrompt += '\n\nIMPORTANT: The user is visiting the ' + langName + ' version of the website. Start and continue the conversation in ' + langName + ' unless the user writes in a different language.';
+        }
 
         const response = await fetch('https://api.anthropic.com/v1/messages', {
             method: 'POST',
@@ -120,7 +128,7 @@ export default async function handler(req, res) {
             body: JSON.stringify({
                 model: 'claude-haiku-4-5-20251001',
                 max_tokens: 1024,
-                system: SYSTEM_PROMPT,
+                system: systemPrompt,
                 messages: recentMessages,
             }),
         });

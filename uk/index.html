@@ -97,15 +97,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </ul>
                 </div>
                 <button data-cal-link="firmadlakazdego.pl/konsultacja-legalizacyjna" data-cal-namespace="konsultacja-legalizacyjna" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}' class="btn btn-hero-cta d-none d-lg-inline-block ms-2" style="font-size:0.75rem;padding:5px 10px">Консультація</button>
-                <div class="dropdown d-inline-block ms-2">
+                <div class="dropdown d-inline-block ms-2 lang-dropdown-js">
                     <a href="#" class="text-decoration-none dropdown-toggle fw-bold lang-switcher-btn" data-bs-toggle="dropdown" aria-expanded="false">UA</a>
                     <div class="dropdown-menu dropdown-menu-end"><ul class="dropdown-inner bg-white border shadow rounded-3 p-1" style="min-width:120px">
-                        <li><a class="dropdown-item py-2" href="../">🇵🇱 PL</a></li>
-                        <li><a class="dropdown-item py-2" href="../en/">🇬🇧 ENG</a></li>
-                        <li><a class="dropdown-item py-2 fw-bold" href="./">🇺🇦 UA</a></li>
-                        <li><a class="dropdown-item py-2" href="../ru/">🇷🇺 RUS</a></li>
+                        <li><a class="dropdown-item py-2" href="/">🇵🇱 PL</a></li>
+                        <li><a class="dropdown-item py-2" href="/en/">🇬🇧 ENG</a></li>
+                        <li><a class="dropdown-item py-2 fw-bold" href="/uk/">🇺🇦 UA</a></li>
+                        <li><a class="dropdown-item py-2" href="/ru/">🇷🇺 RUS</a></li>
                     </ul></div>
                 </div>
+                <span class="lang-inline-nojs">
+                    <a href="/">PL</a>
+                    <a href="/en/">EN</a>
+                    <a href="/uk/" class="active">UA</a>
+                    <a href="/ru/">RU</a>
+                </span>
             </div>
         </div>
     </nav>
@@ -132,7 +138,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="text d-inline-block border-top-1 pt-4 pb-4 position-relative">
             <p class="mt-2 mb-3">Ведіть бізнес без бюрократії — без ZUS, з PIT 6%, за 400&nbsp;zł/міс.</p>
-            <a href="#kontakt" class="btn btn-hero-cta btn-lg px-5 py-3">Зв'яжіться з нами</a>
+            <a href="/uk/kontakt/" class="btn btn-hero-cta btn-lg px-5 py-3">Зв'яжіться з нами</a>
         </div>
 
         <!-- COUNTERY — WEWNĄTRZ hero, на тлі відео -->
@@ -300,7 +306,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <p class="text-smaller mb-0">Забезпечуємо бухгалтерію, юридичне та бізнес-консультування протягом усього періоду співпраці.</p>
             </div>
         </div>
-        <div class="text-center"><a href="#kontakt" class="btn btn-hero-cta btn-lg px-5 py-3">Дізнатися більше</a></div>
+        <div class="text-center"><a href="/uk/kontakt/" class="btn btn-hero-cta btn-lg px-5 py-3">Дізнатися більше</a></div>
     </div>
 </section>
 
@@ -373,7 +379,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="col-md-4 fade-in"><div class="p-4"><div class="display-4 mb-3">🤝</div><h3 class="fw-bold">2. Клієнт приєднується</h3><p class="text-muted">Ваш знайомий реєструється в інкубаторі і починає співпрацю. При підписанні договору вказує ваші дані як особи, яка порекомендувала.</p></div></div>
             <div class="col-md-4 fade-in"><div class="p-4"><div class="display-4 mb-3">💰</div><h3 class="fw-bold">3. Ви отримуєте комісію</h3><p class="text-muted">Після підписання договору та оплати першого місяця рекомендованою особою — ви отримуєте бонус за рекомендацію.</p></div></div>
         </div>
-        <div class="text-center mt-4"><a href="#kontakt" class="btn btn-fdk btn-lg px-5 py-3">Приєднатися до партнерської програми</a></div>
+        <div class="text-center mt-4"><a href="/uk/kontakt/" class="btn btn-fdk btn-lg px-5 py-3">Приєднатися до партнерської програми</a></div>
     </div>
 </section>
 
@@ -402,14 +408,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="row justify-content-center">
             <div class="col-lg-6 mb-4 mb-lg-0">
                 <form id="contact-form" action="/api/contact" method="POST" onsubmit="submitContactForm(event)">
-                    <div class="mb-3"><label for="cf-name" class="form-label">Ім'я та прізвище <span class="required-star">*</span></label><input type="text" class="form-control" id="cf-name" name="name" required></div>
-                    <div class="mb-3"><label for="cf-email" class="form-label">E-mail <span class="required-star">*</span></label><input type="email" class="form-control" id="cf-email" name="email" required></div>
+                    <div class="mb-3"><label for="cf-name" class="form-label">Ім'я та прізвище <span class="required-star">*</span></label><input type="text" class="form-control" id="cf-name" name="name" required minlength="2"></div>
+                    <div class="mb-3"><label for="cf-email" class="form-label">E-mail <span class="required-star">*</span></label><input type="email" class="form-control" id="cf-email" name="email" required pattern="^[^\s@]+@[^\s@]+\.[^\s@]{2,}$"></div>
                     <div class="mb-3"><label for="cf-phone" class="form-label">Телефон <small class="text-muted">(необов'язково)</small></label><input type="tel" class="form-control" id="cf-phone" name="phone"></div>
-                    <div class="mb-3"><label for="cf-message" class="form-label">Повідомлення <span class="required-star">*</span></label><textarea class="form-control" id="cf-message" name="message" rows="4" required></textarea></div>
+                    <div class="mb-3"><label for="cf-message" class="form-label">Повідомлення <span class="required-star">*</span></label><textarea class="form-control" id="cf-message" name="message" rows="4" required minlength="10"></textarea></div>
                     <div class="mb-3 form-check">
                         <input type="checkbox" class="form-check-input" id="cf-rodo" required>
                         <label class="form-check-label text-smaller" for="cf-rodo">
-                            Я даю згоду на обробку моїх персональних даних відповідно до <a href="https://firmadlakazdego.pl/polityka-prywatnosci/" target="_blank">Політики конфіденційності</a>. Адміністратором даних є Фундація Firma dla Każdego, вул. Lwowska 17/4, 00-660 Варшава (NIP: 5252625624). <span class="required-star">*</span>
+                            Я даю згоду на обробку моїх персональних даних відповідно до <a href="/uk/privacy-policy/" target="_blank">Політики конфіденційності</a>. Адміністратором даних є Фундація Firma dla Każdego, вул. Lwowska 17/4, 00-660 Варшава (NIP: 5252625624). <span class="required-star">*</span>
                         </label>
                     </div>
                     <button type="submit" class="btn btn-hero-cta btn-lg w-100">Надіслати повідомлення</button>
@@ -469,7 +475,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <ul class="nav flex-column">
                             <li class="pb-3"><a href="#dla-kogo" class="text-muted">Для кого?</a></li>
                             <li class="pb-3"><a href="/uk/pro-nas/" class="text-muted">Про нас</a></li>
-                            <li class="pb-3"><a href="#kontakt" class="text-muted">Контакт</a></li>
+                            <li class="pb-3"><a href="/uk/kontakt/" class="text-muted">Контакт</a></li>
                             <li class="pb-3"><a href="/uk/faq/" class="text-muted">FAQ</a></li>
                             <li class="pb-3"><a href="/uk/reglament/" class="text-muted">Регламент</a></li>
                             <li class="pb-3"><a href="/ru/sygnalista/" class="text-muted">Портал інформатора</a></li>
