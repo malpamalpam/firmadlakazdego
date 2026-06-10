@@ -11,7 +11,10 @@
     }
   },
   "redirects": [
-    { "source": "/other-industries/", "destination": "/en/other-industries/", "permanent": false }
+    { "source": "/other-industries/", "destination": "/en/other-industries/", "permanent": false },
+    { "source": "/en/sygnalista/", "destination": "/en/whistleblower/", "permanent": true },
+    { "source": "/ru/sygnalista/", "destination": "/ru/informator/", "permanent": true },
+    { "source": "/uk/sygnalista/", "destination": "/uk/informator/", "permanent": true }
   ],
   "rewrites": [
     { "source": "/programisci-graficy/", "destination": "/programisci" },

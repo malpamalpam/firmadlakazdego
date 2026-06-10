@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (calcSource) {
         // Detect currency suffix from page language (UA uses "зл", others use "zł")
         var pageLang = document.documentElement.lang || 'pl';
-        var currSuffix = (pageLang === 'uk') ? ' зл' : ' zł';
+        var currSuffix = ' zł';
 
         function updateCalculator() {
             var revenue = parseFloat(calcSource.value) || 0;
@@ -238,7 +238,9 @@ document.addEventListener('DOMContentLoaded', function() {
         'reglament':      { pl: 'regulamin',        en: 'terms',          uk: 'reglament',  ru: 'reglament' },
         'polityka-prywatnosci': { en: 'privacy-policy', uk: 'polityka-prywatnosci', ru: 'polityka-prywatnosci' },
         'privacy-policy':      { pl: 'polityka-prywatnosci', uk: 'polityka-prywatnosci', ru: 'polityka-prywatnosci' },
-        'sygnalista':     { en: 'sygnalista',       uk: 'sygnalista',     ru: 'sygnalista' },
+        'sygnalista':     { en: 'whistleblower',    uk: 'informator',     ru: 'informator' },
+        'whistleblower':  { pl: 'sygnalista',       uk: 'informator',     ru: 'informator' },
+        'informator':     { pl: 'sygnalista',       en: 'whistleblower',  uk: 'informator', ru: 'informator' },
         'jak-dzialamy':       { en: 'how-it-works',       uk: 'yak-my-pratsyuyemo', ru: 'kak-my-rabotaem' },
         'how-it-works':       { pl: 'jak-dzialamy',       uk: 'yak-my-pratsyuyemo', ru: 'kak-my-rabotaem' },
         'yak-my-pratsyuyemo': { pl: 'jak-dzialamy',       en: 'how-it-works',       ru: 'kak-my-rabotaem' },

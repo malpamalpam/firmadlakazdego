@@ -195,7 +195,50 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </section>
 
-<!-- ==================== 3. WHAT WE DO? ==================== -->
+<!-- ==================== 3. CALCULATOR ==================== -->
+<section id="kalkulator" class="py-5" style="background: linear-gradient(135deg, #1a1e23, #292d33)">
+    <div class="container"><div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 col-xxl-7">
+        <h2 class="text-center text-white mb-2">Calculator: Self-employment vs FDK</h2>
+        <p class="text-center mb-4" style="color:rgba(255,255,255,0.6)">Check how much you'll save with the FDK incubator</p>
+        <div class="card shadow-lg rounded-4 p-4 p-md-5 border-0">
+            <label for="calc-revenue" class="form-label fw-bold fs-5">Your monthly net revenue:</label>
+            <div class="input-group input-group-lg mb-4">
+                <input type="range" class="form-range mt-2" id="calc-slider" min="2000" max="50000" step="500" value="8000" style="accent-color:#00BBFF">
+            </div>
+            <div class="text-center mb-4">
+                <span class="badge rounded-pill fs-4 px-4 py-2" style="background:#00BBFF"><span id="calc-display">8 000</span> PLN</span>
+            </div>
+            <div class="row g-3 mb-4">
+                <div class="col-md-6">
+                    <div class="rounded-3 p-4 h-100" style="background:#fff5f5; border:2px solid #ffcccc">
+                        <div class="d-flex align-items-center gap-2 mb-3"><div class="rounded-circle d-flex align-items-center justify-content-center" style="width:40px;height:40px;background:#ffcccc"><svg width="20" height="20" fill="none" stroke="#dc3545" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4.5c-.77-.833-2.694-.833-3.464 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg></div><h3 class="h5 fw-bold mb-0">Self-employed</h3></div>
+                        <div class="d-flex justify-content-between mb-2"><span>ZUS (full)</span><strong id="jdg-zus">1 600 zł</strong></div>
+                        <div class="d-flex justify-content-between mb-2"><span>Health insurance</span><strong id="jdg-health">556 zł</strong></div>
+                        <div class="d-flex justify-content-between mb-2"><span>Income tax</span><strong id="jdg-tax">960 zł</strong></div>
+                        <div class="d-flex justify-content-between mb-2"><span>Accounting</span><strong>~400 zł</strong></div>
+                        <hr><div class="d-flex justify-content-between"><span class="fw-bold">Total costs:</span><span class="fw-bold text-danger fs-5" id="jdg-total">2 960 zł</span></div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="rounded-3 p-4 h-100" style="background:#f0faff; border:2px solid #00BBFF">
+                        <div class="d-flex align-items-center gap-2 mb-3"><div class="rounded-circle d-flex align-items-center justify-content-center" style="width:40px;height:40px;background:rgba(0,187,255,0.15)"><svg width="20" height="20" fill="none" stroke="#00BBFF" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><h3 class="h5 fw-bold mb-0" style="color:#00BBFF">FDK</h3></div>
+                        <div class="d-flex justify-content-between mb-2"><span>ZUS</span><strong class="text-success">0 zł</strong></div>
+                        <div class="d-flex justify-content-between mb-2"><span>Tax (6%)</span><strong id="fdk-tax">480 zł</strong></div>
+                        <div class="d-flex justify-content-between mb-2"><span>FDK subscription</span><strong id="fdk-abo">400 zł</strong></div>
+                        <hr><div class="d-flex justify-content-between"><span class="fw-bold">Total costs:</span><span class="fw-bold fs-5" style="color:#00BBFF" id="fdk-total">880 zł</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center p-4 rounded-3" style="background:linear-gradient(135deg,#d4edda,#c3e6cb)">
+                <div class="text-success fw-bold mb-1">You save monthly:</div>
+                <div class="display-5 fw-bold text-success" id="calc-savings">2 080 zł</div>
+                <div class="text-muted mt-1">annually: <strong class="text-success" id="calc-savings-year">24 960 zł</strong></div>
+            </div>
+        </div>
+    </div></div></div>
+</section>
+
+<!-- ==================== 4. WHAT WE DO? ==================== -->
 <section id="co-robimy" class="py-4 py-md-5">
     <div class="container">
         <h2 class="text-center mb-4 mb-md-5">What we do?</h2>
@@ -222,7 +265,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </section>
 
-<!-- ==================== 4. FOR WHOM? (with collapse descriptions) ==================== -->
+<!-- ==================== 5. FOR WHOM? (with collapse descriptions) ==================== -->
 <section id="dla-kogo" class="py-4 py-md-5" style="background-color:#f7f7f7">
     <div class="container">
         <h2 class="text-center mb-4 mb-md-5">For whom?</h2>
@@ -267,7 +310,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </section>
 
-<!-- ==================== 5. HOW WE WORK? ==================== -->
+<!-- ==================== 6. HOW WE WORK? ==================== -->
 <section id="jak-dzialamy" class="py-4 py-md-5">
     <div class="container">
         <h2 class="text-center mb-3 mb-md-4">How we work?</h2>
@@ -310,7 +353,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </section>
 
-<!-- ==================== 6. PACKAGE ==================== -->
+<!-- ==================== 7. PACKAGE ==================== -->
 <section id="pakiet" class="py-4 py-md-5" style="background-color:#f7f7f7">
     <div class="container"><div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-9 col-xxl-7">
         <h2 class="text-center mb-4 mb-md-5">What's included in the package?</h2>
@@ -323,48 +366,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="col fade-in"><div class="d-flex align-items-start gap-3"><svg class="flex-shrink-0 mt-1" width="24" height="24" fill="none" stroke="#00BBFF" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><div><strong>6% income tax</strong><br><span class="text-smaller text-muted">Tax optimization — you pay only 6% income tax.</span></div></div></div>
             <div class="col fade-in"><div class="d-flex align-items-start gap-3"><svg class="flex-shrink-0 mt-1" width="24" height="24" fill="none" stroke="#00BBFF" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><div><strong>Legal and business advisory</strong><br><span class="text-smaller text-muted">Ongoing legal support and business consulting.</span></div></div></div>
             <div class="col fade-in"><div class="d-flex align-items-start gap-3"><svg class="flex-shrink-0 mt-1" width="24" height="24" fill="none" stroke="#00BBFF" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><div><strong>Access to knowledge and experience</strong><br><span class="text-smaller text-muted">Training, mentoring, and business contacts.</span></div></div></div>
-        </div>
-    </div></div></div>
-</section>
-
-<!-- ==================== 7. CALCULATOR ==================== -->
-<section id="kalkulator" class="py-5" style="background: linear-gradient(135deg, #1a1e23, #292d33)">
-    <div class="container"><div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 col-xxl-7">
-        <h2 class="text-center text-white mb-2">Calculator: Self-employment vs FDK</h2>
-        <p class="text-center mb-4" style="color:rgba(255,255,255,0.6)">Check how much you'll save with the FDK incubator</p>
-        <div class="card shadow-lg rounded-4 p-4 p-md-5 border-0">
-            <label for="calc-revenue" class="form-label fw-bold fs-5">Your monthly net revenue:</label>
-            <div class="input-group input-group-lg mb-4">
-                <input type="range" class="form-range mt-2" id="calc-slider" min="2000" max="50000" step="500" value="8000" style="accent-color:#00BBFF">
-            </div>
-            <div class="text-center mb-4">
-                <span class="badge rounded-pill fs-4 px-4 py-2" style="background:#00BBFF"><span id="calc-display">8 000</span> PLN</span>
-            </div>
-            <div class="row g-3 mb-4">
-                <div class="col-md-6">
-                    <div class="rounded-3 p-4 h-100" style="background:#fff5f5; border:2px solid #ffcccc">
-                        <div class="d-flex align-items-center gap-2 mb-3"><div class="rounded-circle d-flex align-items-center justify-content-center" style="width:40px;height:40px;background:#ffcccc"><svg width="20" height="20" fill="none" stroke="#dc3545" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4.5c-.77-.833-2.694-.833-3.464 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg></div><h3 class="h5 fw-bold mb-0">Self-employed</h3></div>
-                        <div class="d-flex justify-content-between mb-2"><span>ZUS (full)</span><strong id="jdg-zus">1 600 zł</strong></div>
-                        <div class="d-flex justify-content-between mb-2"><span>Tax (12%)</span><strong id="jdg-tax">960 zł</strong></div>
-                        <div class="d-flex justify-content-between mb-2"><span>Accounting</span><strong>~400 zł</strong></div>
-                        <hr><div class="d-flex justify-content-between"><span class="fw-bold">Total costs:</span><span class="fw-bold text-danger fs-5" id="jdg-total">2 960 zł</span></div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="rounded-3 p-4 h-100" style="background:#f0faff; border:2px solid #00BBFF">
-                        <div class="d-flex align-items-center gap-2 mb-3"><div class="rounded-circle d-flex align-items-center justify-content-center" style="width:40px;height:40px;background:rgba(0,187,255,0.15)"><svg width="20" height="20" fill="none" stroke="#00BBFF" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><h3 class="h5 fw-bold mb-0" style="color:#00BBFF">FDK</h3></div>
-                        <div class="d-flex justify-content-between mb-2"><span>ZUS</span><strong class="text-success">0 zł</strong></div>
-                        <div class="d-flex justify-content-between mb-2"><span>Tax (6%)</span><strong id="fdk-tax">480 zł</strong></div>
-                        <div class="d-flex justify-content-between mb-2"><span>FDK subscription</span><strong id="fdk-abo">400 zł</strong></div>
-                        <hr><div class="d-flex justify-content-between"><span class="fw-bold">Total costs:</span><span class="fw-bold fs-5" style="color:#00BBFF" id="fdk-total">880 zł</span></div>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center p-4 rounded-3" style="background:linear-gradient(135deg,#d4edda,#c3e6cb)">
-                <div class="text-success fw-bold mb-1">You save monthly:</div>
-                <div class="display-5 fw-bold text-success" id="calc-savings">2 080 zł</div>
-                <div class="text-muted mt-1">annually: <strong class="text-success" id="calc-savings-year">24 960 zł</strong></div>
-            </div>
         </div>
     </div></div></div>
 </section>
@@ -508,7 +509,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <li class="pb-3"><a href="/en/contact/" class="text-muted">Contact</a></li>
                             <li class="pb-3"><a href="/en/faq/" class="text-muted">FAQ</a></li>
                             <li class="pb-3"><a href="/en/terms/" class="text-muted">Terms & Conditions</a></li>
-                            <li class="pb-3"><a href="/en/sygnalista/" class="text-muted">Whistleblower Portal</a></li>
+                            <li class="pb-3"><a href="/en/whistleblower/" class="text-muted">Whistleblower Portal</a></li>
                             <li class="pb-3"><a href="/Polityka-Ochrony-Dzieci-FDK.pdf" target="_blank" class="text-muted">Child Protection Policy (PDF)</a></li>
                             <li class="pb-3"><a href="#" class="text-muted" data-bs-toggle="modal" data-bs-target="#oplatyModal">Fees</a></li>
                         </ul>
