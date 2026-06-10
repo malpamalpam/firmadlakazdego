@@ -914,4 +914,42 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/uslugi-dlya-firm-inostrantsev" />
   </url>
 
+  <!-- SYGNALISTA / WHISTLEBLOWER / INFORMATOR (priority 0.6) -->
+  <url>
+    <loc>https://fdk-site.vercel.app/sygnalista</loc>
+    <lastmod>2026-06-10</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/sygnalista" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/whistleblower" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/informator" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/informator" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/en/whistleblower</loc>
+    <lastmod>2026-06-10</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/sygnalista" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/whistleblower" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/informator" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/informator" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/uk/informator</loc>
+    <lastmod>2026-06-10</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/sygnalista" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/whistleblower" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/informator" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/informator" />
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/ru/informator</loc>
+    <lastmod>2026-06-10</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://fdk-site.vercel.app/sygnalista" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdk-site.vercel.app/en/whistleblower" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://fdk-site.vercel.app/uk/informator" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/informator" />
+  </url>
+
 </urlset>
