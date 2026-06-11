@@ -301,7 +301,22 @@ document.addEventListener('DOMContentLoaded', function() {
         'poslugy-dlya-firm-inozemtsiv':              { pl: 'uslugi-dla-firm-cudzoziemcy',          en: 'services-for-employers-of-foreigners', ru: 'uslugi-dlya-firm-inostrantsev' },
         'poslugy-dlya-firm':                         { pl: 'uslugi-dla-firm-cudzoziemcy',          en: 'services-for-employers-of-foreigners', ru: 'uslugi-dlya-firm-inostrantsev' },
         'uslugi-dlya-firm-inostrantsev':             { pl: 'uslugi-dla-firm-cudzoziemcy',          en: 'services-for-employers-of-foreigners', uk: 'poslugy-dlya-firm-inozemtsiv' },
-        'uslugi-dlya-firm':                          { pl: 'uslugi-dla-firm-cudzoziemcy',          en: 'services-for-employers-of-foreigners', uk: 'poslugy-dlya-firm-inozemtsiv' }
+        'uslugi-dlya-firm':                          { pl: 'uslugi-dla-firm-cudzoziemcy',          en: 'services-for-employers-of-foreigners', uk: 'poslugy-dlya-firm-inozemtsiv' },
+
+        // Inkubator hub + industry subpages (PL nested paths → EN/RU/UA flat paths)
+        'inkubator-przedsi\u0119biorczo\u015bci':                                    { en: 'other-industries',  uk: 'inshi-galuzi',    ru: 'drugie-otrasli' },
+        'inkubator-przedsi\u0119biorczo\u015bci/programista-developer':               { en: 'programmers',       uk: 'programisty',     ru: 'programmisty' },
+        'inkubator-przedsi\u0119biorczo\u015bci/web-developer':                       { en: 'programmers',       uk: 'programisty',     ru: 'programmisty' },
+        'inkubator-przedsi\u0119biorczo\u015bci/fotograf':                            { en: 'other-industries',  uk: 'inshi-galuzi',    ru: 'drugie-otrasli' },
+        'inkubator-przedsi\u0119biorczo\u015bci/architekt':                           { en: 'architects',        uk: 'architekty',      ru: 'arhitektory' },
+        'inkubator-przedsi\u0119biorczo\u015bci/grafik':                              { en: 'programmers',       uk: 'programisty',     ru: 'programmisty' },
+        'inkubator-przedsi\u0119biorczo\u015bci/lektor':                              { en: 'translators',       uk: 'perekladachi',    ru: 'perevodchiki' },
+        'inkubator-przedsi\u0119biorczo\u015bci/tlumacz':                             { en: 'translators',       uk: 'perekladachi',    ru: 'perevodchiki' },
+        'inkubator-przedsi\u0119biorczo\u015bci/e-commerce':                          { en: 'ecommerce',         uk: 'ecommerce',       ru: 'ecommerce' },
+        'inkubator-przedsi\u0119biorczo\u015bci/specjalista-seo':                     { en: 'other-industries',  uk: 'inshi-galuzi',    ru: 'drugie-otrasli' },
+        'inkubator-przedsi\u0119biorczo\u015bci/ux-ui-designer':                      { en: 'programmers',       uk: 'programisty',     ru: 'programmisty' },
+        'inkubator-przedsi\u0119biorczo\u015bci/social-media-manager':                { en: 'other-industries',  uk: 'inshi-galuzi',    ru: 'drugie-otrasli' },
+        'inkubator-przedsi\u0119biorczo\u015bci/copywriter':                          { en: 'other-industries',  uk: 'inshi-galuzi',    ru: 'drugie-otrasli' }
     };
 
     var langLinks = document.querySelectorAll('.lang-switcher-btn + .dropdown-menu a.dropdown-item, .lang-switcher-btn ~ .dropdown-menu a.dropdown-item');
@@ -313,6 +328,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (allLangLinks.length > 0) {
         var path = window.location.pathname;
+        try { path = decodeURIComponent(path); } catch(e) {}
         var langMatch = path.match(/^\/(uk|en|ru)(\/|$)/);
         var currentLang = langMatch ? langMatch[1] : 'pl';
         var subpage = path.replace(/^\/(uk|en|ru)/, '').replace(/\.html$/, '').replace(/^\/+/, '').replace(/\/+$/, '');
