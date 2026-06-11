@@ -914,6 +914,75 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://fdk-site.vercel.app/ru/uslugi-dlya-firm-inostrantsev" />
   </url>
 
+  <!-- INKUBATOR PRZEDSIĘBIORCZOŚCI — HUB (priority 0.9) -->
+  <url>
+    <loc>https://fdk-site.vercel.app/inkubator-przedsi%C4%99biorczo%C5%9Bci</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- INKUBATOR — PODSTRONY BRANŻOWE (priority 0.8) -->
+  <url>
+    <loc>https://fdk-site.vercel.app/inkubator-przedsi%C4%99biorczo%C5%9Bci/dla-programisty</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/inkubator-przedsi%C4%99biorczo%C5%9Bci/dla-web-developera</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/inkubator-przedsi%C4%99biorczo%C5%9Bci/dla-fotografa</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/inkubator-przedsi%C4%99biorczo%C5%9Bci/dla-architekta</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/inkubator-przedsi%C4%99biorczo%C5%9Bci/dla-grafika</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/inkubator-przedsi%C4%99biorczo%C5%9Bci/dla-lektora</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/inkubator-przedsi%C4%99biorczo%C5%9Bci/dla-t%C5%82umacza</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/inkubator-przedsi%C4%99biorczo%C5%9Bci/dla-e-commerce</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/inkubator-przedsi%C4%99biorczo%C5%9Bci/dla-specjalisty-seo</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/inkubator-przedsi%C4%99biorczo%C5%9Bci/dla-ux-ui-designera</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/inkubator-przedsi%C4%99biorczo%C5%9Bci/dla-social-media-managera</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fdk-site.vercel.app/inkubator-przedsi%C4%99biorczo%C5%9Bci/dla-copywritera</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+
   <!-- SYGNALISTA / WHISTLEBLOWER / INFORMATOR (priority 0.6) -->
   <url>
     <loc>https://fdk-site.vercel.app/sygnalista</loc>

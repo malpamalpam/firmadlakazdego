@@ -14,12 +14,19 @@
     { "source": "/other-industries/", "destination": "/en/other-industries/", "permanent": false },
     { "source": "/en/sygnalista/", "destination": "/en/whistleblower/", "permanent": true },
     { "source": "/ru/sygnalista/", "destination": "/ru/informator/", "permanent": true },
-    { "source": "/uk/sygnalista/", "destination": "/uk/informator/", "permanent": true }
+    { "source": "/uk/sygnalista/", "destination": "/uk/informator/", "permanent": true },
+    { "source": "/programisci/", "destination": "/inkubator-przedsi%C4%99biorczo%C5%9Bci/dla-programisty/", "permanent": true },
+    { "source": "/programisci-graficy/", "destination": "/inkubator-przedsi%C4%99biorczo%C5%9Bci/dla-programisty/", "permanent": true },
+    { "source": "/architekci/", "destination": "/inkubator-przedsi%C4%99biorczo%C5%9Bci/dla-architekta/", "permanent": true },
+    { "source": "/ecommerce/", "destination": "/inkubator-przedsi%C4%99biorczo%C5%9Bci/dla-e-commerce/", "permanent": true },
+    { "source": "/e-commerce/", "destination": "/inkubator-przedsi%C4%99biorczo%C5%9Bci/dla-e-commerce/", "permanent": true },
+    { "source": "/tlumacze/", "destination": "/inkubator-przedsi%C4%99biorczo%C5%9Bci/dla-t%C5%82umacza/", "permanent": true },
+    { "source": "/tlumacze-lektorzy/", "destination": "/inkubator-przedsi%C4%99biorczo%C5%9Bci/dla-t%C5%82umacza/", "permanent": true },
+    { "source": "/muzycy/", "destination": "/inkubator-przedsi%C4%99biorczo%C5%9Bci/", "permanent": true },
+    { "source": "/inkubator-przedsiebiorczosci/", "destination": "/inkubator-przedsi%C4%99biorczo%C5%9Bci/", "permanent": true },
+    { "source": "/inne-branze/", "destination": "/inkubator-przedsi%C4%99biorczo%C5%9Bci/", "permanent": true }
   ],
   "rewrites": [
-    { "source": "/programisci-graficy/", "destination": "/programisci" },
-    { "source": "/e-commerce/", "destination": "/ecommerce" },
-    { "source": "/tlumacze-lektorzy/", "destination": "/tlumacze" },
     { "source": "/zespol-fundacji-firma-dla-kazdego/", "destination": "/o-nas" },
     { "source": "/inne/", "destination": "/inne-uslugi" },
     { "source": "/ru/privacy-policy/", "destination": "/polityka-prywatnosci" },
