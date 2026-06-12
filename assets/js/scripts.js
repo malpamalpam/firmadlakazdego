@@ -305,7 +305,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Inkubator hub + industry subpages (PL nested paths → EN/RU/UA flat paths)
         'inkubator-przedsiebiorczosci':                                    { en: 'other-industries',  uk: 'inshi-galuzi',    ru: 'drugie-otrasli' },
-        'inkubator-przedsiebiorczosci/programista-developer':               { en: 'programmers',       uk: 'programisty',     ru: 'programmisty' },
+        'inkubator-przedsiebiorczosci/programista':                          { en: 'programmers',       uk: 'programisty',     ru: 'programmisty' },
         'inkubator-przedsiebiorczosci/web-developer':                       { en: 'programmers',       uk: 'programisty',     ru: 'programmisty' },
         'inkubator-przedsiebiorczosci/fotograf':                            { en: 'other-industries',  uk: 'inshi-galuzi',    ru: 'drugie-otrasli' },
         'inkubator-przedsiebiorczosci/architekt':                           { en: 'architects',        uk: 'architekty',      ru: 'arhitektory' },
@@ -313,7 +313,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'inkubator-przedsiebiorczosci/lektor':                              { en: 'translators',       uk: 'perekladachi',    ru: 'perevodchiki' },
         'inkubator-przedsiebiorczosci/tlumacz':                             { en: 'translators',       uk: 'perekladachi',    ru: 'perevodchiki' },
         'inkubator-przedsiebiorczosci/e-commerce':                          { en: 'ecommerce',         uk: 'ecommerce',       ru: 'ecommerce' },
-        'inkubator-przedsiebiorczosci/specjalista-seo':                     { en: 'other-industries',  uk: 'inshi-galuzi',    ru: 'drugie-otrasli' },
+        'inkubator-przedsiebiorczosci/seo-specialist':                      { en: 'other-industries',  uk: 'inshi-galuzi',    ru: 'drugie-otrasli' },
         'inkubator-przedsiebiorczosci/ux-ui-designer':                      { en: 'programmers',       uk: 'programisty',     ru: 'programmisty' },
         'inkubator-przedsiebiorczosci/social-media-manager':                { en: 'other-industries',  uk: 'inshi-galuzi',    ru: 'drugie-otrasli' },
         'inkubator-przedsiebiorczosci/copywriter':                          { en: 'other-industries',  uk: 'inshi-galuzi',    ru: 'drugie-otrasli' }

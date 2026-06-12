@@ -923,7 +923,7 @@
 
   <!-- INKUBATOR — PODSTRONY BRANŻOWE (priority 0.8) -->
   <url>
-    <loc>https://fdk-site.vercel.app/inkubator-przedsiebiorczosci/programista-developer</loc>
+    <loc>https://fdk-site.vercel.app/inkubator-przedsiebiorczosci/programista</loc>
     <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
@@ -963,7 +963,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://fdk-site.vercel.app/inkubator-przedsiebiorczosci/specjalista-seo</loc>
+    <loc>https://fdk-site.vercel.app/inkubator-przedsiebiorczosci/seo-specialist</loc>
     <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
