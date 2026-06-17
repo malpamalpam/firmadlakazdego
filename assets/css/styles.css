@@ -756,6 +756,19 @@ a[href^="tel:"] {
   .hero-counter-label { font-size: 0.75rem; }
 }
 
+/* ===== TABLE OF CONTENTS (industry subpages) ===== */
+.toc-bar { background: #fff; border-bottom: 1px solid #e9ecef; }
+.toc-bar .toc-list { list-style: none; padding: 0; margin: 0; display: flex; gap: 0; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.toc-bar .toc-list::-webkit-scrollbar { display: none; }
+.toc-bar .toc-list li a { display: block; padding: 10px 14px; font-size: 0.82rem; font-weight: 600; color: #5A5A5A; text-decoration: none; white-space: nowrap; border-bottom: 2px solid transparent; transition: color 0.2s, border-color 0.2s; }
+.toc-bar .toc-list li a:hover, .toc-bar .toc-list li a.active { color: #00BBFF; border-bottom-color: #00BBFF; }
+@media (min-width: 992px) {
+  .toc-bar.sticky-toc { position: sticky; top: 60px; z-index: 1020; box-shadow: 0 2px 6px rgba(0,0,0,0.06); }
+}
+@media (max-width: 991.98px) {
+  .toc-bar .toc-list li a { padding: 8px 12px; font-size: 0.78rem; }
+}
+
 /* ===== FOOTER SPACING ===== */
 main + footer { margin-top: 0; }
 section:last-of-type { margin-bottom: 0; padding-bottom: 40px; }
