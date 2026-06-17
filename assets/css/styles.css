@@ -533,11 +533,11 @@ header.sticky-top .navbar-dark .btn-hero-cta {
 /* Navbar items wrap fix */
 header .navbar .navbar-collapse { flex-wrap: nowrap; }
 header .navbar .btn-hero-cta { font-size: 0.75rem !important; padding: 5px 10px !important; white-space: nowrap; }
-@media screen and (min-width: 992px) and (max-width: 1399px) {
-  header .navbar .nav-link { font-size: 0.95rem !important; padding-left: 4px !important; padding-right: 4px !important; }
+@media screen and (min-width: 992px) and (max-width: 1500px) {
+  header .navbar .nav-link { font-size: 0.88rem !important; padding-left: 3px !important; padding-right: 3px !important; }
   header .navbar .btn-hero-cta { font-size: 0.7rem !important; padding: 4px 8px !important; }
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1501px) {
   header .navbar .btn-hero-cta { font-size: 0.8rem !important; padding: 6px 14px !important; }
 }
 
@@ -551,7 +551,7 @@ header.sticky-top .navbar-dark .lang-switcher-btn { color: #fff !important; back
   .navbar-dark .navbar-collapse.collapsing .lang-switcher-btn { color: #333 !important; background: rgba(0,0,0,0.08) !important; }
 }
 .lang-switcher-btn:hover { background: rgba(0,187,255,0.15) !important; }
-@media screen and (min-width: 992px) and (max-width: 1399px) {
+@media screen and (min-width: 992px) and (max-width: 1500px) {
   .lang-switcher-btn { font-size: 0.87rem !important; padding: 4px 6px !important; }
 }
 
@@ -562,7 +562,7 @@ header .navbar .nav-link:hover { background: rgba(0,187,255,0.15); }
 header .navbar .dropdown-toggle.nav-link { font-size: 1.01rem; }
 header .navbar .btn-hero-cta { font-size: 1.01rem !important; padding: 5px 11px !important; white-space: nowrap; }
 
-@media screen and (min-width: 992px) and (max-width: 1399px) {
+@media screen and (min-width: 992px) and (max-width: 1500px) {
   header .navbar .nav-link { font-size: 0.87rem !important; padding: 4px 6px !important; }
   header .navbar .dropdown-toggle.nav-link { font-size: 0.87rem !important; }
   header .navbar .btn-hero-cta { font-size: 0.87rem !important; padding: 4px 9px !important; }
@@ -770,6 +770,10 @@ a[href^="tel:"] {
   .toc-box { padding: 18px 20px; }
   .toc-box .toc-list li a { font-size: 0.84rem; padding: 5px 0 5px 24px; }
 }
+
+/* ===== FOOTER TOUCH TARGETS (A11y WCAG 2.5.5) ===== */
+footer .nav a, footer a.text-muted { min-height: 44px; display: inline-flex; align-items: center; }
+footer .dropdown-item { min-height: 44px; display: flex; align-items: center; }
 
 /* ===== FOOTER SPACING ===== */
 main + footer { margin-top: 0; }

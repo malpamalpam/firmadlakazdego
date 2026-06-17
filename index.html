@@ -49,7 +49,7 @@
     <link rel="preload" href="assets/font/Montserrat-Regular.woff" as="font" type="font/woff" crossorigin>
     <!-- Cal.com Embed — załadowany na końcu body -->
     <!-- [5] Schema.org Organization -->
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Fundacja Firma Dla Każdego","url":"https://firmadlakazdego.pl","logo":"https://firmadlakazdego.pl/assets/img/logo-dark.png","address":{"@type":"PostalAddress","streetAddress":"ul. Lwowska 17/4","addressLocality":"Warszawa","postalCode":"00-660","addressCountry":"PL"},"contactPoint":[{"@type":"ContactPoint","telephone":"+48-575-594-500","contactType":"customer service","availableLanguage":"Polish"},{"@type":"ContactPoint","telephone":"+48-794-731-000","contactType":"customer service","availableLanguage":["English","Russian"]}],"sameAs":["https://www.facebook.com/firmadlakazdego","https://www.instagram.com/firmadlakazdego","https://t.me/FDK_inkubator"]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Fundacja Firma Dla Każdego","url":"https://firmadlakazdego.pl","logo":"https://firmadlakazdego.pl/assets/img/logo-dark.png","image":"https://firmadlakazdego.pl/assets/img/logo-dark.png","description":"Inkubator przedsiębiorczości — załóż firmę w 15 minut, bez ZUS, z pełną obsługą księgową i prawną.","address":{"@type":"PostalAddress","streetAddress":"ul. Lwowska 17/4","addressLocality":"Warszawa","postalCode":"00-660","addressCountry":"PL"},"geo":{"@type":"GeoCoordinates","latitude":"52.2212","longitude":"21.0179"},"telephone":"+48-575-594-500","email":"kontakt@firmadlakazdego.pl","openingHours":"Mo-Fr 09:00-17:00","priceRange":"400-1050 PLN/mies.","contactPoint":[{"@type":"ContactPoint","telephone":"+48-575-594-500","contactType":"customer service","availableLanguage":"Polish"},{"@type":"ContactPoint","telephone":"+48-794-731-000","contactType":"customer service","availableLanguage":["English","Ukrainian","Russian"]}],"sameAs":["https://www.facebook.com/firmadlakazdego","https://www.instagram.com/firmadlakazdego","https://t.me/FDK_inkubator"]}</script>
     <!-- [5] Schema.org FAQPage -->
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Co muszę zrobić, żeby założyć firmę w Fundacji?","acceptedAnswer":{"@type":"Answer","text":"Należy zgłosić się do Fundacji poprzez formularz zgłoszeniowy, telefonicznie lub mailowo. Po zapoznaniu się z materiałami i akceptacji warunków następuje podpisanie umowy."}},{"@type":"Question","name":"Czy muszę być studentem, żeby założyć firmę w Fundacji?","acceptedAnswer":{"@type":"Answer","text":"Nie, Fundacja wspiera wszystkie osoby niezależnie od statusu. Wykluczone są branża gastronomiczna, budowlana i medyczna."}},{"@type":"Question","name":"Czy muszę płacić składki ZUS?","acceptedAnswer":{"@type":"Answer","text":"Studenci poniżej 26 lat nie płacą ZUS ani PIT. Osoby realizujące dzieła są zwolnione z ZUS. W branżach handlowych rozliczenie przez umowę zlecenie generuje obowiązek ZUS."}},{"@type":"Question","name":"Jakie podatki muszę płacić?","acceptedAnswer":{"@type":"Answer","text":"VAT (chyba że zwolnienie), PIT 6% lub 9,6% zależnie od działalności, ewentualnie ZUS w branżach handlowych. Osoby poniżej 26 lat nie płacą PIT."}},{"@type":"Question","name":"Co zawiera pakiet i ile kosztuje?","acceptedAnswer":{"@type":"Answer","text":"Użyczenie osobowości prawnej Fundacji, księgowość, doradztwo prawne, podatkowe i kadrowe. Opłata zależy od przychodu: do 10 000 zł — 400 zł netto/mies., 10 001-30 000 zł — 700 zł netto/mies., powyżej 30 000 zł — 1 050 zł netto/mies."}},{"@type":"Question","name":"Czy mogę się rozliczać na zasadzie B2B?","acceptedAnswer":{"@type":"Answer","text":"Tak, taka sama forma współpracy jak z własną firmą, z tą różnicą, że stroną umowy będzie Fundacja."}},{"@type":"Question","name":"Czy mogę mieć swoje logo i nazwę firmy?","acceptedAnswer":{"@type":"Answer","text":"Tak, wizerunek marki kształtujesz sam. Dane Fundacji nie muszą widnieć na stronie internetowej."}}]}</script>
     <style>
@@ -73,7 +73,7 @@
     #main-nav .navbar-brand img { height: 42px; width: auto; }
     #main-nav .nav-phone-separator { width: 1px; height: 24px; background: rgba(255,255,255,0.25); margin: 0 0.75rem; display: none; }
     @media (min-width:1200px) { #main-nav .nav-phone-separator { display: inline-block; } }
-    @media (min-width:992px) and (max-width:1399px) {
+    @media (min-width:992px) and (max-width:1500px) {
         #main-nav .navbar-nav .nav-link { font-size: 0.9rem; padding-left: 0.3rem; padding-right: 0.3rem; }
         #main-nav .navbar-brand { margin-right: 0.5rem !important; }
         #main-nav .navbar-brand img { height: 36px; }
@@ -188,7 +188,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="hero-counter-label">roku na rynku</div>
                 </div>
                 <div class="col hero-counter-item">
-                    <span class="counter-value hero-counter-num" data-target="10000">0</span><span class="hero-counter-num">+</span>
+                    <span class="counter-value hero-counter-num" data-target="10000" data-suffix="+">0</span>
                     <div class="hero-counter-label">klientów</div>
                 </div>
                 <div class="col hero-counter-item">
@@ -240,7 +240,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h2 class="text-center text-white mb-2">Kalkulator: JDG vs FDK</h2>
         <p class="text-center mb-4" style="color:rgba(255,255,255,0.6)">Sprawdź, ile zaoszczędzisz z inkubatorem FDK</p>
         <div class="card shadow-lg rounded-4 p-4 p-md-5 border-0">
-            <label for="calc-revenue" class="form-label fw-bold fs-5">Twój miesięczny przychód netto:</label>
+            <label for="calc-slider" class="form-label fw-bold fs-5">Twój miesięczny przychód netto:</label>
             <div class="input-group input-group-lg mb-4">
                 <input type="range" class="form-range mt-2" id="calc-slider" min="2000" max="20000" step="500" value="8000" style="accent-color:#00BBFF" aria-label="Kwota przychodu miesięcznego">
             </div>

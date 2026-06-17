@@ -16,23 +16,29 @@ document.addEventListener('DOMContentLoaded', function() {
     var countersStarted = false;
     var counters = document.querySelectorAll('.counter-value');
 
+    function formatNumber(n) {
+        return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, '\u00A0');
+    }
+
     function animateCounters() {
         if (countersStarted) return;
         countersStarted = true;
         counters.forEach(function(counter) {
             var target = parseInt(counter.getAttribute('data-target')) || 0;
+            var suffix = counter.getAttribute('data-suffix') || '';
             var duration = 2000;
             var startTime = null;
             function step(timestamp) {
                 if (!startTime) startTime = timestamp;
                 var progress = Math.min((timestamp - startTime) / duration, 1);
+                // ease-out cubic for smooth deceleration
                 var eased = 1 - Math.pow(1 - progress, 3);
                 var current = Math.floor(eased * target);
-                counter.textContent = current.toLocaleString('pl-PL');
+                counter.textContent = formatNumber(current);
                 if (progress < 1) {
                     requestAnimationFrame(step);
                 } else {
-                    counter.textContent = target.toLocaleString('pl-PL');
+                    counter.textContent = formatNumber(target) + suffix;
                 }
             }
             requestAnimationFrame(step);
@@ -46,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 entries.forEach(function(entry) {
                     if (entry.isIntersecting) {
                         animateCounters();
-                        obs.unobserve(entry.target);
+                        obs.disconnect();
                     }
                 });
             }, { threshold: 0.3 });
