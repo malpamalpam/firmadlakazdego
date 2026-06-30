@@ -10,8 +10,30 @@ export default async function handler(req, res) {
     try {
         const { name, email, phone, message } = req.body;
 
-        if (!name || !email || !phone) {
-            return res.status(400).json({ error: 'Wymagane pola: imię, email, telefon' });
+        // Email is required
+        if (!email) {
+            return res.status(400).json({ error: 'E-mail jest wymagany.' });
+        }
+        // Email format validation
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,10}$/;
+        if (!emailRegex.test(email)) {
+            return res.status(400).json({ error: 'Podaj poprawny adres e-mail.' });
+        }
+        // Message is required (min 10 chars)
+        if (!message || message.trim().length < 10) {
+            return res.status(400).json({ error: 'Wiadomość musi mieć minimum 10 znaków.' });
+        }
+        // Name: optional, but if provided must be ≥ 2 chars
+        if (name && name.trim().length < 2) {
+            return res.status(400).json({ error: 'Imię musi mieć minimum 2 znaki.' });
+        }
+        // Phone: optional, but if provided validate format
+        if (phone) {
+            var phoneDigits = phone.replace(/\D/g, '');
+            var isAllSame = /^(.)\1+$/.test(phoneDigits);
+            if (phoneDigits.length < 9 || isAllSame) {
+                return res.status(400).json({ error: 'Podaj poprawny numer telefonu.' });
+            }
         }
 
         // Wysyłka przez Resend API

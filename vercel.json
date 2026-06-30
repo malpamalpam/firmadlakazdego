@@ -25,7 +25,18 @@
     { "source": "/muzycy/", "destination": "/inkubator-przedsiebiorczosci/", "permanent": true },
     { "source": "/inkubator-przedsiebiorczosci/programista-developer/", "destination": "/inkubator-przedsiebiorczosci/programista/", "permanent": true },
     { "source": "/inkubator-przedsiebiorczosci/specjalista-seo/", "destination": "/inkubator-przedsiebiorczosci/seo-specialist/", "permanent": true },
-    { "source": "/inne-branze/", "destination": "/inkubator-przedsiebiorczosci/", "permanent": true }
+    { "source": "/inne-branze/", "destination": "/inkubator-przedsiebiorczosci/", "permanent": true },
+    { "source": "/o-nas/", "destination": "/zespol-fundacji-firma-dla-kazdego/", "permanent": true },
+    { "source": "/zespol/", "destination": "/zespol-fundacji-firma-dla-kazdego/", "permanent": true },
+    { "source": "/inkubator/", "destination": "/inkubator-przedsiebiorczosci/", "permanent": true },
+    { "source": "/jak-to-dziala/", "destination": "/inkubator-przedsiebiorczosci/", "permanent": true },
+    { "source": "/uslugi/", "destination": "/inne-uslugi/", "permanent": true },
+    { "source": "/legalizacja/", "destination": "/legalizacja-pobytu-i-pracy/", "permanent": true },
+    { "source": "/en/legalization/", "destination": "/en/residence-and-work-permits/", "permanent": true },
+    { "source": "/en/about/", "destination": "/en/about/", "permanent": false },
+    { "source": "/inkubator-przedsiebiorczosci/programista-developer/", "destination": "/inkubator-przedsiebiorczosci/programista/", "permanent": true },
+    { "source": "/inkubator-przedsiebiorczosci/tłumacz/", "destination": "/inkubator-przedsiebiorczosci/tlumacz/", "permanent": true },
+    { "source": "/inkubator-przedsiębiorczości/", "destination": "/inkubator-przedsiebiorczosci/", "permanent": true }
   ],
   "rewrites": [
     { "source": "/zespol-fundacji-firma-dla-kazdego/", "destination": "/o-nas" },

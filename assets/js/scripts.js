@@ -115,6 +115,18 @@ document.addEventListener('DOMContentLoaded', function() {
         var pageLang = document.documentElement.lang || 'pl';
         var currSuffix = ' zł';
 
+        // UoD monthly/annual limits
+        var UOD_LIMIT_MONTHLY = 20000;
+        var UOD_LIMIT_ANNUAL = 240000;
+
+        // Limit warning messages per language
+        var limitMsgs = {
+            pl: 'Uwaga: limit dla umowy o dzieło to 20\u00A0000 zł/mies. (240\u00A0000 zł/rok). Kalkulacja ograniczona do tego limitu.',
+            en: 'Note: the limit for a contract for specific work (umowa o dzieło) is PLN 20\u00A0000/month (PLN 240\u00A0000/year). Calculation capped at this limit.',
+            uk: 'Увага: ліміт для договору підряду — 20\u00A0000 зл/міс. (240\u00A0000 зл/рік). Розрахунок обмежений цим лімітом.',
+            ru: 'Внимание: лимит для договора подряда — 20\u00A0000 зл/мес. (240\u00A0000 зл/год). Расчёт ограничен этим лимитом.'
+        };
+
         function updateCalculator() {
             var revenue = parseFloat(calcSource.value) || 0;
 
@@ -136,8 +148,12 @@ document.addEventListener('DOMContentLoaded', function() {
             var totalJDG = zusJDG + healthJDG + taxJDG + bookJDG;
 
             // === FDK (umowa o dzieło, max 20k/mies. = 240k rocznie) ===
-            var taxFDK = Math.round(revenue * 0.06);
-            var aboFDK = revenue <= 10000 ? 400 : (revenue <= 30000 ? 700 : 1050);
+            // Enforce UoD limit: cap revenue at 20k for FDK calculation
+            var fdkRevenue = Math.min(revenue, UOD_LIMIT_MONTHLY);
+            var overLimit = revenue > UOD_LIMIT_MONTHLY;
+
+            var taxFDK = Math.round(fdkRevenue * 0.06);
+            var aboFDK = fdkRevenue <= 10000 ? 400 : (fdkRevenue <= 30000 ? 700 : 1050);
             var totalFDK = taxFDK + aboFDK;
             var savings = Math.max(0, totalJDG - totalFDK);
 
@@ -152,6 +168,28 @@ document.addEventListener('DOMContentLoaded', function() {
             if (el('fdk-total')) el('fdk-total').textContent = totalFDK.toLocaleString('pl-PL') + currSuffix;
             if (el('calc-savings')) el('calc-savings').textContent = savings.toLocaleString('pl-PL') + currSuffix;
             if (el('calc-savings-year')) el('calc-savings-year').textContent = (savings * 12).toLocaleString('pl-PL') + currSuffix;
+
+            // Show/hide UoD limit warning
+            var limitWarning = el('calc-limit-warning');
+            if (!limitWarning) {
+                // Create warning element dynamically if not in HTML
+                var calcSection = calcSource.closest('.calculator-section, .card, section') || calcSource.parentElement;
+                if (calcSection) {
+                    limitWarning = document.createElement('div');
+                    limitWarning.id = 'calc-limit-warning';
+                    limitWarning.className = 'alert alert-warning mt-3';
+                    limitWarning.style.display = 'none';
+                    calcSection.appendChild(limitWarning);
+                }
+            }
+            if (limitWarning) {
+                if (overLimit) {
+                    limitWarning.textContent = limitMsgs[pageLang] || limitMsgs.pl;
+                    limitWarning.style.display = 'block';
+                } else {
+                    limitWarning.style.display = 'none';
+                }
+            }
         }
         calcSource.addEventListener('input', updateCalculator);
         updateCalculator();
@@ -322,10 +360,56 @@ document.addEventListener('DOMContentLoaded', function() {
         'inkubator-przedsiebiorczosci/seo-specialist':                      { en: 'other-industries',  uk: 'inshi-galuzi',    ru: 'drugie-otrasli' },
         'inkubator-przedsiebiorczosci/ux-ui-designer':                      { en: 'programmers',       uk: 'programisty',     ru: 'programmisty' },
         'inkubator-przedsiebiorczosci/social-media-manager':                { en: 'other-industries',  uk: 'inshi-galuzi',    ru: 'drugie-otrasli' },
-        'inkubator-przedsiebiorczosci/copywriter':                          { en: 'other-industries',  uk: 'inshi-galuzi',    ru: 'drugie-otrasli' }
+        'inkubator-przedsiebiorczosci/copywriter':                          { en: 'other-industries',  uk: 'inshi-galuzi',    ru: 'drugie-otrasli' },
+        'inkubator-przedsiebiorczosci/coaching':                            { en: 'coaching',          uk: 'kouching',        ru: 'kouching' },
+        'inkubator-przedsiebiorczosci/konsulting':                          { en: 'consulting',        uk: 'konsaltyng',      ru: 'konsalting' },
+        'inkubator-przedsiebiorczosci/montaz-wideo':                        { en: 'video-editing',     uk: 'montazh-video',   ru: 'montazh-video' },
+        'inkubator-przedsiebiorczosci/psychologia':                         { en: 'psychology',        uk: 'psykholohiya',    ru: 'psikhologiya' },
+        'inkubator-przedsiebiorczosci/rekodzielo':                          { en: 'handicraft',        uk: 'ruchna-robota',   ru: 'ruchnaya-rabota' },
+        'inkubator-przedsiebiorczosci/studenci':                            { en: 'students',          uk: 'studenty',        ru: 'studenty' },
+        'inkubator-przedsiebiorczosci/wszystkie-branze':                    { en: 'all-industries',    uk: 'vsi-galuzi',      ru: 'vse-otrasli' },
+        // Reverse: EN → PL/UK/RU for industry subpages
+        'programmers':    { pl: 'inkubator-przedsiebiorczosci/programista', uk: 'programisty',     ru: 'programmisty' },
+        'programisty':    { pl: 'inkubator-przedsiebiorczosci/programista', en: 'programmers',     ru: 'programmisty',  uk: 'programisty' },
+        'programmisty':   { pl: 'inkubator-przedsiebiorczosci/programista', en: 'programmers',     uk: 'programisty' },
+        'architects':     { pl: 'inkubator-przedsiebiorczosci/architekt',  uk: 'architekty',      ru: 'arhitektory' },
+        'architekty':     { pl: 'inkubator-przedsiebiorczosci/architekt',  en: 'architects',      ru: 'arhitektory' },
+        'arhitektory':    { pl: 'inkubator-przedsiebiorczosci/architekt',  en: 'architects',      uk: 'architekty' },
+        'translators':    { pl: 'inkubator-przedsiebiorczosci/tlumacz',    uk: 'perekladachi',    ru: 'perevodchiki' },
+        'perekladachi':   { pl: 'inkubator-przedsiebiorczosci/tlumacz',    en: 'translators',     ru: 'perevodchiki' },
+        'perevodchiki':   { pl: 'inkubator-przedsiebiorczosci/tlumacz',    en: 'translators',     uk: 'perekladachi' },
+        'ecommerce':      { pl: 'inkubator-przedsiebiorczosci/e-commerce', en: 'ecommerce',       uk: 'ecommerce',    ru: 'ecommerce' },
+        'coaching':       { pl: 'inkubator-przedsiebiorczosci/coaching',   uk: 'kouching',        ru: 'kouching' },
+        'kouching':       { pl: 'inkubator-przedsiebiorczosci/coaching',   en: 'coaching',        ru: 'kouching',     uk: 'kouching' },
+        'consulting':     { pl: 'inkubator-przedsiebiorczosci/konsulting', uk: 'konsaltyng',      ru: 'konsalting' },
+        'konsaltyng':     { pl: 'inkubator-przedsiebiorczosci/konsulting', en: 'consulting',      ru: 'konsalting' },
+        'konsalting':     { pl: 'inkubator-przedsiebiorczosci/konsulting', en: 'consulting',      uk: 'konsaltyng' },
+        'video-editing':  { pl: 'inkubator-przedsiebiorczosci/montaz-wideo', uk: 'montazh-video', ru: 'montazh-video' },
+        'montazh-video':  { pl: 'inkubator-przedsiebiorczosci/montaz-wideo', en: 'video-editing', uk: 'montazh-video', ru: 'montazh-video' },
+        'psychology':     { pl: 'inkubator-przedsiebiorczosci/psychologia', uk: 'psykholohiya',   ru: 'psikhologiya' },
+        'psykholohiya':   { pl: 'inkubator-przedsiebiorczosci/psychologia', en: 'psychology',     ru: 'psikhologiya' },
+        'psikhologiya':   { pl: 'inkubator-przedsiebiorczosci/psychologia', en: 'psychology',     uk: 'psykholohiya' },
+        'handicraft':     { pl: 'inkubator-przedsiebiorczosci/rekodzielo', uk: 'ruchna-robota',   ru: 'ruchnaya-rabota' },
+        'ruchna-robota':  { pl: 'inkubator-przedsiebiorczosci/rekodzielo', en: 'handicraft',      ru: 'ruchnaya-rabota' },
+        'ruchnaya-rabota': { pl: 'inkubator-przedsiebiorczosci/rekodzielo', en: 'handicraft',     uk: 'ruchna-robota' },
+        'students':       { pl: 'inkubator-przedsiebiorczosci/studenci',   uk: 'studenty',        ru: 'studenty' },
+        'studenty':       { pl: 'inkubator-przedsiebiorczosci/studenci',   en: 'students',        uk: 'studenty',     ru: 'studenty' },
+        'all-industries': { pl: 'inkubator-przedsiebiorczosci/wszystkie-branze', uk: 'vsi-galuzi', ru: 'vse-otrasli' },
+        'vsi-galuzi':     { pl: 'inkubator-przedsiebiorczosci/wszystkie-branze', en: 'all-industries', ru: 'vse-otrasli' },
+        'vse-otrasli':    { pl: 'inkubator-przedsiebiorczosci/wszystkie-branze', en: 'all-industries', uk: 'vsi-galuzi' }
     };
 
-    var langLinks = document.querySelectorAll('.lang-switcher-btn + .dropdown-menu a.dropdown-item, .lang-switcher-btn ~ .dropdown-menu a.dropdown-item');
+    // Match language switcher links — both .lang-switcher-btn and blog-style dropdowns
+    var langLinks = document.querySelectorAll('.lang-switcher-btn + .dropdown-menu a.dropdown-item, .lang-switcher-btn ~ .dropdown-menu a.dropdown-item, .dropdown-menu-end a.dropdown-item');
+    // Filter to only actual language links (matching /, /en/, /uk/, /ru/ or relative equivalents)
+    var langLinksFiltered = [];
+    langLinks.forEach(function(l) {
+        var h = l.getAttribute('href') || '';
+        if (h === '/' || h === './' || h === '../' || h === '../../' || h.match(/^\/?(?:en|uk|ru)\/?$/) || h.match(/\.\.\/(?:en|uk|ru)\/?$/)) {
+            langLinksFiltered.push(l);
+        }
+    });
+    langLinks = langLinksFiltered;
     // Also rewrite no-JS fallback links
     var noJsLinks = document.querySelectorAll('.lang-inline-nojs a');
     var allLangLinks = [];
@@ -433,19 +517,29 @@ function submitContactForm(e) {
     var lang = pageLang.substring(0, 2);
 
     var msgs = {
-        pl: { name: 'Imię musi mieć minimum 2 znaki.', phone: 'Numer telefonu musi mieć minimum 9 cyfr.', email: 'Podaj poprawny adres e-mail.', msg: 'Wiadomość musi mieć minimum 10 znaków.', sending: 'Wysyłanie...' },
-        en: { name: 'Name must be at least 2 characters.', phone: 'Phone number must have at least 9 digits.', email: 'Please enter a valid email address.', msg: 'Message must be at least 10 characters.', sending: 'Sending...' },
-        uk: { name: 'Ім\'я має містити мінімум 2 символи.', phone: 'Номер телефону має містити мінімум 9 цифр.', email: 'Введіть дійсну адресу електронної пошти.', msg: 'Повідомлення має містити мінімум 10 символів.', sending: 'Відправлення...' },
-        ru: { name: 'Имя должно содержать минимум 2 символа.', phone: 'Номер телефона должен содержать минимум 9 цифр.', email: 'Введите действительный адрес электронной почты.', msg: 'Сообщение должно содержать минимум 10 символов.', sending: 'Отправка...' }
+        pl: { name: 'Imię musi mieć minimum 2 znaki.', phone: 'Podaj poprawny numer telefonu (min. 9 cyfr, bez powtórzeń).', email: 'Podaj poprawny adres e-mail.', msg: 'Wiadomość musi mieć minimum 10 znaków.', msgReq: 'Wiadomość jest wymagana.', sending: 'Wysyłanie...' },
+        en: { name: 'Name must be at least 2 characters.', phone: 'Please enter a valid phone number (min. 9 digits, no repeated digits).', email: 'Please enter a valid email address.', msg: 'Message must be at least 10 characters.', msgReq: 'Message is required.', sending: 'Sending...' },
+        uk: { name: 'Ім\'я має містити мінімум 2 символи.', phone: 'Введіть дійсний номер телефону (мін. 9 цифр, без повторень).', email: 'Введіть дійсну адресу електронної пошти.', msg: 'Повідомлення має містити мінімум 10 символів.', msgReq: 'Повідомлення є обов\'язковим.', sending: 'Відправлення...' },
+        ru: { name: 'Имя должно содержать минимум 2 символа.', phone: 'Введите действительный номер телефона (мин. 9 цифр, без повторений).', email: 'Введите действительный адрес электронной почты.', msg: 'Сообщение должно содержать минимум 10 символов.', msgReq: 'Сообщение обязательно.', sending: 'Отправка...' }
     };
     var m = msgs[lang] || msgs.pl;
 
     // Walidacja client-side
-    if (name.length < 2) { alert(m.name); return; }
-    var phoneDigits = phone.replace(/\D/g, '');
-    if (phoneDigits.length < 9) { alert(m.phone); return; }
-    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { alert(m.email); return; }
-    if (message && message.length < 10) { alert(m.msg); return; }
+    // Name: optional, but if provided must be ≥ 2 chars
+    if (name && name.length < 2) { alert(m.name); return; }
+    // Phone: optional, but if provided must have ≥ 9 digits and not be all-zeros or single repeated digit
+    if (phone) {
+        var phoneDigits = phone.replace(/\D/g, '');
+        var isAllSame = /^(.)\1+$/.test(phoneDigits);
+        var isAllZeros = /^0+$/.test(phoneDigits);
+        if (phoneDigits.length < 9 || isAllSame || isAllZeros) { alert(m.phone); return; }
+    }
+    // Email: required, valid format with real TLD (2-10 chars, not all-same)
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,10}$/;
+    if (!email || !emailRegex.test(email)) { alert(m.email); return; }
+    // Message: required, ≥ 10 chars
+    if (!message) { alert(m.msgReq); return; }
+    if (message.length < 10) { alert(m.msg); return; }
 
     btn.disabled = true;
     btn.textContent = m.sending;
@@ -601,5 +695,44 @@ document.addEventListener('DOMContentLoaded', function() {
         if (messageInput && messageInput.hasAttribute('required') && !messageInput.hasAttribute('minlength')) {
             messageInput.setAttribute('minlength', '10');
         }
+    }
+
+    // ===== Article rating (blog posts) =====
+    var ratingContainer = document.querySelector('.article-rating');
+    if (ratingContainer) {
+        var articleId = ratingContainer.getAttribute('data-article') || 'unknown';
+        var storageKey = 'article-rating-' + articleId;
+        var stars = ratingContainer.querySelectorAll('.rating-star');
+        var resultEl = ratingContainer.closest('.border') ? ratingContainer.closest('.border').querySelector('.rating-result') : null;
+
+        // Load existing rating from localStorage
+        var existing = localStorage.getItem(storageKey);
+        if (existing) {
+            var val = parseInt(existing);
+            stars.forEach(function(s) {
+                if (parseInt(s.getAttribute('data-value')) <= val) {
+                    s.classList.remove('btn-outline-warning');
+                    s.classList.add('btn-warning');
+                }
+            });
+            if (resultEl) resultEl.textContent = (document.documentElement.lang === 'pl' ? 'Dziękujemy za ocenę!' : 'Thank you for rating!');
+        }
+
+        stars.forEach(function(star) {
+            star.addEventListener('click', function() {
+                var val = parseInt(star.getAttribute('data-value'));
+                localStorage.setItem(storageKey, val);
+                stars.forEach(function(s) {
+                    if (parseInt(s.getAttribute('data-value')) <= val) {
+                        s.classList.remove('btn-outline-warning');
+                        s.classList.add('btn-warning');
+                    } else {
+                        s.classList.remove('btn-warning');
+                        s.classList.add('btn-outline-warning');
+                    }
+                });
+                if (resultEl) resultEl.textContent = (document.documentElement.lang === 'pl' ? 'Dziękujemy za ocenę!' : 'Thank you for rating!');
+            });
+        });
     }
 });
