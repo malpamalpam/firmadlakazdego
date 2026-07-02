@@ -735,4 +735,17 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+
+    // ===== Child Protection Policy PDF — language-aware link rewriting =====
+    var policyPdfMap = {
+        pl: '/Polityka-Ochrony-Dzieci-FDK-pl.pdf',
+        en: '/Polityka-Ochrony-Dzieci-FDK-en.pdf',
+        ru: '/Polityka-Ochrony-Dzieci-FDK-ru.pdf',
+        uk: '/Polityka-Ochrony-Dzieci-FDK-uk.pdf'
+    };
+    var policyLang = (document.documentElement.lang || 'pl').substring(0, 2);
+    var policyPdf = policyPdfMap[policyLang] || policyPdfMap.pl;
+    document.querySelectorAll('a[href*="Polityka-Ochrony-Dzieci-FDK"]').forEach(function(link) {
+        link.setAttribute('href', policyPdf);
+    });
 });
